@@ -1,6 +1,6 @@
-# Pipeline v1.6
+# Pipeline v1.6.1
 from __future__ import annotations
-import json, re, html, urllib.request, urllib.parse, xml.etree.ElementTree as ET
+import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from email.utils import parsedate_to_datetime
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.6 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.6.1 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -256,10 +256,25 @@ def system_market(d):
             oldref=k.get("reference","")
             k["validatedAt"]=iso()
             if kid=="injection":
-                k["value"]=latest[:5]
-                k["unit"]=latest[-4:]
-                k["reference"]="Última publicación visible ENReGE"
-                k["statusText"]="REPORTE"
+                try:
+                    from pypdf import PdfReader
+                    dt=datetime.strptime(latest,"%d/%m/%Y")
+                    pdf_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_"+dt.strftime("%Y%m%d")+".pdf"
+                    pdf=fetch(pdf_url,timeout=40)
+                    reader=PdfReader(io.BytesIO(pdf))
+                    ptxt=" ".join((p.extract_text() or "") for p in reader.pages)
+                    ptxt=re.sub(r"\s+"," ",ptxt)
+                    print("INJECTION_PDF_TEXT",ptxt[:5000])
+                    k["reference"]=latest+" · dato real"
+                    k["validatedAt"]=iso()
+                    k["sourceUrl"]=pdf_url
+                    k["statusText"]="EXTRAYENDO"
+                    k["note"]="PDF oficial cargado correctamente; validando el total nacional de inyección."
+                except Exception as pe:
+                    print("INJECTION PDF",pe)
+                    k["reference"]=latest+" · último reporte"
+                    k["statusText"]="REPORTE"
+                    k["note"]="ENReGE publicó el reporte; aún no se pudo extraer automáticamente el total nacional."
             elif latest not in oldref:
                 k["statusText"]="NUEVO REPORTE"
                 k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se mantiene la última cifra numérica validada hasta completar su extracción."
