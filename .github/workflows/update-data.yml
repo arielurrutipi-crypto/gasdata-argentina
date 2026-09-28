@@ -19,20 +19,29 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Consultar fuentes
-        run: python scripts/update_pipeline.py
-      - name: Guardar validaciones y novedades
+      - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/data.json
-          if git diff --cached --quiet; then
-            echo "Sin cambios"
-          else
+          for intento in 1 2 3; do
+            echo "Intento $intento"
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/update_pipeline.py
+            git add data/data.json
+            if git diff --cached --quiet; then
+              echo "Sin cambios"
+              exit 0
+            fi
             git commit -m "Actualización automática de fuentes"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin main; then
+              exit 0
+            fi
+            echo "El repositorio cambió durante la actualización; reintentando..."
+            sleep 2
+          done
+          echo "No se pudo guardar tras 3 intentos"
+          exit 1
 
   deploy:
     needs: update
