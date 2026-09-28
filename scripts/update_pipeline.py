@@ -403,9 +403,8 @@ def transport_capacity(d):
 
 REGULATION_START=datetime(2026,1,1,tzinfo=ART)
 REGULATION_SEARCH_TERMS=(
-    "gas natural","gasoducto","subdistribucion","subdistribución",
-    "gas propano","propano por redes","GLP","GNL","Plan Gas","PIST",
-    "comercializadores de gas","transporte de gas","distribucion de gas","distribución de gas"
+    "gas natural","gasoducto","subdistribucion","GLP","GNL",
+    "Plan Gas","PIST","comercializadores de gas","transporte de gas","distribucion de gas"
 )
 REGULATION_GAS_SIGNALS=(
     "gas natural","gas licuado","glp","gnl","lng","gasoduct","subdistrib",
@@ -432,7 +431,10 @@ REGULATION_CATEGORY_RULES=(
 def _norm_url(u):
     if not u: return ""
     u=urllib.parse.urljoin("https://www.argentina.gob.ar",u)
-    return u.split("#",1)[0].rstrip("/")
+    u=u.split("#",1)[0].rstrip("/")
+    for suffix in ("/texto","/actualizacion"):
+        if u.endswith(suffix): u=u[:-len(suffix)]
+    return u
 
 def _reg_categories(text):
     low=(" "+(text or "").lower()+" ")
@@ -482,14 +484,14 @@ def _discover_regulation_urls():
     for term in REGULATION_SEARCH_TERMS:
         page=1
         previous_page=set()
-        while page<=6:
+        while page<=3:
             params={
               "jurisdiccion":"nacional","tipo_norma":"legislaciones",
               "publicacion_desde":since,"publicacion_hasta":until,
               "texto":term,"limit":"50","offset":str(page)
             }
             try:
-                raw=fetch(base+"?"+urllib.parse.urlencode(params),timeout=35)
+                raw=fetch(base+"?"+urllib.parse.urlencode(params),timeout=20)
                 successful+=1
             except Exception as e:
                 print("NORM SEARCH",term,page,e); break
@@ -556,8 +558,18 @@ def update_regulations(d):
     added=0; refreshed=0
     for url,hint in discovered.items():
         if url in existing:
+            if not existing[url].get("issuer"):
+                try:
+                    parsed=_parse_regulation(url,hint)
+                except Exception as e:
+                    print("NORM REFRESH",url,e); parsed=None
+                if parsed:
+                    keep=existing[url]
+                    parsed["desc"]=keep.get("desc") or parsed.get("desc")
+                    parsed["status"]=keep.get("status","unchanged")
+                    existing[url]={**keep,**parsed}
             existing[url]["validatedAt"]=iso()
-            existing[url]["auto"]=existing[url].get("auto",False)
+            existing[url]["auto"]=True
             refreshed+=1
             continue
         try:
