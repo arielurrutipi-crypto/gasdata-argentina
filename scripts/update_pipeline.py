@@ -1,4 +1,4 @@
-# Pipeline v1.8
+# Pipeline v1.9
 from __future__ import annotations
 import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.8 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.9 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -254,7 +254,6 @@ def system_market(d):
             k=items.get(kid)
             if not k: continue
             oldref=k.get("reference","")
-            k["validatedAt"]=iso()
             if kid=="injection":
                 try:
                     from pypdf import PdfReader
@@ -287,12 +286,44 @@ def system_market(d):
                     k["reference"]=latest+" · último reporte"
                     k["statusText"]="REPORTE"
                     k["note"]="ENReGE publicó el reporte; aún no se pudo extraer automáticamente el total nacional."
-            elif latest not in oldref:
-                k["statusText"]="NUEVO REPORTE"
-                k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se mantiene la última cifra numérica validada hasta completar su extracción."
+            elif latest in oldref:
+                k["validatedAt"]=iso()
+            else:
+                k["statusText"]="NUEVO REPORTE · REVISAR"
+                k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se conserva el último total del sistema validado hasta recalcular TGN + TGS; la fecha de validación del valor no cambia."
         except Exception as e:
             print("SYSTEM",kid,e)
 
+
+def monthly_flows_status(d):
+    """Detect new monthly ENReGE reports without replacing validated history blindly."""
+    url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9"
+    months={
+      "enero":"01","febrero":"02","marzo":"03","abril":"04","mayo":"05","junio":"06",
+      "julio":"07","agosto":"08","septiembre":"09","octubre":"10","noviembre":"11","diciembre":"12"
+    }
+    try:
+        txt=clean(fetch(url).decode("utf-8","ignore")).lower()
+        found=[]
+        for name,num in months.items():
+            if re.search(r"\b"+name+r"\s+2026\b",txt):
+                found.append("2026-"+num)
+        if not found:
+            return
+        latest=max(found)
+        meta=d.setdefault("systemMonthlyMeta",{})
+        current=meta.get("latest")
+        meta["sourceUrl"]=url
+        meta["checkedAt"]=iso()
+        if not current or latest>current:
+            meta["pendingMonth"]=latest
+            meta["status"]="new_report"
+            meta["note"]="ENReGE publicó "+latest+". Se conserva el último mes validado hasta extraer y verificar sus valores."
+        else:
+            meta.pop("pendingMonth",None)
+            meta["status"]="current"
+    except Exception as e:
+        print("MONTHLY FLOWS",e)
 
 def transport_capacity(d):
     existing_open=[x for x in d.get("transportCapacity",[]) if x.get("kind")=="CONCURSO ABIERTO"]
@@ -424,11 +455,12 @@ def main():
     production(d)
     demand_priority(d)
     system_market(d)
+    monthly_flows_status(d)
     transport_capacity(d)
     bopba_monitor(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.8.0"
+    d["meta"]["version"]="1.9.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
