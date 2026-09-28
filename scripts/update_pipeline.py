@@ -1,4 +1,4 @@
-# Pipeline v1.9
+# Pipeline v2.0
 from __future__ import annotations
 import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.9 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/2.0 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -326,7 +326,8 @@ def monthly_flows_status(d):
         print("MONTHLY FLOWS",e)
 
 def transport_capacity(d):
-    existing_open=[x for x in d.get("transportCapacity",[]) if x.get("kind")=="CONCURSO ABIERTO"]
+    existing={x.get("id"):x for x in d.get("transportCapacity",[]) if x.get("id")}
+    existing_open=[x for x in existing.values() if x.get("kind")=="CONCURSO ABIERTO"]
     out=[]
     # Official open contests
     en_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php"
@@ -361,15 +362,35 @@ def transport_capacity(d):
               "id":"megsa_"+code.lower(),"kind":"REVENTA TF","company":comp,
               "title":f"Oferta {code}","volume":vol+" m³/d",
               "period":dfrom+"–"+dto,"published":pub,
-              "status":"DESIERTA" if des else "ACTO "+act[:5],
+              "status":"DESIERTA" if des else "CERRADO",
               "source":"MEGSA · Reventa de transporte firme","url":meg_url,
+              "publishedAt":datetime.strptime(pub,"%d/%m/%Y").replace(tzinfo=ART).isoformat(),
+              "deadline":act,
+              "deadlineAt":datetime.strptime(act,"%d/%m/%Y").replace(hour=23,minute=59,second=59,tzinfo=ART).isoformat(),
+              "deadlineLabel":"Acto de lectura / cierre",
               "note":"Última oferta visible en la pantalla pública de reventas."
             })
     except Exception as e:
         print("CAPACITY MEGSA",e)
 
     if out:
-        d["transportCapacity"]=out
+        merged=[]
+        for item in out:
+            old=existing.get(item.get("id"),{})
+            z={**old,**item}
+            if z.get("published") and not z.get("publishedAt"):
+                try:
+                    dt=datetime.strptime(z["published"],"%d/%m/%Y")
+                    z["publishedAt"]=dt.replace(tzinfo=ART).isoformat()
+                except Exception:
+                    pass
+            if z.get("kind")=="REVENTA TF" and z.get("status","").startswith("ACTO ") and not z.get("deadlineAt"):
+                try:
+                    act=item.get("period_act") or None
+                except Exception:
+                    act=None
+            merged.append(z)
+        d["transportCapacity"]=merged
     meta=d.setdefault("transportCapacityMeta",{})
     meta.update(validatedAt=iso(),cadence="Cada 3 horas",
                 note="GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte.")
@@ -460,7 +481,7 @@ def main():
     bopba_monitor(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.9.0"
+    d["meta"]["version"]="2.0.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
