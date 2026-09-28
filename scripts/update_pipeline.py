@@ -130,7 +130,7 @@ def official_series(series_id):
     return json.loads(fetch("https://apis.datos.gob.ar/series/api/series?"+qs).decode("utf-8"))
 
 def production(d):
-    u=next((x for x in d["updates"] if x["name"]=="Producción"),None)
+    u=next((x for x in d["updates"] if x["name"] in ("Producción","Producción nacional")),None)
     k=next((x for x in d.get("kpis",[]) if x.get("id")=="national_prod"),None)
     try: last=datetime.fromisoformat(u["last"]) if u and u.get("last") else None
     except Exception: last=None
@@ -238,8 +238,14 @@ def demand_priority(d):
           "note":"Ventana de 5 días de ENReGE: primera columna = consumo real (1); cuatro columnas siguientes = consumo estimado (2)."
         })
         d["kpis"]=[x for x in d["kpis"] if x.get("id")!="system_daily"]
+        u=next((x for x in d.get("updates",[]) if x.get("name")=="Demanda prioritaria"),None)
+        if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="updated" if old!=disp else "unchanged",
+                       note="Ventana oficial de 5 días revalidada.")
     except Exception as e:
         print("DEMAND",e)
+        u=next((x for x in d.get("updates",[]) if x.get("name")=="Demanda prioritaria"),None)
+        if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",
+                       note="No se pudo leer la ventana oficial; se conservan los últimos valores.")
 
 def system_market(d):
     """Refresh report availability without replacing validated values with unparsed chart data."""
@@ -296,6 +302,11 @@ def system_market(d):
                 k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se conserva el último total del sistema validado hasta recalcular TGN + TGS; la fecha de validación del valor no cambia."
         except Exception as e:
             print("SYSTEM",kid,e)
+    u=next((x for x in d.get("updates",[]) if x.get("name")=="Sistema gasífero diario"),None)
+    if u:
+        newest=max((x.get("validatedAt","") for x in d.get("systemKpis",[]) if x.get("id") in ("linepack","injection")),default="")
+        u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="unchanged",
+                 note="Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo.")
 
 
 def monthly_flows_status(d):
@@ -325,8 +336,16 @@ def monthly_flows_status(d):
         else:
             meta.pop("pendingMonth",None)
             meta["status"]="current"
+        u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
+        if u:
+            changed=bool(meta.get("pendingMonth"))
+            u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="updated" if changed else "unchanged",
+                     note=meta.get("note") or ("Último mes publicado: "+str(meta.get("latest","—"))))
     except Exception as e:
         print("MONTHLY FLOWS",e)
+        u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
+        if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",
+                       note="No se pudo verificar el índice mensual; se conserva el último mes validado.")
 
 def transport_capacity(d):
     existing={x.get("id"):x for x in d.get("transportCapacity",[]) if x.get("id")}
@@ -729,7 +748,7 @@ def _update_due(d,name,hours):
 def validate_pages(d):
     checks=[
       ("Tarifas ENReGE/BAGSA","https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",24),
-      ("Datos operativos","https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php",24)
+      ("Sistema gasífero diario","https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php",24)
     ]
     for name,url,h in checks:
         if not _update_due(d,name,h): continue
@@ -770,7 +789,7 @@ def sync_tariffs_from_regulations(d):
         m=re.search(r"(\d+/\d{4})",str(latest.get("num","")))
         row["res"]=m.group(1) if m else latest.get("num",row.get("res"))
         row["validFrom"]=str(latest.get("publishedAt",""))[:10] or row.get("validFrom")
-        row["validatedAt"]=iso()
+        row["validatedAt"]=latest.get("validatedAt") or row.get("validatedAt") or iso()
         row["url"]=latest.get("url",row.get("url"))
         row["auto"]=True
 
@@ -851,6 +870,7 @@ def refresh_source_status(d):
 
 def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
+    sync_update_catalog(d)
     update_news(d)
     validate_pages(d)
     if _update_due(d,"Normativa",3): update_regulations(d)
