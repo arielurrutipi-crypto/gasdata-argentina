@@ -64,7 +64,7 @@ $('#regCriteria').innerHTML='<b>'+esc(D.regulationCriteria?.title||'Criterio')+'
 tariffs();$('#tarTime').textContent='Validado '+fmt((D.tariffs||[])[0]?.validatedAt);
 $('#updates').innerHTML=(D.updates||[]).map(u=>'<div class="update"><h3>'+esc(u.name)+'</h3><p><b>Frecuencia:</b> '+esc(u.cadence)+'</p><p><b>Última:</b> '+fmt(u.last)+'</p><p><b>Próxima:</b> '+fmt(u.next)+'</p><p>'+esc(u.note||'')+'</p></div>').join('');
 $('#sourceMini').innerHTML=(D.updates||[]).slice(0,5).map(u=>'<div><b>'+esc(u.name)+'</b><br><span>'+fmt(u.last)+'</span></div>').join('');
-$('#sourceRows').innerHTML=(D.sources||[]).map(x=>'<tr><td><b>'+esc(x.name)+'</b></td><td>'+esc(x.type)+'</td><td>'+esc(x.content)+'</td><td>'+esc(x.cadence)+'</td><td>'+fmt(x.validatedAt)+'</td><td><span class="badge">'+esc(x.status||'ACTIVA')+'</span></td><td><a href="'+esc(x.url)+'" target="_blank">Abrir ↗</a></td></tr>').join('');
+$('#sourceRows').innerHTML=(D.sources||[]).map(x=>{let links=x.secondaryUrl?'<a href="'+esc(x.url)+'" target="_blank">gas natural ↗</a> · <a href="'+esc(x.secondaryUrl)+'" target="_blank">BAGSA ↗</a>':'<a href="'+esc(x.url)+'" target="_blank">Abrir ↗</a>',extra=x.lastResult?'<div class="detail">'+esc(x.lastResult)+'</div>':'';return '<tr><td><b>'+esc(x.name)+'</b></td><td>'+esc(x.type)+'</td><td>'+esc(x.content)+extra+'</td><td>'+esc(x.cadence)+'</td><td>'+fmt(x.validatedAt)+'</td><td><span class="badge">'+esc(x.status||'ACTIVA')+'</span></td><td>'+links+'</td></tr>'}).join('');
 let pp=D.marketPrices||[];
 $('#gasPrices').innerHTML=pp.filter(x=>x.group==='Gas Argentina').map(pricecard).join('');
 $('#gnIntlPrices').innerHTML=pp.filter(x=>x.group==='GN internacional').map(pricecard).join('');
