@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.6.0",
-    "updatedAt": "2026-09-28T11:30-03:00",
+    "updatedAt": "2026-09-28T11:40:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1663,6 +1663,19 @@
   },
   "transportCapacity": [
     {
+      "id": "tgn_open_1_2026",
+      "kind": "CONCURSO ABIERTO",
+      "company": "TGN",
+      "title": "Concurso Abierto TGN N.º 1/2026",
+      "volume": "Capacidad firme proveniente de expansiones",
+      "period": "Vigente",
+      "published": "2026",
+      "status": "VIGENTE · VERIFICADO 28/09",
+      "source": "ENReGE · Concursos y reventas",
+      "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
+      "note": "Última verificación oficial 28/09/2026. La página pública de ENReGE lo muestra dentro de Concursos vigentes."
+    },
+    {
       "id": "megsa_t903",
       "kind": "REVENTA TF",
       "company": "TGS",
@@ -1677,7 +1690,7 @@
     }
   ],
   "transportCapacityMeta": {
-    "validatedAt": "2026-09-28T11:30-03:00",
+    "validatedAt": "2026-09-28T11:40:00-03:00",
     "cadence": "Cada 3 horas",
     "note": "GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte."
   }
