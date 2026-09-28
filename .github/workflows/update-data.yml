@@ -28,5 +28,6 @@ jobs:
             echo "Sin cambios"
           else
             git commit -m "Actualización automática de fuentes"
+            git pull --rebase origin main
             git push
           fi
