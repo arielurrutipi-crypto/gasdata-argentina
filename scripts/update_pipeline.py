@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
@@ -547,60 +548,174 @@ def _parse_regulation(url,hint=None):
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
 
+
+BORA_DISCOVERY_SIGNALS=REGULATION_GAS_SIGNALS+(
+    "ente nacional regulador del gas","enrege","enargas","secretaría de energía","secretaria de energia"
+)
+
+def _reg_family(x):
+    low=(" ".join(str(x.get(k,"")) for k in ("issuer","title","desc","num"))).lower()
+    if any(k in low for k in ("enrege","enargas","ente nacional regulador del gas","camuzzi","naturgy","metrogas","litoral gas","gasnea","gas nea","gasnor","tgs","tgn")):
+        return "enrege"
+    if any(k in low for k in ("secretaría de energía","secretaria de energia","plan gas","precio de paridad","ppe","sef")):
+        return "energia"
+    return re.sub(r"\W+","",str(x.get("issuer") or "otro").lower())[:48] or "otro"
+
+def _reg_identity(x):
+    return _reg_family(x)+"|"+re.sub(r"\s+","",str(x.get("num","")).lower())
+
+def _bora_label(a):
+    label=clean(a.get_text(" ",strip=True))
+    if len(label)<18 and a.parent:
+        label=clean(a.parent.get_text(" ",strip=True))
+    return label[:1200]
+
+def _bora_issuer(label):
+    m=re.search(r"(Resoluci[oó]n General|Resoluci[oó]n|Decreto|Disposici[oó]n|Decisi[oó]n Administrativa)\s+\d+\s*/\s*\d{2,4}",label,re.I)
+    if not m: return ""
+    return clean(label[:m.start()].strip(" -–—"))[:180]
+
+def _bora_title(label):
+    parts=re.split(r"\s+-\s+",label,maxsplit=1)
+    if len(parts)>1 and len(parts[1].strip())>3:
+        return clean(parts[1])[:260]
+    m=re.search(r"(?:RESOL|RESFC|DECTO|DI|DA)-?\d{4}[^\s]*",label,re.I)
+    if m and clean(label[m.end():].strip(" -–—")):
+        return clean(label[m.end():].strip(" -–—"))[:260]
+    return clean(label)[:260]
+
+def _parse_bora_detail(url,day,label):
+    raw=fetch(url,timeout=25)
+    soup=BeautifulSoup(raw,"html.parser")
+    article=soup.find("article")
+    body=clean(article.get_text(" ",strip=True)) if article else clean(soup.get_text(" ",strip=True))
+    title=_bora_title(label)
+    issuer=_bora_issuer(label)
+    text=" ".join((label,issuer,title,body[:10000]))
+    if not _reg_relevant(text): return None
+    cats=_reg_categories(text)
+    primary=cats[0] if cats else "Mercado"
+    tags=list(dict.fromkeys(cats))
+    low=text.lower()
+    if "bagsa" in low or "subdistrib" in low: tags.append("BAGSA")
+    num=_reg_number(label)
+    if not num or num=="Norma": return None
+    desc=title
+    if not desc or desc==label[:260]:
+        desc=body[:380]
+    return {
+      "num":num,"category":primary,"title":title or num,
+      "publishedAt":iso(datetime.combine(day,datetime.min.time(),tzinfo=ART)),
+      "validatedAt":iso(),"sourceType":"OFFICIAL","status":"updated",
+      "desc":clean(desc)[:420],"tags":list(dict.fromkeys(tags)),
+      "url":url,"issuer":issuer or "Organismo oficial","auto":True
+    }
+
+def _scan_bora_dates(start_day,end_day):
+    days=[]; cur=start_day
+    while cur<=end_day:
+        if cur.weekday()<5: days.append(cur)
+        cur+=timedelta(days=1)
+    pages=[]; errors=0
+    def load(day):
+        url="https://www.boletinoficial.gob.ar/seccion/primera/"+day.strftime("%Y%m%d")
+        try: return day,fetch(url,timeout=20),None
+        except Exception as e: return day,None,e
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs=[ex.submit(load,d) for d in days]
+        for fut in as_completed(futs):
+            day,raw,err=fut.result()
+            if raw is not None: pages.append((day,raw))
+            else: errors+=1
+    candidates={}
+    for day,raw in pages:
+        soup=BeautifulSoup(raw,"html.parser")
+        for a in soup.find_all("a",href=True):
+            href=a.get("href","")
+            if "/detalleAviso/primera/" not in href: continue
+            label=_bora_label(a)
+            low=label.lower()
+            if not any(k in low for k in BORA_DISCOVERY_SIGNALS): continue
+            url=urllib.parse.urljoin("https://www.boletinoficial.gob.ar",href)
+            candidates[url]={"url":url,"day":day,"label":label}
+    return candidates,len(pages),errors
+
 def update_regulations(d):
-    existing={}
+    existing=[]
     for x in d.get("regulations",[]):
         try: dt=datetime.fromisoformat(x.get("publishedAt",""))
         except Exception: dt=None
-        if dt and dt>=REGULATION_START and x.get("url"):
-            existing[_norm_url(x["url"])]=x
-    discovered,successful=_discover_regulation_urls()
-    added=0; refreshed=0
-    for url,hint in discovered.items():
-        if url in existing:
-            if not existing[url].get("issuer"):
+        if dt and dt>=REGULATION_START:
+            if not x.get("issuer") and "/normativa/nacional/" in str(x.get("url","")):
                 try:
-                    parsed=_parse_regulation(url,hint)
-                except Exception as e:
-                    print("NORM REFRESH",url,e); parsed=None
-                if parsed:
-                    keep=existing[url]
-                    parsed["desc"]=keep.get("desc") or parsed.get("desc")
-                    parsed["status"]=keep.get("status","unchanged")
-                    existing[url]={**keep,**parsed}
-            existing[url]["validatedAt"]=iso()
-            existing[url]["auto"]=True
+                    p=_parse_regulation(_norm_url(x["url"]),{"snippet":x.get("desc","")})
+                except Exception: p=None
+                if p: x={**x,"issuer":p.get("issuer",x.get("issuer"))}
+            existing.append(x)
+    state=d.setdefault("regulationScan",{})
+    try:
+        last=datetime.strptime(state.get("lastScannedDate",""),"%Y-%m-%d").date()
+    except Exception:
+        last=None
+    start_day=REGULATION_START.date() if not last else max(REGULATION_START.date(),last-timedelta(days=2))
+    end_day=now().date()
+    candidates,pages_ok,pages_err=_scan_bora_dates(start_day,end_day)
+    known={_reg_identity(x):x for x in existing if x.get("num")}
+    added=0; refreshed=0
+    to_fetch=[]
+    for entry in candidates.values():
+        num=_reg_number(entry["label"])
+        probe={"num":num,"issuer":_bora_issuer(entry["label"]),"title":_bora_title(entry["label"]),"desc":entry["label"]}
+        key=_reg_identity(probe)
+        if key in known:
+            known[key]["validatedAt"]=iso(); known[key]["auto"]=True
+            if not known[key].get("issuer"): known[key]["issuer"]=probe.get("issuer")
             refreshed+=1
-            continue
-        try:
-            item=_parse_regulation(url,hint)
+        else:
+            to_fetch.append(entry)
+    def parse_entry(entry):
+        try: return _parse_bora_detail(entry["url"],entry["day"],entry["label"])
         except Exception as e:
-            print("NORM DETAIL",url,e); item=None
-        if item:
-            existing[url]=item; added+=1
-    items=list(existing.values())
+            print("BORA DETAIL",entry["url"],e); return None
+    if to_fetch:
+        with ThreadPoolExecutor(max_workers=6) as ex:
+            futs=[ex.submit(parse_entry,e) for e in to_fetch]
+            for fut in as_completed(futs):
+                item=fut.result()
+                if not item: continue
+                key=_reg_identity(item)
+                if key in known:
+                    refreshed+=1
+                    continue
+                known[key]=item; added+=1
+    items=list(known.values())
     items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
     d["regulations"]=items[:500]
+    if pages_ok:
+        state.update(lastScannedDate=end_day.isoformat(),source="Boletín Oficial de la República Argentina · Primera Sección",
+                     lastRun=iso(),pagesOk=pages_ok,pagesError=pages_err,candidates=len(candidates))
     d["regulationCriteria"]={
       "title":"Criterio GasData",
-      "text":"Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se actualiza cada 3 horas y clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. La selección se basa en términos y contenido del acto oficial; la fuente original prevalece.",
+      "text":"Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
       "updatedAt":iso()
     }
-    src=next((x for x in d.get("sources",[]) if x.get("name")=="Argentina.gob.ar · Normativa gas"),None)
+    src=next((x for x in d.get("sources",[]) if x.get("name")=="Boletín Oficial Nación · Normativa gas"),None)
     payload={
-      "name":"Argentina.gob.ar · Normativa gas","type":"Oficial",
-      "content":"Normativa nacional relevante para gas desde 01/01/2026",
-      "cadence":"Cada 3 h","status":"ACTIVA" if successful else "REVISAR",
-      "url":"https://www.argentina.gob.ar/normativa","validatedAt":iso(),
-      "lastResult":f"{len(items)} normas en listado · {added} nuevas · {refreshed} revalidadas"
+      "name":"Boletín Oficial Nación · Normativa gas","type":"Oficial",
+      "content":"Primera Sección · normativa gas desde 01/01/2026",
+      "cadence":"Cada 3 h","status":"ACTIVA" if pages_ok else "REVISAR",
+      "url":"https://www.boletinoficial.gob.ar/seccion/primera","validatedAt":iso(),
+      "lastResult":f"{len(items)} normas · {added} nuevas · {refreshed} revalidadas · {pages_ok} ediciones consultadas"
     }
     if src: src.update(payload)
     else: d.setdefault("sources",[]).append(payload)
+    oldsrc=next((x for x in d.get("sources",[]) if x.get("name")=="Argentina.gob.ar · Normativa gas"),None)
+    if oldsrc: oldsrc["status"]="REFERENCIA"
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Normativa"),None)
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
-                 status="updated" if added else ("unchanged" if successful else "pending"),
-                 note=f"Consulta automática desde 01/01/2026 · {len(items)} normas · {added} nuevas en esta ejecución.")
+                 status="updated" if added else ("unchanged" if pages_ok else "pending"),
+                 note=f"Boletín Oficial desde 01/01/2026 · {len(items)} normas · {added} nuevas en esta ejecución.")
 
 
 def validate_pages(d):
