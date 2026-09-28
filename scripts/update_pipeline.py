@@ -1,4 +1,4 @@
-# Pipeline v1.5
+# Pipeline v1.6
 from __future__ import annotations
 import json, re, html, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.5 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.6 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -266,6 +266,54 @@ def system_market(d):
         except Exception as e:
             print("SYSTEM",kid,e)
 
+
+def transport_capacity(d):
+    out=[]
+    # Official open contests
+    en_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php"
+    try:
+        txt=clean(fetch(en_url).decode("utf-8","ignore"))
+        for company,num in re.findall(r"Concurso abierto\s+(TGN|TGS)\s+N[°º.]?\s*(\d+/\d{4})",txt,re.I):
+            out.append({
+              "id":("open_"+company+"_"+num).lower().replace("/","_"),
+              "kind":"CONCURSO ABIERTO","company":company.upper(),
+              "title":f"Concurso Abierto {company.upper()} N.º {num}",
+              "volume":"Capacidad firme","period":"Vigente","published":str(now().year),
+              "status":"VIGENTE","source":"ENReGE · Concursos y reventas","url":en_url,
+              "note":"Concurso vigente detectado en la página oficial."
+            })
+    except Exception as e:
+        print("CAPACITY ENREGE",e)
+
+    # MEGSA firm transport resale board
+    meg_url="https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2"
+    try:
+        txt=clean(fetch(meg_url).decode("utf-8","ignore"))
+        m=re.search(r"(T\d+)\s+TRANSPORTADORA DE GAS DEL (SUR|NORTE) S\.A\.\s+([\d.]+)\s+(\d{2}/\d{2}/\d{4})\s+(\d{2}/\d{2}/\d{4})\s+(\d{2}/\d{2}/\d{4})\s+(\d{2}/\d{2}/\d{4})(?:\s+(DESIERTA))?",txt,re.I)
+        if m:
+            code,side,vol,dfrom,dto,pub,act,des=m.groups()
+            comp="TGS" if side.upper()=="SUR" else "TGN"
+            out.append({
+              "id":"megsa_"+code.lower(),"kind":"REVENTA TF","company":comp,
+              "title":f"Oferta {code}","volume":vol+" m³/d",
+              "period":dfrom+"–"+dto,"published":pub,
+              "status":"DESIERTA" if des else "ACTO "+act[:5],
+              "source":"MEGSA · Reventa de transporte firme","url":meg_url,
+              "note":"Última oferta visible en la pantalla pública de reventas."
+            })
+    except Exception as e:
+        print("CAPACITY MEGSA",e)
+
+    if out:
+        d["transportCapacity"]=out
+    meta=d.setdefault("transportCapacityMeta",{})
+    meta.update(validatedAt=iso(),cadence="Cada 3 horas",
+                note="GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte.")
+    u=next((x for x in d.get("updates",[]) if x.get("name")=="Capacidad de transporte"),None)
+    if u:
+        u.update(last=iso(),next=iso(now()+timedelta(hours=3)),status="updated" if out else "unchanged",
+                 note="ENReGE concursos abiertos + MEGSA reventas de transporte firme.")
+
 def validate_pages(d):
     checks=[
       ("Normativa","https://www.enargas.gob.ar/secciones/normativa/resoluciones.php",3),
@@ -302,9 +350,10 @@ def main():
     production(d)
     demand_priority(d)
     system_market(d)
+    transport_capacity(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.5.0"
+    d["meta"]["version"]="1.6.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
