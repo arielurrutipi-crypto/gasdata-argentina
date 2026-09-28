@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.3.0",
-    "updatedAt": "2026-09-28T10:51-03:00",
+    "version": "1.4.0",
+    "updatedAt": "2026-09-28T10:54:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -54,17 +54,49 @@
     {
       "id": "demand_priority",
       "label": "Proyección demanda prioritaria",
-      "value": "47,8679",
+      "value": "42,2263",
       "unit": "MMm³/d",
-      "reference": "Mié 30/09/2026 · PROYECCIÓN",
-      "validatedAt": "2026-09-28T10:50-03:00",
+      "reference": "28/09/2026 · PROYECCIÓN",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
       "nextValidation": "2026-09-29T10:50-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
       "source": "ENReGE · Estimación de la Demanda Prioritaria",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php",
-      "note": "Último consumo real de la tabla: Sáb 26/09/2026 = 29,8623 MMm³/d. Las columnas posteriores están identificadas por ENReGE como consumo estimado."
+      "note": "Ventana de 5 días publicada por ENReGE. (1) consumo real; (2) consumo estimado.",
+      "series": [
+        {
+          "date": "24/09",
+          "fullDate": "24/09/2026",
+          "value": "42,7441",
+          "kind": "REAL"
+        },
+        {
+          "date": "25/09",
+          "fullDate": "25/09/2026",
+          "value": "41,5507",
+          "kind": "PROY."
+        },
+        {
+          "date": "26/09",
+          "fullDate": "26/09/2026",
+          "value": "38,9697",
+          "kind": "PROY."
+        },
+        {
+          "date": "27/09",
+          "fullDate": "27/09/2026",
+          "value": "36,0559",
+          "kind": "PROY."
+        },
+        {
+          "date": "28/09",
+          "fullDate": "28/09/2026",
+          "value": "42,2263",
+          "kind": "PROY."
+        }
+      ]
     }
   ],
   "news": [
@@ -1222,7 +1254,8 @@
       "source": "Secretaría de Energía · Res. 23/2026",
       "sourceUrl": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-23-2026-422817/texto",
       "note": "Precio Anual Uniforme trasladable a usuarios finales; no es necesariamente igual al PIST final.",
-      "details": "BAGSA refs.: Naturgy BA Norte 3,790 · Litoral BA 3,855 · Camuzzi Pampeana BA 3,846 / Bahía Blanca 3,860 · Camuzzi Sur BA Sur 3,757"
+      "details": "BAGSA refs.: Naturgy BA Norte 3,790 · Litoral BA 3,855 · Camuzzi Pampeana BA 3,846 / Bahía Blanca 3,860 · Camuzzi Sur BA Sur 3,757",
+      "group": "Gas Argentina"
     },
     {
       "id": "megsa_pist",
@@ -1235,7 +1268,8 @@
       "source": "Subasta interrumpible MEGSA/CAMMESA",
       "sourceUrl": "https://www.lenergygroup.com/megsa-cammesa-34250-mmm3-d-para-usinas-en-la-2q-de-setiembre/",
       "note": "Precio promedio ponderado. Rango ofertado PIST: 2,91–4,13 USD/MMBtu.",
-      "details": "Puesto en GBA: PPP 4,63 USD/MMBtu; rango 3,42–4,92."
+      "details": "Puesto en GBA: PPP 4,63 USD/MMBtu; rango 3,42–4,92.",
+      "group": "Gas Argentina"
     },
     {
       "id": "free_contracts",
@@ -1248,25 +1282,189 @@
       "source": "Referencia observable MEGSA/CAMMESA",
       "sourceUrl": "https://www.lenergygroup.com/megsa-cammesa-34250-mmm3-d-para-usinas-en-la-2q-de-setiembre/",
       "note": "No existe una cotización pública única. El precio real depende de firme/interrumpible, plazo, volumen, punto de entrega, estacionalidad y transporte.",
-      "details": "Usar como orden de magnitud, no como precio contractual."
+      "details": "Usar como orden de magnitud, no como precio contractual.",
+      "group": "Gas Argentina"
     },
     {
-      "id": "glp_ppe",
-      "label": "GLP · Paridad de Exportación (PPE)",
-      "value": "—",
-      "unit": "$/t",
-      "reference": "Valor oficial corriente · conector pendiente",
-      "validatedAt": "2026-09-28T11:00:00-03:00",
-      "statusText": "METODOLOGÍA",
-      "source": "Secretaría de Energía · Res. 126/2026",
-      "sourceUrl": "https://www.argentina.gob.ar/normativa/nacional/norma-426357/texto",
-      "note": "Para propano indiluido por redes se traslada el 60% del PPE vigente al día 20 del mes anterior.",
-      "details": "El dataset público histórico de PPE informa actualización mensual, pero su recurso abierto no expone de forma confiable el valor corriente 2026; no mostramos un número hasta validarlo."
+      "id": "glp_ppe_arg",
+      "group": "GLP",
+      "label": "Argentina · PPE butano",
+      "value": "≈370–380",
+      "unit": "USD/t",
+      "reference": "Agosto 2025 · último monto puntual encontrado",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "HISTÓRICO",
+      "source": "América GLP · cita Secretaría de Energía",
+      "sourceUrl": "https://www.americaglp.com/uncategorised/argentina-con-un-precio-de-la-tn-de-glp-acorde-al-valor-internacional-624",
+      "note": "La publicación informa PPE de butano de ARS 515.000/t y lo ubica en ≈USD 370–380/t; indica que propano era algo menor, sin monto exacto.",
+      "details": "No se presenta como PPE vigente 2026. Para propano por redes, la Res. 126/2026 dispone trasladar 60% del PPE vigente al día 20 del mes anterior."
+    },
+    {
+      "id": "mb_propane",
+      "group": "GLP",
+      "label": "Mont Belvieu · propano",
+      "value": "0,864",
+      "unit": "USD/gal",
+      "reference": "22/09/2026",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "SPOT",
+      "source": "U.S. EIA",
+      "sourceUrl": "https://www.eia.gov/dnav/pet/hist/EER_EPLLPA_PF4_Y44MB_DPGD.htm",
+      "note": "Referencia spot FOB Texas.",
+      "details": "Equivale aproximadamente a USD 463/t usando una densidad indicativa de propano de 0,493 kg/L; conversión GasData."
+    },
+    {
+      "id": "aramco_lpg",
+      "group": "GLP",
+      "label": "Saudi Aramco CP",
+      "value": "625 / 660",
+      "unit": "USD/t",
+      "reference": "Septiembre 2026 · propano / butano",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "BENCHMARK",
+      "source": "Saudi Aramco CP · reportado por OPIS",
+      "sourceUrl": "https://www.opis.com/resources/energy-market-news-from-opis/saudi-aramco-raises-september-lpg-cp-amid-renewed-us-iran-strikes/",
+      "note": "Contract Price de referencia para cargas de Medio Oriente hacia Asia.",
+      "details": "Propano 625 USD/t; butano 660 USD/t."
+    },
+    {
+      "id": "sonatrach_lpg",
+      "group": "GLP",
+      "label": "Sonatrach OSP",
+      "value": "560 / 610",
+      "unit": "USD/t",
+      "reference": "Septiembre 2026 · propano / butano",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "BENCHMARK",
+      "source": "Sonatrach · reportado por Reuters",
+      "sourceUrl": "https://es.finance.yahoo.com/noticias/saudi-aramco-sonatrach-suben-precios-112608134.html",
+      "note": "Referencia de venta para Mediterráneo/Mar Negro.",
+      "details": "Propano 560 USD/t; butano 610 USD/t."
+    },
+    {
+      "id": "jkm",
+      "group": "GNL / internacional",
+      "label": "JKM LNG · Asia",
+      "value": "25,73",
+      "unit": "USD/MMBtu",
+      "reference": "Cierre 23/09/2026 · M+1",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "BENCHMARK LNG",
+      "source": "JKM · Catalyst market report",
+      "sourceUrl": "https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-24-september-2026/",
+      "note": "Referencia de GNL spot para el mercado del noreste asiático.",
+      "details": "No equivale a un netback argentino: faltan licuefacción, flete, pérdidas, financiamiento y otros costos."
+    },
+    {
+      "id": "ttf",
+      "group": "GNL / internacional",
+      "label": "TTF · Europa",
+      "value": "24,34",
+      "unit": "USD/MMBtu",
+      "reference": "23/09/2026 · spot",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "BENCHMARK GAS",
+      "source": "TTF · Catalyst market report",
+      "sourceUrl": "https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-24-september-2026/",
+      "note": "Benchmark europeo de gas; útil para comparar la señal de destino del GNL.",
+      "details": "No es un precio FOB de GNL."
+    },
+    {
+      "id": "henry_hub",
+      "group": "GNL / internacional",
+      "label": "Henry Hub · EE.UU.",
+      "value": "2,90",
+      "unit": "USD/MMBtu",
+      "reference": "22/09/2026 · spot",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "SPOT",
+      "source": "U.S. EIA",
+      "sourceUrl": "https://www.eia.gov/dnav/ng/NG_PRI_FUT_S1_D.htm",
+      "note": "Precio spot del gas en Henry Hub, Louisiana.",
+      "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado."
     }
   ],
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Selección no exhaustiva de normas oficiales que impactan materialmente en gas natural/GLP: subdistribución, transporte y distribución, tarifas/precios/subsidios, comercialización/mercado, infraestructura y reglas técnicas/operativas. Se priorizan los últimos 90 días y se mantienen normas anteriores cuando siguen siendo referencia relevante. Las resoluciones puramente tarifarias también se ordenan en la solapa Tarifas.",
     "updatedAt": "2026-09-28T11:00:00-03:00"
+  },
+  "systemKpis": [
+    {
+      "id": "linepack",
+      "label": "Linepack · último gráfico",
+      "value": "339,9",
+      "unit": "MMm³ TGN",
+      "reference": "27/08/2026 · real",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "OFICIAL / PARCIAL",
+      "source": "ENReGE · Evolución diaria Linepack",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=5",
+      "note": "El gráfico etiqueta TGN en 339,9 MMm³. TGS aparece gráficamente en torno de 220 MMm³; el total del sistema ronda 560 MMm³, pero se mantiene como aproximación visual."
+    },
+    {
+      "id": "injection",
+      "label": "Inyección nacional · reporte",
+      "value": "26/08",
+      "unit": "2026",
+      "reference": "Última publicación visible ENReGE",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "REPORTE",
+      "source": "ENReGE · Inyección por gasoducto",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=6",
+      "note": "Apertura diaria por gasoducto. El tablero marca la fecha del último reporte disponible; la extracción numérica consolidada queda separada hasta validar el PDF."
+    },
+    {
+      "id": "imports_month",
+      "label": "Importaciones de gas",
+      "value": "8,94",
+      "unit": "MMm³/d",
+      "reference": "Promedio · Julio 2026",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "ENReGE · Importaciones/Exportaciones mensuales",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
+      "note": "Promedio mensual total de importaciones."
+    },
+    {
+      "id": "lng_escobar",
+      "label": "Importación GNL · Escobar",
+      "value": "7,79",
+      "unit": "MMm³/d",
+      "reference": "Promedio · Julio 2026",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "ENReGE · Importaciones/Exportaciones mensuales",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
+      "note": "Componente GNL de las importaciones mensuales."
+    },
+    {
+      "id": "exports_month",
+      "label": "Exportaciones de gas",
+      "value": "6,67",
+      "unit": "MMm³/d",
+      "reference": "Promedio · Julio 2026",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "ENReGE · Importaciones/Exportaciones mensuales",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
+      "note": "Promedio mensual total de exportaciones."
+    },
+    {
+      "id": "exports_chile",
+      "label": "Exportaciones a Chile",
+      "value": "6,3",
+      "unit": "MMm³/d",
+      "reference": "Promedio · Julio 2026",
+      "validatedAt": "2026-09-28T10:54:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "ENReGE · Importaciones/Exportaciones mensuales",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
+      "note": "Chile concentra la mayor parte de las exportaciones del mes."
+    }
+  ],
+  "marketNotes": {
+    "glp": "Las referencias GLP no son perfectamente comparables: PPE Argentina, Mont Belvieu spot y CP/OSP internacionales tienen bases logísticas y comerciales distintas. Se muestran para orden de magnitud.",
+    "lng": "JKM y TTF reflejan mercados de destino; Henry Hub es gas de origen. La diferencia entre ellos no debe leerse como margen exportador argentino."
   }
 }
