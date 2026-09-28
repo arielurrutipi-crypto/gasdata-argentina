@@ -273,7 +273,7 @@ def transport_capacity(d):
     en_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php"
     try:
         txt=clean(fetch(en_url).decode("utf-8","ignore"))
-        for company,num in re.findall(r"Concurso abierto\s+(TGN|TGS)\s+N[°º.]?\s*(\d+/\d{4})",txt,re.I):
+        for company,num in re.findall(r"Concurso abierto\s+(TGN|TGS).*?(\d+/\d{4})",txt,re.I):
             out.append({
               "id":("open_"+company+"_"+num).lower().replace("/","_"),
               "kind":"CONCURSO ABIERTO","company":company.upper(),
