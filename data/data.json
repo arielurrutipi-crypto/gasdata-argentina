@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "updatedAt": "2026-09-28T09:45:00-03:00",
+    "timezone": "ART (UTC−3)",
+    "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
+  },
+  "kpis": [
+    {
+      "id": "neuquen_gas",
+      "label": "Producción de gas · Neuquén",
+      "value": "115,47",
+      "unit": "MMm³/d",
+      "reference": "Agosto 2026",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "nextValidation": "2026-10-13T09:45:00-03:00",
+      "status": "unchanged",
+      "statusText": "SIN CAMBIOS",
+      "sourceType": "PRESS",
+      "source": "Referencia provincial difundida en septiembre 2026"
+    },
+    {
+      "id": "neuquen_nonc",
+      "label": "Gas no convencional · Neuquén",
+      "value": "105,92",
+      "unit": "MMm³/d",
+      "reference": "Agosto 2026",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "nextValidation": "2026-10-13T09:45:00-03:00",
+      "status": "unchanged",
+      "statusText": "SIN CAMBIOS",
+      "sourceType": "PRESS",
+      "source": "Referencia provincial difundida en septiembre 2026"
+    },
+    {
+      "id": "national_prod",
+      "label": "Producción nacional",
+      "value": "—",
+      "unit": "",
+      "reference": "Conector oficial inicializando",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "nextValidation": "2026-10-13T09:45:00-03:00",
+      "status": "pending",
+      "statusText": "PENDIENTE",
+      "sourceType": "OFFICIAL",
+      "source": "Secretaría de Energía · API Series de Tiempo"
+    },
+    {
+      "id": "system_daily",
+      "label": "Sistema gasífero diario",
+      "value": "—",
+      "unit": "",
+      "reference": "Conector ENReGE inicializando",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "nextValidation": "2026-09-29T09:45:00-03:00",
+      "status": "pending",
+      "statusText": "PENDIENTE",
+      "sourceType": "OFFICIAL",
+      "source": "ENReGE"
+    }
+  ],
+  "news": [
+    {
+      "source": "EconoJournal",
+      "sourceType": "PRESS",
+      "publishedAt": "2026-09-27T09:00:00-03:00",
+      "feedValidatedAt": "2026-09-28T09:45:00-03:00",
+      "title": "Chevron apuesta por El Trapial para triplicar su producción en Vaca Muerta",
+      "desc": "Planes de desarrollo en El Trapial y expansión productiva de largo plazo.",
+      "tags": [
+        "Vaca Muerta",
+        "Producción"
+      ],
+      "url": "https://econojournal.com.ar/oilgas/chevron-apuesta-por-el-trapial-para-triplicar-su-produccion-en-vaca-muerta/"
+    },
+    {
+      "source": "EconoJournal",
+      "sourceType": "PRESS",
+      "publishedAt": "2026-09-24T09:00:00-03:00",
+      "feedValidatedAt": "2026-09-28T09:45:00-03:00",
+      "title": "Argentina LNG: propuesta de financiamiento vinculada al Exim Bank",
+      "desc": "Cobertura sobre financiamiento asociado al desarrollo de Argentina LNG.",
+      "tags": [
+        "GNL",
+        "YPF"
+      ],
+      "url": "https://econojournal.com.ar/oilgas/vaca-muerta-mcdermott-y-pumpco-apuntalaran-el-credito-para-argentina-lng/"
+    },
+    {
+      "source": "Mejor Energía",
+      "sourceType": "PRESS",
+      "publishedAt": "2026-09-17T09:00:00-03:00",
+      "feedValidatedAt": "2026-09-28T09:45:00-03:00",
+      "title": "TGN proyecta ampliaciones desde Vaca Muerta",
+      "desc": "Proyecto informado para aumentar capacidad de transporte desde la Cuenca Neuquina.",
+      "tags": [
+        "TGN",
+        "Transporte"
+      ],
+      "url": "https://www.mejorenergia.com.ar/"
+    }
+  ],
+  "regulations": [
+    {
+      "num": "Resolución 575/2026",
+      "title": "Camuzzi Gas del Sur — consulta pública sobre cargo específico",
+      "publishedAt": "2026-09-08T00:00:00-03:00",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Consulta pública vinculada a obras del Sistema Cordillerano-Patagónico.",
+      "tags": [
+        "Camuzzi",
+        "Tarifas"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429829/texto"
+    },
+    {
+      "num": "Resolución 552/2026",
+      "title": "Compendio de Instrucciones para la Subdistribución",
+      "publishedAt": "2026-09-03T00:00:00-03:00",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Instancia participativa vinculada a autorizaciones y actividad de subdistribuidores.",
+      "tags": [
+        "Subdistribución",
+        "BAGSA"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346856/20260903"
+    },
+    {
+      "num": "Resolución 525/2026",
+      "title": "TGS — cuadros tarifarios",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios vigentes desde septiembre de 2026.",
+      "tags": [
+        "TGS",
+        "Tarifas"
+      ],
+      "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+    }
+  ],
+  "tariffs": [
+    {
+      "name": "TGN",
+      "product": "GN",
+      "res": "524/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Transporte",
+      "bagsa": false,
+      "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+    },
+    {
+      "name": "TGS",
+      "product": "GN",
+      "res": "525/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Transporte",
+      "bagsa": false,
+      "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+    },
+    {
+      "name": "Naturgy BAN",
+      "product": "GN / GLP",
+      "res": "539/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Distribución · ref. BAGSA",
+      "bagsa": true,
+      "url": "https://www.bagsa.com.ar/index.php/tarifas/"
+    },
+    {
+      "name": "Camuzzi Gas Pampeana",
+      "product": "GN / GLP",
+      "res": "543/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Distribución · ref. BAGSA",
+      "bagsa": true,
+      "url": "https://www.bagsa.com.ar/index.php/tarifas/"
+    },
+    {
+      "name": "Litoral Gas",
+      "product": "GN / GLP",
+      "res": "537/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Distribución · ref. BAGSA",
+      "bagsa": true,
+      "url": "https://www.bagsa.com.ar/index.php/tarifas/"
+    },
+    {
+      "name": "Camuzzi Gas del Sur",
+      "product": "GN / GLP",
+      "res": "542/2026",
+      "validFrom": "2026-09-01",
+      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "scope": "Distribución · ref. BAGSA",
+      "bagsa": true,
+      "url": "https://www.bagsa.com.ar/index.php/tarifas/"
+    }
+  ],
+  "updates": [
+    {
+      "name": "Noticias",
+      "cadence": "Cada 60 min",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": "2026-09-28T10:45:00-03:00",
+      "status": "updated",
+      "note": "RSS de medios especializados; nuevas publicaciones resaltadas durante 48 h."
+    },
+    {
+      "name": "Normativa",
+      "cadence": "Cada 3 h",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": "2026-09-28T12:45:00-03:00",
+      "status": "unchanged",
+      "note": "Fuente oficial ENReGE / Boletín Oficial."
+    },
+    {
+      "name": "Tarifas ENReGE/BAGSA",
+      "cadence": "Diaria",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": "2026-09-29T09:45:00-03:00",
+      "status": "unchanged",
+      "note": "GN y GLP; BAGSA tratado por separado."
+    },
+    {
+      "name": "Producción",
+      "cadence": "Cada 15 días",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": "2026-10-13T09:45:00-03:00",
+      "status": "unchanged",
+      "note": "Si no cambia la fuente, conserva el valor y renueva validación."
+    },
+    {
+      "name": "Datos operativos",
+      "cadence": "Diaria",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": "2026-09-29T09:45:00-03:00",
+      "status": "pending",
+      "note": "Fuente ENReGE."
+    },
+    {
+      "name": "Radar X",
+      "cadence": "A demanda",
+      "last": "2026-09-28T09:45:00-03:00",
+      "next": null,
+      "status": "updated",
+      "note": "Consulta directa en X; API no requerida en el MVP."
+    }
+  ],
+  "xTerms": [
+    "BAGSA",
+    "\"Buenos Aires Gas\"",
+    "ENReGE"
+  ]
+}
