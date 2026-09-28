@@ -103,6 +103,7 @@ def update_news(d):
             print("HTML NEWS",source,e)
 
     existing={(x.get("url") or "").rstrip("/"):x for x in d.get("news",[]) if x.get("url")}
+    new_keys={(x.get("url") or "").rstrip("/") for x in fresh if x.get("url") and (x.get("url") or "").rstrip("/") not in existing}
     prepared=[]
     for x in fresh:
         key=(x.get("url") or "").rstrip("/")
@@ -121,8 +122,8 @@ def update_news(d):
     u=next((x for x in d["updates"] if x["name"]=="Noticias"),None)
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=1)),
-                 status="updated" if fresh else "unchanged",
-                 note="Fuentes consultadas: "+(", ".join(sorted(set(ok_sources))) if ok_sources else "ninguna disponible"))
+                 status="updated" if new_keys else "unchanged",
+                 note=(f"{len(new_keys)} noticias nuevas · " if new_keys else "Sin noticias nuevas · ")+"Fuentes consultadas: "+(", ".join(sorted(set(ok_sources))) if ok_sources else "ninguna disponible"))
 
 def official_series(series_id):
     qs=urllib.parse.urlencode({"ids":series_id,"last":1,"metadata":"full"})
@@ -718,26 +719,60 @@ def update_regulations(d):
                  note=f"Boletín Oficial desde 01/01/2026 · {len(items)} normas · {added} nuevas en esta ejecución.")
 
 
+def _update_due(d,name,hours):
+    u=next((x for x in d.get("updates",[]) if x.get("name")==name),None)
+    if not u or not u.get("last"): return True
+    try: last=datetime.fromisoformat(u["last"])
+    except Exception: return True
+    return now()>=last+timedelta(hours=hours)
+
 def validate_pages(d):
     checks=[
-      ("Normativa","https://www.enargas.gob.ar/secciones/normativa/resoluciones.php",3),
       ("Tarifas ENReGE/BAGSA","https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",24),
       ("Datos operativos","https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php",24)
     ]
     for name,url,h in checks:
+        if not _update_due(d,name,h): continue
         try:
             fetch(url); ok=True
         except Exception as e:
             print(name,e); ok=False
-        u=next((x for x in d["updates"] if x["name"]==name),None)
-        if u and ok: u.update(last=iso(),next=iso(now()+timedelta(hours=h)),status="unchanged")
-    try:
-        fetch("https://www.bagsa.com.ar/index.php/tarifas/")
-        t=iso()
-        for x in d.get("tariffs",[]): x["validatedAt"]=t
-    except Exception as e:
-        print("BAGSA",e)
+        u=next((x for x in d.get("updates",[]) if x.get("name")==name),None)
+        if u:
+            u.update(last=iso(),next=iso(now()+timedelta(hours=h)),
+                     status="unchanged" if ok else "pending")
+    # Reachability check only: do not stamp every tariff row as newly validated.
+    if _update_due(d,"Tarifas ENReGE/BAGSA",24):
+        try: fetch("https://www.bagsa.com.ar/index.php/tarifas/")
+        except Exception as e: print("BAGSA",e)
 
+def sync_tariffs_from_regulations(d):
+    regs=d.get("regulations",[])
+    mapping=(
+      ("TGN",("tgn","transportadora de gas del norte")),
+      ("TGS",("tgs","transportadora de gas del sur")),
+      ("Naturgy BAN",("naturgy","gas natural ban")),
+      ("Camuzzi Gas Pampeana",("camuzzi gas pampeana",)),
+      ("Camuzzi Gas del Sur",("camuzzi gas del sur",)),
+      ("Litoral Gas",("litoral gas",))
+    )
+    for row in d.get("tariffs",[]):
+        names=next((terms for label,terms in mapping if label==row.get("name")),())
+        if not names: continue
+        candidates=[]
+        for r in regs:
+            hay=(str(r.get("title",""))+" "+str(r.get("desc",""))+" "+str(r.get("issuer",""))).lower()
+            cats=[str(r.get("category","")).lower()]+[str(t).lower() for t in r.get("tags",[])]
+            if "tarifas" not in cats and "tarifa" not in hay: continue
+            if any(n in hay for n in names): candidates.append(r)
+        if not candidates: continue
+        latest=max(candidates,key=lambda x:x.get("publishedAt",""))
+        m=re.search(r"(\d+/\d{4})",str(latest.get("num","")))
+        row["res"]=m.group(1) if m else latest.get("num",row.get("res"))
+        row["validFrom"]=str(latest.get("publishedAt",""))[:10] or row.get("validFrom")
+        row["validatedAt"]=iso()
+        row["url"]=latest.get("url",row.get("url"))
+        row["auto"]=True
 
 def bopba_monitor(d):
     """Check only the Provincial Official Gazette results relevant to GasData."""
@@ -779,6 +814,32 @@ def bopba_monitor(d):
                  status="updated" if any(v["matches"] for v in results.values()) else "unchanged",
                  note="Sección Oficial PBA; sólo búsquedas “gas natural” y “BAGSA”.")
 
+def sync_update_catalog(d):
+    existing={x.get("name"):x for x in d.get("updates",[]) if x.get("name")}
+    specs=[
+      ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."),
+      ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
+      ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Normativa + control de páginas","La resolución/vigencia se sincroniza desde normativa detectada. Las páginas ENReGE/BAGSA se controlan diariamente; no se extraen todavía importes de cuadros PDF."),
+      ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
+      ("Producción por cuenca/provincia","Mensual","Pendiente de automatización","Último consolidado validado","Los valores por cuenca y provincia permanecen en el último mes validado hasta implementar lectura automática del dataset oficial."),
+      ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
+      ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
+      ("Flujos mensuales","Cada 60 min","Monitoreo automático","Detecta el último mes publicado","Detecta un mes nuevo de importaciones/exportaciones; los valores se conservan hasta que el nuevo informe pueda extraerse y validarse."),
+      ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
+      ("Boletín Oficial PBA","Cada 3 h","Monitoreo automático","Búsqueda desde 01/01/2026","Consulta “gas natural” y “BAGSA”. Hoy informa coincidencias y última fecha; no incorpora automáticamente actos provinciales al listado nacional."),
+      ("Precios de mercado","Según fuente","Validación puntual","Último dato validado","Benchmarks y referencias de precios todavía no se refrescan todos automáticamente; cada tarjeta conserva su fecha de validación.")
+    ]
+    out=[]
+    for name,cadence,mode,strategy,scope in specs:
+        old=existing.get(name,{})
+        # Compatibility with the previous generic production update.
+        if name=="Producción nacional" and not old:
+            old=existing.get("Producción",{})
+        item={**old,"name":name,"cadence":cadence,"mode":mode,"strategy":strategy,"scope":scope}
+        out.append(item)
+    d["updates"]=out
+
+
 def refresh_source_status(d):
     for src in d.get("sources",[]):
         try:
@@ -792,14 +853,16 @@ def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
     update_news(d)
     validate_pages(d)
-    update_regulations(d)
+    if _update_due(d,"Normativa",3): update_regulations(d)
+    sync_tariffs_from_regulations(d)
     production(d)
     demand_priority(d)
     system_market(d)
     monthly_flows_status(d)
-    transport_capacity(d)
-    bopba_monitor(d)
+    if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
+    if _update_due(d,"Boletín Oficial PBA",3): bopba_monitor(d)
     refresh_source_status(d)
+    sync_update_catalog(d)
     d["meta"]["updatedAt"]=iso()
     d["meta"]["version"]="2.0.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
