@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.4.0",
-    "updatedAt": "2026-09-28T11:08-03:00",
+    "version": "1.5.0",
+    "updatedAt": "2026-09-28T11:20:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -19,7 +19,8 @@
       "sourceType": "PRESS",
       "source": "Ministerio de Energía de Neuquén · difundido por Más Energía",
       "sourceUrl": "https://mase.lmneuquen.com/produccion/el-dominio-vaca-muerta-neuquen-supero-los-685-mil-barriles-petroleo-n1254626",
-      "note": "Producción de la provincia de Neuquén; no equivale a toda la Cuenca Neuquina."
+      "note": "Producción de la provincia de Neuquén; no equivale a toda la Cuenca Neuquina.",
+      "visualGroup": "gn"
     },
     {
       "id": "neuquen_nonc",
@@ -34,7 +35,8 @@
       "sourceType": "PRESS",
       "source": "Ministerio de Energía de Neuquén · difundido por Más Energía",
       "sourceUrl": "https://mase.lmneuquen.com/produccion/el-dominio-vaca-muerta-neuquen-supero-los-685-mil-barriles-petroleo-n1254626",
-      "note": "Gas no convencional de la provincia de Neuquén."
+      "note": "Gas no convencional de la provincia de Neuquén.",
+      "visualGroup": "gn"
     },
     {
       "id": "national_prod",
@@ -49,7 +51,8 @@
       "sourceType": "OFFICIAL_DERIVED",
       "source": "Secretaría de Energía · difundido por Revista Petroquímica",
       "sourceUrl": "https://revistapetroquimica.com/vaca-muerta-impulso-tres-records-historicos-de-produccion-petrolera/",
-      "note": "Promedio de producción durante el mes; no corresponde a un día puntual."
+      "note": "Promedio de producción durante el mes; no corresponde a un día puntual.",
+      "visualGroup": "gn"
     },
     {
       "id": "demand_priority",
@@ -96,7 +99,8 @@
           "value": "47,8679",
           "kind": "PROY."
         }
-      ]
+      ],
+      "visualGroup": "demand"
     }
   ],
   "news": [
@@ -1296,22 +1300,36 @@
       "statusText": "HISTÓRICO",
       "source": "América GLP · cita Secretaría de Energía",
       "sourceUrl": "https://www.americaglp.com/uncategorised/argentina-con-un-precio-de-la-tn-de-glp-acorde-al-valor-internacional-624",
-      "note": "La publicación informa PPE de butano de ARS 515.000/t y lo ubica en ≈USD 370–380/t; indica que propano era algo menor, sin monto exacto.",
-      "details": "No se presenta como PPE vigente 2026. Para propano por redes, la Res. 126/2026 dispone trasladar 60% del PPE vigente al día 20 del mes anterior."
+      "note": "Último monto puntual localizado: ARS 515.000/t para agosto 2025, equivalente en la propia publicación a ≈USD 370–380/t.",
+      "details": "Argentina calcula PPE separados para propano y butano; esta referencia es histórica y no se presenta como valor vigente 2026."
+    },
+    {
+      "id": "glp_ppe_propano_arg",
+      "group": "GLP",
+      "label": "Argentina · PPE propano implícito",
+      "value": "682.323",
+      "unit": "ARS/t",
+      "reference": "Sep 2026 · derivado de tarifa BAGSA",
+      "validatedAt": "2026-09-28T11:20:00-03:00",
+      "statusText": "DERIVADO",
+      "source": "BAGSA / ENReGE · Res. 539/2026 + Res. 126/2026",
+      "sourceUrl": "https://www.bagsa.com.ar/wp-content/uploads/2026/09/NATURGY-GLP-539-26.pdf",
+      "note": "El cuadro BAGSA reconoce $409.393,62/t como precio de compra. La Res. 126/2026 ordena trasladar 60% del PPE del propano.",
+      "details": "PPE implícito = 409.393,62 / 0,60 = 682.322,70 ARS/t. Es un cálculo GasData, no una cotización publicada directamente."
     },
     {
       "id": "mb_propane",
       "group": "GLP",
       "label": "Mont Belvieu · propano",
-      "value": "0,864",
-      "unit": "USD/gal",
+      "value": "463",
+      "unit": "USD/t",
       "reference": "22/09/2026",
       "validatedAt": "2026-09-28T10:54:00-03:00",
       "statusText": "SPOT",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist/EER_EPLLPA_PF4_Y44MB_DPGD.htm",
-      "note": "Referencia spot FOB Texas.",
-      "details": "Equivale aproximadamente a USD 463/t usando una densidad indicativa de propano de 0,493 kg/L; conversión GasData."
+      "note": "Referencia spot FOB Texas convertida a USD/t.",
+      "details": "Conversión GasData desde 0,864 USD/gal usando densidad indicativa de propano 0,493 kg/L."
     },
     {
       "id": "aramco_lpg",
@@ -1400,7 +1418,8 @@
       "statusText": "OFICIAL / PARCIAL",
       "source": "ENReGE · Evolución diaria Linepack",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=5",
-      "note": "El gráfico etiqueta TGN en 339,9 MMm³. TGS aparece gráficamente en torno de 220 MMm³; el total del sistema ronda 560 MMm³, pero se mantiene como aproximación visual."
+      "note": "El gráfico etiqueta TGN en 339,9 MMm³. TGS aparece gráficamente en torno de 220 MMm³; el total del sistema ronda 560 MMm³, pero se mantiene como aproximación visual.",
+      "visualGroup": "gn"
     },
     {
       "id": "injection",
@@ -1412,7 +1431,8 @@
       "statusText": "REPORTE",
       "source": "ENReGE · Inyección por gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=6",
-      "note": "Apertura diaria por gasoducto. El tablero marca la fecha del último reporte disponible; la extracción numérica consolidada queda separada hasta validar el PDF."
+      "note": "Apertura diaria por gasoducto. El tablero marca la fecha del último reporte disponible; la extracción numérica consolidada queda separada hasta validar el PDF.",
+      "visualGroup": "gn"
     },
     {
       "id": "imports_month",
@@ -1424,7 +1444,8 @@
       "statusText": "OFICIAL",
       "source": "ENReGE · Importaciones/Exportaciones mensuales",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
-      "note": "Promedio mensual total de importaciones."
+      "note": "Promedio mensual total de importaciones.",
+      "visualGroup": "gn"
     },
     {
       "id": "lng_escobar",
@@ -1436,7 +1457,8 @@
       "statusText": "OFICIAL",
       "source": "ENReGE · Importaciones/Exportaciones mensuales",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
-      "note": "Componente GNL de las importaciones mensuales."
+      "note": "Componente GNL de las importaciones mensuales.",
+      "visualGroup": "lng"
     },
     {
       "id": "exports_month",
@@ -1448,7 +1470,8 @@
       "statusText": "OFICIAL",
       "source": "ENReGE · Importaciones/Exportaciones mensuales",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
-      "note": "Promedio mensual total de exportaciones."
+      "note": "Promedio mensual total de exportaciones.",
+      "visualGroup": "gn"
     },
     {
       "id": "exports_chile",
@@ -1460,11 +1483,19 @@
       "statusText": "OFICIAL",
       "source": "ENReGE · Importaciones/Exportaciones mensuales",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
-      "note": "Chile concentra la mayor parte de las exportaciones del mes."
+      "note": "Chile concentra la mayor parte de las exportaciones del mes.",
+      "visualGroup": "gn"
     }
   ],
   "marketNotes": {
-    "glp": "Las referencias GLP no son perfectamente comparables: PPE Argentina, Mont Belvieu spot y CP/OSP internacionales tienen bases logísticas y comerciales distintas. Se muestran para orden de magnitud.",
+    "glp": "Argentina dispone de PPE para propano y butano. Para comparar competitividad se muestran junto a Mont Belvieu y referencias CP/OSP, pero las bases comerciales y logísticas no son idénticas.",
     "lng": "JKM y TTF reflejan mercados de destino; Henry Hub es gas de origen. La diferencia entre ellos no debe leerse como margen exportador argentino."
+  },
+  "productionCoverage": {
+    "provinceTitle": "Producción por provincia",
+    "provinceText": "La Secretaría de Energía publica una serie mensual oficial por provincia. GasData muestra por ahora Neuquén en el panel principal y el desglose nacional por cuenca; la automatización del resto de provincias se incorporará desde este tablero oficial para no mezclar períodos ni fuentes.",
+    "provinceSource": "Secretaría de Energía · Producción de gas promedio diaria por provincia",
+    "provinceUrl": "https://estadisticasenergia.mecon.gob.ar/superset/dashboard/27/?native_filters=%28%29&standalone=true",
+    "basinText": "El desglose por cuenca ya está incorporado abajo. Cuenca y provincia no son equivalentes: una cuenca puede abarcar más de una provincia."
   }
 }
