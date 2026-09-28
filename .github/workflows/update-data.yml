@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Instalar lector PDF
-        run: pip install pypdf
+        run: pip install pypdf beautifulsoup4
       - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
