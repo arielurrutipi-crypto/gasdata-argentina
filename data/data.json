@@ -17,7 +17,8 @@
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "PRESS",
-      "source": "Referencia provincial difundida en septiembre 2026"
+      "source": "Referencia provincial difundida en septiembre 2026",
+      "sourceUrl": "https://www.argentina.gob.ar/economia/energia/hidrocarburos/visualizaciones-tableros"
     },
     {
       "id": "neuquen_nonc",
@@ -30,24 +31,26 @@
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "PRESS",
-      "source": "Referencia provincial difundida en septiembre 2026"
+      "source": "Referencia provincial difundida en septiembre 2026",
+      "sourceUrl": "https://www.argentina.gob.ar/economia/energia/hidrocarburos/visualizaciones-tableros"
     },
     {
       "id": "national_prod",
       "label": "Producción nacional de gas",
-      "value": "132,13",
+      "value": "158,8",
       "unit": "MMm³/d",
-      "reference": "2018-07",
-      "validatedAt": "2026-09-28T10:21-03:00",
-      "nextValidation": "2026-10-13T10:21-03:00",
+      "reference": "Julio 2026",
+      "validatedAt": "2026-09-28T10:30:00-03:00",
+      "nextValidation": "2026-10-13T10:30:00-03:00",
       "status": "updated",
       "statusText": "ACTUALIZADO",
       "sourceType": "OFFICIAL",
-      "source": "Secretaría de Energía · Datos Argentina · PROD_GAS_SESCO_7"
+      "source": "Secretaría de Energía",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/la-produccion-de-petroleo-registro-otro-mes-de-crecimiento-en-julio"
     },
     {
       "id": "demand_priority",
-      "label": "Demanda prioritaria",
+      "label": "Proyección demanda prioritaria",
       "value": "47,8679",
       "unit": "MMm³/d",
       "reference": "30/09/26",
@@ -56,7 +59,8 @@
       "status": "updated",
       "statusText": "ACTUALIZADO",
       "sourceType": "OFFICIAL",
-      "source": "ENReGE · Estimación de la Demanda Prioritaria"
+      "source": "ENReGE · Estimación de la Demanda Prioritaria",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
     }
   ],
   "news": [
