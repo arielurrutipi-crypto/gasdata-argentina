@@ -1,4 +1,4 @@
-# Pipeline v1.6.1
+# Pipeline v1.7
 from __future__ import annotations
 import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.6.1 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.7 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -264,12 +264,24 @@ def system_market(d):
                     reader=PdfReader(io.BytesIO(pdf))
                     ptxt=" ".join((p.extract_text() or "") for p in reader.pages)
                     ptxt=re.sub(r"\s+"," ",ptxt)
-                    print("INJECTION_PDF_TEXT",ptxt[:5000])
-                    k["reference"]=latest+" · dato real"
+                    chart_dates=re.findall(r"\b\d{1,2}/\d{1,2}/\d{2}\b",ptxt)
+                    if not chart_dates:
+                        raise RuntimeError("sin fechas en gráfico")
+                    last_date=chart_dates[-1]
+                    pos=ptxt.find(last_date)
+                    totals=re.findall(r"\b\d{2,3},\d\b",ptxt[pos+len(last_date):])[:len(chart_dates)]
+                    short_latest=dt.strftime("%-d/%-m/%y")
+                    if short_latest not in chart_dates or len(totals)<len(chart_dates):
+                        raise RuntimeError("no se pudo alinear serie nacional")
+                    idx=chart_dates.index(short_latest)
+                    val=totals[idx]
+                    k["value"]=val
+                    k["unit"]="MMm³/d"
+                    k["reference"]=latest+" · REAL"
                     k["validatedAt"]=iso()
                     k["sourceUrl"]=pdf_url
-                    k["statusText"]="EXTRAYENDO"
-                    k["note"]="PDF oficial cargado correctamente; validando el total nacional de inyección."
+                    k["statusText"]="OFICIAL"
+                    k["note"]="Inyección nacional total del gráfico oficial ENReGE. El mismo reporte abre el total por San Martín, Neuba I, Neuba II, GPFM, Centro Oeste y Norte."
                 except Exception as pe:
                     print("INJECTION PDF",pe)
                     k["reference"]=latest+" · último reporte"
@@ -374,7 +386,7 @@ def main():
     transport_capacity(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.6.0"
+    d["meta"]["version"]="1.7.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
