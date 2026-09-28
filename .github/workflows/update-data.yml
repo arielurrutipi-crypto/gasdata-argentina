@@ -2,6 +2,10 @@ name: Actualizar datos
 on:
   schedule:
     - cron: '17 * * * *'
+  push:
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update-data.yml'
   workflow_dispatch:
 permissions:
   contents: write
