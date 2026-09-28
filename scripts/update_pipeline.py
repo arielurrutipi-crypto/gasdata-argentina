@@ -1,4 +1,4 @@
-# Pipeline v1.2
+# Pipeline v1.4
 from __future__ import annotations
 import json, re, html, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.2 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.4 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -191,31 +191,80 @@ def production(d):
 def demand_priority(d):
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
     try:
-        txt=clean(fetch(url).decode("utf-8","ignore"))
+        raw=fetch(url).decode("utf-8","ignore")
+        txt=clean(raw)
+
+        # ENReGE publishes a five-day window. The first column is marked (1)
+        # actual consumption and the following columns (2) estimated consumption.
+        dates=[]
+        for x in re.findall(r"\b\d{2}/\d{2}/\d{2}\b",txt):
+            if x not in dates:
+                dates.append(x)
+            if len(dates)>=5: break
+
         m=re.search(r"TOTALES:\s*((?:\d{1,3}\.\d{3,4}\s*){2,8})",txt,re.I)
         if not m: raise RuntimeError("fila TOTALES no identificada")
-        vals=re.findall(r"\d{1,3}\.\d{3,4}",m.group(1))
-        dates=re.findall(r"\b\d{2}/\d{2}/\d{2}\b",txt)
-        if not vals or not dates: raise RuntimeError("sin fechas/valores")
-        ref=dates[min(len(vals),len(dates))-1]; val=float(vals[-1])
-        def spdate(x):
+        vals=re.findall(r"\d{1,3}\.\d{3,4}",m.group(1))[:5]
+        if len(dates)<5 or len(vals)<5:
+            raise RuntimeError(f"ventana incompleta: {len(dates)} fechas / {len(vals)} valores")
+
+        def display_date(x,with_day=False):
             dt=datetime.strptime(x,"%d/%m/%y")
             days=("lun","mar","mié","jue","vie","sáb","dom")
-            return f"{days[dt.weekday()].capitalize()} {dt.strftime('%d/%m/%Y')}"
-        disp=f"{val:.4f}".replace(".",",")
+            return (days[dt.weekday()].capitalize()+" " if with_day else "")+dt.strftime("%d/%m/%Y")
+
+        series=[]
+        for i,(dt,v) in enumerate(zip(dates,vals)):
+            series.append({
+              "date":datetime.strptime(dt,"%d/%m/%y").strftime("%d/%m"),
+              "fullDate":display_date(dt,True),
+              "value":v.replace(".",","),
+              "kind":"REAL" if i==0 else "PROY."
+            })
+
+        ref=dates[-1]; val=float(vals[-1]); disp=f"{val:.4f}".replace(".",",")
         old=next((x.get("value") for x in d.get("kpis",[]) if x.get("id")=="demand_priority"),None)
-        actual_date=dates[0]; actual_val=vals[0]
         upsert_kpi(d,{
           "id":"demand_priority","label":"Proyección demanda prioritaria",
-          "value":disp,"unit":"MMm³/d","reference":spdate(ref)+" · PROYECCIÓN",
+          "value":disp,"unit":"MMm³/d","reference":display_date(ref,True)+" · PROYECCIÓN",
           "validatedAt":iso(),"nextValidation":iso(now()+timedelta(days=1)),
-          "status":"updated" if old!=disp else "unchanged","statusText":"ACTUALIZADO" if old!=disp else "SIN CAMBIOS",
+          "status":"updated" if old!=disp else "unchanged",
+          "statusText":"ACTUALIZADO" if old!=disp else "SIN CAMBIOS",
           "sourceType":"OFFICIAL","source":"ENReGE · Estimación de la Demanda Prioritaria","sourceUrl":url,
-          "note":f"Último consumo real de la tabla: {spdate(actual_date)} = {actual_val.replace('.',',')} MMm³/d. Las columnas posteriores están identificadas por ENReGE como consumo estimado."
+          "series":series,
+          "note":"Ventana de 5 días de ENReGE: primera columna = consumo real (1); cuatro columnas siguientes = consumo estimado (2)."
         })
         d["kpis"]=[x for x in d["kpis"] if x.get("id")!="system_daily"]
     except Exception as e:
         print("DEMAND",e)
+
+def system_market(d):
+    """Refresh report availability without replacing validated values with unparsed chart data."""
+    refs={
+      "linepack":("https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=5","date"),
+      "injection":("https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=6","date")
+    }
+    items={x.get("id"):x for x in d.get("systemKpis",[])}
+    for kid,(url,_) in refs.items():
+        try:
+            txt=clean(fetch(url).decode("utf-8","ignore"))
+            m=re.search(r"\b(\d{2}/\d{2}/\d{4})\b",txt)
+            if not m: continue
+            latest=m.group(1)
+            k=items.get(kid)
+            if not k: continue
+            oldref=k.get("reference","")
+            k["validatedAt"]=iso()
+            if kid=="injection":
+                k["value"]=latest[:5]
+                k["unit"]=latest[-4:]
+                k["reference"]="Última publicación visible ENReGE"
+                k["statusText"]="REPORTE"
+            elif latest not in oldref:
+                k["statusText"]="NUEVO REPORTE"
+                k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se mantiene la última cifra numérica validada hasta completar su extracción."
+        except Exception as e:
+            print("SYSTEM",kid,e)
 
 def validate_pages(d):
     checks=[
@@ -252,9 +301,10 @@ def main():
     validate_pages(d)
     production(d)
     demand_priority(d)
+    system_market(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.3.0"
+    d["meta"]["version"]="1.4.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
