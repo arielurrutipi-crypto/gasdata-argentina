@@ -157,7 +157,7 @@ def demand_priority(d):
         val=float(vals[-1]); disp=f"{val:.4f}".replace(".",",")
         old=next((x.get("value") for x in d.get("kpis",[]) if x.get("id")=="demand_priority"),None)
         upsert_kpi(d,{
-          "id":"demand_priority","label":"Demanda prioritaria",
+          "id":"demand_priority","label":"Proyección demanda prioritaria",
           "value":disp,"unit":"MMm³/d","reference":ref,
           "validatedAt":iso(),"nextValidation":iso(now()+timedelta(days=1)),
           "status":"updated" if old!=disp else "unchanged",
