@@ -50,7 +50,7 @@
     },
     {
       "id": "demand_priority",
-      "label": "Demanda prioritaria",
+      "label": "Proyección demanda prioritaria",
       "value": "47,8679",
       "unit": "MMm³/d",
       "reference": "30/09/26",
@@ -478,10 +478,10 @@
     {
       "name": "Producción",
       "cadence": "Cada 15 días",
-      "last": "2026-09-28T10:21-03:00",
-      "next": "2026-10-13T10:21-03:00",
+      "last": "2026-09-28T10:30:00-03:00",
+      "next": "2026-10-13T10:30:00-03:00",
       "status": "updated",
-      "note": "Serie oficial PROD_GAS_SESCO_7 validada."
+      "note": "Producción nacional validada contra publicación oficial de Secretaría de Energía: julio 2026."
     },
     {
       "name": "Datos operativos",
