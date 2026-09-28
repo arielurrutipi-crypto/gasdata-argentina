@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.5.0",
-    "updatedAt": "2026-09-28T11:22-03:00",
+    "version": "1.6.0",
+    "updatedAt": "2026-09-28T11:35:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1062,6 +1062,14 @@
       "next": null,
       "status": "updated",
       "note": "Consulta directa en X; API no requerida en el MVP."
+    },
+    {
+      "name": "Capacidad de transporte",
+      "cadence": "Cada 3 h",
+      "last": "2026-09-28T11:35:00-03:00",
+      "next": "2026-09-28T14:35:00-03:00",
+      "status": "updated",
+      "note": "ENReGE concursos abiertos + MEGSA reventas de transporte firme."
     }
   ],
   "xTerms": [
@@ -1195,6 +1203,24 @@
       "status": "ACTIVA",
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T11:22-03:00"
+    },
+    {
+      "name": "MEGSA · Transporte firme",
+      "type": "Mercado / oficial",
+      "content": "Reventas de transporte firme, concursos, rondas y precios",
+      "cadence": "Cada 3 h",
+      "status": "ACTIVA",
+      "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
+      "validatedAt": "2026-09-28T11:35:00-03:00"
+    },
+    {
+      "name": "ENReGE · Concursos de capacidad",
+      "type": "Oficial",
+      "content": "Concursos abiertos y reventa de capacidad de transporte",
+      "cadence": "Cada 3 h",
+      "status": "ACTIVA",
+      "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
+      "validatedAt": "2026-09-28T11:35:00-03:00"
     }
   ],
   "basins": [
@@ -1497,5 +1523,136 @@
     "provinceSource": "Secretaría de Energía · Producción de gas promedio diaria por provincia",
     "provinceUrl": "https://estadisticasenergia.mecon.gob.ar/superset/dashboard/27/?native_filters=%28%29&standalone=true",
     "basinText": "El desglose por cuenca ya está incorporado abajo. Cuenca y provincia no son equivalentes: una cuenca puede abarcar más de una provincia."
+  },
+  "provinces": [
+    {
+      "name": "Neuquén",
+      "value": "118,579",
+      "share": "74,6%",
+      "reference": "Junio 2026",
+      "mom": "+2,98%",
+      "yoy": "+5,04%"
+    },
+    {
+      "name": "Estado Nacional",
+      "value": "19,008",
+      "share": "12,0%",
+      "reference": "Junio 2026",
+      "mom": "−0,18%",
+      "yoy": "−8,74%"
+    },
+    {
+      "name": "Santa Cruz",
+      "value": "6,155",
+      "share": "3,9%",
+      "reference": "Junio 2026",
+      "mom": "−2,82%",
+      "yoy": "−21,04%"
+    },
+    {
+      "name": "Chubut",
+      "value": "5,431",
+      "share": "3,4%",
+      "reference": "Junio 2026",
+      "mom": "−1,65%",
+      "yoy": "−12,73%"
+    },
+    {
+      "name": "Tierra del Fuego",
+      "value": "2,930",
+      "share": "1,8%",
+      "reference": "Junio 2026",
+      "mom": "−19,99%",
+      "yoy": "−25,94%"
+    },
+    {
+      "name": "Salta",
+      "value": "2,645",
+      "share": "1,7%",
+      "reference": "Junio 2026",
+      "mom": "−0,36%",
+      "yoy": "−14,88%"
+    },
+    {
+      "name": "Río Negro",
+      "value": "2,624",
+      "share": "1,7%",
+      "reference": "Junio 2026",
+      "mom": "+11,55%",
+      "yoy": "−2,94%"
+    },
+    {
+      "name": "Mendoza",
+      "value": "1,414",
+      "share": "0,9%",
+      "reference": "Junio 2026",
+      "mom": "−1,17%",
+      "yoy": "+5,47%"
+    },
+    {
+      "name": "La Pampa",
+      "value": "0,175",
+      "share": "0,1%",
+      "reference": "Junio 2026",
+      "mom": "−58,57%",
+      "yoy": "−64,12%"
+    },
+    {
+      "name": "Formosa",
+      "value": "0,010",
+      "share": "<0,1%",
+      "reference": "Junio 2026",
+      "mom": "+5,61%",
+      "yoy": "−8,36%"
+    },
+    {
+      "name": "Jujuy",
+      "value": "0,008",
+      "share": "<0,1%",
+      "reference": "Junio 2026",
+      "mom": "−5,38%",
+      "yoy": "−6,49%"
+    }
+  ],
+  "provincesMeta": {
+    "total": "158,980",
+    "reference": "Junio 2026 · promedio diario",
+    "source": "SESCO / Secretaría de Energía · consolidado por TodoHidrocarburos",
+    "sourceUrl": "https://todohidrocarburos.com/2026/08/12/tablero-de-control-de-junio-de-2026/",
+    "officialUrl": "https://www.argentina.gob.ar/economia/energia/planeamiento-energetico/panel-de-indicadores/produccion-de-gas-promedio-diaria-por",
+    "note": "Estado Nacional agrupa producción bajo jurisdicción nacional/offshore. Se usa junio para que provincia y cuenca sean perfectamente comparables."
+  },
+  "transportCapacity": [
+    {
+      "id": "tgn_open_1_2026",
+      "kind": "CONCURSO ABIERTO",
+      "company": "TGN",
+      "title": "Concurso Abierto TGN N.º 1/2026",
+      "volume": "Capacidad firme proveniente de expansiones",
+      "period": "Vigente",
+      "published": "2026",
+      "status": "VIGENTE",
+      "source": "ENReGE · Concursos y reventas",
+      "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
+      "note": "Manifestación de interés y condiciones disponibles en la publicación oficial."
+    },
+    {
+      "id": "megsa_t903",
+      "kind": "REVENTA TF",
+      "company": "TGS",
+      "title": "Oferta T903",
+      "volume": "80.000 m³/d",
+      "period": "01/10/2026–30/04/2027",
+      "published": "10/09/2026",
+      "status": "ACTO 25/09",
+      "source": "MEGSA · Reventa de transporte firme",
+      "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
+      "note": "Última oferta visible en la pantalla pública de reventas al momento de validación."
+    }
+  ],
+  "transportCapacityMeta": {
+    "validatedAt": "2026-09-28T11:35:00-03:00",
+    "cadence": "Cada 3 horas",
+    "note": "GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte."
   }
 }
