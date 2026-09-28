@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.8.0",
-    "updatedAt": "2026-09-28T11:48-03:00",
+    "version": "1.9.0",
+    "updatedAt": "2026-09-28T12:05:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1498,15 +1498,15 @@
   "systemKpis": [
     {
       "id": "linepack",
-      "label": "Linepack · último gráfico",
-      "value": "339,9",
-      "unit": "MMm³ TGN",
-      "reference": "27/08/2026 · real",
-      "validatedAt": "2026-09-28T11:48-03:00",
-      "statusText": "OFICIAL / PARCIAL",
-      "source": "ENReGE · Evolución diaria Linepack",
-      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=5",
-      "note": "El gráfico etiqueta TGN en 339,9 MMm³. TGS aparece gráficamente en torno de 220 MMm³; el total del sistema ronda 560 MMm³, pero se mantiene como aproximación visual.",
+      "label": "Linepack total · sistema TGN + TGS",
+      "value": "≈561",
+      "unit": "MMm³",
+      "reference": "27/08/2026 · REAL",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "statusText": "DERIVADO GRÁFICO",
+      "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
+      "note": "Total GasData ≈ TGN 339,9 MMm³ + TGS ≈221 MMm³, leído del gráfico oficial. Se redondea para no dar falsa precisión.",
       "visualGroup": "gn"
     },
     {
@@ -1716,5 +1716,84 @@
     "validatedAt": "2026-09-28T11:48-03:00",
     "cadence": "Cada 3 horas",
     "note": "GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte."
+  },
+  "systemMonthly2026": [
+    {
+      "month": "2026-01",
+      "label": "Enero",
+      "imports": "0,81",
+      "lng": "0,00",
+      "exports": "8,63",
+      "chile": "8,10",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202601.pdf"
+    },
+    {
+      "month": "2026-02",
+      "label": "Febrero",
+      "imports": "0,84",
+      "lng": "0,00",
+      "exports": "10,06",
+      "chile": "9,20",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202602.pdf"
+    },
+    {
+      "month": "2026-03",
+      "label": "Marzo",
+      "imports": "0,57",
+      "lng": "0,00",
+      "exports": "10,34",
+      "chile": "9,30",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202603.pdf"
+    },
+    {
+      "month": "2026-04",
+      "label": "Abril",
+      "imports": "1,03",
+      "lng": "0,00",
+      "exports": "9,71",
+      "chile": "9,00",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202604.pdf"
+    },
+    {
+      "month": "2026-05",
+      "label": "Mayo",
+      "imports": "4,94",
+      "lng": "3,04",
+      "exports": "7,52",
+      "chile": "7,20",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202605.pdf"
+    },
+    {
+      "month": "2026-06",
+      "label": "Junio",
+      "imports": "16,77",
+      "lng": "15,84",
+      "exports": "7,00",
+      "chile": "6,60",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202606.pdf"
+    },
+    {
+      "month": "2026-07",
+      "label": "Julio",
+      "imports": "8,94",
+      "lng": "7,79",
+      "exports": "6,67",
+      "chile": "6,30",
+      "validatedAt": "2026-09-28T12:05:00-03:00",
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202607.pdf"
+    }
+  ],
+  "systemMonthlyMeta": {
+    "year": 2026,
+    "latest": "2026-07",
+    "source": "ENReGE · Importaciones y Exportaciones Mensuales",
+    "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
+    "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual."
   }
 }
