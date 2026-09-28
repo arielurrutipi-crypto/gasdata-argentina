@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "updatedAt": "2026-09-28T09:45:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
@@ -46,17 +46,17 @@
       "source": "Secretaría de Energía · API Series de Tiempo"
     },
     {
-      "id": "system_daily",
-      "label": "Sistema gasífero diario",
-      "value": "—",
-      "unit": "",
-      "reference": "Conector ENReGE inicializando",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
-      "nextValidation": "2026-09-29T09:45:00-03:00",
-      "status": "pending",
-      "statusText": "PENDIENTE",
+      "id": "demand_priority",
+      "label": "Demanda prioritaria",
+      "value": "42,2263",
+      "unit": "MMm³/d",
+      "reference": "28/09/26",
+      "validatedAt": "2026-09-28T10:20:00-03:00",
+      "nextValidation": "2026-09-29T10:20:00-03:00",
+      "status": "updated",
+      "statusText": "ACTUALIZADO",
       "sourceType": "OFFICIAL",
-      "source": "ENReGE"
+      "source": "ENReGE · Estimación de la Demanda Prioritaria"
     }
   ],
   "news": [
@@ -260,5 +260,95 @@
     "BAGSA",
     "\"Buenos Aires Gas\"",
     "ENReGE"
+  ],
+  "sources": [
+    {
+      "name": "EconoJournal",
+      "type": "Prensa",
+      "content": "Noticias Oil & Gas, Vaca Muerta, GNL, transporte",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://econojournal.com.ar/"
+    },
+    {
+      "name": "Mejor Energía",
+      "type": "Prensa",
+      "content": "Noticias energéticas y gas",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://www.mejorenergia.com.ar/"
+    },
+    {
+      "name": "RunRun Energético",
+      "type": "Prensa",
+      "content": "Gas, Vaca Muerta, infraestructura, empresas",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://runrunenergetico.com/"
+    },
+    {
+      "name": "ENReGE · Noticias",
+      "type": "Oficial",
+      "content": "Novedades regulatorias e institucionales",
+      "cadence": "Cada 3 h",
+      "status": "ACTIVA",
+      "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php"
+    },
+    {
+      "name": "ENReGE · Datos diarios",
+      "type": "Oficial",
+      "content": "Demanda, linepack, inyección, importaciones y exportaciones",
+      "cadence": "Diaria",
+      "status": "ACTIVA",
+      "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php"
+    },
+    {
+      "name": "ENReGE · Tarifas",
+      "type": "Oficial",
+      "content": "Resoluciones y cuadros tarifarios vigentes",
+      "cadence": "Diaria",
+      "status": "ACTIVA",
+      "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+    },
+    {
+      "name": "Secretaría de Energía · Noticias",
+      "type": "Oficial",
+      "content": "Política energética, producción e infraestructura",
+      "cadence": "Cada 3 h",
+      "status": "ACTIVA",
+      "url": "https://www.argentina.gob.ar/economia/energia/noticias"
+    },
+    {
+      "name": "Datos Argentina · Energía",
+      "type": "Oficial",
+      "content": "Producción nacional y por cuenca",
+      "cadence": "Cada 15 días",
+      "status": "ACTIVA",
+      "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco"
+    },
+    {
+      "name": "TGS · Prensa",
+      "type": "Corporativa",
+      "content": "Transporte, ampliaciones, proyectos y NGL",
+      "cadence": "Diaria",
+      "status": "ACTIVA",
+      "url": "https://www.tgs.com.ar/prensa/"
+    },
+    {
+      "name": "TGN · Comunicaciones",
+      "type": "Corporativa",
+      "content": "Gasoductos, ampliaciones y hechos relevantes",
+      "cadence": "Diaria",
+      "status": "ACTIVA",
+      "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/"
+    },
+    {
+      "name": "BAGSA · Tarifas",
+      "type": "Oficial/empresa",
+      "content": "Cuadros tarifarios GN y GLP aplicables a BAGSA",
+      "cadence": "Diaria",
+      "status": "ACTIVA",
+      "url": "https://www.bagsa.com.ar/index.php/tarifas/"
+    }
   ]
 }
