@@ -7,12 +7,16 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.0"}
-KEYWORDS=("gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy","enrege","enargas","tarifa","gasoducto","subdistrib")
+UA={"User-Agent":"GasDataArgentina/1.2 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+KEYWORDS=(
+ "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
+ "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
+ "importacion","importación","shale","tight","gas natural","gas licuado","gasoducto perito moreno"
+)
 
 def now(): return datetime.now(ART)
 def iso(d=None): return (d or now()).isoformat(timespec="minutes")
-def fetch(url,timeout=25):
+def fetch(url,timeout=30):
     req=urllib.request.Request(url,headers=UA)
     with urllib.request.urlopen(req,timeout=timeout) as r: return r.read()
 def clean(s):
@@ -23,102 +27,157 @@ def pdate(s):
         d=parsedate_to_datetime(s)
         if d.tzinfo is None: d=d.replace(tzinfo=timezone.utc)
         return d.astimezone(ART)
-    except: return now()
+    except Exception:
+        return now()
+def upsert_kpi(d,item):
+    for i,x in enumerate(d.setdefault("kpis",[])):
+        if x.get("id")==item["id"]:
+            d["kpis"][i]={**x,**item}; return
+    d["kpis"].append(item)
 
 def rss(source,url):
     root=ET.fromstring(fetch(url)); out=[]
-    for it in root.findall(".//item")[:30]:
+    for it in root.findall(".//item")[:60]:
         title=(it.findtext("title") or "").strip()
         desc=clean(it.findtext("description") or "")
         hay=(title+" "+desc).lower()
         if not any(k in hay for k in KEYWORDS): continue
-        out.append({"source":source,"sourceType":"PRESS","publishedAt":iso(pdate(it.findtext("pubDate") or "")),
-          "feedValidatedAt":iso(),"title":title,"desc":desc[:500],"tags":["Gas"],
-          "url":(it.findtext("link") or "").strip()})
+        out.append({
+          "source":source,"sourceType":"PRESS",
+          "publishedAt":iso(pdate(it.findtext("pubDate") or "")),
+          "feedValidatedAt":iso(),"title":title,"desc":desc[:520],
+          "tags":["Gas"],"url":(it.findtext("link") or "").strip()
+        })
     return out
 
 def update_news(d):
-    feeds=[("EconoJournal","https://econojournal.com.ar/feed/"),("Mejor Energía","https://www.mejorenergia.com.ar/feed/")]
-    fresh=[]; ok=0
+    feeds=[
+      ("EconoJournal","https://econojournal.com.ar/feed/"),
+      ("Mejor Energía","https://www.mejorenergia.com.ar/feed/"),
+      ("RunRun Energético","https://runrunenergetico.com/feed/"),
+      ("RunRun Energético · Gas","https://runrunenergetico.com/category/oil-gas/gas/feed/"),
+      ("TGS","https://www.tgs.com.ar/feed/"),
+      ("TGN","https://www.tgn.com.ar/feed/")
+    ]
+    fresh=[]; ok_sources=[]
     for source,url in feeds:
-        try: fresh+=rss(source,url); ok+=1
-        except Exception as e: print("RSS",source,e)
+        try:
+            items=rss(source,url)
+            fresh+=items
+            ok_sources.append(source)
+        except Exception as e:
+            print("RSS",source,e)
     if fresh:
         seen=set(); merged=[]
         for x in sorted(fresh+d.get("news",[]),key=lambda z:z.get("publishedAt",""),reverse=True):
-            k=x.get("url") or x.get("title")
-            if k in seen: continue
+            k=(x.get("url") or x.get("title") or "").rstrip("/")
+            if not k or k in seen: continue
             seen.add(k); x["feedValidatedAt"]=iso(); merged.append(x)
-        d["news"]=merged[:30]
+        d["news"]=merged[:60]
     u=next((x for x in d["updates"] if x["name"]=="Noticias"),None)
-    if u and ok: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="updated" if fresh else "unchanged")
+    if u:
+        u.update(last=iso(),next=iso(now()+timedelta(hours=1)),
+                 status="updated" if fresh else "unchanged",
+                 note="Fuentes consultadas: "+(", ".join(sorted(set(ok_sources))) if ok_sources else "ninguna disponible"))
+
+def official_series(series_id):
+    qs=urllib.parse.urlencode({"ids":series_id,"last":1,"metadata":"full"})
+    return json.loads(fetch("https://apis.datos.gob.ar/series/api/series?"+qs).decode("utf-8"))
+
+def production(d):
+    u=next((x for x in d["updates"] if x["name"]=="Producción"),None)
+    k=next((x for x in d.get("kpis",[]) if x.get("id")=="national_prod"),None)
+    try: last=datetime.fromisoformat(u["last"]) if u and u.get("last") else None
+    except Exception: last=None
+    if k and k.get("status")!="pending" and last and now()<last+timedelta(days=15):
+        return
+    try:
+        raw=official_series("PROD_GAS_SESCO_7")
+        ref,val=raw["data"][0][0],raw["data"][0][1]
+        disp=f"{float(val):,.2f}".replace(",","X").replace(".",",").replace("X",".")
+        old=(k or {}).get("value")
+        item={
+          "id":"national_prod","label":"Producción nacional de gas",
+          "value":disp,"unit":"MMm³/d","reference":ref[:7],
+          "validatedAt":iso(),"nextValidation":iso(now()+timedelta(days=15)),
+          "status":"updated" if old!=disp else "unchanged",
+          "statusText":"ACTUALIZADO" if old!=disp else "SIN CAMBIOS",
+          "sourceType":"OFFICIAL","source":"Secretaría de Energía · Datos Argentina · PROD_GAS_SESCO_7"
+        }
+        upsert_kpi(d,item)
+        if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status=item["status"],
+                       note="Serie oficial PROD_GAS_SESCO_7 validada.")
+    except Exception as e:
+        print("PROD",e)
+        if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status="pending",
+                       note="Consulta fallida; se conserva el último valor disponible.")
+
+def demand_priority(d):
+    url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
+    try:
+        txt=clean(fetch(url).decode("utf-8","ignore"))
+        # La fila TOTALES contiene cinco valores diarios; tomamos el último.
+        m=re.search(r"TOTALES:\s*((?:\d{1,3}\.\d{3,4}\s*){2,8})",txt,re.I)
+        if not m:
+            raise RuntimeError("fila TOTALES no identificada")
+        vals=re.findall(r"\d{1,3}\.\d{3,4}",m.group(1))
+        if not vals: raise RuntimeError("sin valores")
+        dates=re.findall(r"\b\d{2}/\d{2}/\d{2}\b",txt)
+        ref=dates[-1] if dates else now().strftime("%d/%m/%y")
+        val=float(vals[-1]); disp=f"{val:.4f}".replace(".",",")
+        old=next((x.get("value") for x in d.get("kpis",[]) if x.get("id")=="demand_priority"),None)
+        upsert_kpi(d,{
+          "id":"demand_priority","label":"Demanda prioritaria",
+          "value":disp,"unit":"MMm³/d","reference":ref,
+          "validatedAt":iso(),"nextValidation":iso(now()+timedelta(days=1)),
+          "status":"updated" if old!=disp else "unchanged",
+          "statusText":"ACTUALIZADO" if old!=disp else "SIN CAMBIOS",
+          "sourceType":"OFFICIAL","source":"ENReGE · Estimación de la Demanda Prioritaria"
+        })
+        # quitamos el placeholder anterior
+        d["kpis"]=[x for x in d["kpis"] if x.get("id")!="system_daily"]
+    except Exception as e:
+        print("DEMAND",e)
 
 def validate_pages(d):
     checks=[
       ("Normativa","https://www.enargas.gob.ar/secciones/normativa/resoluciones.php",3),
       ("Tarifas ENReGE/BAGSA","https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",24),
-      ("Datos operativos","https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php",24)]
+      ("Datos operativos","https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php",24)
+    ]
     for name,url,h in checks:
-        try: fetch(url); ok=True
-        except Exception as e: print(name,e); ok=False
+        try:
+            fetch(url); ok=True
+        except Exception as e:
+            print(name,e); ok=False
         u=next((x for x in d["updates"] if x["name"]==name),None)
         if u and ok: u.update(last=iso(),next=iso(now()+timedelta(hours=h)),status="unchanged")
     try:
         fetch("https://www.bagsa.com.ar/index.php/tarifas/")
         t=iso()
         for x in d.get("tariffs",[]): x["validatedAt"]=t
-    except Exception as e: print("BAGSA",e)
-
-def candidates(obj):
-    out=[]
-    if isinstance(obj,dict):
-        field=obj.get("field") if isinstance(obj.get("field"),dict) else obj
-        sid=field.get("id") or field.get("serie_id") or obj.get("serie_id")
-        if sid:
-            ds=obj.get("dataset") if isinstance(obj.get("dataset"),dict) else {}
-            text=" ".join(str(v) for v in (field.get("description",""),field.get("title",""),obj.get("title",""),obj.get("description",""),ds.get("title","")))
-            out.append((str(sid),text))
-        for v in obj.values(): out+=candidates(v)
-    elif isinstance(obj,list):
-        for v in obj: out+=candidates(v)
-    return out
-
-def production(d):
-    u=next((x for x in d["updates"] if x["name"]=="Producción"),None)
-    try: last=datetime.fromisoformat(u["last"]) if u and u.get("last") else None
-    except: last=None
-    if last and now()<last+timedelta(days=15): return
-    try:
-        qs=urllib.parse.urlencode({"q":"producción gas natural total país","catalog_id":"energia","limit":100})
-        sr=json.loads(fetch("https://apis.datos.gob.ar/series/api/search/?"+qs).decode())
-        best=None
-        for sid,txt in candidates(sr):
-            s=txt.lower(); score=sum(p for w,p in [("gas natural",8),("producción",6),("produccion",6),("total",4),("país",4),("pais",4),("mensual",2)] if w in s)
-            if any(w in s for w in ("petróleo","petroleo","líquido","liquido")): score-=5
-            if best is None or score>best[0]: best=(score,sid,txt)
-        if not best or best[0]<10: raise RuntimeError("serie no identificada con suficiente confianza")
-        sid,title=best[1],best[2]
-        qs=urllib.parse.urlencode({"ids":sid,"last":1,"metadata":"full"})
-        raw=json.loads(fetch("https://apis.datos.gob.ar/series/api/series?"+qs).decode())
-        ref,val=raw["data"][0][0],raw["data"][0][1]
-        k=next(x for x in d["kpis"] if x["id"]=="national_prod")
-        old=(k.get("value"),k.get("reference"))
-        disp=f"{float(val):,.2f}".replace(",","X").replace(".",",").replace("X",".")
-        meta=json.dumps(raw.get("meta",[]),ensure_ascii=False).lower()
-        unit="MMm³/d" if any(x in meta for x in ("m3/d","m³/d","mm3/d")) else ""
-        k.update(value=disp,unit=unit,reference=ref[:7],validatedAt=iso(),nextValidation=iso(now()+timedelta(days=15)),
-          sourceType="OFFICIAL",source="Secretaría de Energía · API Series de Tiempo",note=f"Serie oficial: {sid}. {title[:160]}")
-        k["status"]="updated" if old!=(disp,ref[:7]) else "unchanged"
-        k["statusText"]="ACTUALIZADO" if k["status"]=="updated" else "SIN CAMBIOS"
-        if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status=k["status"],note=f"Fuente oficial validada. Serie {sid}.")
     except Exception as e:
-        print("PROD",e)
-        if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status="pending",note="La fuente fue consultada pero no pudo validarse automáticamente; se conserva el último dato.")
+        print("BAGSA",e)
+
+def refresh_source_status(d):
+    for src in d.get("sources",[]):
+        try:
+            fetch(src["url"],timeout=20)
+            src["status"]="ACTIVA"
+            src["validatedAt"]=iso()
+        except Exception:
+            src["status"]="REVISAR"
 
 def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
-    update_news(d); validate_pages(d); production(d)
-    d["meta"]["updatedAt"]=iso(); d["meta"]["version"]="1.1.0"
+    update_news(d)
+    validate_pages(d)
+    production(d)
+    demand_priority(d)
+    refresh_source_status(d)
+    d["meta"]["updatedAt"]=iso()
+    d["meta"]["version"]="1.2.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
-if __name__=="__main__": main()
+if __name__=="__main__":
+    main()
