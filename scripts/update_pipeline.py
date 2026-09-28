@@ -268,6 +268,7 @@ def system_market(d):
 
 
 def transport_capacity(d):
+    existing_open=[x for x in d.get("transportCapacity",[]) if x.get("kind")=="CONCURSO ABIERTO"]
     out=[]
     # Official open contests
     en_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php"
@@ -284,6 +285,11 @@ def transport_capacity(d):
             })
     except Exception as e:
         print("CAPACITY ENREGE",e)
+
+    if not any(x.get("kind")=="CONCURSO ABIERTO" for x in out):
+        # ENReGE renders parts of the current contest list dynamically; retain the
+        # last officially verified contest instead of silently deleting it.
+        out.extend(existing_open)
 
     # MEGSA firm transport resale board
     meg_url="https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2"
