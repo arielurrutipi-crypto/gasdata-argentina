@@ -308,17 +308,46 @@ def system_market(d):
                  note="Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo.")
 
 
+def _number_ar(value):
+    return float(str(value).replace(".","").replace(",","."))
+
+def _format_ar(value):
+    return f"{value:.2f}".replace(".",",")
+
+def _monthly_pdf_url(month):
+    return "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_"+month.replace("-","")+".pdf"
+
+def _read_monthly_flows_pdf(month):
+    from pypdf import PdfReader
+    pdf=fetch(_monthly_pdf_url(month),timeout=40)
+    text=" ".join((page.extract_text() or "") for page in PdfReader(io.BytesIO(pdf)).pages)
+    results={}
+    names=r"(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)"
+    for section,key in (("Exportaciones","exports"),("Importaciones","imports")):
+        match=re.search(r"\b"+section+r"\b(.+?)\bPais\b",text,re.I|re.S)
+        if not match: raise ValueError("falta el gráfico de "+section)
+        segment=match.group(1)
+        years=list(re.finditer(r"\b20\d{2}\b",segment))
+        if not years: raise ValueError("falta el año del gráfico de "+section)
+        headline=segment[:years[-1].start()]
+        count=len(re.findall(r"\b"+names+r"\b",headline,re.I))
+        if count<1: raise ValueError("faltan meses del gráfico de "+section)
+        values=re.findall(r"\b\d{1,3},\d{2}\b",segment[years[-1].end():])
+        if len(values)<count: raise ValueError("faltan totales mensuales de "+section)
+        results[key]=_number_ar(values[count-1])
+    return results
+
 def monthly_flows_status(d):
-    """Detect new monthly ENReGE reports without replacing validated history blindly."""
+    """Read the published monthly PDF when its chart text can be verified."""
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9"
-    months={
+    months_names={
       "enero":"01","febrero":"02","marzo":"03","abril":"04","mayo":"05","junio":"06",
       "julio":"07","agosto":"08","septiembre":"09","octubre":"10","noviembre":"11","diciembre":"12"
     }
     try:
         txt=clean(fetch(url).decode("utf-8","ignore")).lower()
         found=[]
-        for name,num in months.items():
+        for name,num in months_names.items():
             if re.search(r"\b"+name+r"\s+2026\b",txt):
                 found.append("2026-"+num)
         if not found:
@@ -329,22 +358,49 @@ def monthly_flows_status(d):
         meta["sourceUrl"]=url
         meta["checkedAt"]=iso()
         if not current or latest>current:
-            meta["pendingMonth"]=latest
-            meta["status"]="new_report"
-            meta["note"]="ENReGE publicó "+latest+". Se conserva el último mes validado hasta extraer y verificar sus valores."
+            # Check the parser against the already verified July report before trusting a new PDF.
+            baseline=next((x for x in d.get("systemMonthly2026",[]) if x.get("month")==current),None)
+            if not baseline: raise ValueError("falta un mes previamente validado para contrastar el lector")
+            parsed_baseline=_read_monthly_flows_pdf(current)
+            if any(abs(parsed_baseline[k]-_number_ar(baseline[k]))>0.02 for k in ("imports","exports")):
+                raise ValueError("el diseño del PDF cambió: no coincide con el mes validado")
+            months={x.get("month"):x for x in d.get("systemMonthly2026",[])}
+            for month in sorted(x for x in found if x>current):
+                values=_read_monthly_flows_pdf(month)
+                previous=months[max(months)]
+                for key in ("imports","exports"):
+                    if not 0<=values[key]<100 or abs(values[key]-_number_ar(previous[key]))>60:
+                        raise ValueError("valor mensual fuera de rango; requiere revisión")
+                row={"month":month,"label":next(n.capitalize() for n,num in months_names.items() if num==month[-2:]),
+                     "imports":_format_ar(values["imports"]),"exports":_format_ar(values["exports"]),
+                     "validatedAt":iso(),"sourceUrl":_monthly_pdf_url(month)}
+                months[month]=row
+                # Keep the GNL/Chile figures at their own period until they have a verified parser.
+                for item_id,key in (("imports_month","imports"),("exports_month","exports")):
+                    k=next((x for x in d.get("systemKpis",[]) if x.get("id")==item_id),None)
+                    if k: k.update(value=row[key],reference="Promedio · "+row["label"]+" "+month[:4],
+                                   validatedAt=iso(),sourceUrl=row["sourceUrl"],statusText="OFICIAL")
+            d["systemMonthly2026"]=sorted(months.values(),key=lambda x:x["month"])
+            meta["latest"]=latest
+            meta.pop("pendingMonth",None)
+            meta["status"]="updated"
+            meta["note"]="Importaciones y exportaciones totales extraídas del PDF oficial y contrastadas con el último mes validado. Desgloses GNL/Chile quedan con su propio período hasta validarlos."
         else:
             meta.pop("pendingMonth",None)
             meta["status"]="current"
         u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
         if u:
-            changed=bool(meta.get("pendingMonth"))
+            changed=meta.get("status")=="updated"
             u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="new_report" if changed else "unchanged",
                      note=meta.get("note") or ("Último mes publicado: "+str(meta.get("latest","—"))))
     except Exception as e:
         print("MONTHLY FLOWS",e)
+        meta=d.setdefault("systemMonthlyMeta",{})
+        if 'latest' in locals() and latest>str(meta.get("latest","")):
+            meta.update(pendingMonth=latest,status="new_report",checkedAt=iso(),note="Reporte nuevo disponible; no se alteran los valores hasta poder verificar sus cifras: "+str(e)[:180])
         u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
         if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",
-                       note="No se pudo verificar el índice mensual; se conserva el último mes validado.")
+                       note="No se pudo verificar el nuevo informe mensual; se conservan los últimos valores validados.")
 
 def transport_capacity(d):
     existing={x.get("id"):x for x in d.get("transportCapacity",[]) if x.get("id")}
@@ -805,9 +861,14 @@ def sync_tariffs_from_regulations(d):
         if not candidates: continue
         latest=max(candidates,key=lambda x:x.get("publishedAt",""))
         m=re.search(r"(\d+/\d{4})",str(latest.get("num","")))
-        row["res"]=m.group(1) if m else latest.get("num",row.get("res"))
-        row["validFrom"]=str(latest.get("publishedAt",""))[:10] or row.get("validFrom")
-        row["validatedAt"]=latest.get("validatedAt") or row.get("validatedAt") or iso()
+        resolution=m.group(1) if m else latest.get("num",row.get("res"))
+        if resolution!=row.get("res"):
+            # Publication and tariff-effective dates are not interchangeable.
+            row["pendingResolution"]=resolution
+            row["pendingUrl"]=latest.get("url")
+            row["status"]="review_effective_date"
+            continue
+        row["validatedAt"]=latest.get("validatedAt") or row.get("validatedAt")
         row["url"]=latest.get("url",row.get("url"))
         row["auto"]=True
 
@@ -862,7 +923,7 @@ def sync_update_catalog(d):
       ("Producción por cuenca/provincia","Mensual","Pendiente de automatización","Último consolidado validado","Los valores por cuenca y provincia permanecen en el último mes validado hasta implementar lectura automática del dataset oficial."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
       ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
-      ("Flujos mensuales","Cada 60 min","Monitoreo automático","Detecta el último mes publicado","Detecta un mes nuevo de importaciones/exportaciones; los valores se conservan hasta que el nuevo informe pueda extraerse y validarse."),
+      ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
       ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
       ("Boletín Oficial PBA","Cada 3 h","Monitoreo automático","Búsqueda desde 01/01/2026","Consulta “gas natural” y “BAGSA”. Hoy informa coincidencias y última fecha; no incorpora automáticamente actos provinciales al listado nacional."),
       ("Precios de mercado","Según fuente","Validación puntual","Último dato validado","Benchmarks y referencias de precios todavía no se refrescan todos automáticamente; cada tarjeta conserva su fecha de validación.")
