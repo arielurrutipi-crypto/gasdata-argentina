@@ -116,13 +116,13 @@ def update_news(d):
     for x in sorted(prepared+d.get("news",[]),key=lambda z:z.get("publishedAt",""),reverse=True):
         k=(x.get("url") or x.get("title") or "").rstrip("/")
         if not k or k in seen: continue
-        seen.add(k); x["feedValidatedAt"]=iso(); merged.append(x)
+        seen.add(k); merged.append(x)
     if merged:
         d["news"]=merged[:80]
     u=next((x for x in d["updates"] if x["name"]=="Noticias"),None)
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=1)),
-                 status="updated" if new_keys else "unchanged",
+                 status="pending" if not ok_sources else ("partial" if len(ok_sources)<len(feeds)+len(html_sources) else ("updated" if new_keys else "unchanged")),
                  note=(f"{len(new_keys)} noticias nuevas · " if new_keys else "Sin noticias nuevas · ")+"Fuentes consultadas: "+(", ".join(sorted(set(ok_sources))) if ok_sources else "ninguna disponible"))
 
 def official_series(series_id):
@@ -292,9 +292,8 @@ def system_market(d):
                     k["note"]="Inyección nacional total del gráfico oficial ENReGE. El mismo reporte abre el total por San Martín, Neuba I, Neuba II, GPFM, Centro Oeste y Norte."
                 except Exception as pe:
                     print("INJECTION PDF",pe)
-                    k["reference"]=latest+" · último reporte"
-                    k["statusText"]="REPORTE"
-                    k["note"]="ENReGE publicó el reporte; aún no se pudo extraer automáticamente el total nacional."
+                    k["statusText"]="NUEVO REPORTE · REVISAR"
+                    k["note"]="Reporte disponible: "+latest+". No se pudo extraer el total; se conservan el valor anterior y su fecha de referencia."
             elif latest in oldref:
                 k["validatedAt"]=iso()
             else:
@@ -339,7 +338,7 @@ def monthly_flows_status(d):
         u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
         if u:
             changed=bool(meta.get("pendingMonth"))
-            u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="updated" if changed else "unchanged",
+            u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="new_report" if changed else "unchanged",
                      note=meta.get("note") or ("Último mes publicado: "+str(meta.get("latest","—"))))
     except Exception as e:
         print("MONTHLY FLOWS",e)
@@ -631,12 +630,12 @@ def _parse_bora_detail(url,day,label):
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
 
-def _scan_bora_dates(start_day,end_day):
-    days=[]; cur=start_day
+def _scan_bora_dates(start_day,end_day,retry_dates=()):
+    days=set(retry_dates); cur=start_day
     while cur<=end_day:
-        if cur.weekday()<5: days.append(cur)
+        if cur.weekday()<5: days.add(cur)
         cur+=timedelta(days=1)
-    pages=[]; errors=0
+    pages=[]; failed=[]
     def load(day):
         url="https://www.boletinoficial.gob.ar/seccion/primera/"+day.strftime("%Y%m%d")
         try: return day,fetch(url,timeout=20),None
@@ -646,11 +645,18 @@ def _scan_bora_dates(start_day,end_day):
         for fut in as_completed(futs):
             day,raw,err=fut.result()
             if raw is not None: pages.append((day,raw))
-            else: errors+=1
+            else: failed.append(day.isoformat())
     candidates={}
     for day,raw in pages:
         soup=BeautifulSoup(raw,"html.parser")
-        for a in soup.find_all("a",href=True):
+        # A successful HTTP request may still be an error/challenge or an unreadable index.
+        links=soup.find_all("a",href=True)
+        if not any("/detalleAviso/primera/" in a.get("href","") for a in links):
+            page_text=clean(soup.get_text(" ",strip=True)).lower()
+            if not any(message in page_text for message in ("no se encontraron avisos","no hay edición","sin publicaciones","no se publica")):
+                failed.append(day.isoformat())
+                continue
+        for a in links:
             href=a.get("href","")
             if "/detalleAviso/primera/" not in href: continue
             label=_bora_label(a)
@@ -658,7 +664,7 @@ def _scan_bora_dates(start_day,end_day):
             if not any(k in low for k in BORA_DISCOVERY_SIGNALS): continue
             url=urllib.parse.urljoin("https://www.boletinoficial.gob.ar",href)
             candidates[url]={"url":url,"day":day,"label":label}
-    return candidates,len(pages),errors
+    return candidates,len(days)-len(failed),sorted(failed)
 
 def update_regulations(d):
     existing=[]
@@ -679,7 +685,12 @@ def update_regulations(d):
         last=None
     start_day=REGULATION_START.date() if not last else max(REGULATION_START.date(),last-timedelta(days=2))
     end_day=now().date()
-    candidates,pages_ok,pages_err=_scan_bora_dates(start_day,end_day)
+    retry_dates=[datetime.strptime(x,"%Y-%m-%d").date() for x in state.get("pendingDates",[])]
+    candidates,pages_ok,failed_dates=_scan_bora_dates(start_day,end_day,retry_dates)
+    # Keep failed detail requests even after their edition leaves the overlap window.
+    for entry in state.get("pendingDetails",[]):
+        entry={**entry,"day":datetime.strptime(entry["day"],"%Y-%m-%d").date()}
+        candidates.setdefault(entry["url"],entry)
     known={_reg_identity(x):x for x in existing if x.get("num")}
     added=0; refreshed=0
     to_fetch=[]
@@ -693,15 +704,17 @@ def update_regulations(d):
             refreshed+=1
         else:
             to_fetch.append(entry)
+    failed_details=[]
     def parse_entry(entry):
-        try: return _parse_bora_detail(entry["url"],entry["day"],entry["label"])
+        try: return entry,_parse_bora_detail(entry["url"],entry["day"],entry["label"]),False
         except Exception as e:
-            print("BORA DETAIL",entry["url"],e); return None
+            print("BORA DETAIL",entry["url"],e); return entry,None,True
     if to_fetch:
         with ThreadPoolExecutor(max_workers=6) as ex:
             futs=[ex.submit(parse_entry,e) for e in to_fetch]
             for fut in as_completed(futs):
-                item=fut.result()
+                entry,item,failed=fut.result()
+                if failed: failed_details.append({**entry,"day":entry["day"].isoformat()})
                 if not item: continue
                 key=_reg_identity(item)
                 if key in known:
@@ -710,10 +723,14 @@ def update_regulations(d):
                 known[key]=item; added+=1
     items=list(known.values())
     items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
-    d["regulations"]=items[:500]
-    if pages_ok:
-        state.update(lastScannedDate=end_day.isoformat(),source="Boletín Oficial de la República Argentina · Primera Sección",
-                     lastRun=iso(),pagesOk=pages_ok,pagesError=pages_err,candidates=len(candidates))
+    d["regulations"]=items
+    incomplete=bool(failed_dates or failed_details)
+    state.update(lastScannedDate=end_day.isoformat(),source="Boletín Oficial de la República Argentina · Primera Sección",
+                 lastRun=iso(),pagesOk=pages_ok,pagesError=len(failed_dates),candidates=len(candidates),
+                 pendingDates=failed_dates,pendingDetails=failed_details,
+                 complete=not incomplete,lastRange={"from":start_day.isoformat(),"to":end_day.isoformat()},
+                 added=added,revalidated=refreshed)
+    if not incomplete: state["lastSuccessfulAt"]=iso()
     d["regulationCriteria"]={
       "title":"Criterio GasData",
       "text":"Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
@@ -723,10 +740,11 @@ def update_regulations(d):
     payload={
       "name":"Boletín Oficial Nación · Normativa gas","type":"Oficial",
       "content":"Primera Sección · normativa gas desde 01/01/2026",
-      "cadence":"Cada 3 h","status":"ACTIVA" if pages_ok else "REVISAR",
-      "url":"https://www.boletinoficial.gob.ar/seccion/primera","validatedAt":iso(),
+      "cadence":"Cada 3 h","status":"REVISAR" if incomplete else "ACTIVA",
+      "url":"https://www.boletinoficial.gob.ar/seccion/primera","checkedAt":iso(),
       "lastResult":f"{len(items)} normas · {added} nuevas · {refreshed} revalidadas · {pages_ok} ediciones consultadas"
     }
+    if not incomplete: payload["validatedAt"]=iso()
     if src: src.update(payload)
     else: d.setdefault("sources",[]).append(payload)
     oldsrc=next((x for x in d.get("sources",[]) if x.get("name")=="Argentina.gob.ar · Normativa gas"),None)
@@ -734,8 +752,8 @@ def update_regulations(d):
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Normativa"),None)
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
-                 status="updated" if added else ("unchanged" if pages_ok else "pending"),
-                 note=f"Boletín Oficial desde 01/01/2026 · {len(items)} normas · {added} nuevas en esta ejecución.")
+                 status=("partial" if pages_ok else "pending") if incomplete else ("updated" if added else "unchanged"),
+                 note=f"Consulta {start_day:%d/%m/%Y}–{end_day:%d/%m/%Y} · {len(items)} normas guardadas · {added} nuevas · {len(failed_dates)} ediciones y {len(failed_details)} documentos pendientes de reintento.")
 
 
 def _update_due(d,name,hours):
@@ -817,7 +835,8 @@ def bopba_monitor(d):
 
     src=next((x for x in d.get("sources",[]) if x.get("name")=="Boletín Oficial PBA · Gas/BAGSA"),None)
     if src:
-        src["validatedAt"]=iso()
+        src["checkedAt"]=iso()
+        if all(v["ok"] for v in results.values()): src["validatedAt"]=iso()
         src["status"]="ACTIVA" if any(v["ok"] for v in results.values()) else "REVISAR"
         src["url"]=urls["gas natural"]
         src["secondaryUrl"]=urls["BAGSA"]
@@ -830,8 +849,8 @@ def bopba_monitor(d):
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Boletín Oficial PBA"),None)
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
-                 status="updated" if any(v["matches"] for v in results.values()) else "unchanged",
-                 note="Sección Oficial PBA; sólo búsquedas “gas natural” y “BAGSA”.")
+                 status="pending" if not any(v["ok"] for v in results.values()) else ("partial" if not all(v["ok"] for v in results.values()) else "monitored"),
+                 note="Monitoreo desde 01/01/2026: se consulta la primera página de resultados para “gas natural” y “BAGSA”; no se incorporan actos provinciales al listado. Coincidencias visibles: "+str(sum(v["matches"] for v in results.values()))+".")
 
 def sync_update_catalog(d):
     existing={x.get("name"):x for x in d.get("updates",[]) if x.get("name")}
@@ -863,17 +882,19 @@ def refresh_source_status(d):
     for src in d.get("sources",[]):
         try:
             fetch(src["url"],timeout=20)
-            src["status"]="ACTIVA"
-            src["validatedAt"]=iso()
+            src["availability"]="DISPONIBLE"
+            src["checkedAt"]=iso()
         except Exception:
-            src["status"]="REVISAR"
+            src["availability"]="NO DISPONIBLE"
+            src["checkedAt"]=iso()
 
 def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
     update_news(d)
     validate_pages(d)
-    if _update_due(d,"Normativa",3): update_regulations(d)
+    scan=d.get("regulationScan",{})
+    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
     production(d)
     demand_priority(d)
