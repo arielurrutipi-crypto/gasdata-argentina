@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.7.0",
-    "updatedAt": "2026-09-28T11:44-03:00",
+    "version": "1.8.0",
+    "updatedAt": "2026-09-28T11:50:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1109,6 +1109,14 @@
       "next": "2026-09-28T14:44-03:00",
       "status": "updated",
       "note": "ENReGE concursos abiertos + MEGSA reventas de transporte firme."
+    },
+    {
+      "name": "Boletín Oficial PBA",
+      "cadence": "Cada 3 h",
+      "last": "2026-09-28T11:50:00-03:00",
+      "next": "2026-09-28T14:50:00-03:00",
+      "status": "updated",
+      "note": "Consulta Sección Oficial filtrada por “gas natural” o “BAGSA”."
     }
   ],
   "xTerms": [
@@ -1260,6 +1268,20 @@
       "status": "ACTIVA",
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T11:44-03:00"
+    },
+    {
+      "name": "Boletín Oficial PBA · Gas/BAGSA",
+      "type": "Oficial provincial",
+      "content": "Filtro exclusivo: “gas natural” OR “BAGSA”",
+      "cadence": "Cada 3 h",
+      "status": "ACTIVA",
+      "url": "https://boletinoficial.gba.gob.ar/buscar?commit=Buscar&search%5Bdate_gteq%5D=&search%5Bdate_lteq%5D=&search%5Bsection%5D=OFICIAL&search%5Bsort%5D=by_match_desc&search%5Bwords%5D=gas+natural&utf8=%E2%9C%93",
+      "secondaryUrl": "https://boletinoficial.gba.gob.ar/buscar?commit=Buscar&search%5Bdate_gteq%5D=&search%5Bdate_lteq%5D=&search%5Bsection%5D=OFICIAL&search%5Bsort%5D=by_match_desc&search%5Bwords%5D=BAGSA&utf8=%E2%9C%93",
+      "filters": [
+        "gas natural",
+        "BAGSA"
+      ],
+      "validatedAt": "2026-09-28T11:50:00-03:00"
     }
   ],
   "basins": [
@@ -1426,7 +1448,7 @@
     },
     {
       "id": "jkm",
-      "group": "GNL / internacional",
+      "group": "GNL",
       "label": "JKM LNG · Asia",
       "value": "25,73",
       "unit": "USD/MMBtu",
@@ -1440,13 +1462,13 @@
     },
     {
       "id": "ttf",
-      "group": "GNL / internacional",
-      "label": "TTF · Europa",
+      "group": "GN internacional",
+      "label": "TTF · gas natural Europa",
       "value": "24,34",
       "unit": "USD/MMBtu",
       "reference": "23/09/2026 · spot",
       "validatedAt": "2026-09-28T10:54:00-03:00",
-      "statusText": "BENCHMARK GAS",
+      "statusText": "BENCHMARK GN",
       "source": "TTF · Catalyst market report",
       "sourceUrl": "https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-24-september-2026/",
       "note": "Benchmark europeo de gas; útil para comparar la señal de destino del GNL.",
@@ -1454,7 +1476,7 @@
     },
     {
       "id": "henry_hub",
-      "group": "GNL / internacional",
+      "group": "GN internacional",
       "label": "Henry Hub · EE.UU.",
       "value": "2,90",
       "unit": "USD/MMBtu",
@@ -1557,11 +1579,11 @@
     "lng": "JKM y TTF reflejan mercados de destino; Henry Hub es gas de origen. La diferencia entre ellos no debe leerse como margen exportador argentino."
   },
   "productionCoverage": {
-    "provinceTitle": "Producción por provincia",
-    "provinceText": "La Secretaría de Energía publica una serie mensual oficial por provincia. GasData muestra por ahora Neuquén en el panel principal y el desglose nacional por cuenca; la automatización del resto de provincias se incorporará desde este tablero oficial para no mezclar períodos ni fuentes.",
-    "provinceSource": "Secretaría de Energía · Producción de gas promedio diaria por provincia",
-    "provinceUrl": "https://estadisticasenergia.mecon.gob.ar/superset/dashboard/27/?native_filters=%28%29&standalone=true",
-    "basinText": "El desglose por cuenca ya está incorporado abajo. Cuenca y provincia no son equivalentes: una cuenca puede abarcar más de una provincia."
+    "provinceTitle": "Detalle territorial",
+    "provinceText": "La portada muestra sólo indicadores nacionales. En Mercado se abre la producción por provincia/jurisdicción y por cuenca, manteniendo un mismo período comparable.",
+    "provinceSource": "Secretaría de Energía · Producción de gas promedio diaria",
+    "provinceUrl": "https://www.argentina.gob.ar/economia/energia/planeamiento-energetico/panel-de-indicadores/produccion-de-gas-promedio-diaria-por",
+    "basinText": "Cuenca y provincia son aperturas diferentes del mismo total nacional."
   },
   "provinces": [
     {
