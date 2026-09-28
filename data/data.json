@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.2.0",
-    "updatedAt": "2026-09-28T10:33-03:00",
+    "version": "1.3.0",
+    "updatedAt": "2026-09-28T11:00:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -11,56 +11,60 @@
       "label": "Producción de gas · Neuquén",
       "value": "115,47",
       "unit": "MMm³/d",
-      "reference": "Agosto 2026",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "reference": "Promedio diario · Agosto 2026",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "nextValidation": "2026-10-13T09:45:00-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "PRESS",
-      "source": "Referencia provincial difundida en septiembre 2026",
-      "sourceUrl": "https://www.argentina.gob.ar/economia/energia/hidrocarburos/visualizaciones-tableros"
+      "source": "Ministerio de Energía de Neuquén · difundido por Más Energía",
+      "sourceUrl": "https://mase.lmneuquen.com/produccion/el-dominio-vaca-muerta-neuquen-supero-los-685-mil-barriles-petroleo-n1254626",
+      "note": "Producción de la provincia de Neuquén; no equivale a toda la Cuenca Neuquina."
     },
     {
       "id": "neuquen_nonc",
       "label": "Gas no convencional · Neuquén",
       "value": "105,92",
       "unit": "MMm³/d",
-      "reference": "Agosto 2026",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "reference": "Promedio diario · Agosto 2026",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "nextValidation": "2026-10-13T09:45:00-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "PRESS",
-      "source": "Referencia provincial difundida en septiembre 2026",
-      "sourceUrl": "https://www.argentina.gob.ar/economia/energia/hidrocarburos/visualizaciones-tableros"
+      "source": "Ministerio de Energía de Neuquén · difundido por Más Energía",
+      "sourceUrl": "https://mase.lmneuquen.com/produccion/el-dominio-vaca-muerta-neuquen-supero-los-685-mil-barriles-petroleo-n1254626",
+      "note": "Gas no convencional de la provincia de Neuquén."
     },
     {
       "id": "national_prod",
       "label": "Producción nacional de gas",
-      "value": "158,8",
+      "value": "153,38",
       "unit": "MMm³/d",
-      "reference": "Julio 2026",
-      "validatedAt": "2026-09-28T10:30:00-03:00",
-      "nextValidation": "2026-10-13T10:30:00-03:00",
+      "reference": "Promedio diario · Agosto 2026",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "nextValidation": "2026-10-13T11:00:00-03:00",
       "status": "updated",
       "statusText": "ACTUALIZADO",
-      "sourceType": "OFFICIAL",
-      "source": "Secretaría de Energía",
-      "sourceUrl": "https://www.argentina.gob.ar/noticias/la-produccion-de-petroleo-registro-otro-mes-de-crecimiento-en-julio"
+      "sourceType": "OFFICIAL_DERIVED",
+      "source": "Secretaría de Energía · difundido por Revista Petroquímica",
+      "sourceUrl": "https://revistapetroquimica.com/vaca-muerta-impulso-tres-records-historicos-de-produccion-petrolera/",
+      "note": "Promedio de producción durante el mes; no corresponde a un día puntual."
     },
     {
       "id": "demand_priority",
       "label": "Proyección demanda prioritaria",
       "value": "47,8679",
       "unit": "MMm³/d",
-      "reference": "30/09/26",
-      "validatedAt": "2026-09-28T10:33-03:00",
+      "reference": "Mié 30/09/2026 · PROYECCIÓN",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "nextValidation": "2026-09-29T10:33-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
       "source": "ENReGE · Estimación de la Demanda Prioritaria",
-      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
+      "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php",
+      "note": "Último consumo real de la tabla: sáb 26/09/2026 = 29,8623 MMm³/d. Del 27/09 al 30/09 son estimaciones."
     }
   ],
   "news": [
@@ -346,46 +350,186 @@
   ],
   "regulations": [
     {
+      "num": "Resolución 654/2026",
+      "category": "Mercado",
+      "title": "Registro de Comercializadores — baja de ET Managing Company",
+      "publishedAt": "2026-09-23T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "Baja de un agente del Registro de Comercializadores de Gas Natural.",
+      "tags": [
+        "Comercialización",
+        "Mercado"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-430393"
+    },
+    {
       "num": "Resolución 575/2026",
-      "title": "Camuzzi Gas del Sur — consulta pública sobre cargo específico",
+      "category": "Infraestructura",
+      "title": "Camuzzi Gas del Sur — Sistema Cordillerano-Patagónico",
       "publishedAt": "2026-09-08T00:00:00-03:00",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "sourceType": "OFFICIAL",
       "status": "unchanged",
-      "desc": "Consulta pública vinculada a obras del Sistema Cordillerano-Patagónico.",
+      "desc": "Consulta/actuaciones vinculadas a obras de refuerzo y plantas compresoras del sistema.",
       "tags": [
         "Camuzzi",
-        "Tarifas"
+        "Infraestructura"
       ],
       "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429829/texto"
     },
     {
       "num": "Resolución 552/2026",
-      "title": "Compendio de Instrucciones para la Subdistribución",
+      "category": "Subdistribución",
+      "title": "Proyecto de nuevo Compendio de Instrucciones para la Subdistribución",
       "publishedAt": "2026-09-03T00:00:00-03:00",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "sourceType": "OFFICIAL",
       "status": "unchanged",
-      "desc": "Instancia participativa vinculada a autorizaciones y actividad de subdistribuidores.",
+      "desc": "Consulta pública sobre autorización, renovación y aspectos de la actividad de subdistribución.",
       "tags": [
         "Subdistribución",
         "BAGSA"
       ],
-      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346856/20260903"
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429628/texto"
     },
     {
-      "num": "Resolución 525/2026",
-      "title": "TGS — cuadros tarifarios",
+      "num": "Resolución 543/2026",
+      "category": "Tarifas",
+      "title": "Camuzzi Gas Pampeana — cuadros tarifarios",
       "publishedAt": "2026-09-01T00:00:00-03:00",
-      "validatedAt": "2026-09-28T09:45:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
       "sourceType": "OFFICIAL",
       "status": "unchanged",
       "desc": "Cuadros tarifarios vigentes desde septiembre de 2026.",
       "tags": [
-        "TGS",
-        "Tarifas"
+        "Tarifas",
+        "BAGSA"
       ],
-      "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429501"
+    },
+    {
+      "num": "Resolución 542/2026",
+      "category": "Tarifas",
+      "title": "Camuzzi Gas del Sur — cuadros tarifarios",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios vigentes desde septiembre de 2026.",
+      "tags": [
+        "Tarifas",
+        "BAGSA"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429500"
+    },
+    {
+      "num": "Resolución 539/2026",
+      "category": "Tarifas",
+      "title": "Naturgy BAN — cuadros tarifarios",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios vigentes desde septiembre de 2026.",
+      "tags": [
+        "Tarifas",
+        "BAGSA"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429497"
+    },
+    {
+      "num": "Resolución 537/2026",
+      "category": "Tarifas",
+      "title": "Litoral Gas — cuadros tarifarios",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios vigentes desde septiembre de 2026.",
+      "tags": [
+        "Tarifas",
+        "BAGSA"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/buscar-boletin?fecha_publicacion=01-09-2026&s=1"
+    },
+    {
+      "num": "Resolución 525/2026",
+      "category": "Tarifas",
+      "title": "TGS — cuadros tarifarios de transporte",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios aplicables a Transportadora de Gas del Sur.",
+      "tags": [
+        "TGS",
+        "Transporte"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429475"
+    },
+    {
+      "num": "Resolución 524/2026",
+      "category": "Tarifas",
+      "title": "TGN — cuadros tarifarios de transporte",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Cuadros tarifarios aplicables a Transportadora de Gas del Norte.",
+      "tags": [
+        "TGN",
+        "Transporte"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429473"
+    },
+    {
+      "num": "Resolución 223/2026",
+      "category": "Subsidios",
+      "title": "SEF — bonificación adicional para septiembre 2026",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Fija una bonificación adicional extraordinaria de 24,25% para beneficiarios SEF de gas natural y propano por redes.",
+      "tags": [
+        "SEF",
+        "Gas",
+        "GLP"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429514"
+    },
+    {
+      "num": "Resolución 126/2026",
+      "category": "GLP",
+      "title": "Propano por redes — traslado del 60% del PPE",
+      "publishedAt": "2026-06-03T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "El valor de gas propano por redes pasa a equivaler al 60% del Precio de Paridad de Exportación vigente.",
+      "tags": [
+        "GLP",
+        "PPE"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-426357/texto"
+    },
+    {
+      "num": "Resolución 23/2026",
+      "category": "Precios",
+      "title": "Plan Gas.Ar — Precio Anual Uniforme 2026",
+      "publishedAt": "2026-01-30T00:00:00-03:00",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "unchanged",
+      "desc": "Establece el PAU 2026 por subzona tarifaria para el gas asociado a Plan Gas.Ar.",
+      "tags": [
+        "Plan Gas",
+        "PAU",
+        "PIST"
+      ],
+      "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-23-2026-422817/texto"
     }
   ],
   "tariffs": [
@@ -575,7 +719,8 @@
       "content": "Producción nacional y por cuenca",
       "cadence": "Cada 15 días",
       "status": "REVISAR",
-      "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco"
+      "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
+      "validatedAt": "2026-09-28T11:00:00-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -603,6 +748,141 @@
       "status": "ACTIVA",
       "url": "https://www.bagsa.com.ar/index.php/tarifas/",
       "validatedAt": "2026-09-28T10:33-03:00"
+    },
+    {
+      "name": "Revista Petroquímica",
+      "type": "Prensa",
+      "content": "Petróleo, gas, petroquímica, producción y mercado",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://revistapetroquimica.com/",
+      "validatedAt": "2026-09-28T11:00:00-03:00"
+    },
+    {
+      "name": "Más Energía · LM Neuquén",
+      "type": "Prensa",
+      "content": "Vaca Muerta, gas, infraestructura y mercado",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://mase.lmneuquen.com/",
+      "validatedAt": "2026-09-28T11:00:00-03:00"
+    },
+    {
+      "name": "América GLP",
+      "type": "Prensa especializada",
+      "content": "GLP Argentina y regional, precios, exportaciones e industria",
+      "cadence": "Cada hora",
+      "status": "ACTIVA",
+      "url": "https://www.americaglp.com/",
+      "validatedAt": "2026-09-28T11:00:00-03:00"
     }
-  ]
+  ],
+  "basins": [
+    {
+      "name": "Cuenca Neuquina",
+      "value": "122,704",
+      "unit": "MMm³/d",
+      "share": "77,2%",
+      "reference": "Junio 2026",
+      "trend": "+4,59% interanual"
+    },
+    {
+      "name": "Cuenca Austral",
+      "value": "25,354",
+      "unit": "MMm³/d",
+      "share": "15,9%",
+      "reference": "Junio 2026",
+      "trend": "−12,40% interanual"
+    },
+    {
+      "name": "Golfo San Jorge",
+      "value": "8,171",
+      "unit": "MMm³/d",
+      "share": "5,1%",
+      "reference": "Junio 2026",
+      "trend": "−17,13% interanual"
+    },
+    {
+      "name": "Cuenca Noroeste",
+      "value": "2,663",
+      "unit": "MMm³/d",
+      "share": "1,7%",
+      "reference": "Junio 2026",
+      "trend": "−14,83% interanual"
+    },
+    {
+      "name": "Cuenca Cuyana",
+      "value": "0,087",
+      "unit": "MMm³/d",
+      "share": "0,1%",
+      "reference": "Junio 2026",
+      "trend": "−10,20% interanual"
+    }
+  ],
+  "basinsMeta": {
+    "total": "158,980",
+    "reference": "Junio 2026 · promedio diario",
+    "source": "Secretaría de Energía / IAPG · tablero consolidado",
+    "sourceUrl": "https://todohidrocarburos.com/2026/08/12/tablero-de-control-de-junio-de-2026/",
+    "note": "Cuenca ≠ provincia. La Cuenca Neuquina incluye producción fuera de la provincia de Neuquén."
+  },
+  "marketPrices": [
+    {
+      "id": "pau",
+      "label": "Plan Gas.Ar · PAU 2026",
+      "value": "3,34–4,06",
+      "unit": "USD/MMBtu",
+      "reference": "Año 2026 · rango por subzona",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "Secretaría de Energía · Res. 23/2026",
+      "sourceUrl": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-23-2026-422817/texto",
+      "note": "Precio Anual Uniforme trasladable a usuarios finales; no es necesariamente igual al PIST final.",
+      "details": "BAGSA refs.: Naturgy BA Norte 3,790 · Litoral BA 3,855 · Camuzzi Pampeana BA 3,846 / Bahía Blanca 3,860 · Camuzzi Sur BA Sur 3,757"
+    },
+    {
+      "id": "megsa_pist",
+      "label": "Mercado observable · MEGSA/CAMMESA",
+      "value": "3,85",
+      "unit": "USD/MMBtu PIST",
+      "reference": "14–30 Sep 2026",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "statusText": "REFERENCIA",
+      "source": "Subasta interrumpible MEGSA/CAMMESA",
+      "sourceUrl": "https://www.lenergygroup.com/megsa-cammesa-34250-mmm3-d-para-usinas-en-la-2q-de-setiembre/",
+      "note": "Precio promedio ponderado. Rango ofertado PIST: 2,91–4,13 USD/MMBtu.",
+      "details": "Puesto en GBA: PPP 4,63 USD/MMBtu; rango 3,42–4,92."
+    },
+    {
+      "id": "free_contracts",
+      "label": "Contratos libres bilaterales",
+      "value": "≈ 2,9–4,1",
+      "unit": "USD/MMBtu",
+      "reference": "Proxy PIST · Sep 2026",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "statusText": "PROXY",
+      "source": "Referencia observable MEGSA/CAMMESA",
+      "sourceUrl": "https://www.lenergygroup.com/megsa-cammesa-34250-mmm3-d-para-usinas-en-la-2q-de-setiembre/",
+      "note": "No existe una cotización pública única. El precio real depende de firme/interrumpible, plazo, volumen, punto de entrega, estacionalidad y transporte.",
+      "details": "Usar como orden de magnitud, no como precio contractual."
+    },
+    {
+      "id": "glp_ppe",
+      "label": "GLP · Paridad de Exportación (PPE)",
+      "value": "—",
+      "unit": "$/t",
+      "reference": "Valor oficial corriente · conector pendiente",
+      "validatedAt": "2026-09-28T11:00:00-03:00",
+      "statusText": "METODOLOGÍA",
+      "source": "Secretaría de Energía · Res. 126/2026",
+      "sourceUrl": "https://www.argentina.gob.ar/normativa/nacional/norma-426357/texto",
+      "note": "Para propano indiluido por redes se traslada el 60% del PPE vigente al día 20 del mes anterior.",
+      "details": "El dataset público histórico de PPE informa actualización mensual, pero su recurso abierto no expone de forma confiable el valor corriente 2026; no mostramos un número hasta validarlo."
+    }
+  ],
+  "regulationCriteria": {
+    "title": "Criterio GasData",
+    "text": "Selección no exhaustiva de normas oficiales que impactan materialmente en gas natural/GLP: subdistribución, transporte y distribución, tarifas/precios/subsidios, comercialización/mercado, infraestructura y reglas técnicas/operativas. Se priorizan los últimos 90 días y se mantienen normas anteriores cuando siguen siendo referencia relevante. Las resoluciones puramente tarifarias también se ordenan en la solapa Tarifas.",
+    "updatedAt": "2026-09-28T11:00:00-03:00"
+  }
 }
