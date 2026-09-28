@@ -9,6 +9,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -31,3 +33,25 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Publicar datos actualizados
+        id: deployment
+        uses: actions/deploy-pages@v4
