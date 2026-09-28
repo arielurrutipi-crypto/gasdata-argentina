@@ -11,6 +11,13 @@ def fetch(url):
 def inspect(kind,url):
     try:
         raw=fetch(url)
+        if kind=='json': return json.loads(raw)
+        if kind=='xls':
+            book=xlrd.open_workbook(file_contents=raw)
+            return [{'name':s.name,'head':[s.row_values(i) for i in range(min(8,s.nrows))],'tail':[s.row_values(i) for i in range(max(0,s.nrows-3),s.nrows)]} for s in book.sheets()]
+        if kind=='xlsx':
+            book=openpyxl.load_workbook(io.BytesIO(raw),read_only=True,data_only=True)
+            return [{'name':s.title,'head':list(s.values)[:9],'tail':list(s.values)[-3:]} for s in book]
         if kind=='zip':
             z=zipfile.ZipFile(io.BytesIO(raw)); out={'names':z.namelist(),'bytes':len(raw)}
             files=[]
@@ -40,6 +47,12 @@ def inspect(kind,url):
     except Exception as e:return {'error':str(e)}
 
 TASKS={
+ 'eia_xls':('xls','https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls'),
+ 'wb_xlsx':('xlsx','https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx'),
+ 'glp_api':('json','https://datos.energia.gob.ar/api/3/action/package_show?id=glp'),
+ 'gn_api':('json','https://datos.energia.gob.ar/api/3/action/package_show?id=precios-de-gas-natural'),
+ 'bagsa_gn':('pdf','https://www.bagsa.com.ar/wp-content/uploads/2026/09/NATURGY-GN-539-26.pdf'),
+ 'bagsa_glp':('pdf','https://www.bagsa.com.ar/wp-content/uploads/2026/09/NATURGY-GLP-539-26.pdf'),
  'production':('zip','https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/tablas_dinamicas/upstream/sescoweb_produccion.zip'),
  'monthly':('pdf','https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_202607.pdf'),
  'linepack':('pdf','https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf'),
