@@ -1136,7 +1136,7 @@
     {
       "name": "Datos Argentina · Energía",
       "type": "Oficial",
-      "content": "Producción nacional y por cuenca",
+      "content": "Producción nacional, por provincia y por cuenca",
       "cadence": "Cada 15 días",
       "status": "REVISAR",
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
