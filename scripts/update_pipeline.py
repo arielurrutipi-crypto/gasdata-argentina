@@ -91,26 +91,55 @@ def production(d):
     except Exception: last=None
     if k and k.get("status")!="pending" and last and now()<last+timedelta(days=15):
         return
+    months=("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre")
     try:
-        raw=official_series("PROD_GAS_SESCO_7")
-        ref,val=raw["data"][0][0],raw["data"][0][1]
-        disp=f"{float(val):,.2f}".replace(",","X").replace(".",",").replace("X",".")
+        hub="https://www.argentina.gob.ar/economia/energia/noticias"
+        raw=fetch(hub).decode("utf-8","ignore")
+        links=[]
+        for href,label in re.findall(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',raw,re.I|re.S):
+            title=clean(label)
+            h=(title+" "+href).lower()
+            if "produccion" in h or "producción" in h or "gas" in h:
+                links.append((urllib.parse.urljoin(hub,href),title))
+        found=None
+        for url,title in links[:30]:
+            try:
+                article=clean(fetch(url).decode("utf-8","ignore"))
+            except Exception:
+                continue
+            m=re.search(r"gas natural.{0,180}?producci[oó]n nacional (?:fue|alcanz[oó])(?: de)?\s*([\d.,]+)\s+millones de metros c[uú]bicos diarios",article,re.I)
+            if not m:
+                continue
+            val=float(m.group(1).replace(".","").replace(",","."))
+            year_m=re.search(r"\b(20\d{2})\b",article)
+            year=year_m.group(1) if year_m else str(now().year)
+            month=next((x for x in months if x in title.lower()),None)
+            if not month:
+                month=next((x for x in months if re.search(r"\ben "+x+r"\b",article,re.I)),None)
+            ref=(month.capitalize()+" "+year) if month else year
+            found=(val,ref,url,title)
+            break
+        if not found:
+            raise RuntimeError("no se halló una publicación oficial reciente con producción nacional de gas")
+        val,ref,url,title=found
+        disp=f"{val:.1f}".replace(".",",")
         old=(k or {}).get("value")
         item={
           "id":"national_prod","label":"Producción nacional de gas",
-          "value":disp,"unit":"MMm³/d","reference":ref[:7],
+          "value":disp,"unit":"MMm³/d","reference":ref,
           "validatedAt":iso(),"nextValidation":iso(now()+timedelta(days=15)),
           "status":"updated" if old!=disp else "unchanged",
           "statusText":"ACTUALIZADO" if old!=disp else "SIN CAMBIOS",
-          "sourceType":"OFFICIAL","source":"Secretaría de Energía · Datos Argentina · PROD_GAS_SESCO_7"
+          "sourceType":"OFFICIAL","source":"Secretaría de Energía",
+          "sourceUrl":url,"note":title
         }
         upsert_kpi(d,item)
         if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status=item["status"],
-                       note="Serie oficial PROD_GAS_SESCO_7 validada.")
+                       note="Producción validada contra la publicación oficial más reciente de Secretaría de Energía.")
     except Exception as e:
         print("PROD",e)
         if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status="pending",
-                       note="Consulta fallida; se conserva el último valor disponible.")
+                       note="Consulta oficial fallida; se conserva el último valor y su período de referencia.")
 
 def demand_priority(d):
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
