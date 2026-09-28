@@ -1576,7 +1576,7 @@
   ],
   "marketNotes": {
     "glp": "Argentina dispone de PPE para propano y butano. Para comparar competitividad se muestran junto a Mont Belvieu y referencias CP/OSP, pero las bases comerciales y logísticas no son idénticas.",
-    "lng": "JKM y TTF reflejan mercados de destino; Henry Hub es gas de origen. La diferencia entre ellos no debe leerse como margen exportador argentino."
+    "lng": "JKM es una referencia de GNL spot en Asia. TTF y Henry Hub se muestran por separado como benchmarks de gas natural, no como GNL."
   },
   "productionCoverage": {
     "provinceTitle": "Detalle territorial",
