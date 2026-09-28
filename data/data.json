@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.6.0",
-    "updatedAt": "2026-09-28T11:42-03:00",
+    "version": "1.7.0",
+    "updatedAt": "2026-09-28T11:45:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1488,15 +1488,15 @@
     },
     {
       "id": "injection",
-      "label": "Inyección nacional · reporte",
-      "value": "26/08",
-      "unit": "2026",
-      "reference": "26/08/2026 · dato real",
-      "validatedAt": "2026-09-28T11:42-03:00",
-      "statusText": "EXTRAYENDO",
-      "source": "ENReGE · Inyección por gasoducto",
+      "label": "Inyección nacional",
+      "value": "129,0",
+      "unit": "MMm³/d",
+      "reference": "26/08/2026 · REAL",
+      "validatedAt": "2026-09-28T11:45:00-03:00",
+      "statusText": "OFICIAL",
+      "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
-      "note": "PDF oficial cargado correctamente; validando el total nacional de inyección.",
+      "note": "Inyección nacional total del gráfico oficial. Apertura por San Martín, Neuba I, Neuba II, GPFM, Centro Oeste y Norte.",
       "visualGroup": "gn"
     },
     {
