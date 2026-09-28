@@ -1,4 +1,4 @@
-# Pipeline v1.7
+# Pipeline v1.8
 from __future__ import annotations
 import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
 ART=timezone(timedelta(hours=-3))
-UA={"User-Agent":"GasDataArgentina/1.7 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
+UA={"User-Agent":"GasDataArgentina/1.8 (+https://github.com/arielurrutipi-crypto/gasdata-argentina)"}
 KEYWORDS=(
  "gas","vaca muerta","gnl","lng","tgs","tgn","bagsa","camuzzi","metrogas","naturgy",
  "enrege","enargas","tarifa","gasoducto","subdistrib","exportacion","exportación",
@@ -367,6 +367,47 @@ def validate_pages(d):
     except Exception as e:
         print("BAGSA",e)
 
+
+def bopba_monitor(d):
+    """Check only the Provincial Official Gazette results relevant to GasData."""
+    base="https://boletinoficial.gba.gob.ar/buscar"
+    since=(now()-timedelta(days=45)).strftime("%d/%m/%Y")
+    results={}
+    urls={}
+    for term in ("gas natural","BAGSA"):
+        params={
+          "commit":"Buscar","search[date_gteq]":since,"search[date_lteq]":"",
+          "search[section]":"OFICIAL","search[sort]":"by_match_desc",
+          "search[words]":term,"utf8":"✓"
+        }
+        url=base+"?"+urllib.parse.urlencode(params)
+        urls[term]=url
+        try:
+            txt=clean(fetch(url).decode("utf-8","ignore"))
+            dates=re.findall(r"fecha de publicación:\s*(\d{2}/\d{2}/\d{4})",txt,re.I)
+            results[term]={"ok":True,"matches":len(dates),"latest":dates[0] if dates else None}
+        except Exception as e:
+            print("BOPBA",term,e)
+            results[term]={"ok":False,"matches":0,"latest":None}
+
+    src=next((x for x in d.get("sources",[]) if x.get("name")=="Boletín Oficial PBA · Gas/BAGSA"),None)
+    if src:
+        src["validatedAt"]=iso()
+        src["status"]="ACTIVA" if any(v["ok"] for v in results.values()) else "REVISAR"
+        src["url"]=urls["gas natural"]
+        src["secondaryUrl"]=urls["BAGSA"]
+        src["content"]="Filtro exclusivo: “gas natural” OR “BAGSA”"
+        src["lastResult"]=" · ".join(
+          f"{k}: {v['matches']} coincid."+(f" · última {v['latest']}" if v["latest"] else "")
+          for k,v in results.items()
+        )
+
+    u=next((x for x in d.get("updates",[]) if x.get("name")=="Boletín Oficial PBA"),None)
+    if u:
+        u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
+                 status="updated" if any(v["matches"] for v in results.values()) else "unchanged",
+                 note="Sección Oficial PBA; sólo búsquedas “gas natural” y “BAGSA”.")
+
 def refresh_source_status(d):
     for src in d.get("sources",[]):
         try:
@@ -384,9 +425,10 @@ def main():
     demand_priority(d)
     system_market(d)
     transport_capacity(d)
+    bopba_monitor(d)
     refresh_source_status(d)
     d["meta"]["updatedAt"]=iso()
-    d["meta"]["version"]="1.7.0"
+    d["meta"]["version"]="1.8.0"
     DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
