@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.9.0",
-    "updatedAt": "2026-09-28T12:17-03:00",
+    "version": "2.0.0",
+    "updatedAt": "2026-09-28T12:20:00-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -1692,11 +1692,15 @@
       "title": "Concurso Abierto TGN N.º 1/2026",
       "volume": "Capacidad firme proveniente de expansiones",
       "period": "Vigente",
-      "published": "2026",
-      "status": "VIGENTE · VERIFICADO 28/09",
-      "source": "ENReGE · Concursos y reventas",
+      "published": "17/09/2026",
+      "status": "VIGENTE",
+      "source": "ENReGE / TGN",
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
-      "note": "Última verificación oficial 28/09/2026. La página pública de ENReGE lo muestra dentro de Concursos vigentes."
+      "note": "Manifestación de Interés 01/2026. Esta etapa mide demanda; no es todavía la oferta irrevocable del concurso posterior.",
+      "publishedAt": "2026-09-17T00:00:00-03:00",
+      "deadline": "08/10/2026 12:00",
+      "deadlineAt": "2026-10-08T12:00:00-03:00",
+      "deadlineLabel": "Cierre manifestación de interés"
     },
     {
       "id": "megsa_t903",
@@ -1706,10 +1710,14 @@
       "volume": "80.000 m³/d",
       "period": "01/10/2026–30/04/2027",
       "published": "10/09/2026",
-      "status": "ACTO 25/09",
+      "status": "CERRADO",
       "source": "MEGSA · Reventa de transporte firme",
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
-      "note": "Última oferta visible en la pantalla pública de reventas."
+      "note": "Reventa de transporte firme TGS T903 por 80.000 m³/d.",
+      "publishedAt": "2026-09-10T00:00:00-03:00",
+      "deadline": "25/09/2026",
+      "deadlineAt": "2026-09-25T23:59:59-03:00",
+      "deadlineLabel": "Acto de lectura / cierre"
     }
   ],
   "transportCapacityMeta": {
@@ -1797,5 +1805,290 @@
     "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual.",
     "checkedAt": "2026-09-28T12:16-03:00",
     "status": "current"
+  },
+  "basinMonthly2026": [
+    {
+      "month": "2026-01",
+      "label": "Enero",
+      "total": "130,962",
+      "reference": "Enero 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/03/11/tablero-de-control-de-enero-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "95,247",
+          "unit": "MMm³/d",
+          "share": "72,7%",
+          "trend": "-2,00%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "24,451",
+          "unit": "MMm³/d",
+          "share": "18,7%",
+          "trend": "-11,71%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,443",
+          "unit": "MMm³/d",
+          "share": "6,4%",
+          "trend": "-17,52%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,728",
+          "unit": "MMm³/d",
+          "share": "2,1%",
+          "trend": "-16,64%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,094",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-18,50%"
+        }
+      ]
+    },
+    {
+      "month": "2026-02",
+      "label": "Febrero",
+      "total": "140,023",
+      "reference": "Febrero 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/04/08/tablero-de-control-de-febrero-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "101,631",
+          "unit": "MMm³/d",
+          "share": "72,6%",
+          "trend": "-0,70%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "26,938",
+          "unit": "MMm³/d",
+          "share": "19,2%",
+          "trend": "-7,01%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,644",
+          "unit": "MMm³/d",
+          "share": "6,2%",
+          "trend": "-14,29%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,721",
+          "unit": "MMm³/d",
+          "share": "1,9%",
+          "trend": "-16,94%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,089",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-23,82%"
+        }
+      ]
+    },
+    {
+      "month": "2026-03",
+      "label": "Marzo",
+      "total": "141,739",
+      "reference": "Marzo 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/05/13/tablero-de-control-de-marzo-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "104,963",
+          "unit": "MMm³/d",
+          "share": "74,1%",
+          "trend": "+12,40%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "25,725",
+          "unit": "MMm³/d",
+          "share": "18,1%",
+          "trend": "-5,23%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,262",
+          "unit": "MMm³/d",
+          "share": "5,8%",
+          "trend": "-16,30%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,702",
+          "unit": "MMm³/d",
+          "share": "1,9%",
+          "trend": "-17,65%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,088",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-22,04%"
+        }
+      ]
+    },
+    {
+      "month": "2026-04",
+      "label": "Abril",
+      "total": "140,513",
+      "reference": "Abril 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/06/10/tablero-de-control-de-abril-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "105,022",
+          "unit": "MMm³/d",
+          "share": "74,7%",
+          "trend": "+9,57%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "24,575",
+          "unit": "MMm³/d",
+          "share": "17,5%",
+          "trend": "-9,89%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,140",
+          "unit": "MMm³/d",
+          "share": "5,8%",
+          "trend": "-19,98%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,683",
+          "unit": "MMm³/d",
+          "share": "1,9%",
+          "trend": "-18,99%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,093",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-15,61%"
+        }
+      ]
+    },
+    {
+      "month": "2026-05",
+      "label": "Mayo",
+      "total": "155,665",
+      "reference": "Mayo 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/07/08/tablero-de-control-de-mayo-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "119,080",
+          "unit": "MMm³/d",
+          "share": "76,5%",
+          "trend": "+11,38%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "25,610",
+          "unit": "MMm³/d",
+          "share": "16,5%",
+          "trend": "-6,74%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,214",
+          "unit": "MMm³/d",
+          "share": "5,3%",
+          "trend": "-17,70%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,673",
+          "unit": "MMm³/d",
+          "share": "1,7%",
+          "trend": "-16,59%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,088",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-28,56%"
+        }
+      ]
+    },
+    {
+      "month": "2026-06",
+      "label": "Junio",
+      "total": "158,980",
+      "reference": "Junio 2026 · promedio diario",
+      "validatedAt": "2026-09-28T12:20:00-03:00",
+      "source": "SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+      "sourceUrl": "https://todohidrocarburos.com/2026/08/12/tablero-de-control-de-junio-de-2026/",
+      "basins": [
+        {
+          "name": "Cuenca Neuquina",
+          "value": "122,704",
+          "unit": "MMm³/d",
+          "share": "77,2%",
+          "trend": "+4,59%"
+        },
+        {
+          "name": "Cuenca Austral",
+          "value": "25,354",
+          "unit": "MMm³/d",
+          "share": "15,9%",
+          "trend": "-12,40%"
+        },
+        {
+          "name": "Golfo San Jorge",
+          "value": "8,171",
+          "unit": "MMm³/d",
+          "share": "5,1%",
+          "trend": "-17,13%"
+        },
+        {
+          "name": "Cuenca Noroeste",
+          "value": "2,663",
+          "unit": "MMm³/d",
+          "share": "1,7%",
+          "trend": "-14,83%"
+        },
+        {
+          "name": "Cuenca Cuyana",
+          "value": "0,087",
+          "unit": "MMm³/d",
+          "share": "0,1%",
+          "trend": "-10,20%"
+        }
+      ]
+    }
+  ],
+  "basinMonthlyMeta": {
+    "year": 2026,
+    "latest": "2026-06",
+    "source": "Producción promedio diaria por cuenca · SESCO/Secretaría de Energía",
+    "officialUrl": "https://www.argentina.gob.ar/produccion/energia/planeamiento-energetico/panel-de-indicadores/produccion-gas-prom-diaria-cuenca",
+    "note": "Selector con meses verificados enero–junio 2026. La serie oficial es mensual."
   }
 }
