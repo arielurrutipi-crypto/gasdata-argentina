@@ -4,6 +4,7 @@ import json, re, html, io, urllib.request, urllib.parse, xml.etree.ElementTree a
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from email.utils import parsedate_to_datetime
+from bs4 import BeautifulSoup
 
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"data.json"
@@ -399,6 +400,197 @@ def transport_capacity(d):
         u.update(last=iso(),next=iso(now()+timedelta(hours=3)),status="updated" if out else "unchanged",
                  note="ENReGE concursos abiertos + MEGSA reventas de transporte firme.")
 
+
+REGULATION_START=datetime(2026,1,1,tzinfo=ART)
+REGULATION_SEARCH_TERMS=(
+    "gas natural","gasoducto","subdistribucion","subdistribución",
+    "gas propano","propano por redes","GLP","GNL","Plan Gas","PIST",
+    "comercializadores de gas","transporte de gas","distribucion de gas","distribución de gas"
+)
+REGULATION_GAS_SIGNALS=(
+    "gas natural","gas licuado","glp","gnl","lng","gasoduct","subdistrib",
+    "propano","butano","plan gas","pist","comercializador",
+    "transporte de gas","distribución de gas","distribucion de gas",
+    "camuzzi","naturgy","metrogas","litoral gas","gasnea","gas nea","gasnor",
+    "tgs","tgn","transportadora de gas","energía argentina sociedad anónima",
+    "energia argentina sociedad anonima"
+)
+REGULATION_CATEGORY_RULES=(
+    ("Subdistribución",("subdistrib","subdistribuidor","sdb")),
+    ("GLP",("glp","gas licuado de petróleo","gas licuado de petroleo","propano","butano")),
+    ("GNL",("gnl","lng","gas natural licuado")),
+    ("Tarifas",("cuadro tarifario","cuadros tarifarios","tarifa","revisión tarifaria","revision tarifaria")),
+    ("Precios",("precio anual uniforme"," pau ","pist","precio de gas","precio de paridad de exportación","precio de paridad de exportacion","ppe")),
+    ("Subsidios",("subsid","bonificación","bonificacion","sef","segmentación","segmentacion")),
+    ("Comercialización",("comercializador","comercialización","comercializacion","registro de comercializadores")),
+    ("Transporte",("transporte de gas","transportista","capacidad firme","tgs","tgn","gasoducto norandino","energía argentina sociedad anónima","energia argentina sociedad anonima")),
+    ("Distribución",("distribución de gas","distribucion de gas","distribuidora","camuzzi","naturgy","metrogas","litoral gas","gasnea","gas nea","gasnor")),
+    ("Infraestructura",("gasoducto","planta compresora","infraestructura","ampliación","ampliacion","refuerzo","obra")),
+    ("Técnica / operativa",("nag-","norma técnica","norma tecnica","reglamento","seguridad","integridad","odoriz","medición","medicion","calidad de gas","operación","operacion"))
+)
+
+def _norm_url(u):
+    if not u: return ""
+    u=urllib.parse.urljoin("https://www.argentina.gob.ar",u)
+    return u.split("#",1)[0].rstrip("/")
+
+def _reg_categories(text):
+    low=(" "+(text or "").lower()+" ")
+    cats=[]
+    for name,terms in REGULATION_CATEGORY_RULES:
+        if any(t in low for t in terms):
+            cats.append(name)
+    if not cats and ("mercado" in low or "registro" in low):
+        cats.append("Mercado")
+    return cats
+
+def _reg_relevant(text):
+    low=(text or "").lower()
+    return any(k in low for k in REGULATION_GAS_SIGNALS)
+
+def _reg_number(name):
+    name=clean(name)
+    m=re.search(r"(Resoluci[oó]n General|Resoluci[oó]n|Decreto|Disposici[oó]n|Decisi[oó]n Administrativa)\s+(\d+)\s*/\s*(\d{2,4})",name,re.I)
+    if not m: return name[:90] or "Norma"
+    kind=m.group(1)
+    kind=kind[0].upper()+kind[1:]
+    year=m.group(3)
+    if len(year)==2: year="20"+year
+    return f"{kind} {m.group(2)}/{year}"
+
+def _reg_date(text):
+    patterns=(
+      r"Publicada en el Bolet[ií]n Oficial:\s*(\d{2}-\d{2}-\d{4})",
+      r"Fecha de publicaci[oó]n\s*(\d{2}/\d{2}/\d{4})",
+      r"Publicaci[oó]n:\s*(\d{2}-\d{2}-\d{4})"
+    )
+    for p in patterns:
+        m=re.search(p,text,re.I)
+        if m:
+            raw=m.group(1)
+            for fmtx in ("%d-%m-%Y","%d/%m/%Y"):
+                try: return datetime.strptime(raw,fmtx).replace(tzinfo=ART)
+                except Exception: pass
+    return None
+
+def _discover_regulation_urls():
+    base="https://www.argentina.gob.ar/normativa/busqueda-avanzada"
+    since=REGULATION_START.strftime("%Y-%m-%d")
+    until=now().strftime("%Y-%m-%d")
+    found={}
+    successful=0
+    for term in REGULATION_SEARCH_TERMS:
+        page=1
+        previous_page=set()
+        while page<=6:
+            params={
+              "jurisdiccion":"nacional","tipo_norma":"legislaciones",
+              "publicacion_desde":since,"publicacion_hasta":until,
+              "texto":term,"limit":"50","offset":str(page)
+            }
+            try:
+                raw=fetch(base+"?"+urllib.parse.urlencode(params),timeout=35)
+                successful+=1
+            except Exception as e:
+                print("NORM SEARCH",term,page,e); break
+            soup=BeautifulSoup(raw,"html.parser")
+            table=soup.find("table")
+            if not table: break
+            rows=table.find_all("tr")[1:]
+            if not rows: break
+            this_page=set()
+            for row in rows:
+                cells=row.find_all("td")
+                if not cells: continue
+                link=row.find("a",href=True)
+                if not link: continue
+                url=_norm_url(link.get("href"))
+                if "/normativa/nacional/" not in url: continue
+                snippet=clean(cells[2].get_text(" ",strip=True)) if len(cells)>=3 else clean(row.get_text(" ",strip=True))
+                found.setdefault(url,{"url":url,"snippet":snippet,"term":term})
+                this_page.add(url)
+            if not this_page or this_page==previous_page or len(rows)<50: break
+            previous_page=this_page
+            page+=1
+    return found,successful
+
+def _parse_regulation(url,hint=None):
+    raw=fetch(url,timeout=35)
+    soup=BeautifulSoup(raw,"html.parser")
+    name=clean((soup.find("h1",class_="h5") or soup.find("h1") or "").get_text(" ",strip=True) if (soup.find("h1",class_="h5") or soup.find("h1")) else "")
+    title_node=soup.find("h2",class_="h5") or soup.find("h2")
+    title=clean(title_node.get_text(" ",strip=True)) if title_node else ""
+    lead=soup.find("p",class_="lead m-b-0")
+    issuer=""
+    if lead:
+        small=lead.find("small")
+        issuer=clean(small.get_text(" ",strip=True)) if small else clean(lead.get_text(" ",strip=True))
+    article=soup.find("article")
+    summary=clean(article.get_text(" ",strip=True)) if article else clean(soup.get_text(" ",strip=True))
+    text=" ".join(x for x in (name,title,issuer,(hint or {}).get("snippet",""),summary[:6500]) if x)
+    if not _reg_relevant(text): return None
+    dt=_reg_date(clean(soup.get_text(" ",strip=True)))
+    if not dt or dt<REGULATION_START or dt>now()+timedelta(days=1): return None
+    cats=_reg_categories(text)
+    primary=cats[0] if cats else "Mercado"
+    tags=list(dict.fromkeys(cats))
+    low=text.lower()
+    if "bagsa" in low or "subdistrib" in low: tags.append("BAGSA")
+    desc=(hint or {}).get("snippet") or title or summary[:280]
+    desc=clean(desc)[:420]
+    return {
+      "num":_reg_number(name),"category":primary,"title":title or _reg_number(name),
+      "publishedAt":iso(dt),"validatedAt":iso(),"sourceType":"OFFICIAL",
+      "status":"updated","desc":desc,"tags":list(dict.fromkeys(tags)),
+      "url":url,"issuer":issuer or "Organismo oficial","auto":True
+    }
+
+def update_regulations(d):
+    existing={}
+    for x in d.get("regulations",[]):
+        try: dt=datetime.fromisoformat(x.get("publishedAt",""))
+        except Exception: dt=None
+        if dt and dt>=REGULATION_START and x.get("url"):
+            existing[_norm_url(x["url"])]=x
+    discovered,successful=_discover_regulation_urls()
+    added=0; refreshed=0
+    for url,hint in discovered.items():
+        if url in existing:
+            existing[url]["validatedAt"]=iso()
+            existing[url]["auto"]=existing[url].get("auto",False)
+            refreshed+=1
+            continue
+        try:
+            item=_parse_regulation(url,hint)
+        except Exception as e:
+            print("NORM DETAIL",url,e); item=None
+        if item:
+            existing[url]=item; added+=1
+    items=list(existing.values())
+    items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
+    d["regulations"]=items[:500]
+    d["regulationCriteria"]={
+      "title":"Criterio GasData",
+      "text":"Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se actualiza cada 3 horas y clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. La selección se basa en términos y contenido del acto oficial; la fuente original prevalece.",
+      "updatedAt":iso()
+    }
+    src=next((x for x in d.get("sources",[]) if x.get("name")=="Argentina.gob.ar · Normativa gas"),None)
+    payload={
+      "name":"Argentina.gob.ar · Normativa gas","type":"Oficial",
+      "content":"Normativa nacional relevante para gas desde 01/01/2026",
+      "cadence":"Cada 3 h","status":"ACTIVA" if successful else "REVISAR",
+      "url":"https://www.argentina.gob.ar/normativa","validatedAt":iso(),
+      "lastResult":f"{len(items)} normas en listado · {added} nuevas · {refreshed} revalidadas"
+    }
+    if src: src.update(payload)
+    else: d.setdefault("sources",[]).append(payload)
+    u=next((x for x in d.get("updates",[]) if x.get("name")=="Normativa"),None)
+    if u:
+        u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
+                 status="updated" if added else ("unchanged" if successful else "pending"),
+                 note=f"Consulta automática desde 01/01/2026 · {len(items)} normas · {added} nuevas en esta ejecución.")
+
+
 def validate_pages(d):
     checks=[
       ("Normativa","https://www.enargas.gob.ar/secciones/normativa/resoluciones.php",3),
@@ -423,7 +615,7 @@ def validate_pages(d):
 def bopba_monitor(d):
     """Check only the Provincial Official Gazette results relevant to GasData."""
     base="https://boletinoficial.gba.gob.ar/buscar"
-    since=(now()-timedelta(days=45)).strftime("%d/%m/%Y")
+    since=REGULATION_START.strftime("%d/%m/%Y")
     results={}
     urls={}
     for term in ("gas natural","BAGSA"):
@@ -473,6 +665,7 @@ def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
     update_news(d)
     validate_pages(d)
+    update_regulations(d)
     production(d)
     demand_priority(d)
     system_market(d)
