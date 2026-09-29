@@ -318,6 +318,12 @@ def _monthly_pdf_url(month):
     return "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_"+month.replace("-","")+".pdf"
 
 def _read_monthly_flows_pdf(month):
+    from automatic_sources import monthly_values
+    import pdfplumber
+    with pdfplumber.open(io.BytesIO(fetch(_monthly_pdf_url(month),timeout=40))) as pdf:
+        return monthly_values(pdf.pages[0].extract_words())
+
+def _legacy_read_monthly_flows_pdf(month):
     from pypdf import PdfReader
     pdf=fetch(_monthly_pdf_url(month),timeout=40)
     text=" ".join((page.extract_text() or "") for page in PdfReader(io.BytesIO(pdf)).pages)
@@ -637,6 +643,8 @@ def _reg_family(x):
     return re.sub(r"\W+","",str(x.get("issuer") or "otro").lower())[:48] or "otro"
 
 def _reg_identity(x):
+    if x.get('jurisdiction') == 'PBA':
+        return 'pba|' + str(x.get('url'))
     return _reg_family(x)+"|"+re.sub(r"\s+","",str(x.get("num","")).lower())
 
 def _bora_label(a):
@@ -918,7 +926,7 @@ def sync_update_catalog(d):
     specs=[
       ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."),
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
-      ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Normativa + control de páginas","La resolución/vigencia se sincroniza desde normativa detectada. Las páginas ENReGE/BAGSA se controlan diariamente; no se extraen todavía importes de cuadros PDF."),
+      ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Cuadros BAGSA + normativa","Lee resolución y vigencia explícita de cuadros BAGSA. Conserva referencias anteriores si falta verificar un producto. No interpreta todavía todos los importes tarifarios."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
       ("Producción por cuenca/provincia","Mensual","Pendiente de automatización","Último consolidado validado","Los valores por cuenca y provincia permanecen en el último mes validado hasta implementar lectura automática del dataset oficial."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
@@ -926,7 +934,7 @@ def sync_update_catalog(d):
       ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
       ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
       ("Boletín Oficial PBA","Cada 3 h","Monitoreo automático","Búsqueda desde 01/01/2026","Consulta “gas natural” y “BAGSA”. Hoy informa coincidencias y última fecha; no incorpora automáticamente actos provinciales al listado nacional."),
-      ("Precios de mercado","Según fuente","Validación puntual","Último dato validado","Benchmarks y referencias de precios todavía no se refrescan todos automáticamente; cada tarjeta conserva su fecha de validación.")
+      ("Precios de mercado","Cada 60 min","Automática parcial","EIA diaria + Banco Mundial mensual","Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.")
     ]
     out=[]
     for name,cadence,mode,strategy,scope in specs:
@@ -950,13 +958,17 @@ def refresh_source_status(d):
             src["checkedAt"]=iso()
 
 def main():
+    from automatic_sources import update_market, update_bagsa
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
     update_news(d)
-    validate_pages(d)
     scan=d.get("regulationScan",{})
     if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
+    if _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
+        update_bagsa(d,fetch,iso)
+    update_market(d,fetch,iso)
+    validate_pages(d)
     production(d)
     demand_priority(d)
     system_market(d)

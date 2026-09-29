@@ -24,7 +24,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Instalar lector PDF
-        run: pip install pypdf beautifulsoup4
+        run: pip install pypdf beautifulsoup4 pdfplumber openpyxl xlrd
+      - name: Probar lectores antes de modificar datos
+        run: python -m unittest discover -s scripts -p 'test_automatic_sources.py'
       - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
@@ -73,4 +75,3 @@ jobs:
       - name: Publicar datos actualizados
         id: deployment
         uses: actions/deploy-pages@v4
-
