@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "updatedAt": "2026-09-29T13:35-03:00",
+    "updatedAt": "2026-09-29T14:31-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -57,11 +57,11 @@
     {
       "id": "demand_priority",
       "label": "Proyección demanda prioritaria",
-      "value": "45,3907",
+      "value": "43,5805",
       "unit": "MMm³/d",
-      "reference": "Jue 01/10/2026 · PROYECCIÓN",
-      "validatedAt": "2026-09-29T13:34-03:00",
-      "nextValidation": "2026-09-30T13:34-03:00",
+      "reference": "Vie 02/10/2026 · PROYECCIÓN",
+      "validatedAt": "2026-09-29T14:31-03:00",
+      "nextValidation": "2026-09-30T14:31-03:00",
       "status": "updated",
       "statusText": "ACTUALIZADO",
       "sourceType": "OFFICIAL",
@@ -70,21 +70,15 @@
       "note": "Ventana de 5 días de ENReGE: primera columna = consumo real (1); cuatro columnas siguientes = consumo estimado (2).",
       "series": [
         {
-          "date": "27/09",
-          "fullDate": "Dom 27/09/2026",
-          "value": "37,2475",
-          "kind": "REAL"
-        },
-        {
           "date": "28/09",
           "fullDate": "Lun 28/09/2026",
-          "value": "42,0747",
-          "kind": "PROY."
+          "value": "40,4595",
+          "kind": "REAL"
         },
         {
           "date": "29/09",
           "fullDate": "Mar 29/09/2026",
-          "value": "42,3147",
+          "value": "43,8147",
           "kind": "PROY."
         },
         {
@@ -96,7 +90,13 @@
         {
           "date": "01/10",
           "fullDate": "Jue 01/10/2026",
-          "value": "45,3907",
+          "value": "45,4007",
+          "kind": "PROY."
+        },
+        {
+          "date": "02/10",
+          "fullDate": "Vie 02/10/2026",
+          "value": "43,5805",
           "kind": "PROY."
         }
       ],
@@ -108,7 +108,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T11:37-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Juan Luchilo, gerente general de Cammesa: “El sistema eléctrico tiene ir a un esquema lo más full gas posible”",
       "desc": "Juan Luchilo, gerente general de Cammesa, no tiene dudas. “El sistema eléctrico tiene ir a un esquema lo más full gas posible”, afirmó en el Renewables y Electricity Day organizado por EconoJournal. “Desde el momento que se establece que Vaca Muerta es una fuente infinita de gas, hay que poner generación en boca de pozo […]",
       "tags": [
@@ -145,7 +145,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "GNL: aumentó el tránsito de buques por el estrecho de Ormuz pese al conflicto",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -158,7 +158,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Con una ley Mendoza quiere impulsar Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -230,7 +230,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:40-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "La producción argentina proyecta alcanzar un millón de barriles diarios",
       "desc": "El país se encamina a marcar un hito histórico de extracción impulsado por el desarrollo de la formación Vaca Muerta […] The post La producción argentina proyecta alcanzar un millón de barriles diarios first appeared on revistapetroquimica.com .",
       "tags": [
@@ -242,7 +242,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:27-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste",
       "desc": "La petrolera estatal Saudi Aramco retomó los flujos a través de esta infraestructura de 1.200 kilómetros tras reparar los daños […] The post Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste first appeared on revistapetroquimica.com .",
       "tags": [
@@ -254,7 +254,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T17:24-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Enrege: delegados sindicales de UPCN y ATE presionaron a la conducción del ente en la última reunión de directorio",
       "desc": "La reunión de directorio del Ente Nacional Regulador del Gas y la Electricidad (Enrege) venía transcurriendo este lunes sin mayores sobresaltos, con el foco puesto en la actualización de tarifas de octubre, el apagón del 19 de septiembre y el plan de retiros voluntarios. Sin embargo, apenas se terminaron de tratar los temas del día, […]",
       "tags": [
@@ -266,7 +266,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T16:09-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Elecciones 2027: con foco en el derrame de Vaca Muerta, se lanzó un primer espacio opositor a Rolando Figueroa",
       "desc": "Las elecciones provinciales del 2027 en Neuquén aún no tienen fecha, pero un espacio político lanzó este lunes su plataforma de campaña con la que buscará disputarle la gobernación a Rolando Figueroa. Se trata del partido Cumplir, liderado por la diputada Brenda Buchiniz e integrado por una amalgama de dirigentes que incluye desde un exfuncionario […]",
       "tags": [
@@ -318,7 +318,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Urea: el gas de Vaca Muerta cuesta hasta un 68% menos que el del Presal brasileño",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -331,7 +331,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Las claves para entender la apuesta del GNL argentino",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -344,7 +344,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "El gas de Vaca Muerta podría llegar a Brasil a U$S 6,3/MMBTU",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -357,7 +357,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "El Hub Norte y la necesidad de infraestructura para el gas asociado",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -370,7 +370,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "EXIM de Estados Unidos financiará a Argentina LNG con U$S 6.000 millones",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -383,7 +383,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Vaca Muerta: el motor salarial que domina Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -396,7 +396,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Un tren para descomprimir la \"ruta de la arena\" de Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -409,7 +409,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Neuquén ya explica el 74% del petróleo y el 75% del gas del país",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -422,7 +422,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Halliburton capacitó a sus operarios para operar Zeus en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -435,7 +435,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "El camino hacia el \"sello verde\" Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -653,7 +653,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T09:01-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "El Gobierno precisó cuánto costará la energía para data centers, grandes desarrollos mineros y nuevos proyectos de infraestructura en Vaca Muerta",
       "desc": "El Gobierno publicó el viernes pasado la resolución 264 de la Secretaría de Energía, una normativa que establece las condiciones de borde bajo las cuales deberán incorporarse al Mercado Eléctrico Mayorista (MEM) las nuevas inversiones que impliquen un salto significativo en el consumo de electricidad. La regulación apunta fundamentalmente a anticipar el impacto que podrían […]",
       "tags": [
@@ -677,7 +677,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T07:12-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales",
       "desc": "La petrolera YPF aporta el 48,9% del crudo no convencional argentino con 317,4 mil barriles diarios, mientras que el 80,6% […] The post YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales first appeared on revistapetroquimica.com .",
       "tags": [
@@ -689,7 +689,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T06:50-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones",
       "desc": "Un corredor marítimo supervisado por Estados Unidos y rutas alternativas permitieron restablecer el flujo de 8 millones de barriles diarios […] The post Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones first appeared on revistapetroquimica.com .",
       "tags": [
@@ -810,7 +810,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T06:52-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU",
       "desc": "El mandatario excluyó expresamente de la invitación a las firmas que exploten recursos en las Islas Malvinas bajo ocupación ilegal. […] The post Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU first appeared on revistapetroquimica.com .",
       "tags": [
@@ -822,7 +822,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T06:47-03:00",
-      "feedValidatedAt": "2026-09-29T13:34-03:00",
+      "feedValidatedAt": "2026-09-29T14:31-03:00",
       "title": "EE. UU. financiará con U$S 7.000 millones el Corredor Andes-Atlántico",
       "desc": "El acuerdo estratégico impulsará obras en ferrocarriles, ductos, energía y puertos para conectar Vaca Muerta y la minería del NOA […] The post EE. UU. financiará con U$S 7.000 millones el Corredor Andes-Atlántico first appeared on revistapetroquimica.com .",
       "tags": [
@@ -1019,7 +1019,7 @@
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-29T10:35-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 25/09/2026 VISTO el Expediente N.° EX-2026-69172932- -APN-UDYE#ENREGE, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que,",
@@ -1040,7 +1040,7 @@
       "category": "Transporte",
       "title": "Autorízase Segunda Etapa de Privatización.",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-29T10:35-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Autorízase Segunda Etapa de Privatización.",
@@ -6170,10 +6170,10 @@
     {
       "name": "Noticias",
       "cadence": "Cada 60 min",
-      "last": "2026-09-29T13:34-03:00",
-      "next": "2026-09-29T14:34-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T15:31-03:00",
       "status": "partial",
-      "note": "3 noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas",
+      "note": "Sin noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica",
       "mode": "Automática",
       "strategy": "Ventana reciente + deduplicación",
       "scope": "Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."
@@ -6181,8 +6181,8 @@
     {
       "name": "Normativa",
       "cadence": "Cada 3 h",
-      "last": "2026-09-29T10:35-03:00",
-      "next": "2026-09-29T13:35-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T17:31-03:00",
       "status": "unchanged",
       "note": "Consulta 27/09/2026–29/09/2026 · 255 normas guardadas · 0 nuevas · 0 ediciones y 0 documentos pendientes de reintento.",
       "mode": "Automática incremental",
@@ -6224,8 +6224,8 @@
       "mode": "Automática",
       "strategy": "Relectura de ventana vigente",
       "scope": "Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia.",
-      "last": "2026-09-29T13:34-03:00",
-      "next": "2026-09-29T14:34-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T15:31-03:00",
       "status": "updated",
       "note": "Ventana oficial de 5 días revalidada."
     },
@@ -6235,8 +6235,8 @@
       "mode": "Automática parcial",
       "strategy": "Último reporte disponible",
       "scope": "Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo.",
-      "last": "2026-09-29T13:34-03:00",
-      "next": "2026-09-29T14:34-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T15:31-03:00",
       "status": "unchanged",
       "note": "Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo."
     },
@@ -6246,16 +6246,16 @@
       "mode": "Automática parcial",
       "strategy": "Totales del PDF verificados",
       "scope": "Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas.",
-      "last": "2026-09-29T13:34-03:00",
-      "next": "2026-09-29T14:34-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T15:31-03:00",
       "status": "unchanged",
       "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual."
     },
     {
       "name": "Capacidad de transporte",
       "cadence": "Cada 3 h",
-      "last": "2026-09-29T10:35-03:00",
-      "next": "2026-09-29T13:35-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T17:31-03:00",
       "status": "updated",
       "note": "ENReGE concursos abiertos + MEGSA reventas de transporte firme.",
       "mode": "Automática",
@@ -6265,8 +6265,8 @@
     {
       "name": "Boletín Oficial PBA",
       "cadence": "Cada 3 h",
-      "last": "2026-09-29T10:35-03:00",
-      "next": "2026-09-29T13:35-03:00",
+      "last": "2026-09-29T14:31-03:00",
+      "next": "2026-09-29T17:31-03:00",
       "status": "monitored",
       "note": "Monitoreo desde 01/01/2026: se consulta la primera página de resultados para “gas natural” y “BAGSA”; no se incorporan actos provinciales al listado. Coincidencias visibles: 10.",
       "mode": "Monitoreo automático",
@@ -6279,7 +6279,7 @@
       "mode": "Automática parcial",
       "strategy": "EIA diaria + Banco Mundial mensual",
       "scope": "Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.",
-      "last": "2026-09-29T13:34-03:00",
+      "last": "2026-09-29T14:31-03:00",
       "status": "partial",
       "note": "Lectores automáticos: henry_hub: ok, mb_propane: ok, worldbank: ok. Las demás referencias conservan su fecha y requieren revisión manual."
     }
@@ -6299,7 +6299,7 @@
       "url": "https://econojournal.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Mejor Energía",
@@ -6310,7 +6310,7 @@
       "url": "https://www.mejorenergia.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "RunRun Energético",
@@ -6321,7 +6321,7 @@
       "url": "https://runrunenergetico.com/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "ENReGE · Noticias",
@@ -6332,7 +6332,7 @@
       "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "ENReGE · Datos diarios",
@@ -6343,7 +6343,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "ENReGE · Tarifas",
@@ -6354,7 +6354,7 @@
       "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Secretaría de Energía · Noticias",
@@ -6365,7 +6365,7 @@
       "url": "https://www.argentina.gob.ar/economia/energia/noticias",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Datos Argentina · Energía",
@@ -6376,7 +6376,7 @@
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
       "validatedAt": "2026-09-28T11:00:00-03:00",
       "availability": "NO DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -6387,7 +6387,7 @@
       "url": "https://www.tgs.com.ar/prensa/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "TGN · Comunicaciones",
@@ -6398,7 +6398,7 @@
       "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/",
       "validatedAt": "2026-09-28T14:39-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "BAGSA · Tarifas",
@@ -6409,7 +6409,7 @@
       "url": "https://www.bagsa.com.ar/index.php/tarifas/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Revista Petroquímica",
@@ -6420,7 +6420,7 @@
       "url": "https://revistapetroquimica.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Más Energía · LM Neuquén",
@@ -6431,7 +6431,7 @@
       "url": "https://mase.lmneuquen.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "América GLP",
@@ -6442,7 +6442,7 @@
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "MEGSA · Transporte firme",
@@ -6453,7 +6453,7 @@
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "ENReGE · Concursos de capacidad",
@@ -6464,7 +6464,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:34-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Boletín Oficial PBA · Gas/BAGSA",
@@ -6478,10 +6478,10 @@
         "gas natural",
         "BAGSA"
       ],
-      "validatedAt": "2026-09-29T10:35-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "lastResult": "gas natural: 5 coincid. · última 13/05/2026 · BAGSA: 5 coincid. · última 02/02/2026",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:35-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Argentina.gob.ar · Normativa gas",
@@ -6493,7 +6493,7 @@
       "validatedAt": "2026-09-28T14:49-03:00",
       "lastResult": "12 normas en listado · 0 nuevas · 0 revalidadas",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-29T13:35-03:00"
+      "checkedAt": "2026-09-29T14:31-03:00"
     },
     {
       "name": "Boletín Oficial Nación · Normativa gas",
@@ -6502,10 +6502,10 @@
       "cadence": "Cada 3 h",
       "status": "ACTIVA",
       "url": "https://www.boletinoficial.gob.ar/seccion/primera",
-      "checkedAt": "2026-09-29T13:35-03:00",
+      "checkedAt": "2026-09-29T14:31-03:00",
       "lastResult": "255 normas · 0 nuevas · 2 revalidadas · 2 ediciones consultadas",
       "availability": "DISPONIBLE",
-      "validatedAt": "2026-09-29T10:35-03:00"
+      "validatedAt": "2026-09-29T14:31-03:00"
     }
   ],
   "basins": [
@@ -6640,14 +6640,14 @@
       "value": "462,97",
       "unit": "USD/t",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls",
       "note": "Referencia spot FOB Texas convertida a USD/t.",
       "details": "Conversión desde 0.864 USD/gal; 3,785411784 L/gal y densidad indicativa 0,493 kg/L.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-29T13:34-03:00",
+      "checkedAt": "2026-09-29T14:31-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -6718,14 +6718,14 @@
       "value": "2,90",
       "unit": "USD/MMBtu",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls",
       "note": "Precio spot del gas en Henry Hub, Louisiana.",
       "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-29T13:34-03:00",
+      "checkedAt": "2026-09-29T14:31-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -6733,8 +6733,8 @@
       "id": "wb_europe",
       "value": "21,11",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-29T13:34-03:00",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "checkedAt": "2026-09-29T14:31-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "Gas Europa · promedio mensual",
@@ -6751,8 +6751,8 @@
       "id": "wb_japan",
       "value": "13,94",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-29T13:34-03:00",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "checkedAt": "2026-09-29T14:31-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "GNL Japón · promedio mensual",
@@ -6769,7 +6769,7 @@
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
-    "updatedAt": "2026-09-29T10:35-03:00"
+    "updatedAt": "2026-09-29T14:31-03:00"
   },
   "systemKpis": [
     {
@@ -6778,7 +6778,7 @@
       "value": "≈561",
       "unit": "MMm³",
       "reference": "27/08/2026 · REAL",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "statusText": "DERIVADO GRÁFICO",
       "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
@@ -6791,7 +6791,7 @@
       "value": "129,0",
       "unit": "MMm³/d",
       "reference": "26/08/2026 · REAL",
-      "validatedAt": "2026-09-29T13:34-03:00",
+      "validatedAt": "2026-09-29T14:31-03:00",
       "statusText": "OFICIAL",
       "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
@@ -6997,7 +6997,7 @@
     }
   ],
   "transportCapacityMeta": {
-    "validatedAt": "2026-09-29T10:35-03:00",
+    "validatedAt": "2026-09-29T14:31-03:00",
     "cadence": "Cada 3 horas",
     "note": "GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte."
   },
@@ -7079,7 +7079,7 @@
     "source": "ENReGE · Importaciones y Exportaciones Mensuales",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
     "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual.",
-    "checkedAt": "2026-09-29T13:34-03:00",
+    "checkedAt": "2026-09-29T14:31-03:00",
     "status": "current"
   },
   "basinMonthly2026": [
@@ -7370,7 +7370,7 @@
   "regulationScan": {
     "lastScannedDate": "2026-09-29",
     "source": "Boletín Oficial de la República Argentina · Primera Sección",
-    "lastRun": "2026-09-29T10:35-03:00",
+    "lastRun": "2026-09-29T14:31-03:00",
     "pagesOk": 2,
     "pagesError": 0,
     "candidates": 5,
@@ -7383,7 +7383,7 @@
     },
     "added": 0,
     "revalidated": 2,
-    "lastSuccessfulAt": "2026-09-29T10:35-03:00"
+    "lastSuccessfulAt": "2026-09-29T14:31-03:00"
   },
   "tariffAutomation": {
     "checkedAt": "2026-09-28T21:50-03:00",
@@ -7395,7 +7395,7 @@
     ]
   },
   "marketAutomation": {
-    "checkedAt": "2026-09-29T13:34-03:00",
+    "checkedAt": "2026-09-29T14:31-03:00",
     "readers": {
       "henry_hub": "ok",
       "mb_propane": "ok",
