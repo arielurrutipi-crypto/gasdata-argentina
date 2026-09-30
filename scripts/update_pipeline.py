@@ -267,7 +267,14 @@ def _board_row(segment,label):
     p=re.escape(label).replace(r"\ ",r"\s+")
     m=re.search(p+r"\s+([\d,]+)\s+([+\-−]?\d+(?:\.\d+)?%)\s+([+\-−]?\d+(?:\.\d+)?%)",segment,re.I)
     if not m: raise ValueError("fila no encontrada: "+label)
-    return _ar_decimal(m.group(1)),m.group(2).replace("−","-"),m.group(3).replace("−","-")
+    raw=m.group(1)
+    value=_ar_decimal(raw)
+    # The HTML export keeps three-decimal precision but suppresses leading
+    # zeroes/separators for sub-1 MMm3/d values: Cuyana 0.076 is rendered
+    # as "76", Formosa 0.009 as "9", etc.
+    if ',' not in raw and value>=1:
+        value=value/1000
+    return value,m.group(2).replace("−","-"),m.group(3).replace("−","-")
 
 def update_basin_production(d):
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Producción por cuenca/provincia"),None)
