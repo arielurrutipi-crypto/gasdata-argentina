@@ -64,25 +64,32 @@ def catalyst_latest(fetch):
         candidates.append((dt,href))
     if not candidates:
         raise ValueError('No se encontró el último UK Energy Market Report')
-    report_date,url=max(candidates,key=lambda x:x[0])
-    text=re.sub(r'\s+',' ',BeautifulSoup(fetch(url,timeout=30),'html.parser').get_text(' ',strip=True))
-    jkm=re.search(r'JKM\s+LNG\s+M\+1\s*\$?([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
-    if not jkm:
-        jkm=re.search(r'JKM.{0,80}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
-    ttf=re.search(r'TTF\s+spot.{0,100}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
-    if not ttf:
-        ttf=re.search(r'TTF.{0,100}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
-    settle=re.search(r'Settlement\s+(\d{1,2})\s+([A-Za-z]+)',text,re.I)
-    obs=report_date-timedelta(days=1)
-    if settle:
-        mon=month_map.get(settle.group(2).lower())
-        if mon:
-            year=report_date.year
-            obs=datetime(year,mon,int(settle.group(1)))
-            if obs>report_date: obs=obs.replace(year=year-1)
-    if not jkm or not ttf:
-        raise ValueError('El reporte Catalyst no expone JKM/TTF con el formato esperado')
-    return obs.date().isoformat(),float(jkm.group(1)),float(ttf.group(1)),url
+    errors=[]
+    for report_date,url in sorted(candidates,key=lambda x:x[0],reverse=True)[:12]:
+        try:
+            text=re.sub(r'\s+',' ',BeautifulSoup(fetch(url,timeout=30),'html.parser').get_text(' ',strip=True))
+        except Exception as exc:
+            errors.append(report_date.date().isoformat()+': '+str(exc)[:60])
+            continue
+        jkm=re.search(r'JKM\s+LNG\s+M\+1\s*\$?([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+        if not jkm:
+            jkm=re.search(r'JKM.{0,100}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+        ttf=re.search(r'TTF\s+(?:spot|day-ahead).{0,120}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
+        if not ttf:
+            ttf=re.search(r'TTF.{0,120}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+        if not jkm or not ttf:
+            errors.append(report_date.date().isoformat()+': sin JKM/TTF parseables')
+            continue
+        settle=re.search(r'Settlement\s+(\d{1,2})\s+([A-Za-z]+)',text,re.I)
+        obs=report_date-timedelta(days=1)
+        if settle:
+            mon=month_map.get(settle.group(2).lower())
+            if mon:
+                year=report_date.year
+                obs=datetime(year,mon,int(settle.group(1)))
+                if obs>report_date: obs=obs.replace(year=year-1)
+        return obs.date().isoformat(),float(jkm.group(1)),float(ttf.group(1)),url
+    raise ValueError('No hubo reporte Catalyst accesible y parseable: '+'; '.join(errors[:4]))
 
 def pau_2026(fetch):
     from pypdf import PdfReader
