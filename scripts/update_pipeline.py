@@ -517,7 +517,7 @@ def _legacy_read_monthly_flows_pdf(month):
     return results
 
 def monthly_flows_status(d):
-    """Read the published monthly PDF when its chart text can be verified."""
+    """Read totals and validated components from the official monthly PDF."""
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9"
     months_names={
       "enero":"01","febrero":"02","marzo":"03","abril":"04","mayo":"05","junio":"06",
@@ -536,50 +536,89 @@ def monthly_flows_status(d):
         current=meta.get("latest")
         meta["sourceUrl"]=url
         meta["checkedAt"]=iso()
-        if not current or latest>current:
-            # Check the parser against the already verified July report before trusting a new PDF.
+
+        # Reader migration: validate all four July/current values before trusting
+        # the component alignment for future months.
+        if current and meta.get("readerVersion")!=2:
             baseline=next((x for x in d.get("systemMonthly2026",[]) if x.get("month")==current),None)
             if not baseline: raise ValueError("falta un mes previamente validado para contrastar el lector")
-            parsed_baseline=_read_monthly_flows_pdf(current)
-            if any(abs(parsed_baseline[k]-_number_ar(baseline[k]))>0.02 for k in ("imports","exports")):
-                raise ValueError("el diseño del PDF cambió: no coincide con el mes validado")
+            parsed=_read_monthly_flows_pdf(current)
+            expected={"imports":"imports","exports":"exports","lng":"lng","chile":"chile"}
+            for parsed_key,row_key in expected.items():
+                if row_key not in baseline:
+                    raise ValueError("falta componente validado "+row_key+" en el mes base")
+                if abs(parsed[parsed_key]-_number_ar(baseline[row_key]))>0.02:
+                    raise ValueError("lector mensual no reproduce "+row_key+" del mes base")
+            meta["readerVersion"]=2
+            meta["componentParserValidatedAt"]=iso()
+            meta["note"]="Totales, GNL Escobar y exportaciones a Chile se extraen del PDF oficial; el lector fue contrastado contra el último mes previamente validado."
+
+        if not current or latest>current:
+            baseline=next((x for x in d.get("systemMonthly2026",[]) if x.get("month")==current),None)
+            if current and not baseline: raise ValueError("falta un mes previamente validado para contrastar el lector")
+            if current:
+                parsed_baseline=_read_monthly_flows_pdf(current)
+                for key in ("imports","exports","lng","chile"):
+                    if key not in baseline or abs(parsed_baseline[key]-_number_ar(baseline[key]))>0.02:
+                        raise ValueError("el diseño del PDF cambió: no coincide "+key+" con el mes validado")
             months={x.get("month"):x for x in d.get("systemMonthly2026",[])}
-            for month in sorted(x for x in found if x>current):
+            for month in sorted(x for x in found if not current or x>current):
                 values=_read_monthly_flows_pdf(month)
-                previous=months[max(months)]
-                for key in ("imports","exports"):
-                    if not 0<=values[key]<100 or abs(values[key]-_number_ar(previous[key]))>60:
-                        raise ValueError("valor mensual fuera de rango; requiere revisión")
-                row={"month":month,"label":next(n.capitalize() for n,num in months_names.items() if num==month[-2:]),
-                     "imports":_format_ar(values["imports"]),"exports":_format_ar(values["exports"]),
-                     "validatedAt":iso(),"sourceUrl":_monthly_pdf_url(month)}
+                previous=months[max(months)] if months else None
+                for key in ("imports","exports","lng","chile"):
+                    if not 0<=values[key]<100:
+                        raise ValueError(key+" mensual fuera de rango")
+                    if previous and key in previous and abs(values[key]-_number_ar(previous[key]))>60:
+                        raise ValueError(key+" cambió fuera del rango de seguridad")
+                row={
+                  "month":month,
+                  "label":next(n.capitalize() for n,num in months_names.items() if num==month[-2:]),
+                  "imports":_format_ar(values["imports"]),
+                  "lng":_format_ar(values["lng"]),
+                  "exports":_format_ar(values["exports"]),
+                  "chile":_format_ar(values["chile"]),
+                  "validatedAt":iso(),"sourceUrl":_monthly_pdf_url(month)
+                }
                 months[month]=row
-                # Keep the GNL/Chile figures at their own period until they have a verified parser.
-                for item_id,key in (("imports_month","imports"),("exports_month","exports")):
+                for item_id,key in (
+                    ("imports_month","imports"),("lng_escobar","lng"),
+                    ("exports_month","exports"),("exports_chile","chile")
+                ):
                     k=next((x for x in d.get("systemKpis",[]) if x.get("id")==item_id),None)
-                    if k: k.update(value=row[key],reference="Promedio · "+row["label"]+" "+month[:4],
-                                   validatedAt=iso(),sourceUrl=row["sourceUrl"],statusText="OFICIAL")
+                    if k:
+                        k.update(value=row[key],reference="Promedio · "+row["label"]+" "+month[:4],
+                                 validatedAt=iso(),sourceUrl=row["sourceUrl"],statusText="OFICIAL")
             d["systemMonthly2026"]=sorted(months.values(),key=lambda x:x["month"])
             meta["latest"]=latest
             meta.pop("pendingMonth",None)
             meta["status"]="updated"
-            meta["note"]="Importaciones y exportaciones totales extraídas del PDF oficial y contrastadas con el último mes validado. Desgloses GNL/Chile quedan con su propio período hasta validarlos."
+            meta["readerVersion"]=2
+            meta["note"]="Importaciones, exportaciones, GNL Escobar y Chile extraídos automáticamente del PDF oficial y contrastados con el último mes validado."
         else:
             meta.pop("pendingMonth",None)
             meta["status"]="current"
+
         u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
         if u:
             changed=meta.get("status")=="updated"
-            u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="new_report" if changed else "unchanged",
-                     note=meta.get("note") or ("Último mes publicado: "+str(meta.get("latest","—"))))
+            u.update(
+              last=iso(),next=iso(now()+timedelta(hours=1)),
+              status="updated" if changed else "unchanged",
+              mode="Automática",
+              strategy="PDF oficial · total + GNL + Chile · validación cruzada",
+              scope="Detecta el último mes ENReGE y extrae importaciones, GNL Escobar, exportaciones y exportaciones a Chile. Conserva el último dato si el formato deja de reproducir el mes base.",
+              note=meta.get("note") or ("Último mes publicado: "+str(meta.get("latest","—")))
+            )
     except Exception as e:
         print("MONTHLY FLOWS",e)
         meta=d.setdefault("systemMonthlyMeta",{})
         if 'latest' in locals() and latest>str(meta.get("latest","")):
             meta.update(pendingMonth=latest,status="new_report",checkedAt=iso(),note="Reporte nuevo disponible; no se alteran los valores hasta poder verificar sus cifras: "+str(e)[:180])
         u=next((x for x in d.get("updates",[]) if x.get("name")=="Flujos mensuales"),None)
-        if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",
-                       note="No se pudo verificar el nuevo informe mensual; se conservan los últimos valores validados.")
+        if u:
+            u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",mode="Automática",
+                     note="No se pudo verificar el informe mensual; se conservan los últimos valores validados: "+str(e)[:180])
+
 
 def transport_capacity(d):
     existing={x.get("id"):x for x in d.get("transportCapacity",[]) if x.get("id")}
@@ -1182,7 +1221,7 @@ def sync_update_catalog(d):
       ("Producción por cuenca/provincia","Diaria","Automática","Último tablero mensual + validación de cierres","Detecta el último tablero mensual, extrae gas por cuenca y provincia y sólo publica si ambas sumas cierran contra el total país."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
       ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
-      ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
+      ("Flujos mensuales","Cada 60 min","Automática","PDF oficial · total + GNL + Chile · validación cruzada","Detecta el último mes ENReGE y extrae importaciones, GNL Escobar, exportaciones y exportaciones a Chile; antes de publicar verifica que el lector reproduzca el último mes validado."),
       ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
       ("Boletín Oficial PBA","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."),
       ("Precios de mercado","Cada 60 min","Automática parcial","EIA diaria + Banco Mundial mensual","Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.")
