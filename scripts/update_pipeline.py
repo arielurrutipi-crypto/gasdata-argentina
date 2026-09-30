@@ -1372,6 +1372,10 @@ def validate_pages(d):
         try: fetch("https://www.bagsa.com.ar/index.php/tarifas/")
         except Exception as e: print("BAGSA",e)
 
+ENARGAS_TARIFF_CURRENT_URL="https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php"
+ENARGAS_TARIFF_HISTORY_URL="https://www.enargas.gob.ar/secciones/precios-y-tarifas/cuadros-tarifarios-serie-historica.php"
+ENARGAS_TARIFF_HOME_URL="https://www.enargas.gob.ar/secciones/precios-y-tarifas/cuadros-tarifarios.php"
+
 TARIFF_PROVIDER_RULES=(
     ("TGN",("transportadora de gas del norte"," tgn ")),
     ("TGS",("transportadora de gas del sur"," tgs ")),
@@ -1439,6 +1443,113 @@ def _tariff_regulation_meta(reg):
 
 def _tariff_key(row):
     return "|".join(str(row.get(k,"")) for k in ("name","product","res"))
+
+def _resolution_short(label):
+    label=clean(label or "")
+    m=re.search(r"(?:RESFC|RESOL)?\s*[- ]?\s*(20\d{2})\s*[-_/]?\s*0*(\d{1,4})",label,re.I)
+    if m: return f"{int(m.group(2))}/{m.group(1)}"
+    m=re.search(r"(\d{1,4})\s*/\s*(20\d{2})",label)
+    return f"{int(m.group(1))}/{m.group(2)}" if m else label
+
+def sync_tariffs_from_enargas(d):
+    """Use ENARGAS/ENReGE Precios y Tarifas as the primary current-tariff authority."""
+    try:
+        raw=fetch(ENARGAS_TARIFF_CURRENT_URL,timeout=30)
+        soup=BeautifulSoup(raw,"html.parser")
+        official={}
+        for a in soup.find_all("a",href=True):
+            label=clean(a.get_text(" ",strip=True))
+            parent=clean(a.parent.get_text(" ",strip=True)) if a.parent else label
+            hay=(" "+parent+" ").lower()
+            provider=None
+            for name,terms in TARIFF_PROVIDER_RULES:
+                if any(t in hay for t in terms):
+                    provider=name;break
+            if not provider: continue
+            res=_resolution_short(label)
+            if not re.search(r"\d+/20\d{2}",res): continue
+            official[provider]={
+              "res":res,
+              "resolutionUrl":urllib.parse.urljoin(ENARGAS_TARIFF_CURRENT_URL,a["href"])
+            }
+        if not official:
+            raise ValueError("la página oficial no devolvió resoluciones tarifarias reconocibles")
+
+        regs=d.get("regulations",[])
+        for row in d.get("tariffs",[]):
+            provider=row.get("name")
+            meta=official.get(provider)
+            if not meta: continue
+            old_res=row.get("res")
+            row["res"]=meta["res"]
+            row["url"]=meta["resolutionUrl"]
+            row["resolutionUrl"]=meta["resolutionUrl"]
+            row["primarySource"]="ENARGAS/ENReGE · Precios y tarifas"
+            row["primarySourceUrl"]=ENARGAS_TARIFF_CURRENT_URL
+            row["sourcePriority"]="primary"
+            row["auto"]=True
+
+            # Resolve an effective date from the same official resolution if it changed.
+            if meta["res"]!=old_res:
+                reg=next((r for r in regs if meta["res"] in str(r.get("num","")) and _tariff_provider_from_reg(r)==provider),None)
+                if reg:
+                    rmeta=_tariff_regulation_meta(reg)
+                    valid=rmeta.get("validFrom") or _tariff_inferred_valid_from(reg.get("publishedAt"))
+                    if valid: row["validFrom"]=valid
+                    if rmeta.get("documentUrl"):
+                        row["officialDocumentUrl"]=rmeta["documentUrl"]
+                row["status"]="current"
+            row["validatedAt"]=iso()
+
+        ta=d.setdefault("tariffAutomation",{})
+        ta.update(primarySource="ENARGAS/ENReGE · Precios y tarifas",
+                  primarySourceUrl=ENARGAS_TARIFF_CURRENT_URL,
+                  officialCurrentCount=len(official),officialCheckedAt=iso())
+        print("ENARGAS CURRENT TARIFFS",len(official))
+    except Exception as e:
+        print("ENARGAS CURRENT TARIFFS",e)
+        d.setdefault("tariffAutomation",{}).update(officialCheckedAt=iso(),officialError=str(e)[:180])
+
+def sync_enargas_tariff_series(d):
+    """Build the 2026 archive from ENARGAS' own historical tariff workbooks."""
+    try:
+        raw=fetch(ENARGAS_TARIFF_HISTORY_URL,timeout=30)
+        soup=BeautifulSoup(raw,"html.parser")
+        rows=[]
+        for a in soup.find_all("a",href=True):
+            label=clean(a.get_text(" ",strip=True)).replace("*","").strip()
+            m=re.search(r"^(Gas Natural|GLP)\s*-\s*Per[ií]odo\s+(\d{2}/\d{2}/2026)\s*-\s*(\d{2}/\d{2}/2026)",label,re.I)
+            if not m: continue
+            start=datetime.strptime(m.group(2),"%d/%m/%Y").date()
+            end=datetime.strptime(m.group(3),"%d/%m/%Y").date()
+            product="GN" if m.group(1).lower().startswith("gas natural") else "GLP"
+            href=urllib.parse.urljoin(ENARGAS_TARIFF_HISTORY_URL,a["href"])
+            rows.append({
+              "name":"ENARGAS / ENReGE","product":product,"res":"Serie histórica oficial",
+              "validFrom":start.isoformat(),"validTo":end.isoformat(),
+              "month":start.strftime("%Y-%m"),"year":2026,"isCurrent":False,
+              "validatedAt":iso(),"scope":f"Período {start.strftime('%d/%m/%Y')}–{end.strftime('%d/%m/%Y')}",
+              "documentUrl":href,"documentType":"xlsx",
+              "documentSource":"ENARGAS/ENReGE · Serie histórica",
+              "url":ENARGAS_TARIFF_HISTORY_URL,
+              "primarySource":"ENARGAS/ENReGE · Precios y tarifas",
+              "primarySourceUrl":ENARGAS_TARIFF_HISTORY_URL,
+              "auto":True,"status":"archive"
+            })
+        if not rows:
+            raise ValueError("no se encontraron períodos 2026 en la serie histórica")
+        rows.sort(key=lambda x:(x["validFrom"],x["product"]),reverse=True)
+        d["tariffSeries2026"]=rows
+        d["tariffSeriesMeta"]={
+          "year":2026,"checkedAt":iso(),"count":len(rows),
+          "source":"ENARGAS/ENReGE · Serie histórica de cuadros tarifarios",
+          "sourceUrl":ENARGAS_TARIFF_HISTORY_URL,
+          "note":"Archivo oficial por período. Los archivos XLSX se conservan y se muestran directamente desde la fuente primaria."
+        }
+        print("ENARGAS TARIFF SERIES",len(rows))
+    except Exception as e:
+        print("ENARGAS TARIFF SERIES",e)
+        d.setdefault("tariffSeriesMeta",{}).update(checkedAt=iso(),error=str(e)[:180])
 
 def sync_tariff_archive(d):
     """Persist every 2026 tariff cycle and mark only the date-effective rows as current."""
@@ -1633,7 +1744,7 @@ def sync_update_catalog(d):
     specs=[
       ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."),
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
-      ("Tarifas ENReGE/BAGSA","Diaria","Automática","Cuadros BAGSA + normativa","Detecta automáticamente los cuadros vigentes, resolución y fecha de vigencia para GN/GLP. Si un documento no puede verificarse, conserva la última referencia válida."),
+      ("Tarifas ENReGE/BAGSA","Diaria","Automática","ENARGAS/ENReGE como fuente primaria + respaldo BAGSA","La resolución vigente y la serie histórica 2026 se leen desde Precios y Tarifas de ENARGAS/ENReGE. BAGSA se usa sólo como respaldo o copia directa del cuadro cuando resulta útil."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
       ("Producción por cuenca/provincia","Diaria","Automática","Último tablero mensual + validación de cierres","Detecta el último tablero mensual, extrae gas por cuenca y provincia y sólo publica si ambas sumas cierran contra el total país."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
@@ -1677,6 +1788,8 @@ def main():
     sync_tariffs_from_regulations(d)
     if d.get("tariffAutomation",{}).get("readerVersion")!=4 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
+    sync_tariffs_from_enargas(d)
+    sync_enargas_tariff_series(d)
     sync_tariff_archive(d)
     update_market(d,fetch,iso)
     validate_pages(d)
