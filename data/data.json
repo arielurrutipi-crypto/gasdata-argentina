@@ -6643,7 +6643,7 @@
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
       "note": "Total GasData ≈ TGN 339,9 MMm³ + TGS ≈221 MMm³, leído del gráfico oficial. Se redondea para no dar falsa precisión.",
       "visualGroup": "gn",
-      "derivedExact": 561.0,
+      "derivedExact": 561,
       "linepackParser": {
         "checkedAt": "2026-09-30T13:12-03:00",
         "report": "27/08/2026",
