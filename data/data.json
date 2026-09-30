@@ -1174,6 +1174,90 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 257/2026",
+      "category": "Mercado",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 257/2026 RESOL-2026-257-APN-SE#MEC",
+      "publishedAt": "2026-09-25T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 257/2026 RESOL-2026-257-APN-SE#MEC",
+      "tags": [
+        "Mercado"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347964/20260925?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Déjase sin efecto la Resolución N° 883 de fecha 31 de octubre de 2023 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "disposition": "Déjase sin efecto la Resolución N° 883 de fecha 31 de octubre de 2023 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 264/2026",
+      "category": "GNL",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 264/2026 RESOL-2026-264-APN-SE#MEC",
+      "publishedAt": "2026-09-25T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 264/2026 RESOL-2026-264-APN-SE#MEC",
+      "tags": [
+        "GNL",
+        "Tarifas",
+        "Transporte",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347965/20260925?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Sustitúyese el Artículo 13 de la Resolución N° 400 de fecha 20 de octubre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el que quedará redactado de la siguiente manera: “ARTÍCULO 13.- Toda nueva demanda o ampliación de demanda que solicite su incorporación al MERCADO ELÉCTRICO MAYORISTA (MEM) y represente un incremento relativo que exceda en al menos un CERO COMA CINCO POR CIENTO (0,5%) de la demanda media del MEM será considerada Demanda Extratendencial (XDEM), con independencia de que su vinculación al SADI se efectúe mediante instalaciones de transporte o de distribución. Deberá acompañar a su solicitud la presentación de un Plan Especial de Abastecimiento que asegure: (i) al menos un OCHENTA POR CIENTO (80%) de nueva producción de energía; y (ii) respaldo físico de potencia suficiente para cubrir al menos el CIEN POR CIENTO (100%) de su consumo en caso de tratarse d",
+      "disposition": "Sustitúyese el Artículo 13 de la Resolución N° 400 de fecha 20 de octubre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el que quedará redactado de la siguiente manera: “ARTÍCULO 13.- Toda nueva demanda o ampliación de demanda que solicite su incorporación al MERCADO ELÉCTRICO MAYORISTA (MEM) y represente un incremento relativo que exceda…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 254/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 254/2026 RESOL-2026-254-APN-SE#MEC",
+      "publishedAt": "2026-09-24T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 254/2026 RESOL-2026-254-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347889/20260924",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Apruébase la tarifa máxima aplicable a los usuarios por el servicio de uso de muelle para la carga y descarga de hidrocarburos a buques tanque en la Terminal Marítima Puerto Rosales situada en la Provincia de BUENOS AIRES, en el valor de DÓLARES ESTADOUNIDENSES TRES CON SETENTA CENTAVOS (USD 3,70) por METRO CÚBICO (m3), según surge del Informe N° IF-2026-83280710-APN-DNTEI#MEC de fecha 28 de agosto de 2026 de la Dirección Nacional de Transporte e Infraestructura de esta Secretaría. La tarifa aprobada por la presente medida no incluye el Impuesto al Valor Agregado (IVA).",
+      "disposition": "Apruébase la tarifa máxima aplicable a los usuarios por el servicio de uso de muelle para la carga y descarga de hidrocarburos a buques tanque en la Terminal Marítima Puerto Rosales situada en la Provincia de BUENOS AIRES, en el valor de DÓLARES ESTADOUNIDENSES TRES CON SETENTA CENTAVOS (USD 3,70) por METRO CÚBICO (m3), según surge del Informe N°…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 255/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
+      "publishedAt": "2026-09-24T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Distribución",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347890/20260924",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma DISTRIBUIDORA INTEGRAL DE ENERGÍA SOCIEDAD ANÓNIMA (DISTRIBUIDORA INTEGRAL DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma DISTRIBUIDORA INTEGRAL DE ENERGÍA SOCIEDAD ANÓNIMA (DISTRIBUIDORA INTEGRAL DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 654/2026",
       "category": "Mercado",
       "title": "Registro de Comercializadores — baja de ET Managing Company",
@@ -1249,6 +1333,48 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 239/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 239/2026 RESOL-2026-239-APN-SE#MEC",
+      "publishedAt": "2026-09-11T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 239/2026 RESOL-2026-239-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347304/20260911",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma EMPRESA PROVINCIAL DE ENERGIA DE CHUBUT SOCIEDAD ANÓNIMA UNIPERSONAL (EPECH S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma EMPRESA PROVINCIAL DE ENERGIA DE CHUBUT SOCIEDAD ANÓNIMA UNIPERSONAL (EPECH S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 236/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 236/2026 RESOL-2026-236-APN-SE#MEC",
+      "publishedAt": "2026-09-10T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 236/2026 RESOL-2026-236-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347212/20260910",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma SECCO ENERGY SOCIEDAD ANÓNIMA UNIPERSONAL (SECCO ENERGY S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma SECCO ENERGY SOCIEDAD ANÓNIMA UNIPERSONAL (SECCO ENERGY S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 575/2026",
       "category": "Infraestructura",
       "title": "Camuzzi Gas del Sur — Sistema Cordillerano-Patagónico",
@@ -1269,6 +1395,26 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 229/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 229/2026 RESOL-2026-229-APN-SE#MEC",
+      "publishedAt": "2026-09-04T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 229/2026 RESOL-2026-229-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346920/20260904",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma GENNEIA ENERGÍA SOCIEDAD ANÓNIMA (GENNEIA ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma GENNEIA ENERGÍA SOCIEDAD ANÓNIMA (GENNEIA ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 552/2026",
       "category": "Subdistribución",
       "title": "Proyecto de nuevo Compendio de Instrucciones para la Subdistribución",
@@ -1286,6 +1432,28 @@
       "auto": true,
       "firstArticle": "°: Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitudes de autorización a quienes aspiren a desempeñarse como subdistribuidores del servicio público de distribución de gas por redes, como así también de su renovación y de los aspectos vinculados a tal actividad.",
       "disposition": "°: Disponer la consulta pública del proyecto “COMPENDIO DE INSTRUCCIONES PARA LA SUBDISTRIBUCIÓN DE GAS POR REDES” que como Anexo N.° IF-2026-82102474-APN-UDG#ENREGE forma parte integrante de la presente, que tiene por objeto implementar una nueva reglamentación de los requerimientos para la tramitación de las solicitudes de autorización a quienes aspiren a…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 224/2026",
+      "category": "Subdistribución",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 224/2026 RESOL-2026-224-APN-SE#MEC",
+      "publishedAt": "2026-09-02T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 224/2026 RESOL-2026-224-APN-SE#MEC",
+      "tags": [
+        "Subdistribución",
+        "Transporte",
+        "Distribución",
+        "BAGSA"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346785/20260902",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Amplíase el plazo previsto en el Artículo 1° de la Resolución N° 54 de fecha 3 de marzo de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA hasta el 31 de diciembre de 2026.",
+      "disposition": "Amplíase el plazo previsto en el Artículo 1° de la Resolución N° 54 de fecha 3 de marzo de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA hasta el 31 de diciembre de 2026.",
       "operativePreview": true
     },
     {
@@ -1431,6 +1599,50 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 527/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 527/2026 RESFC-2026-527-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 527/2026 RESFC-2026-527-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82294753- -APN-UDYE#ENREGE; las Leyes N.° 24.076 - T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-2",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346665/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733424-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733424-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 528/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 528/2026 RESFC-2026-528-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 528/2026 RESFC-2026-528-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82295883- -APN-UDYE#ENREGE, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 -T.O. 2025 (B.O. 7-7-25) y N.° 27.742 (B.O. 8-7-24), los Decretos N.° 1738/92 (B.O. 28-9-92), N.° 729/95 (B.O. 30-5-95), DNU N",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346666/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733600-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733600-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 529/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 529/2026 RESFC-2026-529-APN-DIRECTORIO#ENREGE",
@@ -1476,6 +1688,93 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 531/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 531/2026 RESFC-2026-531-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 531/2026 RESFC-2026-531-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82295369- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025-(B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12-23), DNU N.° 1023/24 (B.O. 20-11-24)",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346669/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañía Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733271-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañía Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733271-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 532/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 532/2026 RESFC-2026-532-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 532/2026 RESFC-2026-532-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82292299- -APN-UDYE#ENREGE, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 - T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24), los Decretos N.° 1738/92 (B.O. 28-9-92), N.° 729/95 (B.O. 30-5-95), DNU",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346670/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733378-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima incluidos en el Anexo N.° IF-2026-83733378-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 534/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 534/2026 RESFC-2026-534-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 534/2026 RESFC-2026-534-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N° EX-2026-80936337-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 222 de fecha 31 de agosto de 2026, establece para el período comprendido entre el 1 de septiembre de 202",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346672/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-83508036-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-83508036-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 535/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 535/2026 RESFC-2026-535-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 535/2026 RESFC-2026-535-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N° EX-2026-80936221-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 222 de fecha 31 de agosto de 2026, establece para el período comprendido entre el 1 de septiembre de 202",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346673/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-83511068-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-83511068-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 536/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 536/2026 RESFC-2026-536-APN-DIRECTORIO#ENREGE",
@@ -1498,6 +1797,56 @@
       "auto": true,
       "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164384-APN-UDYE#ENREGE que forma parte de la presente.",
       "disposition": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164384-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 538/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 538/2026 RESFC-2026-538-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 538/2026 RESFC-2026-538-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82298313- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 -T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urgen",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346676/20260901?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164137-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-84164137-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 540/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 540/2026 RESFC-2026-540-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-09-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:45-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 540/2026 RESFC-2026-540-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 31/08/2026 VISTO el Expediente N.° EX-2026-82299119- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346678/20260901",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-84163949-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-84163949-APN-UDYE#ENREGE que forma parte de la presente.",
       "operativePreview": true
     },
     {
@@ -1599,6 +1948,29 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 210/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 210/2026 RESOL-2026-210-APN-SE#MEC",
+      "publishedAt": "2026-08-25T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 210/2026 RESOL-2026-210-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Transporte",
+        "Distribución",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346332/20260825",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase la desvinculación de la firma SCC POWER SAN PEDRO S.A. en su carácter de Agente Generador del MERCADO ELÉCTRICO MAYORISTA (MEM), exclusivamente respecto de su Central Térmica MATHEU III de DOSCIENTOS CINCUENTA Y CUATRO MEGAVATIOS (254 MW) de potencia nominal instalada, en los términos del régimen previsto en el Anexo 17 de los Procedimientos para la Programación de la Operación, el Despacho de Cargas y el Cálculo de Precios (Los Procedimientos), descriptos en el Anexo I de la Resolución Nº 61 de fecha 29 de abril de 1992 de la ex SECRETARÍA DE ENERGÍA ELÉCTRICA del ex MINISTERIO DE ECONOMÍA Y OBRAS Y SERVICIOS PÚBLICOS y sus modificatorias y complementarias.",
+      "disposition": "Autorízase la desvinculación de la firma SCC POWER SAN PEDRO S.A. en su carácter de Agente Generador del MERCADO ELÉCTRICO MAYORISTA (MEM), exclusivamente respecto de su Central Térmica MATHEU III de DOSCIENTOS CINCUENTA Y CUATRO MEGAVATIOS (254 MW) de potencia nominal instalada, en los términos del régimen previsto en el Anexo 17 de los Procedimientos para…",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 444/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 444/2026 RESFC-2026-444-APN-DIRECTORIO#ENREGE",
@@ -1620,6 +1992,69 @@
       "auto": true,
       "firstArticle": "Inscribir a ONELLI ENERGÍA SOCIEDAD ANÓNIMA como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
       "disposition": "Inscribir a ONELLI ENERGÍA SOCIEDAD ANÓNIMA como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 207/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 207/2026 RESOL-2026-207-APN-SE#MEC",
+      "publishedAt": "2026-08-18T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 207/2026 RESOL-2026-207-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345968/20260818",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma ONELLI ENERGÍA SOCIEDAD ANÓNIMA (ONELLI ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma ONELLI ENERGÍA SOCIEDAD ANÓNIMA (ONELLI ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 201/2026",
+      "category": "Transporte",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 201/2026 RESOL-2026-201-APN-SE#MEC",
+      "publishedAt": "2026-08-10T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 201/2026 RESOL-2026-201-APN-SE#MEC",
+      "tags": [
+        "Transporte",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345718/20260810",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Deróganse los Artículos 5°, 6° y 7° de la Resolución N° 593 de fecha 27 de julio de 2022 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "disposition": "Deróganse los Artículos 5°, 6° y 7° de la Resolución N° 593 de fecha 27 de julio de 2022 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 337/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 337/2026 RESFC-2026-337-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 337/2026 RESFC-2026-337-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 29/07/2026 VISTO el Expediente N° EX-2026-70844527-APN-USDE#ENREGE, los puntos 4.1.1 y 5.5.3.1 del Subanexo 4 “Normas de Calidad del Servicio Público y Sanciones Período 2025-2030” del Contrato de Concesión de EDENOR S.A. y EDESUR S.A., y CONSIDERAN",
+      "tags": [
+        "Tarifas",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345233/20260731",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Establecer que para el cálculo de las sanciones por demora en la puesta a disposición de suministros agrupados cuya potencia máxima solicitada sea igual o superior a los CINCUENTA KILOVATIOS (50 kW), el valor del Costo de la Energía No Suministrada (CENS) a utilizar debe ser el correspondiente a usuarios T1, vigente a la fecha en que se configure el incumplimiento por parte de las Distribuidoras.",
+      "disposition": "Establecer que para el cálculo de las sanciones por demora en la puesta a disposición de suministros agrupados cuya potencia máxima solicitada sea igual o superior a los CINCUENTA KILOVATIOS (50 kW), el valor del Costo de la Energía No Suministrada (CENS) a utilizar debe ser el correspondiente a usuarios T1, vigente a la fecha en que se configure el…",
       "operativePreview": true
     },
     {
@@ -1689,6 +2124,50 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 358/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 358/2026 RESFC-2026-358-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 358/2026 RESFC-2026-358-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71248822- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345254/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73147537-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73147537-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 359/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 359/2026 RESFC-2026-359-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:46-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 359/2026 RESFC-2026-359-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71248188- -APN-UDYE#ENREGE, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24), los Decretos N.° 1738/92 (B.O. 28-9-92), N.° 729/95 (B.O. 30-5-95), DNU",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345255/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148587-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148587-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 360/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 360/2026 RESFC-2026-360-APN-DIRECTORIO#ENREGE",
@@ -1731,6 +2210,50 @@
       "auto": true,
       "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148378-APN-UDYE#ENREGE que forma parte de la presente.",
       "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148378-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 362/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 362/2026 RESFC-2026-362-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 362/2026 RESFC-2026-362-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71247743- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345258/20260731",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañia Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73148896-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañia Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73148896-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 363/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 363/2026 RESFC-2026-363-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 363/2026 RESFC-2026-363-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71249241- -APN-UDYE#ENREGE, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24), los Decretos N.° 1738/92 (B.O. 28-9-92), N.° 729/95 (B.O. 30-5-95), DNU",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345259/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima Sucursal Argentina, incluidos en el Anexo N.° IF-2026-73147211-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima Sucursal Argentina, incluidos en el Anexo N.° IF-2026-73147211-APN-UDYE#ENREGE que forma parte de la presente.",
       "operativePreview": true
     },
     {
@@ -1829,6 +2352,56 @@
       "auto": true,
       "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632544-APN-UDYE#ENREGE que forma parte de la presente.",
       "disposition": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632544-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 368/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 368/2026 RESFC-2026-368-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 368/2026 RESFC-2026-368-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71265178- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345264/20260731",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632684-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632684-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 369/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 369/2026 RESFC-2026-369-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 369/2026 RESFC-2026-369-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71264861- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345265/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632790-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632790-APN-UDYE#ENREGE que forma parte de la presente.",
       "operativePreview": true
     },
     {
@@ -1932,6 +2505,49 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 374/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 374/2026 RESFC-2026-374-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 374/2026 RESFC-2026-374-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N° EX-2026-71737014-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 190 de fecha 30 de julio de 2026, establece para el período comprendido entre el 1 de agosto de 2026 y e",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345270/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-73221925-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-73221925-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 375/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 375/2026 RESFC-2026-375-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-31T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 375/2026 RESFC-2026-375-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N° EX-2026-71736902-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARIA DE ENERGÍA (SE), mediante la Resolución N° 190 de fecha 30 de julio de 2026, establece para el período comprendido entre el 1 de agosto de 2026 y e",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345271/20260731?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-73222344-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-73222344-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 187/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 187/2026 RESOL-2026-187-APN-SE#MEC",
@@ -1979,6 +2595,26 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 336/2026",
+      "category": "Distribución",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 336/2026 RESFC-2026-336-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-30T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 336/2026 RESFC-2026-336-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 29/07/2026 VISTO el Expediente N° EX-2023-93013721-APN-SD#ENRE y la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, y CONSIDERANDO: Que, en el considerando número 166 de la resolución de",
+      "tags": [
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345160/20260730",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Reemplazar en el considerando 166 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, donde dice «“Transener c/ Provincia de Neuquén” (Fallos 323:3949)», debe decir «“Compañía de Transportes de Energía Eléctrica en Alta Tensión TRANSENER S.A. c/Neuquén, Provincia del s/ acción declarativa (C.30.XXXV)”» y; donde dice «“Central Puerto S.A.” (Fallos 329:595)», debe decir «“Ente Regulador de la Electricidad de la Pcia. de S.E. c/ resoluciones 535/97 - 1108/97 - E.N.R.E. - (exp. 1232/95 - 3492/97) y otro. E. 167. XXXVII.14/03/2006” (Fallos: 329:595)».",
+      "disposition": "Reemplazar en el considerando 166 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, donde dice «“Transener c/ Provincia de Neuquén” (Fallos 323:3949)», debe decir «“Compañía de Transportes de Energía Eléctrica en Alta Tensión TRANSENER S.A. c/Neuquén, Provincia del s/ acción declarativa…",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 180/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 180/2026 RESOL-2026-180-APN-SE#MEC",
@@ -1997,6 +2633,73 @@
       "auto": true,
       "firstArticle": "Sustitúyese el Artículo 6° de la Resolución Nº 131 de fecha 31 de julio del 2003 de la SECRETARÍA DE ENERGÍA del ex MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS, por el siguiente: “Los “OPERADORES DE GAS LICUADO DE PETRÓLEO AUTOMOTOR (OGLPA)” para estar aprobados por la SUBSECRETARÍA DE HIDROCARBUROS, por sí o por medio de sus dependencias, deberán presentar la certificación del cumplimiento de las condiciones de seguridad vigentes, emitida por una de las Empresas Auditoras de Seguridad, debidamente registradas ante la SECRETARÍA DE ENERGÍA y efectuar su inscripción en el REGISTRO NACIONAL DE OPERADORES DE GAS LICUADO DE PETRÓLEO EN AUTOMOTORES (RNOGLPA), conforme las estipulaciones contenidas en los Anexos I, II, III, IV y V de la presente resolución y en el resto de la normativa vigente al momento de su inscripción. La referida aprobación de la SUBSECRETARÍA DE HI",
       "disposition": "Sustitúyese el Artículo 6° de la Resolución Nº 131 de fecha 31 de julio del 2003 de la SECRETARÍA DE ENERGÍA del ex MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS, por el siguiente: “Los “OPERADORES DE GAS LICUADO DE PETRÓLEO AUTOMOTOR (OGLPA)” para estar aprobados por la SUBSECRETARÍA DE HIDROCARBUROS, por sí o por medio de sus…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 167/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 167/2026 RESOL-2026-167-APN-SE#MEC",
+      "publishedAt": "2026-07-24T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 167/2026 RESOL-2026-167-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Precios",
+        "Transporte",
+        "Distribución",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344887/20260724",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Durante la vigencia de la emergencia energética, declarada por el Decreto N° 55 del 16 de diciembre de 2023 y prorrogada por los Decretos Nros. 1.023 del 19 de noviembre de 2024, 370 del 30 de mayo de 2025 y 49 del 26 de enero de 2026 hasta el 31 de diciembre de 2027, las diferencias diarias acumuladas mensualmente, conforme con el Numeral 9.4.2.5. de las Reglas Básicas de la Licencia de Distribución (RBLD) de gas, cuyo modelo fue aprobado por el Decreto N° 2255/92, serán calculadas e incorporadas con su signo conforme al Numeral 9.4.2.6. de las RBLD, cada DOS (2) meses.",
+      "disposition": "Durante la vigencia de la emergencia energética, declarada por el Decreto N° 55 del 16 de diciembre de 2023 y prorrogada por los Decretos Nros. 1.023 del 19 de noviembre de 2024, 370 del 30 de mayo de 2025 y 49 del 26 de enero de 2026 hasta el 31 de diciembre de 2027, las diferencias diarias acumuladas mensualmente, conforme con el Numeral 9.4.2.5. de las…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 165/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 165/2026 RESOL-2026-165-APN-SE#MEC",
+      "publishedAt": "2026-07-22T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 165/2026 RESOL-2026-165-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344760/20260722?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Apruébanse las tarifas máximas indicadas en el Anexo I (IF-2026-65293817-APN-SSH#MEC), que forma parte integrante de la presente medida, aplicables a los usuarios por los servicios de uso de boya para la carga y descarga de hidrocarburos a buques tanque y de almacenaje en la Terminal Marítima Puerto Rosales ubicada en la Provincia de BUENOS AIRES. Las tarifas aprobadas por la presente medida no incluyen el Impuesto al Valor Agregado (IVA).",
+      "disposition": "Apruébanse las tarifas máximas indicadas en el Anexo I (IF-2026-65293817-APN-SSH#MEC), que forma parte integrante de la presente medida, aplicables a los usuarios por los servicios de uso de boya para la carga y descarga de hidrocarburos a buques tanque y de almacenaje en la Terminal Marítima Puerto Rosales ubicada en la Provincia de BUENOS AIRES.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 166/2026",
+      "category": "GLP",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 166/2026 RESOL-2026-166-APN-SE#MEC",
+      "publishedAt": "2026-07-22T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 166/2026 RESOL-2026-166-APN-SE#MEC",
+      "tags": [
+        "GLP",
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344761/20260722?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Créase el REGISTRO DE OPERACIONES DE EXPORTACIÓN, en el cual deberán registrarse todas las Notificaciones de Exportación, Objeciones y Constancias de Libre Exportación de Hidrocarburos y sus derivados, sustanciadas y/o emitidas en el marco del Decreto N° 1.057 de fecha 28 de noviembre de 2024.",
+      "disposition": "Créase el REGISTRO DE OPERACIONES DE EXPORTACIÓN, en el cual deberán registrarse todas las Notificaciones de Exportación, Objeciones y Constancias de Libre Exportación de Hidrocarburos y sus derivados, sustanciadas y/o emitidas en el marco del Decreto N° 1.057 de fecha 28 de noviembre de 2024.",
       "operativePreview": true
     },
     {
@@ -2021,6 +2724,27 @@
       "auto": true,
       "firstArticle": "Inscribir a Cuñado Oil & Gas Sociedad Anónima como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
       "disposition": "Inscribir a Cuñado Oil & Gas Sociedad Anónima como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 163/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 163/2026 RESOL-2026-163-APN-SE#MEC",
+      "publishedAt": "2026-07-20T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 163/2026 RESOL-2026-163-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344525/20260720",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma HFV ENERGÍA SOCIEDAD ANÓNIMA (HFV ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma HFV ENERGÍA SOCIEDAD ANÓNIMA (HFV ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
       "operativePreview": true
     },
     {
@@ -2070,6 +2794,49 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 158/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 158/2026 RESOL-2026-158-APN-SE#MEC",
+      "publishedAt": "2026-07-13T00:00-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 158/2026 RESOL-2026-158-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344225/20260713",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma ACONCAGUA ENERGÍA TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (ACONCAGUA ENERGÍA TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma ACONCAGUA ENERGÍA TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (ACONCAGUA ENERGÍA TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 233/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 233/2026 RESFC-2026-233-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-07T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 233/2026 RESFC-2026-233-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 06/07/2026 Visto el Expediente N° EX-2026-47796658-APN-SD#ENRE y la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, y CONSIDERANDO: Que mediante el artículo 6 de la Resolución del Visto, s",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Comercialización",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344099/20260707",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Reemplazar los valores tarifarios (expresados en $/kWh) detallados en el cuadro “Tarifa General” del IF-2026-52106633-APN-UARYEE#ENREGE, aprobado por el artículo 6 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, correspondientes al segmento de consumo G1, de modo que donde dice “176,194” debe decir “252,091”; al segmento G2, de modo que donde dice “193,444” debe decir “269,343”; al segmento G3, de modo que donde dice “182,648” debe decir “258,544” y; al segmento G4, de modo que donde dice “180,029” debe decir “255,926”",
+      "disposition": "Reemplazar los valores tarifarios (expresados en $/kWh) detallados en el cuadro “Tarifa General” del IF-2026-52106633-APN-UARYEE#ENREGE, aprobado por el artículo 6 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, correspondientes al segmento de consumo G1, de modo que donde dice “176,194”…",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 215/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 215/2026 RESFC-2026-215-APN-DIRECTORIO#ENREGE",
@@ -2091,6 +2858,27 @@
       "auto": true,
       "firstArticle": "Inscribir a BTG Pactual Argentina Energía Sociedad Anónima Unipersonal como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
       "disposition": "Inscribir a BTG Pactual Argentina Energía Sociedad Anónima Unipersonal como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 152/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 152/2026 RESOL-2026-152-APN-SE#MEC",
+      "publishedAt": "2026-07-03T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 152/2026 RESOL-2026-152-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343986/20260703",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma BTG PACTUAL ARGENTINA ENERGÍA SOCIEDAD ANÓNIMA UNIPERSONAL (BTG PACTUAL ARGENTINA ENERGÍA S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma BTG PACTUAL ARGENTINA ENERGÍA SOCIEDAD ANÓNIMA UNIPERSONAL (BTG PACTUAL ARGENTINA ENERGÍA S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
       "operativePreview": true
     },
     {
@@ -2227,6 +3015,28 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 164/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 164/2026 RESFC-2026-164-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 164/2026 RESFC-2026-164-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62722767- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343783/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63287919-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63287919-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 166/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 166/2026 RESFC-2026-166-APN-DIRECTORIO#ENREGE",
@@ -2247,6 +3057,72 @@
       "auto": true,
       "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO NORANDINO ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63290443-APN-UDYE#ENREGE que forma parte de la presente.",
       "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO NORANDINO ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63290443-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 167/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 167/2026 RESFC-2026-167-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 167/2026 RESFC-2026-167-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62722903- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343786/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por GAS LINK SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289529-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por GAS LINK SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289529-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 168/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 168/2026 RESFC-2026-168-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 168/2026 RESFC-2026-168-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62723393- -APN-UDYE#ENREGE; las Leyes Nros. 17.319 (B.O. 30-6-67) y 24.076 - T.O. 2025 (B.O. 7-7-25); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 729/95 (B.O. 30-5-95); los Decretos de Necesidad y Urgencia",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343787/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por REFINERÍA DEL NORTE SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291025-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por REFINERÍA DEL NORTE SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291025-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 169/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 169/2026 RESFC-2026-169-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 169/2026 RESFC-2026-169-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62720390- -APN-UDYE#ENREGE; las Leyes Nros. 17.319 (B.O. 30-6-67) y 24.076 - T.O. 2025 (B.O. 7-7-25); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 729/95 (B.O. 30-5-95); los Decretos de Necesidad y Urgencia",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Distribución",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343788/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el anexo N.° IF-2026-63289027-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el anexo N.° IF-2026-63289027-APN-UDYE#ENREGE que forma parte de la presente.",
       "operativePreview": true
     },
     {
@@ -2422,6 +3298,56 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 194/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 194/2026 RESFC-2026-194-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 194/2026 RESFC-2026-194-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62838991- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343813/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056419-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056419-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 195/2026",
+      "category": "GLP",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 195/2026 RESFC-2026-195-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 195/2026 RESFC-2026-195-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62838559- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
+      "tags": [
+        "GLP",
+        "GNL",
+        "Tarifas",
+        "Precios",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343814/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056296-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056296-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 204/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 204/2026 RESFC-2026-204-APN-DIRECTORIO#ENREGE",
@@ -2445,6 +3371,49 @@
       "auto": true,
       "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Naturgy Ban Sociedad Anónima incluidos en el Anexo N.° IF-2026-64343669-APN-UDYE#ENREGE que forma parte de la presente.",
       "disposition": "Aprobar los cuadros tarifarios a aplicar por Naturgy Ban Sociedad Anónima incluidos en el Anexo N.° IF-2026-64343669-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 205/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 205/2026 RESFC-2026-205-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 205/2026 RESFC-2026-205-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N° EX-2026-61651444-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 151 de fecha 30 de junio de 2026, estableció -para el período comprendido entre el 1 de julio de 2026 y",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343816/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-63030132-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-63030132-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 206/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 206/2026 RESFC-2026-206-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 206/2026 RESFC-2026-206-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N° EX-2026-61652097-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 151 de fecha 30 de junio de 2026, estableció -para el período comprendido entre el 1 de julio de 2026 y",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343817/20260701?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-63028393-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-63028393-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
       "operativePreview": true
     },
     {
@@ -2492,6 +3461,50 @@
       "auto": true,
       "firstArticle": "Prorrógase para el mes de julio de 2026 la bonificación adicional extraordinaria del VEINTICINCO POR CIENTO (25%), establecida para el mes de mayo de 2026, por el Artículo 1° de la Resolución N° 111 de fecha 30 de abril de 2026 de esta SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, sobre el consumo correspondiente, aplicable a los usuarios de gas natural y gas propano indiluido por redes, beneficiarios del Régimen de Subsidios Energéticos Focalizados (SEF), creado por el Decreto N° 943 de fecha 31 de diciembre de 2025.",
       "disposition": "Prorrógase para el mes de julio de 2026 la bonificación adicional extraordinaria del VEINTICINCO POR CIENTO (25%), establecida para el mes de mayo de 2026, por el Artículo 1° de la Resolución N° 111 de fecha 30 de abril de 2026 de esta SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, sobre el consumo correspondiente, aplicable a los usuarios de gas natural…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 151/2026",
+      "category": "GNL",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 151/2026 RESOL-2026-151-APN-SE#MEC",
+      "publishedAt": "2026-07-01T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 151/2026 RESOL-2026-151-APN-SE#MEC",
+      "tags": [
+        "GNL",
+        "Tarifas",
+        "Subsidios",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343837/20260701?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Establécese, para el período comprendido entre el 1° y el 31 de julio de 2026, la aplicación de los Precios de Referencia de la Potencia (POTREF), del Precio Estabilizado de la Energía (PEE) y del Precio Estabilizado de los Servicios Adicionales (PES) en el MERCADO ELÉCTRICO MAYORISTA (MEM), establecidos en el Anexo (IF-2026-63234940-APN-DNRYDSE#MEC), que forma parte integrante de la presente medida. Dichos precios serán aplicables a la demanda de energía eléctrica declarada por los Agentes Distribuidores y/o Prestadores del Servicio Público de Distribución del MEM como destinada al abastecimiento de sus usuarios finales, así como de los usuarios de otros prestadores del servicio público de distribución de energía eléctrica ubicados dentro del área de influencia o concesión del respectivo Agente Distribuidor. El PEE, conjuntamente con el POTREF y el PES, deberá ser utilizado para su corr",
+      "disposition": "Establécese, para el período comprendido entre el 1° y el 31 de julio de 2026, la aplicación de los Precios de Referencia de la Potencia (POTREF), del Precio Estabilizado de la Energía (PEE) y del Precio Estabilizado de los Servicios Adicionales (PES) en el MERCADO ELÉCTRICO MAYORISTA (MEM), establecidos en el Anexo (IF-2026-63234940-APN-DNRYDSE#MEC), que…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 140/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 140/2026 RESOL-2026-140-APN-SE#MEC",
+      "publishedAt": "2026-06-23T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 140/2026 RESOL-2026-140-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343423/20260623",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma EDISON TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (EDISON TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma EDISON TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (EDISON TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
       "operativePreview": true
     },
     {
@@ -2556,6 +3569,30 @@
       "auto": true,
       "firstArticle": "Prorrogar por treinta (30) días corridos, contados a partir de la fecha de vencimiento, los plazos establecidos en los artículos 1° y 2° de la Resolución N.° RESOL-2026-329-APN-DIRECTORIO#ENARGAS.",
       "disposition": "Prorrogar por treinta (30) días corridos, contados a partir de la fecha de vencimiento, los plazos establecidos en los artículos 1° y 2° de la Resolución N.° RESOL-2026-329-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 136/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 136/2026 RESOL-2026-136-APN-SE#MEC",
+      "publishedAt": "2026-06-18T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 136/2026 RESOL-2026-136-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Comercialización",
+        "Transporte",
+        "Distribución",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343286/20260618?anexos=1",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Ratifícanse e incorpóranse como parte integrante del Pliego de Bases y Condiciones de la Convocatoria Abierta Nacional e Internacional “Abastecimiento de Energía Eléctrica por Centrales de Almacenamiento para reserva y confiabilidad en el MERCADO ELÉCTRICO MAYORISTA (MEM) (AlmaSADI)” efectuada en el marco de la Resolución N° 50 de fecha 27 de febrero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA la totalidad de Circulares Nros. 1, 2, 3, 4 y 5 y la Nota de Comunicación de Nodos Adicionales.",
+      "disposition": "Ratifícanse e incorpóranse como parte integrante del Pliego de Bases y Condiciones de la Convocatoria Abierta Nacional e Internacional “Abastecimiento de Energía Eléctrica por Centrales de Almacenamiento para reserva y confiabilidad en el MERCADO ELÉCTRICO MAYORISTA (MEM) (AlmaSADI)” efectuada en el marco de la Resolución N° 50 de fecha 27 de febrero de…",
       "operativePreview": true
     },
     {
@@ -2809,6 +3846,49 @@
       "url": "https://boletinoficial.gba.gob.ar/secciones/14190/ver#page=89",
       "auto": true,
       "disposition": "Licitación Pública Nº 04-01-26 Segundo Llamado POR 2 DÍAS - Licitación Pública 04/01/26, Segundo Llamado. Obra: Extensión de Redes de Gas Natural"
+    },
+    {
+      "num": "Resolución 25/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 25/2026 RESFC-2026-25-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-05-29T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 25/2026 RESFC-2026-25-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 28/05/2026 VISTO el Expediente N° EX-2026-47796466-APN-SD#ENRE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 109 de fecha 30 de abril de 2026, estableció -para el período comprendido entre el 1 de mayo de 2026 y el 31 d",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/342564/20260529?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-52107757-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-52107757-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 26/2026",
+      "category": "Tarifas",
+      "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 26/2026 RESFC-2026-26-APN-DIRECTORIO#ENREGE",
+      "publishedAt": "2026-05-29T00:00-03:00",
+      "validatedAt": "2026-09-30T11:59-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 26/2026 RESFC-2026-26-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 28/05/2026 VISTO el Expediente N° EX-2026-47796658-APN-SD#ENRE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 109 de fecha 30 de abril de 2026, estableció -para el período comprendido entre el 1 de mayo de 2026 y el 31 d",
+      "tags": [
+        "Tarifas",
+        "Subsidios",
+        "Comercialización",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/342565/20260529?anexos=1",
+      "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-52106760-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-52106760-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 51/2026",
@@ -3391,6 +4471,27 @@
       "auto": true,
       "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-44314597-APN-GDYE#ENARGAS que forma parte de la presente.",
       "disposition": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-44314597-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 110/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 110/2026 RESOL-2026-110-APN-SE#MEC",
+      "publishedAt": "2026-05-05T00:00-03:00",
+      "validatedAt": "2026-09-30T12:00-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 110/2026 RESOL-2026-110-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341569/20260505",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la EMPRESA DE DESARROLLO HIDROCARBURÍFERO PROVINCIAL SOCIEDAD ANÓNIMA (E.D.HI.P.S.A.), en calidad de Provincia Comercializadora de Regalías en Especie del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la EMPRESA DE DESARROLLO HIDROCARBURÍFERO PROVINCIAL SOCIEDAD ANÓNIMA (E.D.HI.P.S.A.), en calidad de Provincia Comercializadora de Regalías en Especie del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
       "operativePreview": true
     },
     {
@@ -4016,6 +5117,27 @@
       "disposition": "Licitación Pública Nº 04-01-26 POR 2 DÍAS - Obra: Extensión de Redes de Gas Natural Barrio Tunitas y Otros."
     },
     {
+      "num": "Resolución 99/2026",
+      "category": "GNL",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 99/2026 RESOL-2026-99-APN-SE#MEC",
+      "publishedAt": "2026-04-23T00:00-03:00",
+      "validatedAt": "2026-09-30T12:07-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 99/2026 RESOL-2026-99-APN-SE#MEC",
+      "tags": [
+        "GNL",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341087/20260423",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Incorpórase como inciso k) del Punto 3.4. “RECUPERO DE COSTOS DE COMBUSTIBLES Y DESPACHO” del Anexo I “Reglas para la Normalización del MEM y su Adaptación Progresiva” aprobado por el Artículo 1° de la Resolución N° 400 de fecha 20 de octubre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el texto que como Anexo (IF-2026-38727976-APN-DNRYDSE#MEC) forma parte integrante de la presente medida.",
+      "disposition": "Incorpórase como inciso k) del Punto 3.4. “RECUPERO DE COSTOS DE COMBUSTIBLES Y DESPACHO” del Anexo I “Reglas para la Normalización del MEM y su Adaptación Progresiva” aprobado por el Artículo 1° de la Resolución N° 400 de fecha 20 de octubre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el texto que como Anexo…",
+      "operativePreview": true
+    },
+    {
       "num": "PBA · 2026-04-17 · Página 5",
       "title": "BAGSA — aporte irrevocable a cuenta de futuros aumentos de capital",
       "desc": "-05979976-GDEBA-DPTLMIYSPGP del Ministerio de Infraestructura y Servicios Públicos,\npor el cual se propicia aprobar una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros\naumentos de capital social a favor de “Buenos Aires Gas S.A.” ( BAGSA ), y\n \nCONSIDERANDO:\nQue por el Decreto N° 1094/03 se declaró de interés público la construcción y explotación de redes de distribución",
@@ -4288,6 +5410,27 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 76/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 76/2026 RESOL-2026-76-APN-SE#MEC",
+      "publishedAt": "2026-03-25T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 76/2026 RESOL-2026-76-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339842/20260325",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma COMERCIALIZADORA DE ENERGÍA SOCIEDAD ANÓNIMA (COMERCIALIZADORA DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma COMERCIALIZADORA DE ENERGÍA SOCIEDAD ANÓNIMA (COMERCIALIZADORA DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 344/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 344/2026 RESOL-2026-344-APN-DIRECTORIO#ENARGAS",
@@ -4381,6 +5524,26 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 69/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 69/2026 RESOL-2026-69-APN-SE#MEC",
+      "publishedAt": "2026-03-17T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 69/2026 RESOL-2026-69-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339566/20260317",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma COROCOTTA SOCIEDAD ANÓNIMA (COROCOTTA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma COROCOTTA SOCIEDAD ANÓNIMA (COROCOTTA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 64/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 64/2026 RESOL-2026-64-APN-SE#MEC",
@@ -4401,6 +5564,27 @@
       "auto": true,
       "firstArticle": "Apruébase el Sistema de Información de los operadores de Gas Licuado de Petróleo (GLP), al que deberán ajustarse los operadores inscriptos en el Registro Nacional de la Industria del Gas Licuado de Petróleo (RNIGLP) regulado por la Resolución N° 136 de fecha 14 de abril de 2003 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA y sus normas modificatorias y complementarias, o el que en el futuro lo reemplace, y que como Anexo I (IF-2026-20299088-APN-SSCL#MEC) forma parte integrante de la presente medida. Lo dispuesto en la presente medida no es limitativo de la facultad de solicitar toda otra información que la Autoridad de Aplicación considere necesaria para el cumplimiento de sus funciones, dentro del marco del Decreto N° 1.028 de fecha 14 de agosto de 2001 y de la Ley N° 26.020 y sus modificatorias.",
       "disposition": "Apruébase el Sistema de Información de los operadores de Gas Licuado de Petróleo (GLP), al que deberán ajustarse los operadores inscriptos en el Registro Nacional de la Industria del Gas Licuado de Petróleo (RNIGLP) regulado por la Resolución N° 136 de fecha 14 de abril de 2003 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA y sus normas…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 67/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 67/2026 RESOL-2026-67-APN-SE#MEC",
+      "publishedAt": "2026-03-16T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 67/2026 RESOL-2026-67-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339479/20260316",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma VENERGY SOCIEDAD ANÓNIMA (VENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma VENERGY SOCIEDAD ANÓNIMA (VENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
       "operativePreview": true
     },
     {
@@ -4445,6 +5629,28 @@
       "auto": true,
       "firstArticle": "Otorgar un plazo de NOVENTA (90) días corridos para la adecuación de las Certificaciones de Aptitud Técnica de los Centros de Revisión Periódica de Cilindros para GNC conforme la norma NAG-444 (2026) aprobada por la Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS.",
       "disposition": "Otorgar un plazo de NOVENTA (90) días corridos para la adecuación de las Certificaciones de Aptitud Técnica de los Centros de Revisión Periódica de Cilindros para GNC conforme la norma NAG-444 (2026) aprobada por la Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 60/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 60/2026 RESOL-2026-60-APN-SE#MEC",
+      "publishedAt": "2026-03-11T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 60/2026 RESOL-2026-60-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Precios",
+        "Transporte",
+        "Distribución"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339309/20260311",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Sustitúyese el Numeral 9.4.2.3 de las Reglas Básicas de la Licencia de Distribución aprobada como Anexo B, Subanexo I, por el Decreto Nº 2.255 de fecha 2 de diciembre de 1992, por el siguiente texto: “9.4.2.3. Una vez transcurrido el Período de transición, los ajustes serán estacionales, abarcando los períodos del 1° de mayo al 30 de septiembre de cada año, y del 1° de octubre al 30 de abril del año siguiente”.",
+      "disposition": "Sustitúyese el Numeral 9.4.2.3 de las Reglas Básicas de la Licencia de Distribución aprobada como Anexo B, Subanexo I, por el Decreto Nº 2.255 de fecha 2 de diciembre de 1992, por el siguiente texto: “9.4.2.3.",
       "operativePreview": true
     },
     {
@@ -4503,6 +5709,46 @@
       "url": "https://boletinoficial.gba.gob.ar/secciones/14024/ver#page=65",
       "auto": true,
       "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
+    },
+    {
+      "num": "Resolución 56/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 56/2026 RESOL-2026-56-APN-SE#MEC",
+      "publishedAt": "2026-03-06T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 56/2026 RESOL-2026-56-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339140/20260306",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma POWERGEN SOLUTIONS SOCIEDAD ANÓNIMA (POWERGEN SOLUTIONS S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma POWERGEN SOLUTIONS SOCIEDAD ANÓNIMA (POWERGEN SOLUTIONS S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 55/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 55/2026 RESOL-2026-55-APN-SE#MEC",
+      "publishedAt": "2026-03-06T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 55/2026 RESOL-2026-55-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339139/20260306",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma CORE ENERGY SOCIEDAD ANÓNIMA (CORE ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma CORE ENERGY SOCIEDAD ANÓNIMA (CORE ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-03-05 · Página 34",
@@ -4565,6 +5811,28 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 54/2026",
+      "category": "Subdistribución",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 54/2026 RESOL-2026-54-APN-SE#MEC",
+      "publishedAt": "2026-03-05T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 54/2026 RESOL-2026-54-APN-SE#MEC",
+      "tags": [
+        "Subdistribución",
+        "Transporte",
+        "Distribución",
+        "BAGSA"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339102/20260305",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Amplíase en CIENTO OCHENTA (180) días corridos el plazo previsto en el Artículo 1° de la Resolución N° 36 de fecha 9 de febrero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA a contar desde el vencimiento del plazo establecido por el Artículo 1° de la citada resolución.",
+      "disposition": "Amplíase en CIENTO OCHENTA (180) días corridos el plazo previsto en el Artículo 1° de la Resolución N° 36 de fecha 9 de febrero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA a contar desde el vencimiento del plazo establecido por el Artículo 1° de la citada resolución.",
+      "operativePreview": true
+    },
+    {
       "num": "PBA · 2026-03-04 · Página 46",
       "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": ", como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma parte del link de descarga.\nQuien haya descargado",
@@ -4582,6 +5850,26 @@
       "url": "https://boletinoficial.gba.gob.ar/secciones/14018/ver#page=46",
       "auto": true,
       "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
+    },
+    {
+      "num": "Resolución 52/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 52/2026 RESOL-2026-52-APN-SE#MEC",
+      "publishedAt": "2026-03-04T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 52/2026 RESOL-2026-52-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339057/20260304",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma INFINITY ENERGY SOCIEDAD ANÓNIMA (INFINITY ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma INFINITY ENERGY SOCIEDAD ANÓNIMA (INFINITY ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 97/2026",
@@ -5143,6 +6431,28 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 36/2026",
+      "category": "Subdistribución",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 36/2026 RESOL-2026-36-APN-SE#MEC",
+      "publishedAt": "2026-02-10T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 36/2026 RESOL-2026-36-APN-SE#MEC",
+      "tags": [
+        "Subdistribución",
+        "Transporte",
+        "Distribución",
+        "BAGSA"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338321/20260210",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Amplíase en QUINCE (15) días hábiles administrativos el plazo previsto en el Artículo 3° de la Resolución N° 606 de fecha 26 de diciembre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "disposition": "Amplíase en QUINCE (15) días hábiles administrativos el plazo previsto en el Artículo 3° de la Resolución N° 606 de fecha 26 de diciembre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 33/2026",
       "category": "GNL",
       "title": "SECRETARÍA DE ENERGÍA Resolución 33/2026 RESOL-2026-33-APN-SE#MEC",
@@ -5167,6 +6477,27 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 31/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 31/2026 RESOL-2026-31-APN-SE#MEC",
+      "publishedAt": "2026-02-05T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 31/2026 RESOL-2026-31-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338186/20260205",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Apruébase el presupuesto anual de costos del MERCADO ELECTRÓNICO DE GAS S.A. (MEGSA) (CUIT N° 30-70911020-5) para el año 2026, para solventar el funcionamiento de la Réplica de Información de Despacho (RDD), por la suma total de PESOS MIL TRESCIENTOS OCHENTA Y OCHO MILLONES OCHENTA MIL DOSCIENTOS CINCUENTA Y OCHO ($1.388.080.258), según surge del Informe Técnico N° IF-2026-08529171-APN-DNEYR#MEC de la Dirección Nacional de Economía y Regulación dependiente de la SUBSECRETARÍA DE COMBUSTIBLES LÍQUIDOS de esta Secretaría, a los efectos del cálculo del arancel que establece el Artículo 1º de la Resolución N° 9 de fecha 8 de junio de 2016 de la ex SECRETARÍA DE RECURSOS HIDROCARBURÍFEROS del ex MINISTERIO DE ENERGÍA Y MINERÍA.",
+      "disposition": "Apruébase el presupuesto anual de costos del MERCADO ELECTRÓNICO DE GAS S.A. (MEGSA) (CUIT N° 30-70911020-5) para el año 2026, para solventar el funcionamiento de la Réplica de Información de Despacho (RDD), por la suma total de PESOS MIL TRESCIENTOS OCHENTA Y OCHO MILLONES OCHENTA MIL DOSCIENTOS CINCUENTA Y OCHO ($1.388.080.258), según surge del Informe…",
+      "operativePreview": true
+    },
+    {
       "num": "PBA · 2026-02-02 · Página 47",
       "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": ". Cumplido, archívese.\n \nFallo: 797/2025.\n \nDaniel Carlos Chillo, Ariel Héctor Pietronave, Juan Pablo Peredo, Gustavo Eduardo Diez, Federico Gastón\nThea. Rubricado: Gonzalo Sebastián Kodelia.\n\n◢ LICITACIONES\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta PP N° 1969-26 Obra de Suministro de Gas a la localidad de Anchorena\n- Urquiza",
@@ -5184,6 +6515,27 @@
       "url": "https://boletinoficial.gba.gob.ar/secciones/13965/ver#page=47",
       "auto": true,
       "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
+    },
+    {
+      "num": "Resolución 28/2026",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 28/2026 RESOL-2026-28-APN-SE#MEC",
+      "publishedAt": "2026-02-02T00:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 28/2026 RESOL-2026-28-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338073/20260202",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma ANDINA ENERGÍA SOCIEDAD POR ACCIONES SIMPLIFICADA (ANDINA ENERGÍA S.A.S.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma ANDINA ENERGÍA SOCIEDAD POR ACCIONES SIMPLIFICADA (ANDINA ENERGÍA S.A.S.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 23/2026",
@@ -5849,6 +7201,74 @@
       "operativePreview": true
     },
     {
+      "num": "Resolución 13/2026",
+      "category": "GLP",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 13/2026 RESOL-2026-13-APN-SE#MEC",
+      "publishedAt": "2026-01-16T00:00-03:00",
+      "validatedAt": "2026-09-30T12:07-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 13/2026 RESOL-2026-13-APN-SE#MEC",
+      "tags": [
+        "GLP",
+        "Precios",
+        "Subsidios",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337515/20260116",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Instrúyese a la SUBSECRETARÍA DE TRANSICIÓN Y PLANEAMIENTO ENERGÉTICO de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, para que asuma la gestión operativa del REGISTRO DE SUBSIDIOS ENERGÉTICOS FOCALIZADOS (ReSEF) creado por el Artículo 3º del Decreto N° 943 del 31 de diciembre de 2025, a todos los fines de la administración del padrón de beneficiarios y de los mecanismos de inscripción, consulta y revisión, para la efectiva instrumentación de los criterios de inclusión y exclusión, de los indicadores de exteriorización patrimonial, y de la gestión de las herramientas de revisión y control necesarias para optimizar el funcionamiento del régimen de SUBSIDIOS ENERGÉTICOS FOCALIZADOS (SEF) creado por el Artículo 1º del citado decreto.",
+      "disposition": "Instrúyese a la SUBSECRETARÍA DE TRANSICIÓN Y PLANEAMIENTO ENERGÉTICO de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, para que asuma la gestión operativa del REGISTRO DE SUBSIDIOS ENERGÉTICOS FOCALIZADOS (ReSEF) creado por el Artículo 3º del Decreto N° 943 del 31 de diciembre de 2025, a todos los fines de la administración del padrón de…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 14/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 14/2026 RESOL-2026-14-APN-SE#MEC",
+      "publishedAt": "2026-01-16T00:00-03:00",
+      "validatedAt": "2026-09-30T12:07-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 14/2026 RESOL-2026-14-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Comercialización",
+        "Distribución",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337516/20260116",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Dase por prorrogado desde el día 12 de enero de 2026, inclusive, y hasta por SESENTA (60) días hábiles el plazo para que los Adjudicatarios, listados en el Anexo (IF-2026-05043643-APN-DNGE#MEC) y que forma parte integrante de la presente medida, puedan suscribir los Contratos de Generación de Almacenamiento con Distribuidores del MERCADO ELÉCTRICO MAYORISTA (MEM) en los términos y condiciones establecidos en el Artículo 21 del Pliego de Bases y Condiciones de la Convocatoria Abierta Nacional e Internacional “Almacenamiento AlmaGBA” autorizada por la Resolución N° 67 de fecha 14 de febrero de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "disposition": "Dase por prorrogado desde el día 12 de enero de 2026, inclusive, y hasta por SESENTA (60) días hábiles el plazo para que los Adjudicatarios, listados en el Anexo (IF-2026-05043643-APN-DNGE#MEC) y que forma parte integrante de la presente medida, puedan suscribir los Contratos de Generación de Almacenamiento con Distribuidores del MERCADO ELÉCTRICO MAYORISTA…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 5/2026",
+      "category": "Tarifas",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 5/2026 RESOL-2026-5-APN-SE#MEC",
+      "publishedAt": "2026-01-06T00:00-03:00",
+      "validatedAt": "2026-09-30T12:07-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 5/2026 RESOL-2026-5-APN-SE#MEC",
+      "tags": [
+        "Tarifas",
+        "Transporte",
+        "Infraestructura",
+        "Técnica / operativa"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337134/20260106",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Establécese que los conceptos correspondientes a la energía generada y la potencia disponible de la CENTRAL HIDROELÉCTRICA YACIRETÁ (CHY) serán reconocidos y facturados al valor de DÓLARES ESTADOUNIDENSES VEINTIOCHO POR MEGAVATIO HORA (USD 28/MWh), durante el período comprendido entre el 1° de enero y el 31 de diciembre de 2026. A los fines de su facturación, la COMPAÑÍA ADMINISTRADORA DEL MERCADO MAYORISTA ELÉCTRICO SOCIEDAD ANÓNIMA deberá aplicar dicho valor convertido a pesos al tipo de cambio de referencia “A 3500” del BANCO CENTRAL DE LA REPÚBLICA ARGENTINA (BCRA), vigente al día de vencimiento de la obligación.",
+      "disposition": "Establécese que los conceptos correspondientes a la energía generada y la potencia disponible de la CENTRAL HIDROELÉCTRICA YACIRETÁ (CHY) serán reconocidos y facturados al valor de DÓLARES ESTADOUNIDENSES VEINTIOCHO POR MEGAVATIO HORA (USD 28/MWh), durante el período comprendido entre el 1° de enero y el 31 de diciembre de 2026.",
+      "operativePreview": true
+    },
+    {
       "num": "Resolución 1019/2025",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 1019/2025 RESOL-2025-1019-APN-DIRECTORIO#ENARGAS",
@@ -5868,6 +7288,26 @@
       "auto": true,
       "firstArticle": "Habilitar dentro de los plazos establecidos para la feria administrativa del mes de enero de 2026, la sustanciación de todo tipo de trámite en el marco de las actuaciones vinculadas al proceso de revisión tarifaria encomendado a este organismo por el artículo 3º del Decreto de Necesidad y Urgencia Nº 55 del 16 de diciembre de 2023, correspondientes a las Transportistas del servicio público de gas natural que no cuenten con Licencia otorgada por el Estado Nacional.",
       "disposition": "Habilitar dentro de los plazos establecidos para la feria administrativa del mes de enero de 2026, la sustanciación de todo tipo de trámite en el marco de las actuaciones vinculadas al proceso de revisión tarifaria encomendado a este organismo por el artículo 3º del Decreto de Necesidad y Urgencia Nº 55 del 16 de diciembre de 2023, correspondientes a las…",
+      "operativePreview": true
+    },
+    {
+      "num": "Resolución 610/2025",
+      "category": "Comercialización",
+      "title": "SECRETARÍA DE ENERGÍA Resolución 610/2025 RESOL-2025-610-APN-SE#MEC",
+      "publishedAt": "2026-01-02T00:00-03:00",
+      "validatedAt": "2026-09-30T12:07-03:00",
+      "sourceType": "OFFICIAL",
+      "status": "updated",
+      "desc": "SECRETARÍA DE ENERGÍA Resolución 610/2025 RESOL-2025-610-APN-SE#MEC",
+      "tags": [
+        "Comercialización",
+        "Infraestructura"
+      ],
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337060/20260102",
+      "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma BREMBO ENERGÍA SOCIEDAD ANÓNIMA (BREMBO ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), por encontrarse ajustado al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma BREMBO ENERGÍA SOCIEDAD ANÓNIMA (BREMBO ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), por encontrarse ajustado al cumplimiento de la normativa vigente.",
       "operativePreview": true
     }
   ],
