@@ -1290,6 +1290,7 @@ def update_regulations(d):
     d["regulations"]=items
     incomplete=bool(failed_dates or failed_details)
     state.update(lastScannedDate=end_day.isoformat(),source="Boletín Oficial de la República Argentina · Primera Sección",
+                 previewBackfillVersion=1,
                  lastRun=iso(),pagesOk=pages_ok,pagesError=len(failed_dates),candidates=len(candidates),
                  pendingDates=failed_dates,pendingDetails=failed_details,
                  complete=not incomplete,lastRange={"from":start_day.isoformat(),"to":end_day.isoformat()},
@@ -1465,7 +1466,7 @@ def main():
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
     needs_reg_relevance=scan.get("relevanceVersion")!=2
-    needs_reg_backfill=any(x.get("jurisdiction")!="PBA" and x.get("url") and not x.get("firstArticle") for x in d.get("regulations",[]))
+    needs_reg_backfill=scan.get("previewBackfillVersion")!=1
     if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_relevance or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
     if d.get("tariffAutomation",{}).get("readerVersion")!=4 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
