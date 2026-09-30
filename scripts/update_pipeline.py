@@ -557,13 +557,43 @@ def _reg_date(text):
                 except Exception: pass
     return None
 
-def _first_article(text):
+def _operative_section(text):
     text=clean(text or "")
     if not text: return ""
-    m=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]*\s*(.*?)(?=\s+\bART[ÍI]CULO\s+(?:2|SEGUNDO)\b|$)",text,re.I|re.S)
+    markers=list(re.finditer(r"\b(?:RESUELVE|RESUELVEN|DECRETA|DISPONE|DISPONEN|DECIDE)\s*:",text,re.I))
+    if markers:
+        return text[markers[-1].end():]
+    por_ello=list(re.finditer(r"\bPOR\s+ELLO\b",text,re.I))
+    if por_ello:
+        tail=text[por_ello[-1].end():]
+        first=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]+",tail,re.I)
+        if first: return tail[first.start():]
+    return ""
+
+def _first_article(text):
+    section=_operative_section(text)
+    if not section: return ""
+    m=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]*\s*(.*?)(?=\s+\bART[ÍI]CULO\s+(?:2|2[°ºo]|SEGUNDO)\b|$)",section,re.I|re.S)
     if not m: return ""
     value=clean(m.group(1)).strip(" -–—")
-    return value[:700]
+    return value[:900]
+
+def _disposition_summary(first_article,title="",fallback=""):
+    text=clean(first_article or "")
+    if not text:
+        candidate=clean(title or fallback or "")
+        generic=bool(re.search(r"^(?:ENTE |MINISTERIO |SECRETAR[IÍ]A |Resoluci[oó]n\s+\d|Decreto\s+\d)",candidate,re.I))
+        return "" if generic else candidate[:360]
+    # The operative first article usually starts with the action itself
+    # (Apruébase, Autorízase, Fíjase, Convócase, etc.). Keep that action
+    # rather than summarising the recitals.
+    limit=360
+    if len(text)<=limit: return text
+    head=text[:limit+80]
+    stops=[m.end() for m in re.finditer(r"\.(?=\s+[A-ZÁÉÍÓÚÑ])",head)]
+    stop=max((x for x in stops if 120<=x<=limit+40),default=0)
+    if stop: return head[:stop].strip()
+    return text[:limit].rsplit(" ",1)[0].strip()+"…"
 
 
 def _discover_regulation_urls():
@@ -630,12 +660,13 @@ def _parse_regulation(url,hint=None):
     low=text.lower()
     if "bagsa" in low or "subdistrib" in low: tags.append("BAGSA")
     first_article=_first_article(summary)
-    desc=(hint or {}).get("snippet") or title or first_article or summary[:280]
+    disposition=_disposition_summary(first_article,title,(hint or {}).get("snippet",""))
+    desc=(hint or {}).get("snippet") or title or disposition or summary[:280]
     desc=clean(desc)[:420]
     return {
       "num":_reg_number(name),"category":primary,"title":title or _reg_number(name),
       "publishedAt":iso(dt),"validatedAt":iso(),"sourceType":"OFFICIAL",
-      "status":"updated","desc":desc,"firstArticle":first_article,
+      "status":"updated","desc":desc,"firstArticle":first_article,"disposition":disposition,"operativePreview":bool(first_article),
       "tags":list(dict.fromkeys(tags)),
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
@@ -695,14 +726,15 @@ def _parse_bora_detail(url,day,label):
     num=_reg_number(label)
     if not num or num=="Norma": return None
     first_article=_first_article(body)
+    disposition=_disposition_summary(first_article,title,body[:380])
     desc=title
     if not desc or desc==label[:260]:
-        desc=first_article or body[:380]
+        desc=disposition or body[:380]
     return {
       "num":num,"category":primary,"title":title or num,
       "publishedAt":iso(datetime.combine(day,datetime.min.time(),tzinfo=ART)),
       "validatedAt":iso(),"sourceType":"OFFICIAL","status":"updated",
-      "desc":clean(desc)[:420],"firstArticle":first_article,
+      "desc":clean(desc)[:420],"firstArticle":first_article,"disposition":disposition,"operativePreview":bool(first_article),
       "tags":list(dict.fromkeys(tags)),
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
@@ -754,6 +786,11 @@ def update_regulations(d):
                     p=_parse_regulation(_norm_url(x["url"]),{"snippet":x.get("desc","")})
                 except Exception: p=None
                 if p: x={**x,"issuer":p.get("issuer",x.get("issuer"))}
+            # Old previews were extracted before the parser was restricted to
+            # the operative section. Clear them progressively and rebuild them.
+            if x.get("firstArticle") and not x.get("operativePreview"):
+                x.pop("firstArticle",None)
+                x.pop("disposition",None)
             existing.append(x)
     state=d.setdefault("regulationScan",{})
     try:
@@ -800,26 +837,29 @@ def update_regulations(d):
                 known[key]=item; added+=1
     preview_backfilled=0
     preview_targets=sorted(
-        (x for x in known.values() if x.get("url") and not x.get("firstArticle")),
+        (x for x in known.values() if x.get("url") and x.get("jurisdiction")!="PBA" and not x.get("firstArticle")),
         key=lambda x:x.get("publishedAt",""),reverse=True
-    )[:16]
+    )[:48]
     def load_preview(item):
         try:
             raw=fetch(item["url"],timeout=25)
             soup=BeautifulSoup(raw,"html.parser")
             article=soup.find("article")
             body=clean(article.get_text(" ",strip=True)) if article else clean(soup.get_text(" ",strip=True))
-            return item,_first_article(body)
+            first=_first_article(body)
+            return item,first,_disposition_summary(first,item.get("title",""),item.get("desc",""))
         except Exception as e:
             print("REG PREVIEW",item.get("url"),e)
-            return item,""
+            return item,"",""
     if preview_targets:
         with ThreadPoolExecutor(max_workers=6) as ex:
             futs=[ex.submit(load_preview,x) for x in preview_targets]
             for fut in as_completed(futs):
-                item,preview=fut.result()
+                item,preview,disposition=fut.result()
                 if preview:
                     item["firstArticle"]=preview
+                    item["disposition"]=disposition
+                    item["operativePreview"]=True
                     item["validatedAt"]=iso()
                     preview_backfilled+=1
 
