@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "updatedAt": "2026-09-30T12:00-03:00",
+    "updatedAt": "2026-09-30T12:05-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -60,8 +60,8 @@
       "value": "43,3917",
       "unit": "MMm³/d",
       "reference": "Vie 02/10/2026 · PROYECCIÓN",
-      "validatedAt": "2026-09-30T12:00-03:00",
-      "nextValidation": "2026-10-01T12:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
+      "nextValidation": "2026-10-01T12:04-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
@@ -72,7 +72,7 @@
         {
           "date": "28/09",
           "fullDate": "Lun 28/09/2026",
-          "value": "40,7121",
+          "value": "40,8030",
           "kind": "REAL"
         },
         {
@@ -84,13 +84,13 @@
         {
           "date": "30/09",
           "fullDate": "Mié 30/09/2026",
-          "value": "45,4523",
+          "value": "45,5664",
           "kind": "PROY."
         },
         {
           "date": "01/10",
           "fullDate": "Jue 01/10/2026",
-          "value": "45,1870",
+          "value": "45,2217",
           "kind": "PROY."
         },
         {
@@ -108,7 +108,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta",
       "desc": "YPF iniciará una nueva campaña de estudios técnicos en el Golfo San Matías como parte del desarrollo de Argentina LNG, el proyecto diseñado para convertir la producción de gas de Vaca Muerta en una plataforma de exportación de gas natural licuado a gran escala. Los trabajos serán realizados desde el buque Rustrigen, una embarcación especializada […] The post Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -121,7 +121,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "PECOM concretó su primera exportación de crudo Escalante hacia Hawái",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -134,7 +134,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Vaca Muerta: DLS Archer activó dos equipos de alta especificación para YPF",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -146,7 +146,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El petróleo se mantiene cerca de US$100 mientras se recupera la oferta de Medio Oriente",
       "desc": "Los mercados petroleros comenzaron a registrar señales de mayor estabilidad luego de que las exportaciones de crudo de Medio Oriente recuperaran casi por completo los niveles previos al conflicto regional. Aun con esa mejora, los precios internacionales continúan operando cerca de los US$100 por barril. Según estimaciones de JPMorgan Chase y Goldman Sachs, los volúmenes […] The post El petróleo se mantiene cerca de US$100 mientras se recupera la oferta de Medio Oriente first appeared on Runrun energético .",
       "tags": [
@@ -158,7 +158,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T07:45-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Bahía Grande participará de los estudios geotécnicos del proyecto Argentina LNG de YPF ENI",
       "desc": "Bahía Grande, empresa especializada en logística y operaciones marítimas para la industria energética con más de 35 años de trayectoria, será parte del proyecto Argentina LNG impulsado por YPF/ENI, la inversión privada más grande de la historia del país. El plan tiene como objetivo extraer el gas natural de Vaca Muerta en Neuquén, para convertirlo […] The post Bahía Grande participará de los estudios geotécnicos del proyecto Argentina LNG de YPF ENI first appeared on Runrun energético .",
       "tags": [
@@ -170,7 +170,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T11:37-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Juan Luchilo, gerente general de Cammesa: “El sistema eléctrico tiene ir a un esquema lo más full gas posible”",
       "desc": "Juan Luchilo, gerente general de Cammesa, no tiene dudas. “El sistema eléctrico tiene ir a un esquema lo más full gas posible”, afirmó en el Renewables y Electricity Day organizado por EconoJournal. “Desde el momento que se establece que Vaca Muerta es una fuente infinita de gas, hay que poner generación en boca de pozo […]",
       "tags": [
@@ -182,7 +182,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T10:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Chevron invertirá US$13.800 millones para triplicar su producción en Vaca Muerta",
       "desc": "La petrolera estadounidense Chevron aceleró su apuesta por Vaca Muerta con un plan que busca transformar a El Trapial en uno de los principales motores de crecimiento de su producción no convencional durante la próxima década. El proyecto fue presentado al Régimen de Incentivo para Grandes Inversiones (RIGI) y contempla desembolsos por US$13.800 millones, una […] The post Chevron invertirá US$13.800 millones para triplicar su producción en Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -194,7 +194,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Un buque argentino avanza con estudios clave para el desarrollo del proyecto Argentina GNL en Río Negro",
       "desc": "El proyecto Argentina GNL continúa sumando etapas técnicas en la costa atlántica rionegrina. Esta semana, el buque argentino Rustrigen inició una nueva campaña geofísica y oceanográfica en el Golfo San Matías, destinada a recopilar información necesaria para el diseño de la futura infraestructura offshore vinculada a la exportación de gas natural licuado. Las tareas forman […] The post Un buque argentino avanza con estudios clave para el desarrollo del proyecto Argentina GNL en Río Negro first appeared on Runrun en",
       "tags": [
@@ -219,7 +219,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "GNL: aumentó el tránsito de buques por el estrecho de Ormuz pese al conflicto",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -304,7 +304,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:40-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "La producción argentina proyecta alcanzar un millón de barriles diarios",
       "desc": "El país se encamina a marcar un hito histórico de extracción impulsado por el desarrollo de la formación Vaca Muerta […] The post La producción argentina proyecta alcanzar un millón de barriles diarios first appeared on revistapetroquimica.com .",
       "tags": [
@@ -316,7 +316,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:27-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste",
       "desc": "La petrolera estatal Saudi Aramco retomó los flujos a través de esta infraestructura de 1.200 kilómetros tras reparar los daños […] The post Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste first appeared on revistapetroquimica.com .",
       "tags": [
@@ -328,7 +328,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T17:24-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Enrege: delegados sindicales de UPCN y ATE presionaron a la conducción del ente en la última reunión de directorio",
       "desc": "La reunión de directorio del Ente Nacional Regulador del Gas y la Electricidad (Enrege) venía transcurriendo este lunes sin mayores sobresaltos, con el foco puesto en la actualización de tarifas de octubre, el apagón del 19 de septiembre y el plan de retiros voluntarios. Sin embargo, apenas se terminaron de tratar los temas del día, […]",
       "tags": [
@@ -340,7 +340,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T16:09-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Elecciones 2027: con foco en el derrame de Vaca Muerta, se lanzó un primer espacio opositor a Rolando Figueroa",
       "desc": "Las elecciones provinciales del 2027 en Neuquén aún no tienen fecha, pero un espacio político lanzó este lunes su plataforma de campaña con la que buscará disputarle la gobernación a Rolando Figueroa. Se trata del partido Cumplir, liderado por la diputada Brenda Buchiniz e integrado por una amalgama de dirigentes que incluye desde un exfuncionario […]",
       "tags": [
@@ -392,7 +392,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Urea: el gas de Vaca Muerta cuesta hasta un 68% menos que el del Presal brasileño",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -405,7 +405,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Las claves para entender la apuesta del GNL argentino",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -418,7 +418,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El gas de Vaca Muerta podría llegar a Brasil a U$S 6,3/MMBTU",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -431,7 +431,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El Hub Norte y la necesidad de infraestructura para el gas asociado",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -444,7 +444,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "EXIM de Estados Unidos financiará a Argentina LNG con U$S 6.000 millones",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -457,7 +457,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Vaca Muerta: el motor salarial que domina Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -470,7 +470,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Un tren para descomprimir la \"ruta de la arena\" de Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -483,7 +483,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Halliburton capacitó a sus operarios para operar Zeus en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -496,7 +496,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El camino hacia el \"sello verde\" Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -509,7 +509,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Alto apoyo al Programa \"Gas do Povo\" a un año de su creación",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -522,7 +522,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Se viene el precio “Bahía Blanca” para la tonelada de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -535,7 +535,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Argentina mira para su exportación América, Asia y China",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -548,7 +548,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Cuál es el precio internacional, la demanda y perspectiva del GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -561,7 +561,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Colombia: la importación de GLP alcanzó al 51,7%, y ya superó a la oferta nacional",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -574,7 +574,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "La suba del precio internacional tensiona importación en México",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -587,7 +587,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Argentina: City Gas instaló su segunda expendedora",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -600,7 +600,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Seminario para entender a la Argentina como exportadora de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -613,7 +613,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Colombia: Colgas el mayor importador de GLP, con el 53% del volumen entre el 2020 y el 2025",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -626,7 +626,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Nuevo proyecto de u$s360 M de Compañía Mega para producir más de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -639,7 +639,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "SuperGasBras ya maneja una flota de 51 camiones eléctricos en Río de Janeiro",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -652,7 +652,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Transporte de GLP varado al pie de la Cordillera por nieve",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -703,7 +703,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "OLACDE proyecta exportaciones firmes de gas a Brasil por 10 millones de m³ diarios desde 2029",
       "desc": "La expansión del shale gas de Vaca Muerta podría abrir una nueva etapa para las exportaciones energéticas argentinas si avanzan las inversiones y acuerdos necesarios para abastecer de manera estable al mercado brasileño. Según estimaciones presentadas por la OLACDE, el primer objetivo consiste en alcanzar envíos firmes de 10 millones de metros cúbicos diarios de […] The post OLACDE proyecta exportaciones firmes de gas a Brasil por 10 millones de m³ diarios desde 2029 first appeared on Runrun energético .",
       "tags": [
@@ -727,7 +727,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T09:01-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El Gobierno precisó cuánto costará la energía para data centers, grandes desarrollos mineros y nuevos proyectos de infraestructura en Vaca Muerta",
       "desc": "El Gobierno publicó el viernes pasado la resolución 264 de la Secretaría de Energía, una normativa que establece las condiciones de borde bajo las cuales deberán incorporarse al Mercado Eléctrico Mayorista (MEM) las nuevas inversiones que impliquen un salto significativo en el consumo de electricidad. La regulación apunta fundamentalmente a anticipar el impacto que podrían […]",
       "tags": [
@@ -751,7 +751,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T07:12-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales",
       "desc": "La petrolera YPF aporta el 48,9% del crudo no convencional argentino con 317,4 mil barriles diarios, mientras que el 80,6% […] The post YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales first appeared on revistapetroquimica.com .",
       "tags": [
@@ -763,7 +763,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T06:50-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones",
       "desc": "Un corredor marítimo supervisado por Estados Unidos y rutas alternativas permitieron restablecer el flujo de 8 millones de barriles diarios […] The post Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones first appeared on revistapetroquimica.com .",
       "tags": [
@@ -788,7 +788,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T09:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "McDermott y Pumpco aparecen como piezas clave detrás del financiamiento de US$ 6.000 millones para Argentina LNG",
       "desc": "Una parte importante del financiamiento por hasta US$ 6.000 millones que YPF negocia con el Export-Import Bank de Estados Unidos (EXIM Bank) podría terminar respaldando contratos ya adjudicados a empresas estadounidenses dentro del proyecto Argentina LNG, la principal apuesta exportadora vinculada a Vaca Muerta. El esquema propuesto por EXIM contempla recursos destinados específicamente a la […] The post McDermott y Pumpco aparecen como piezas clave detrás del financiamiento de US$ 6.000 millones para Argentina LNG",
       "tags": [
@@ -824,7 +824,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T08:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "El Senado limitó Zona Fría y 1,6 millones de usuarios perderán subsidios al gas",
       "desc": "El Senado aprobó una modificación al régimen de Zona Fría que reducirá el alcance de los subsidios al gas natural y dejará fuera del beneficio a aproximadamente 1,6 millones de usuarios residenciales. La decisión representa uno de los cambios regulatorios más relevantes del año para el mercado energético argentino. Detrás de la reforma aparece el […] The post El Senado limitó Zona Fría y 1,6 millones de usuarios perderán subsidios al gas first appeared on Runrun energético .",
       "tags": [
@@ -884,7 +884,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T06:52-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU",
       "desc": "El mandatario excluyó expresamente de la invitación a las firmas que exploten recursos en las Islas Malvinas bajo ocupación ilegal. […] The post Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU first appeared on revistapetroquimica.com .",
       "tags": [
@@ -969,7 +969,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-24T07:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Rincón del Mangrullo sigue al frente del gas de YPF mientras crecen Bandurria Sur y El Orejano",
       "desc": "La producción de gas operada por YPF alcanzó en agosto los 30,3 millones de metros cúbicos diarios y mantuvo a Rincón del Mangrullo como el principal bloque gasífero de la compañía por cuarto mes consecutivo. Aunque la producción total registró una caída mensual del 3,2%, algunos desarrollos no convencionales lograron incrementar sus volúmenes y ganar […] The post Rincón del Mangrullo sigue al frente del gas de YPF mientras crecen Bandurria Sur y El Orejano first appeared on Runrun energético .",
       "tags": [
@@ -993,7 +993,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-21T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Complejo Industrial Neuquén: la apuesta de YPF para Argentina LNG",
       "desc": "La petrolera YPF presentó en Plaza Huincul los detalles del Complejo Industrial Neuquén, pieza clave del proyecto Argentina LNG que desarrolla junto con Eni y XRG. La primera etapa contempla una inversión de US$ 51.000 millones y una capacidad de 12 millones de toneladas anuales, con operaciones previstas desde 2030. El complejo se ubicará sobre […] The post Complejo Industrial Neuquén: la apuesta de YPF para Argentina LNG first appeared on Runrun energético .",
       "tags": [
@@ -1018,7 +1018,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-17T08:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Argentina se perfila como potencia global en GLP gracias a Vaca Muerta",
       "desc": "El director de Midstream Gas & GLP de YPF, Pedro Locreille, anunció el 16 de septiembre de 2026 en el Seminario Internacional de GLP “De Argentina hacia el mundo” que la Argentina podría alcanzar hasta 9 millones de toneladas anuales del mencionado hidrocarburo hacia 2031, lo que ubicaría al país entre los cinco a siete […] The post Argentina se perfila como potencia global en GLP gracias a Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -1030,7 +1030,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-16T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Argentina LNG acelera su desarrollo: YPF firmará la FID antes de fin de año",
       "desc": "El presidente y CEO de YPF, Horacio Marín, confirmó en la feria internacional Gastech 2026 que el proyecto Argentina LNG alcanzará la Decisión Final de Inversión (FID) antes de fin de año, con inicio de obras programado para febrero de 2027. En el panel “Argentina LNG: Building the Next Global Energy Supply Hub”, Marín compartió […] The post Argentina LNG acelera su desarrollo: YPF firmará la FID antes de fin de año first appeared on Runrun energético .",
       "tags": [
@@ -1042,7 +1042,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-16T09:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:59-03:00",
+      "feedValidatedAt": "2026-09-30T12:03-03:00",
       "title": "Río Negro avanza con infraestructura para exportar gas de Vaca Muerta",
       "desc": "El gobernador Alberto Weretilneck recorrió en el Puerto de San Antonio Este la descarga y acopio de 3.340 caños de 36 pulgadas destinados al gasoducto que conectará Vaca Muerta con la costa rionegrina. La obra, de 472 kilómetros, permitirá transportar hasta 27 millones de m³ de gas por día y abastecer el primer proyecto de […] The post Río Negro avanza con infraestructura para exportar gas de Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -1093,7 +1093,7 @@
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T11:59-03:00",
+      "validatedAt": "2026-09-30T12:03-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 25/09/2026 VISTO el Expediente N.° EX-2026-69172932- -APN-UDYE#ENREGE, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que,",
@@ -1117,7 +1117,7 @@
       "category": "Transporte",
       "title": "Autorízase Segunda Etapa de Privatización.",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T11:59-03:00",
+      "validatedAt": "2026-09-30T12:03-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Autorízase Segunda Etapa de Privatización.",
@@ -4233,7 +4233,7 @@
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 476/2026 RESOL-2026-476-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-05-05T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 476/2026 RESOL-2026-476-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 30/04/2026 VISTO el Expediente EX-2019-105159628- -APN-GGNV#ENARGAS, la Ley N.° 24.076 -T.O. 2025, el Decreto N.° 2255/1992, las Resoluciones N.° RESOL-2022-456-APN-DIRECTORIO#ENARGAS, N.° RESOL-2023-179-APN-DIRECTORIO#ENARGAS, N.° RESOL-2023-449-APN-DIRECTORIO#ENAR",
@@ -4244,7 +4244,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341550/20260505?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la Norma NAG-420 (2026) “REQUISITOS PARA LA AMPLIACIÓN DE HABILITACIÓN PARA LA CARGA A VEHÍCULOS DE TRANSPORTE PESADO” que como Anexo N° IF-2026-43333891-APN-GIYN#ENARGAS forma parte de la presente Resolución, reemplazando la Norma NAG-420 “Requisitos de habilitación para el abastecimiento de GNV a Vehículos de Transporte de Pasajeros y de Carga” aprobada mediante la Resolución N° RESOL-2022-456-APN-DIRECTORIO#ENARGAS del 26 de octubre de 2022.",
+      "disposition": "Aprobar la Norma NAG-420 (2026) “REQUISITOS PARA LA AMPLIACIÓN DE HABILITACIÓN PARA LA CARGA A VEHÍCULOS DE TRANSPORTE PESADO” que como Anexo N° IF-2026-43333891-APN-GIYN#ENARGAS forma parte de la presente Resolución, reemplazando la Norma NAG-420 “Requisitos de habilitación para el abastecimiento de GNV a Vehículos de Transporte de Pasajeros y de Carga”…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 480/2026",
@@ -4876,7 +4879,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 462/2026 RESOL-2026-462-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:03-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 462/2026 RESOL-2026-462-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/04/2026 VISTO el Expediente N.° EX-2026-42650389- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC",
@@ -4892,14 +4895,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341384/20260430?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-43393569-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-43393569-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 463/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 463/2026 RESOL-2026-463-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 463/2026 RESOL-2026-463-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/04/2026 VISTO el Expediente N.° EX-2026- 42668174- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#ME",
@@ -4915,7 +4921,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341385/20260430?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por METROGAS S.A. incluidos en el Anexo N.° IF-2026-43395194-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por METROGAS S.A. incluidos en el Anexo N.° IF-2026-43395194-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 464/2026",
@@ -4945,7 +4954,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 465/2026 RESOL-2026-465-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 465/2026 RESOL-2026-465-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/04/2026 VISTO el Expediente N.° EX-2026-42667967- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC",
@@ -4961,7 +4970,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341387/20260430?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS DEL CENTRO S.A. incluidos en el Anexo N.° IF-2026-43393452-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS DEL CENTRO S.A. incluidos en el Anexo N.° IF-2026-43393452-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 466/2026",
@@ -4991,7 +5003,7 @@
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 103/2026 RESOL-2026-103-APN-SE#MEC",
       "publishedAt": "2026-04-29T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 103/2026 RESOL-2026-103-APN-SE#MEC",
@@ -5002,14 +5014,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341287/20260429?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Sustitúyese el Anexo I “NORMAS TÉCNICAS PARA LA INSTALACIÓN, FUNCIONAMIENTO E INSPECCIÓN DE DEPÓSITOS DE MICROGARRAFAS, GARRAFAS Y CILINDROS PARA CONTENER GAS LICUADO DE PETRÓLEO (GLP) DE HASTA CUARENTA Y CINCO KILOGRAMOS (45 KG.) DE CAPACIDAD, Y PARA EL EJERCICIO DE LA ACTIVIDAD DE LOS DISTRIBUIDORES EN ENVASES DE HASTA CUARENTA Y CINCO KILOGRAMOS (45 KG.) DE CAPACIDAD CON UNA CAPACIDAD TOTAL DE ALMACENAMIENTO DE ENVASES LLENOS Y/O VACÍOS SUPERIOR A UN MIL KILOGRAMOS (1.000 KG)” de la Resolución Nº 1.097 de fecha 26 de noviembre de 2015 de la SECRETARÍA DE ENERGÍA del ex MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS por el Anexo I (IF-2026-37601603-APN-SSH#MEC) que integra la presente resolución.",
+      "disposition": "Sustitúyese el Anexo I “NORMAS TÉCNICAS PARA LA INSTALACIÓN, FUNCIONAMIENTO E INSPECCIÓN DE DEPÓSITOS DE MICROGARRAFAS, GARRAFAS Y CILINDROS PARA CONTENER GAS LICUADO DE PETRÓLEO (GLP) DE HASTA CUARENTA Y CINCO KILOGRAMOS (45 KG.) DE CAPACIDAD, Y PARA EL EJERCICIO DE LA ACTIVIDAD DE LOS DISTRIBUIDORES EN ENVASES DE HASTA CUARENTA Y CINCO KILOGRAMOS (45 KG.)…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 430/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 430/2026 RESOL-2026-430-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 430/2026 RESOL-2026-430-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 23/04/2026 VISTO el Expediente N.º EX-2025-90579047- -APN-GDYE#ENARGAS, la Ley N.º 24.076 (T.O. 2025), el Decreto N.º 1738/92 y la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS, y; CONSIDERANDO: Que, el Artículo 9° de la Ley N.º 24.076 prevé que “Son sujetos a",
@@ -5022,14 +5037,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341183/20260427",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Inscribir a PAMPA ENERGÍA SOLUCIONES S.A. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Inscribir a PAMPA ENERGÍA SOLUCIONES S.A. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 435/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 435/2026 RESOL-2026-435-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 435/2026 RESOL-2026-435-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 24/04/2026 VISTO el Expediente N.º EX-2025-112087756- -APN-GD#ENARGAS; las disposiciones de la Ley N.º 24.076 - T.O. 2025 (Decreto N.º 451/25) y su reglamentación por Decreto N.º 1738/92, el Decreto N.º 2255/92, la Resolución ENARGAS N.º I-910/2009 y su normativa co",
@@ -5042,14 +5060,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341184/20260427?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la nueva “Reglamentación de las autorizaciones del Artículo 16 de la Ley N.º 24.076 – T.O. 2025”, según se detalla en el Anexo Nº IF-2026-41276028-APN-GD#ENARGAS, que forma parte del presente acto.",
+      "disposition": "Aprobar la nueva “Reglamentación de las autorizaciones del Artículo 16 de la Ley N.º 24.076 – T.O. 2025”, según se detalla en el Anexo Nº IF-2026-41276028-APN-GD#ENARGAS, que forma parte del presente acto.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 436/2026",
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 436/2026 RESOL-2026-436-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 436/2026 RESOL-2026-436-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 24/04/2026 VISTO el Expediente N.° EX-2023-107112111- -APN-GDYGNV#ENARGAS, la Ley N.° 24.076 (T.O. 2025), las Resoluciones ENARGAS N.º 139/95, N.º 2592/02, N.° I-29/07; y Resolución N° RESOL-2025-719-APN-DIRECTORIO#ENARGAS y, CONSIDERANDO, Que mediante la Resolución",
@@ -5058,7 +5079,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341185/20260427?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar el Anexo I “REQUISITOS PARA LA INSCRIPCIÓN DE LOS POSTULANTES (Y SU MANTENIMIENTO) EN EL REGISTRO DE MATRÍCULAS HABILITANTES PARA LA ACTIVIDAD DE GNV” (N.° IF-2026-27085394-APN-GGNV#ENARGAS); el Anexo II “REGISTRO DE REPRESENTANTES TÉCNICOS (RRT)” (N.° IF-2026-27085980-APN-GGNV#ENARGAS); y el Anexo III “CRONOGRAMA DE ADECUACIÓN DE LOS SUJETOS DEL SISTEMA DE GNV A LOS NUEVOS REQUISITOS DE RMH Y RRT” (N.° IF-2026-27086284-APN-GGNV#ENARGAS), que forman parte de la presente Resolución.",
+      "disposition": "Aprobar el Anexo I “REQUISITOS PARA LA INSCRIPCIÓN DE LOS POSTULANTES (Y SU MANTENIMIENTO) EN EL REGISTRO DE MATRÍCULAS HABILITANTES PARA LA ACTIVIDAD DE GNV” (N.° IF-2026-27085394-APN-GGNV#ENARGAS); el Anexo II “REGISTRO DE REPRESENTANTES TÉCNICOS (RRT)” (N.° IF-2026-27085980-APN-GGNV#ENARGAS); y el Anexo III “CRONOGRAMA DE ADECUACIÓN DE LOS SUJETOS DEL…",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-04-24 · Página 69",
@@ -5157,7 +5181,7 @@
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 415/2026 RESOL-2026-415-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-16T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 415/2026 RESOL-2026-415-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 15/04/2026 VISTO el Expediente N.° EX-2026-26198869- -APN-GDYE#ENARGAS, las Leyes N.° 19.549 y modificatorias; N.° 24.076 (T.O. 2025), el Decreto N.° 1738/1992 y la Resolución N.° RESOL-2026-385-APN-DIRECTORIO#ENARGAS, y CONSIDERANDO: Que mediante la Resolución N.°",
@@ -5168,14 +5192,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340810/20260416",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Prorrogar por única vez, y por el plazo adicional de dos (2) días hábiles contados a partir de su vencimiento, el plazo de la Consulta Pública establecido en el",
+      "disposition": "Prorrogar por única vez, y por el plazo adicional de dos (2) días hábiles contados a partir de su vencimiento, el plazo de la Consulta Pública establecido en el",
+      "operativePreview": true
     },
     {
       "num": "Resolución 409/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 409/2026 RESOL-2026-409-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-14T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 409/2026 RESOL-2026-409-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 13/04/2026 VISTO el Expediente N.° EX-2026-27986150- -APN-GDYE#ENARGAS, las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92 y 2255/92, N.° 1172/03 y DNU N.° 55/23, 1023/24, DNU N.° 370/25 y DNU N.° 49/26; las Resoluciones N.° RESOL-2026-18-APN-SE",
@@ -5187,14 +5214,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340688/20260414?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Dar por concluida la etapa de Consulta Pública iniciada con el dictado de la Resolución N.° RESOL-2026-346-APN-DIRECTORIO#ENARGAS, y tener por contestadas las observaciones, consultas y comentarios presentados por los distintos interesados.",
+      "disposition": "Dar por concluida la etapa de Consulta Pública iniciada con el dictado de la Resolución N.° RESOL-2026-346-APN-DIRECTORIO#ENARGAS, y tener por contestadas las observaciones, consultas y comentarios presentados por los distintos interesados.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 384/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 384/2026 RESOL-2026-384-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 384/2026 RESOL-2026-384-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 31/03/2026 VISTO el Expediente N° EX-2026-27986150- -APN-GDYE#ENARGAS, las Leyes Nº 19.549 y modificatorias; 24.076 (T.O. 2025) y 27.742, el Decreto Nº 1738/1992 y la Resolución N.º RESOL-2026-346-APN-DIRECTORIO#ENARGAS y; CONSIDERANDO: Que, mediante la Resolución N",
@@ -5207,14 +5237,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340235/20260401",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Prorrogar, por única vez en atención a las circunstancias detalladas en los CONSIDERANDOS, el procedimiento de Consulta Pública iniciado por la Resolución N.º RESOL-2026-346-APN-DIRECTORIO#ENARGAS por el plazo adicional de dos (2) días hábiles, contados a partir del vencimiento del plazo establecido en la Resolución N.º RESOL-2026-346-APN-DIRECTORIO#ENARGAS, para que las Licenciatarias de Transporte, de Distribución y/o cualquier otro tercero interesado puedan formular sus observaciones, sugerencias y/o comentarios vinculados a las propuestas y modificaciones puestas a consideración en el Artículo 1º de la resolución precitada, los que deberán presentarse a través de la Mesa de Entradas Virtual de este Organismo disponible en su página web (www.enargas.gob.ar).",
+      "disposition": "Prorrogar, por única vez en atención a las circunstancias detalladas en los CONSIDERANDOS, el procedimiento de Consulta Pública iniciado por la Resolución N.º RESOL-2026-346-APN-DIRECTORIO#ENARGAS por el plazo adicional de dos (2) días hábiles, contados a partir del vencimiento del plazo establecido en la Resolución N.º…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 385/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 385/2026 RESOL-2026-385-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-04-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 385/2026 RESOL-2026-385-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 31/03/2026 VISTO el Expediente N.° EX-2026-26198869- -APN-GDYE#ENARGAS, las Leyes N.° 24.076 -T.O.2025- y N.° 27.742; los Decretos N.° 1738/92, N.° 1172/03 y N.° 452/25; los Decretos DNU N.° 55/23; N.° 1.023/24 y N.° 370/25; la Resolución N.° RESOL-2026-18-APN-SE#ME",
@@ -5226,14 +5259,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340236/20260401?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Disponer la Puesta en Consulta Pública del proyecto denominado “Reglamento para la Asignación de Capacidades de Transporte Firme” (Anexo N.° IF-2026-29989551-APN-GDYE#ENARGAS), como así también del “Modelo de Manifestación de Interés” (Anexo N° IF-2026-29988002-APN-GDYE#ENARGAS), del “Modelo de Oferta Irrevocable” (Anexo N.° IF-2026-29988123-APN-GDYE#ENARGAS) y del “Procedimiento para la Asignación de Capacidad de Transporte Firme” (Anexo N.° IF-2026-29988296-APN-GDYE#ENARGAS) que forman parte de la presente.",
+      "disposition": "Disponer la Puesta en Consulta Pública del proyecto denominado “Reglamento para la Asignación de Capacidades de Transporte Firme” (Anexo N.° IF-2026-29989551-APN-GDYE#ENARGAS), como así también del “Modelo de Manifestación de Interés” (Anexo N° IF-2026-29988002-APN-GDYE#ENARGAS), del “Modelo de Oferta Irrevocable” (Anexo N.°…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 382/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 382/2026 RESOL-2026-382-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 382/2026 RESOL-2026-382-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/03/2026 VISTO el Expediente N° EX-2025-137172288- -APN-GDYE#ENARGAS, la Ley N° 24.076 (T.O. 2025), el Decreto N° 1738/92 y la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS, y; CONSIDERANDO: Que, el Artículo 9° de la Ley N° 24.076 prevé que “Son sujetos activ",
@@ -5246,14 +5282,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340169/20260331",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Inscribir a MADALENA ENERGY TRADING S.R.L. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Inscribir a MADALENA ENERGY TRADING S.R.L. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 378/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 378/2026 RESOL-2026-378-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 378/2026 RESOL-2026-378-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/03/2026 VISTO el Expediente N.° EX-2026-30355518- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41",
@@ -5268,14 +5307,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340086/20260330",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por LITORAL GAS S.A. incluidos en el Anexo N.° IF-2026-30687968-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por LITORAL GAS S.A. incluidos en el Anexo N.° IF-2026-30687968-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 376/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 376/2026 RESOL-2026-376-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 376/2026 RESOL-2026-376-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/03/2026 VISTO el Expediente N.° EX-2026-30370929- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41",
@@ -5290,14 +5332,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340084/20260330?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS CUYANA S.A. incluidos en el Anexo N.° IF-2026-30687881-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS CUYANA S.A. incluidos en el Anexo N.° IF-2026-30687881-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 377/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 377/2026 RESOL-2026-377-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 377/2026 RESOL-2026-377-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/03/2026 VISTO el Expediente N.° EX-2026-30356692- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41",
@@ -5314,14 +5359,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340085/20260330",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY NOA S.A. incluidos en el Anexo N.° IF-2026-30688238-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY NOA S.A. incluidos en el Anexo N.° IF-2026-30688238-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 379/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 379/2026 RESOL-2026-379-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 379/2026 RESOL-2026-379-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/03/2026 VISTO el Expediente N.° EX-2026-30357845- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 - T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41",
@@ -5336,14 +5384,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340087/20260330?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-30688046-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-30688046-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 349/2026",
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 349/2026 RESOL-2026-349-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-25T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 349/2026 RESOL-2026-349-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 19/03/2026 VISTO el EX-2026-01042801- -APN-GT#ENARGAS , la Ley Nº 24.076 (T.O. 2025), su Decreto Reglamentario Nº 1738/92,el Decreto Nº 2255/92, las Leyes Nº 17.319 y Nº 17.801, las Resoluciones ENARGAS Nº I-3562/15, Nº I-4446/17, Nº 279/18, RESFC-2019-339-APN-DIREC",
@@ -5354,14 +5405,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339836/20260325?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Sustituir el Subanexo I.I.1 – “Tabla márgenes por hectárea” de la Resolución ENARGAS N° I-3562/15 (sustituido por el Artículo 1° de la RESOL-2025-109-APN-DIRECTORIO#ENARGAS), por el Subanexo I.I.1 que forma parte integrante de la presente resolución como IF-2026-20145946-APN-GT#ENARGAS.",
+      "disposition": "Sustituir el Subanexo I.I.1 – “Tabla márgenes por hectárea” de la Resolución ENARGAS N° I-3562/15 (sustituido por el Artículo 1° de la RESOL-2025-109-APN-DIRECTORIO#ENARGAS), por el Subanexo I.I.1 que forma parte integrante de la presente resolución como IF-2026-20145946-APN-GT#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 76/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 76/2026 RESOL-2026-76-APN-SE#MEC",
       "publishedAt": "2026-03-25T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 76/2026 RESOL-2026-76-APN-SE#MEC",
@@ -5372,14 +5426,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339842/20260325",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma COMERCIALIZADORA DE ENERGÍA SOCIEDAD ANÓNIMA (COMERCIALIZADORA DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma COMERCIALIZADORA DE ENERGÍA SOCIEDAD ANÓNIMA (COMERCIALIZADORA DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 344/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 344/2026 RESOL-2026-344-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-20T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 344/2026 RESOL-2026-344-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 18/03/2026 VISTO el Expediente N° EX-2021-35411935- -APN-GDYE#ENARGAS, la Ley Nº 24.076, el Decreto Nº 738/92 y la Resolución Nº RESFC-2020-94-APN-DIRECTORIO#ENARGAS; y CONSIDERANDO: Que, el Artículo 9° de la Ley Nº 24.076 prevé que “Son sujetos activos de la indust",
@@ -5393,14 +5450,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339724/20260320",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Reempadronar a TRAFIGURA ARGENTINA S.A., en el REGISTRO DE COMERCIALIZADORES del ENARGAS, en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Reempadronar a TRAFIGURA ARGENTINA S.A., en el REGISTRO DE COMERCIALIZADORES del ENARGAS, en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 72/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 72/2026 RESOL-2026-72-APN-SE#MEC",
       "publishedAt": "2026-03-20T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 72/2026 RESOL-2026-72-APN-SE#MEC",
@@ -5412,14 +5472,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339737/20260320?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Apruébase el “LISTADO DE LOTES DE MODELOS DE VÁLVULAS PARA GARRAFAS DESTINADAS A CONTENER GAS LICUADO DE PETRÓLEO (GLP) A REEMPLAZAR”, que como Anexo I (IF-2026-23264168-APN-SSCL#MEC) forma parte integrante de la presente resolución.",
+      "disposition": "Apruébase el “LISTADO DE LOTES DE MODELOS DE VÁLVULAS PARA GARRAFAS DESTINADAS A CONTENER GAS LICUADO DE PETRÓLEO (GLP) A REEMPLAZAR”, que como Anexo I (IF-2026-23264168-APN-SSCL#MEC) forma parte integrante de la presente resolución.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 346/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 346/2026 RESOL-2026-346-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-20T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 346/2026 RESOL-2026-346-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 19/03/2026 VISTO el Expediente N.° EX-2026-27986150- -APN-GDYE#ENARGAS, las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, N.° 1172/03 y DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25 y DNU N.° 49/26; las Resoluciones N.° RESOL-2026-18-APN-SE#M",
@@ -5433,14 +5496,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339725/20260320",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Iniciar un procedimiento de Consulta Pública a fin de poner a consideración las siguientes modificaciones y propuestas, propiciadas por este Ente Regulador, a saber: 1) Modificación de los Factores de Carga de NATURGY NOA S.A. y CAMUZZI GAS DEL SUR S.A., conforme el análisis que surge del Informe Intergerencial N.° IF-2026-28319210-APN-GAL#ENARGAS y los anexos N.° IF-2026-28197414-APN-GTIC#ENARGAS y N.° IF-2026-28181143-APN-GTIC#ENARGAS; 2) Determinación de nuevos porcentajes (%) de referencia de Gas Retenido para las distintas rutas de transporte de gas natural, conforme el análisis que surge del Informe Intergerencial N.° IF-2026-28319210-APN-GAL#ENARGAS y en el Informe de la Gerencia de Transmisión N.° IF-2026-28630598-APN-GT#ENARGAS y el anexo N.° IF-2026-28622577-APN-GT#ENARGAS; 3) Derogación de la Resolución N.° RESOL-2024-705-APN-DIRECTORIO#ENARGAS, así como de la normativa antece",
+      "disposition": "Iniciar un procedimiento de Consulta Pública a fin de poner a consideración las siguientes modificaciones y propuestas, propiciadas por este Ente Regulador, a saber: 1) Modificación de los Factores de Carga de NATURGY NOA S.A. y CAMUZZI GAS DEL SUR S.A., conforme el análisis que surge del Informe Intergerencial N.° IF-2026-28319210-APN-GAL#ENARGAS y los…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 340/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 340/2026 RESOL-2026-340-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-18T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 340/2026 RESOL-2026-340-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 16/03/2026 VISTO el Expediente N° EX-2026-21986582- -APN-GDYE#ENARGAS, la Ley N° 24.076 - (T.O. 2025), el Decreto N° 1738/92 y la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS, y; CONSIDERANDO: Que, el Artículo 9° de la Ley N° 24.076 prevé que “Son sujetos acti",
@@ -5453,14 +5519,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339597/20260318",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Inscribir a QUARZO ENERGY S.R.L. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Inscribir a QUARZO ENERGY S.R.L. como COMERCIALIZADOR de Gas Natural en el REGISTRO DE COMERCIALIZADORES del ENARGAS en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 69/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 69/2026 RESOL-2026-69-APN-SE#MEC",
       "publishedAt": "2026-03-17T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 69/2026 RESOL-2026-69-APN-SE#MEC",
@@ -5470,14 +5539,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339566/20260317",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma COROCOTTA SOCIEDAD ANÓNIMA (COROCOTTA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma COROCOTTA SOCIEDAD ANÓNIMA (COROCOTTA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 64/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 64/2026 RESOL-2026-64-APN-SE#MEC",
       "publishedAt": "2026-03-16T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 64/2026 RESOL-2026-64-APN-SE#MEC",
@@ -5490,14 +5562,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339477/20260316?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Apruébase el Sistema de Información de los operadores de Gas Licuado de Petróleo (GLP), al que deberán ajustarse los operadores inscriptos en el Registro Nacional de la Industria del Gas Licuado de Petróleo (RNIGLP) regulado por la Resolución N° 136 de fecha 14 de abril de 2003 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA y sus normas modificatorias y complementarias, o el que en el futuro lo reemplace, y que como Anexo I (IF-2026-20299088-APN-SSCL#MEC) forma parte integrante de la presente medida. Lo dispuesto en la presente medida no es limitativo de la facultad de solicitar toda otra información que la Autoridad de Aplicación considere necesaria para el cumplimiento de sus funciones, dentro del marco del Decreto N° 1.028 de fecha 14 de agosto de 2001 y de la Ley N° 26.020 y sus modificatorias.",
+      "disposition": "Apruébase el Sistema de Información de los operadores de Gas Licuado de Petróleo (GLP), al que deberán ajustarse los operadores inscriptos en el Registro Nacional de la Industria del Gas Licuado de Petróleo (RNIGLP) regulado por la Resolución N° 136 de fecha 14 de abril de 2003 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA y sus normas…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 67/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 67/2026 RESOL-2026-67-APN-SE#MEC",
       "publishedAt": "2026-03-16T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 67/2026 RESOL-2026-67-APN-SE#MEC",
@@ -5508,14 +5583,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339479/20260316",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma VENERGY SOCIEDAD ANÓNIMA (VENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma VENERGY SOCIEDAD ANÓNIMA (VENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 66/2026",
       "category": "GNL",
       "title": "SECRETARÍA DE ENERGÍA Resolución 66/2026 RESOL-2026-66-APN-SE#MEC",
       "publishedAt": "2026-03-13T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 66/2026 RESOL-2026-66-APN-SE#MEC",
@@ -5530,14 +5608,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339419/20260313?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Establécese la Reconfiguración del Sistema de Transporte de Gas Natural, en el marco de la Emergencia Energética prorrogada por el Artículo 1º del Decreto N° 49 del 26 de enero de 2026, que se instrumentará conforme el ANEXO I (IF-2026-25931437-APN-SE#MEC), que forma parte integrante de la presente medida. La reconfiguración establecida en el presente artículo entrará en vigencia cuando el ENTE NACIONAL REGULADOR DEL GAS (ENARGAS) o el ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD, según el organismo que se encuentre en funciones, dicte las medidas que permitan su operatividad.",
+      "disposition": "Establécese la Reconfiguración del Sistema de Transporte de Gas Natural, en el marco de la Emergencia Energética prorrogada por el Artículo 1º del Decreto N° 49 del 26 de enero de 2026, que se instrumentará conforme el ANEXO I (IF-2026-25931437-APN-SE#MEC), que forma parte integrante de la presente medida.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 329/2026",
       "category": "Técnica / operativa",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 329/2026 RESOL-2026-329-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-12T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 329/2026 RESOL-2026-329-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 10/03/2026 VISTO el Expediente N° EX-2025-127029878- -APN-GIYN#ENARGAS, la Ley N° 24.076 (T.O. 2025), la NAG- 444 y la Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS, y, CONSIDERANDO: Que el Artículo 51 inciso b) establece, entre las funciones y facultades de es",
@@ -5546,14 +5627,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339358/20260312",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Otorgar un plazo de NOVENTA (90) días corridos para la adecuación de las Certificaciones de Aptitud Técnica de los Centros de Revisión Periódica de Cilindros para GNC conforme la norma NAG-444 (2026) aprobada por la Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Otorgar un plazo de NOVENTA (90) días corridos para la adecuación de las Certificaciones de Aptitud Técnica de los Centros de Revisión Periódica de Cilindros para GNC conforme la norma NAG-444 (2026) aprobada por la Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 60/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 60/2026 RESOL-2026-60-APN-SE#MEC",
       "publishedAt": "2026-03-11T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 60/2026 RESOL-2026-60-APN-SE#MEC",
@@ -5565,7 +5649,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339309/20260311",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Sustitúyese el Numeral 9.4.2.3 de las Reglas Básicas de la Licencia de Distribución aprobada como Anexo B, Subanexo I, por el Decreto Nº 2.255 de fecha 2 de diciembre de 1992, por el siguiente texto: “9.4.2.3. Una vez transcurrido el Período de transición, los ajustes serán estacionales, abarcando los períodos del 1° de mayo al 30 de septiembre de cada año, y del 1° de octubre al 30 de abril del año siguiente”.",
+      "disposition": "Sustitúyese el Numeral 9.4.2.3 de las Reglas Básicas de la Licencia de Distribución aprobada como Anexo B, Subanexo I, por el Decreto Nº 2.255 de fecha 2 de diciembre de 1992, por el siguiente texto: “9.4.2.3.",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-03-10 · Página 26",
@@ -5629,7 +5716,7 @@
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 56/2026 RESOL-2026-56-APN-SE#MEC",
       "publishedAt": "2026-03-06T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 56/2026 RESOL-2026-56-APN-SE#MEC",
@@ -5639,14 +5726,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339140/20260306",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma POWERGEN SOLUTIONS SOCIEDAD ANÓNIMA (POWERGEN SOLUTIONS S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma POWERGEN SOLUTIONS SOCIEDAD ANÓNIMA (POWERGEN SOLUTIONS S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 55/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 55/2026 RESOL-2026-55-APN-SE#MEC",
       "publishedAt": "2026-03-06T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 55/2026 RESOL-2026-55-APN-SE#MEC",
@@ -5656,7 +5746,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339139/20260306",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma CORE ENERGY SOCIEDAD ANÓNIMA (CORE ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma CORE ENERGY SOCIEDAD ANÓNIMA (CORE ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-03-05 · Página 34",
@@ -5701,7 +5794,7 @@
       "category": "Transporte",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 103/2026 RESOL-2026-103-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-05T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 103/2026 RESOL-2026-103-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 03/03/2026 VISTO el Expediente EX-2025-136431046- -APN-GIYN#ENARGAS, la Ley N° 24.076 - T.O. 2025, los Decretos Nº 1738/92 y Nº 2255/92, la Resolución ENARGAS N° 20/93, la Resolución ENARGAS N° I-3778/16, RESOL-2025-956-APN-DIRECTORIO#ENARGAS y; CONSIDERANDO, Que, e",
@@ -5713,14 +5806,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339097/20260305?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la Adenda N° 4 Año 2026 de la norma NAG-100 “Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas Natural y otros Gases por cañerías”, que como IF-2026-19023992-APN-GIYN#ENARGAS, forma parte integrante del presente acto.",
+      "disposition": "Aprobar la Adenda N° 4 Año 2026 de la norma NAG-100 “Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas Natural y otros Gases por cañerías”, que como IF-2026-19023992-APN-GIYN#ENARGAS, forma parte integrante del presente acto.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 54/2026",
       "category": "Subdistribución",
       "title": "SECRETARÍA DE ENERGÍA Resolución 54/2026 RESOL-2026-54-APN-SE#MEC",
       "publishedAt": "2026-03-05T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 54/2026 RESOL-2026-54-APN-SE#MEC",
@@ -5732,7 +5828,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339102/20260305",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Amplíase en CIENTO OCHENTA (180) días corridos el plazo previsto en el Artículo 1° de la Resolución N° 36 de fecha 9 de febrero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA a contar desde el vencimiento del plazo establecido por el Artículo 1° de la citada resolución.",
+      "disposition": "Amplíase en CIENTO OCHENTA (180) días corridos el plazo previsto en el Artículo 1° de la Resolución N° 36 de fecha 9 de febrero de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA a contar desde el vencimiento del plazo establecido por el Artículo 1° de la citada resolución.",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-03-04 · Página 46",
@@ -5758,7 +5857,7 @@
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 52/2026 RESOL-2026-52-APN-SE#MEC",
       "publishedAt": "2026-03-04T00:00-03:00",
-      "validatedAt": "2026-09-28T15:03-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 52/2026 RESOL-2026-52-APN-SE#MEC",
@@ -5768,14 +5867,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339057/20260304",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma INFINITY ENERGY SOCIEDAD ANÓNIMA (INFINITY ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma INFINITY ENERGY SOCIEDAD ANÓNIMA (INFINITY ENERGY S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 97/2026",
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 97/2026 RESOL-2026-97-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-03T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 97/2026 RESOL-2026-97-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 27/02/2026 VISTO el Expediente N° EX-2025-140308859- -APN-GIYN#ENARGAS, la Ley N° 24.076 (T.O. 2025), la NAG- 312 y la Resolución N° RESOL-2025-994-APN-DIRECTORIO#ENARGAS, y, CONSIDERANDO: Que mediante la Resolución N.º RESOL-2025-994-APN-DIRECTORIO#ENARGAS del 26 de",
@@ -5785,14 +5887,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338984/20260303?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la Adenda N.° 3 (2026) de la NAG-312 (2010) “Artefactos domésticos de cocción que utilizan combustibles gaseosos” que como ANEXO I (IF-2026-20146325-APN-GIYN#ENARGAS) forma parte de la presente.",
+      "disposition": "Aprobar la Adenda N.° 3 (2026) de la NAG-312 (2010) “Artefactos domésticos de cocción que utilizan combustibles gaseosos” que como ANEXO I (IF-2026-20146325-APN-GIYN#ENARGAS) forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 101/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 101/2026 RESOL-2026-101-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-03-03T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 101/2026 RESOL-2026-101-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 02/03/2026 VISTO el Expediente N.° EX-2026-15788249- -APN-GCER#ENARGAS; la Ley N.° 24.076 (T.O. 2025) y su Decreto Reglamentario N.° 1738/1992; los Decretos DNU N.° 892/20 y su modificatorio, y Decretos N.° 332/22, 465/24 y 943/25; las Resoluciones del ex MINISTERIO",
@@ -5805,14 +5910,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338985/20260303?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Derogar las Resoluciones N.° RESOL-2020-362-APN-DIRECTORIO#ENARGAS, N.° RESOL-2020-363-APN-DIRECTORIO#ENARGAS y N.° RESOL-2025-125-APN-DIRECTORIO#ENARGAS, y sus respectivos anexos.",
+      "disposition": "Derogar las Resoluciones N.° RESOL-2020-362-APN-DIRECTORIO#ENARGAS, N.° RESOL-2020-363-APN-DIRECTORIO#ENARGAS y N.° RESOL-2025-125-APN-DIRECTORIO#ENARGAS, y sus respectivos anexos.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 76/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 76/2026 RESOL-2026-76-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 76/2026 RESOL-2026-76-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18890571- -APN-GDYE#ENARGAS, la Ley N.° 24.076 -T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que mediante Decreto N.° 2457/1992 se",
@@ -5823,14 +5931,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338822/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-19564063-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-19564063-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 77/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 77/2026 RESOL-2026-77-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 77/2026 RESOL-2026-77-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18889774- -APN-GDYE#ENARGAS, la Ley N.° 24.076 -T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que mediante Decreto N.° 2458/1992 se",
@@ -5841,14 +5952,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338823/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2026-19563896-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2026-19563896-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 78/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 78/2026 RESOL-2026-78-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 78/2026 RESOL-2026-78-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18892405- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que GASODUCTO NORAND",
@@ -5861,14 +5975,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338824/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GASODUCTO NORANDINO ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19565151-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GASODUCTO NORANDINO ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19565151-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 79/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 79/2026 RESOL-2026-79-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 79/2026 RESOL-2026-79-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18891768- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que GAS LINK S.A. (e",
@@ -5880,14 +5997,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338825/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GAS LINK S.A. incluidos en el Anexo N.° IF-2026-19564782-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GAS LINK S.A. incluidos en el Anexo N.° IF-2026-19564782-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 80/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 80/2026 RESOL-2026-80-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 80/2026 RESOL-2026-80-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18890996- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 (T.O. 2025) y N.° 27.742, los Decretos N.° 1738/92, N.° 729/95, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 4",
@@ -5899,14 +6019,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338826/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el Anexo N.° IF-2026-19564210-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el Anexo N.° IF-2026-19564210-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 81/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 81/2026 RESOL-2026-81-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 81/2026 RESOL-2026-81-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18891393- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que GASODUCTO GASAND",
@@ -5919,14 +6042,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338827/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GASODUCTO GASANDES ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19564573-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por GASODUCTO GASANDES ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19564573-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 82/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 82/2026 RESOL-2026-82-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 82/2026 RESOL-2026-82-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18892750- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 (T.O. 2025) y N.° 27.742, los Decretos N.° 1738/92, N.° 729/95, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 4",
@@ -5938,14 +6064,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338828/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por REFINERÍA DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-19565326-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por REFINERÍA DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-19565326-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 83/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 83/2026 RESOL-2026-83-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 83/2026 RESOL-2026-83-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18893139- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que TRANSPORTADORA D",
@@ -5956,14 +6085,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338829/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por TRANSPORTADORA DE GAS DEL MERCOSUR S.A. incluidos en el Anexo N.° IF-2026-19565499-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por TRANSPORTADORA DE GAS DEL MERCOSUR S.A. incluidos en el Anexo N.° IF-2026-19565499-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 84/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 84/2026 RESOL-2026-84-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 84/2026 RESOL-2026-84-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18892092- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 -y modificatorias-, N.° 24.076 (T.O. 2025) y N.° 27.742, los Decretos N.° 1738/92, N.° 729/95, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 4",
@@ -5975,14 +6107,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338830/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por ENERGÍA ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19564982-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por ENERGÍA ARGENTINA S.A. incluidos en el Anexo N.° IF-2026-19564982-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 85/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 85/2026 RESOL-2026-85-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 85/2026 RESOL-2026-85-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18893509- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y Decreto N.° 452/25; y CONSIDERANDO: Que COMPAÑÍA ENTRERRIAN",
@@ -5994,14 +6129,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338831/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS S.A. incluidos en el Anexo N.° IF-2026-19565692-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS S.A. incluidos en el Anexo N.° IF-2026-19565692-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 86/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 86/2026 RESOL-2026-86-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 86/2026 RESOL-2026-86-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18896288- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41-A",
@@ -6018,14 +6156,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338832/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por METROGAS S.A. incluidos en el Anexo N.° IF-2026-19573623-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por METROGAS S.A. incluidos en el Anexo N.° IF-2026-19573623-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 87/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 87/2026 RESOL-2026-87-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 87/2026 RESOL-2026-87-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18899646- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41-A",
@@ -6040,14 +6181,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338833/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por CAMUZZI GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2025-19572729-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por CAMUZZI GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2025-19572729-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 95/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 95/2026 RESOL-2026-95-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 95/2026 RESOL-2026-95-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18899646- -APN-GDYE#ENARGAS, la Ley Nº. 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que, en materia de aprobación de cua",
@@ -6058,14 +6202,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338834/20260227",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Rectificar el Artículo 1º de la Resolución N.° RESOL-2026-87-APN-DIRECTORIO#ENARGAS en tanto, donde dice “Anexo N.° IF-2025-19572729-APN-GDYE#ENARGAS”, debe leerse “Anexo N.° IF-2026-19572729-APN-GDYE#ENARGAS”.",
+      "disposition": "Rectificar el Artículo 1º de la Resolución N.° RESOL-2026-87-APN-DIRECTORIO#ENARGAS en tanto, donde dice “Anexo N.° IF-2025-19572729-APN-GDYE#ENARGAS”, debe leerse “Anexo N.° IF-2026-19572729-APN-GDYE#ENARGAS”.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 88/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 88/2026 RESOL-2026-88-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 88/2026 RESOL-2026-88-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18899960- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC,",
@@ -6080,14 +6227,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338835/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por CAMUZZI GAS PAMPEANA S.A. incluidos en el Anexo N.° IF-2026-19572971-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por CAMUZZI GAS PAMPEANA S.A. incluidos en el Anexo N.° IF-2026-19572971-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 89/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 89/2026 RESOL-2026-89-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 89/2026 RESOL-2026-89-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18897761- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41-A",
@@ -6102,14 +6252,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338836/20260227",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS CUYANA S.A. incluidos en el Anexo N.° IF-2026-19573465-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DE GAS CUYANA S.A. incluidos en el Anexo N.° IF-2026-19573465-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 91/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 91/2026 RESOL-2026-91-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 91/2026 RESOL-2026-91-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18895940- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC,",
@@ -6124,14 +6277,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338838/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY BAN S.A. incluidos en el Anexo N.° IF-2026-19574006-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY BAN S.A. incluidos en el Anexo N.° IF-2026-19574006-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 90/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 90/2026 RESOL-2026-90-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 90/2026 RESOL-2026-90-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18897372- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC y",
@@ -6148,14 +6304,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338837/20260227",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DEL CENTRO S.A. incluidos en el Anexo N.° IF-2026-19573132-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por DISTRIBUIDORA DEL CENTRO S.A. incluidos en el Anexo N.° IF-2026-19573132-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 92/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 92/2026 RESOL-2026-92-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 92/2026 RESOL-2026-92-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18898840- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41-A",
@@ -6172,14 +6331,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338839/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY NOA S.A. incluidos en el Anexo N.° IF-2026-19574262-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por NATURGY NOA S.A. incluidos en el Anexo N.° IF-2026-19574262-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 93/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 93/2026 RESOL-2026-93-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 93/2026 RESOL-2026-93-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18898271- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y N.° 452/25; las Resoluciones N.° RESOL-2024-41-APN-SE#MEC,",
@@ -6194,14 +6356,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338840/20260227?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por LITORAL GAS S.A. incluidos en el Anexo N.° IF-2026-19573763-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por LITORAL GAS S.A. incluidos en el Anexo N.° IF-2026-19573763-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 94/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 94/2026 RESOL-2026-94-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-27T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 94/2026 RESOL-2026-94-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 26/02/2026 VISTO el Expediente N.° EX-2026-18899248- -APN-GDYE#ENARGAS, las Leyes N.° 17.319 y N.° 24.076 (T.O. 2025); los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; las Resoluciones N.° RESOL-2024-41-A",
@@ -6216,14 +6381,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338841/20260227",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-19574420-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por GAS NEA S.A. incluidos en el Anexo N.° IF-2026-19574420-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 72/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 72/2026 RESOL-2026-72-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-18T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 72/2026 RESOL-2026-72-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 12/02/2026 VISTO el Expediente N° EX-2020-53274581- -APN-GDYE#ENARGAS, la Ley Nº 24.076, el Decreto Nº 738/92 y la Resolución Nº RESFC-2020-94-APN-DIRECTORIO#ENARGAS; y CONSIDERANDO: Que, el Artículo 9° de la Ley Nº 24.076 prevé que “Son sujetos activos de la industri",
@@ -6237,32 +6405,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338478/20260218",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
-    },
-    {
-      "num": "PBA · 2026-02-13 · Página 86",
-      "title": "ones eléctricas, industriales y domiciliarias; mantenimiento de instalaciones relativas a gas natural , agua potable, obras sanitarias, y de electricidad y de otras ramas de la ingeniería; estudio, proyecto, dirección",
-      "desc": "civiles, hidráulicas, portuarias e inmuebles urbanos y rurales: mejoras en inmuebles,\ncontratación y subcontratación de personal para dichos fines. Sistemas de electrificación, instalaciones eléctricas,\nindustriales y domiciliarias; mantenimiento de instalaciones relativas a gas natural , agua potable, obras sanitarias, y de\nelectricidad y de otras ramas de la ingeniería; estudio, proyecto, dirección",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Normativa",
-      "tags": [
-        "PBA",
-        "Normativa"
-      ],
-      "date": "13/02/2026",
-      "publishedAt": "2026-02-13T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:29-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/13988/ver#page=86",
       "auto": true,
-      "disposition": "ones eléctricas, industriales y domiciliarias; mantenimiento de instalaciones relativas a gas natural , agua potable, obras sanitarias, y de electricidad y de otras ramas de la ingeniería; estudio, proyecto, dirección"
+      "firstArticle": "Reempadronar a EXCELERATE ENERGY S.R.L. en el REGISTRO DE COMERCIALIZADORES del ENARGAS, en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Reempadronar a EXCELERATE ENERGY S.R.L. en el REGISTRO DE COMERCIALIZADORES del ENARGAS, en el ámbito de la Gerencia de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N° RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 62/2026",
       "category": "Transporte",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 62/2026 RESOL-2026-62-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-02-10T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 62/2026 RESOL-2026-62-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 09/02/2026 VISTO el Expediente EX-2025-50045782- -APN-GIYN#ENARGAS, la Ley N° 24.076 - T.O. 2025, los Decretos Nº 1738/92 y Nº 2255/92, la Resolución ENARGAS N° 20/93, la RESOL-2025-894-APN-DIRECTORIO#ENARGAS y; CONSIDERANDO, Que el Artículo 51 inc. b) de la Ley N° 24",
@@ -6273,14 +6426,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338320/20260210?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la Adenda N° 3 Año 2026 de la norma NAG-100 “Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas Natural y otros Gases por cañerías” que modifica la Parte E “Soldadura en cañerías de acero” y el Material Guía de la Sección 713 de la Parte M “Mantenimiento”, que como que como IF-2026-12992531-APN-GIYN#ENARGAS, forma parte integrante del presente acto.",
+      "disposition": "Aprobar la Adenda N° 3 Año 2026 de la norma NAG-100 “Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas Natural y otros Gases por cañerías” que modifica la Parte E “Soldadura en cañerías de acero” y el Material Guía de la Sección 713 de la Parte M “Mantenimiento”, que como que como IF-2026-12992531-APN-GIYN#ENARGAS, forma parte…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 36/2026",
       "category": "Subdistribución",
       "title": "SECRETARÍA DE ENERGÍA Resolución 36/2026 RESOL-2026-36-APN-SE#MEC",
       "publishedAt": "2026-02-10T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 36/2026 RESOL-2026-36-APN-SE#MEC",
@@ -6292,14 +6448,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338321/20260210",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Amplíase en QUINCE (15) días hábiles administrativos el plazo previsto en el Artículo 3° de la Resolución N° 606 de fecha 26 de diciembre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "disposition": "Amplíase en QUINCE (15) días hábiles administrativos el plazo previsto en el Artículo 3° de la Resolución N° 606 de fecha 26 de diciembre de 2025 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 33/2026",
       "category": "GNL",
       "title": "SECRETARÍA DE ENERGÍA Resolución 33/2026 RESOL-2026-33-APN-SE#MEC",
       "publishedAt": "2026-02-09T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 33/2026 RESOL-2026-33-APN-SE#MEC",
@@ -6313,32 +6472,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338275/20260209?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
-    },
-    {
-      "num": "PBA · 2026-02-06 · Página 53",
-      "title": "ación en ámbitos públicos y privados. H) La proyección, dirección y ejecución de redes de gas natural , cloacales, de agua potable, fibra óptica, eléctricas y afines",
-      "desc": "de construcción,\nherramientas, maquinarias, indumentaria de trabajo y elementos de protección personal (EPP). G) El mantenimiento de\nespacios públicos, parques y áreas verdes, así como el proyecto, construcción y mantenimiento de obras de urbanización\nen ámbitos públicos y privados. H) La proyección, dirección y ejecución de redes de gas natural , cloacales, de agua\npotable, fibra óptica, eléctricas y afines",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Normativa",
-      "tags": [
-        "PBA",
-        "Normativa"
-      ],
-      "date": "06/02/2026",
-      "publishedAt": "2026-02-06T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:29-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/13974/ver#page=53",
       "auto": true,
-      "disposition": "ación en ámbitos públicos y privados. H) La proyección, dirección y ejecución de redes de gas natural , cloacales, de agua potable, fibra óptica, eléctricas y afines"
+      "firstArticle": "Convóquese a una Licitación Pública Nacional e Internacional, con el objeto de seleccionar un único comercializador-agregador de carácter privado, para llevar a cabo la importación de gas natural licuado (GNL) y la comercialización en el mercado interno del GNL regasificado, mediante la utilización de la capacidad asignada en las instalaciones ubicadas en la Localidad de Escobar (la Terminal) para la regasificación, el almacenaje y el transporte del GNL regasificado hasta la Localidad de Los Cardales, ambas de la Provincia de BUENOS AIRES, de acuerdo con los términos del contrato referido en el",
+      "disposition": "Convóquese a una Licitación Pública Nacional e Internacional, con el objeto de seleccionar un único comercializador-agregador de carácter privado, para llevar a cabo la importación de gas natural licuado (GNL) y la comercialización en el mercado interno del GNL regasificado, mediante la utilización de la capacidad asignada en las instalaciones ubicadas en…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 31/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 31/2026 RESOL-2026-31-APN-SE#MEC",
       "publishedAt": "2026-02-05T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 31/2026 RESOL-2026-31-APN-SE#MEC",
@@ -6349,7 +6493,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338186/20260205",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Apruébase el presupuesto anual de costos del MERCADO ELECTRÓNICO DE GAS S.A. (MEGSA) (CUIT N° 30-70911020-5) para el año 2026, para solventar el funcionamiento de la Réplica de Información de Despacho (RDD), por la suma total de PESOS MIL TRESCIENTOS OCHENTA Y OCHO MILLONES OCHENTA MIL DOSCIENTOS CINCUENTA Y OCHO ($1.388.080.258), según surge del Informe Técnico N° IF-2026-08529171-APN-DNEYR#MEC de la Dirección Nacional de Economía y Regulación dependiente de la SUBSECRETARÍA DE COMBUSTIBLES LÍQUIDOS de esta Secretaría, a los efectos del cálculo del arancel que establece el Artículo 1º de la Resolución N° 9 de fecha 8 de junio de 2016 de la ex SECRETARÍA DE RECURSOS HIDROCARBURÍFEROS del ex MINISTERIO DE ENERGÍA Y MINERÍA.",
+      "disposition": "Apruébase el presupuesto anual de costos del MERCADO ELECTRÓNICO DE GAS S.A. (MEGSA) (CUIT N° 30-70911020-5) para el año 2026, para solventar el funcionamiento de la Réplica de Información de Despacho (RDD), por la suma total de PESOS MIL TRESCIENTOS OCHENTA Y OCHO MILLONES OCHENTA MIL DOSCIENTOS CINCUENTA Y OCHO ($1.388.080.258), según surge del Informe…",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-02-02 · Página 47",
@@ -6375,7 +6522,7 @@
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 28/2026 RESOL-2026-28-APN-SE#MEC",
       "publishedAt": "2026-02-02T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 28/2026 RESOL-2026-28-APN-SE#MEC",
@@ -6386,14 +6533,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338073/20260202",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma ANDINA ENERGÍA SOCIEDAD POR ACCIONES SIMPLIFICADA (ANDINA ENERGÍA S.A.S.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma ANDINA ENERGÍA SOCIEDAD POR ACCIONES SIMPLIFICADA (ANDINA ENERGÍA S.A.S.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 23/2026",
       "category": "Precios",
       "title": "Plan Gas.Ar — Precio Anual Uniforme 2026",
       "publishedAt": "2026-01-30T00:00:00-03:00",
-      "validatedAt": "2026-09-28T15:03-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "unchanged",
       "desc": "Establece el PAU 2026 por subzona tarifaria para el gas asociado a Plan Gas.Ar.",
@@ -6404,7 +6554,10 @@
       ],
       "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-23-2026-422817/texto",
       "issuer": "SECRETARIA DE ENERGIA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Establécese el Precio Anual Uniforme (PAU), a ser trasladado a los usuarios finales en relación con los contratos o acuerdos de abastecimiento vigentes celebrados en el marco del “PLAN DE REASEGURO Y POTENCIACIÓN DE LA PRODUCCIÓN FEDERAL DE HIDROCARBUROS, EL AUTOABASTECIMIENTO INTERNO, LAS EXPORTACIONES, LA SUSTITUCIÓN DE IMPORTACIONES Y LA EXPANSIÓN DEL SISTEMA DE TRANSPORTE PARA TODAS LAS CUENCAS HIDROCARBURÍFERAS DEL PAÍS 2023-2028” aprobado por el Decreto N° 892 de fecha 13 de noviembre de 2020 y sus modificatorios (Plan Gas.Ar), para los consumos de gas realizados durante el año 2026 y desde la fecha de entrada en vigencia de los cuadros tarifarios a publicar por el ENTE NACIONAL REGULADOR DEL GAS (ENARGAS), organismo descentralizado actuante en el ámbito de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, conforme surge del Anexo (IF-2026-09272989-APN-SSCL#MEC) que forma parte ",
+      "disposition": "Establécese el Precio Anual Uniforme (PAU), a ser trasladado a los usuarios finales en relación con los contratos o acuerdos de abastecimiento vigentes celebrados en el marco del “PLAN DE REASEGURO Y POTENCIACIÓN DE LA PRODUCCIÓN FEDERAL DE HIDROCARBUROS, EL AUTOABASTECIMIENTO INTERNO, LAS EXPORTACIONES, LA SUSTITUCIÓN DE IMPORTACIONES Y LA EXPANSIÓN DEL…",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-01-30 · Página 80",
@@ -6449,7 +6602,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 32/2026 RESOL-2026-32-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-01-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 32/2026 RESOL-2026-32-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/01/2026 VISTO el Expediente N.° EX-2026-09435497- -APN-GDYE#ENARGAS, la Ley N.° 24.076 -T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que mediante Decreto N.° 2458/1992 se",
@@ -6461,14 +6614,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337985/20260130?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2026-09596835-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR S.A. incluidos en el Anexo N.° IF-2026-09596835-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 33/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 33/2026 RESOL-2026-33-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-01-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 33/2026 RESOL-2026-33-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/01/2026 VISTO el Expediente N.° EX-2026-09436675- -APN-GDYE#ENARGAS, la Ley N.° 24.076 -T.O. 2025; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26 y el Decreto N.° 452/25; y CONSIDERANDO: Que mediante Decreto N.° 2457/1992 se",
@@ -6480,14 +6636,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337986/20260130?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-09596946-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE S.A. incluidos en el Anexo N.° IF-2026-09596946-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 34/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 34/2026 RESOL-2026-34-APN-DIRECTORIO#ENARGAS",
       "publishedAt": "2026-01-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Resolución 34/2026 RESOL-2026-34-APN-DIRECTORIO#ENARGAS Ciudad de Buenos Aires, 29/01/2026 VISTO el Expediente N.° EX-2026-09461183- -APN-GDYE#ENARGAS; las Leyes N.° 24.076 (T.O. 2025) y N.° 27.742; los Decretos N.° 1738/92, DNU N.° 55/23, DNU N.° 1023/24, DNU N.° 370/25, DNU N.° 49/26, Decreto N.° 452/25; y CONSIDERANDO: Que COMPAÑÍA ENTRERRIANA",
@@ -6499,7 +6658,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337987/20260130",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS S.A. incluidos en el Anexo N.° IF-2026-09599452-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS S.A. incluidos en el Anexo N.° IF-2026-09599452-APN-GDYE#ENARGAS que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 35/2026",
@@ -7045,24 +7207,6 @@
       "auto": true
     },
     {
-      "num": "PBA · 2026-01-05 · Página 107",
-      "title": "quiz. de predios; j)serv.conexos a las activ.citadas.; k)Diseño y construc.de instalac.de gas natural . Finan (ex.op.L.Ent.Finan). Cap $30.000.000.- Adm.Dir.1 a 7 dir.tit., e igual o menor n° sup, por 3 ej. Repr: Pte. Pte: Katherine J.Baldi; D.S. Edga",
-      "desc": "., g)serv. de limpieza de ofic.públ. y/o priv.; h)manten. de parques y jardines en espac.públ. y/o priv.\ni)parquiz. de predios; j)serv.conexos a las activ.citadas.; k)Diseño y construc.de instalac.de gas natural . Finan\n(ex.op.L.Ent.Finan). Cap $30.000.000.- Adm.Dir.1 a 7 dir.tit., e igual o menor n° sup, por 3 ej. Repr: Pte. Pte: Katherine\nJ.Baldi; D.S. Edgardo J.Saldaña. Fisc.socios. Cie.últ.día",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Normativa",
-      "tags": [
-        "PBA",
-        "Normativa"
-      ],
-      "date": "05/01/2026",
-      "publishedAt": "2026-01-05T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:29-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/13921/ver#page=107",
-      "auto": true,
-      "disposition": "quiz. de predios; j)serv.conexos a las activ.citadas.; k)Diseño y construc.de instalac.de gas natural . Finan (ex.op.L.Ent.Finan). Cap $30.000.000.- Adm.Dir.1 a 7 dir.tit., e igual o menor n° sup, por 3 ej. Repr: Pte. Pte: Katherine J.Baldi; D.S. Edga"
-    },
-    {
       "num": "Resolución 1019/2025",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 1019/2025 RESOL-2025-1019-APN-DIRECTORIO#ENARGAS",
@@ -7201,8 +7345,8 @@
     {
       "name": "Noticias",
       "cadence": "Cada 60 min",
-      "last": "2026-09-30T11:59-03:00",
-      "next": "2026-09-30T12:59-03:00",
+      "last": "2026-09-30T12:03-03:00",
+      "next": "2026-09-30T13:03-03:00",
       "status": "partial",
       "note": "Sin noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas",
       "mode": "Automática",
@@ -7212,10 +7356,10 @@
     {
       "name": "Normativa",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T12:00-03:00",
-      "next": "2026-09-30T15:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
+      "next": "2026-09-30T15:04-03:00",
       "status": "unchanged",
-      "note": "Consulta 28/09/2026–30/09/2026 · 284 normas guardadas · 0 nuevas · 68 fichas enriquecidas con Art. 1° · 0 ediciones y 0 documentos pendientes de reintento.",
+      "note": "Consulta 28/09/2026–30/09/2026 · 282 normas guardadas · 0 nuevas · 66 fichas enriquecidas con Art. 1° · 0 ediciones y 0 documentos pendientes de reintento.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."
@@ -7255,8 +7399,8 @@
       "mode": "Automática",
       "strategy": "Relectura de ventana vigente",
       "scope": "Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia.",
-      "last": "2026-09-30T12:00-03:00",
-      "next": "2026-09-30T13:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
+      "next": "2026-09-30T13:04-03:00",
       "status": "unchanged",
       "note": "Ventana oficial de 5 días revalidada."
     },
@@ -7266,8 +7410,8 @@
       "mode": "Automática parcial",
       "strategy": "Último reporte disponible",
       "scope": "Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo.",
-      "last": "2026-09-30T12:00-03:00",
-      "next": "2026-09-30T13:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
+      "next": "2026-09-30T13:04-03:00",
       "status": "unchanged",
       "note": "Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo."
     },
@@ -7277,8 +7421,8 @@
       "mode": "Automática parcial",
       "strategy": "Totales del PDF verificados",
       "scope": "Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas.",
-      "last": "2026-09-30T12:00-03:00",
-      "next": "2026-09-30T13:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
+      "next": "2026-09-30T13:04-03:00",
       "status": "unchanged",
       "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual."
     },
@@ -7296,10 +7440,10 @@
     {
       "name": "Boletín Oficial PBA",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T12:00-03:00",
-      "next": "2026-09-30T15:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
+      "next": "2026-09-30T15:04-03:00",
       "status": "updated",
-      "note": "0 publicaciones provinciales incorporadas · 2 coincidencias irrelevantes depuradas. Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.",
+      "note": "0 publicaciones provinciales incorporadas · 3 coincidencias irrelevantes depuradas. Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."
@@ -7310,7 +7454,7 @@
       "mode": "Automática parcial",
       "strategy": "EIA diaria + Banco Mundial mensual",
       "scope": "Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.",
-      "last": "2026-09-30T12:00-03:00",
+      "last": "2026-09-30T12:04-03:00",
       "status": "partial",
       "note": "Lectores automáticos: henry_hub: ok, mb_propane: ok, worldbank: ok. Las demás referencias conservan su fecha y requieren revisión manual."
     }
@@ -7330,7 +7474,7 @@
       "url": "https://econojournal.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "Mejor Energía",
@@ -7341,7 +7485,7 @@
       "url": "https://www.mejorenergia.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "RunRun Energético",
@@ -7352,7 +7496,7 @@
       "url": "https://runrunenergetico.com/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "ENReGE · Noticias",
@@ -7363,7 +7507,7 @@
       "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "ENReGE · Datos diarios",
@@ -7374,7 +7518,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "ENReGE · Tarifas",
@@ -7385,7 +7529,7 @@
       "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "Secretaría de Energía · Noticias",
@@ -7396,7 +7540,7 @@
       "url": "https://www.argentina.gob.ar/economia/energia/noticias",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "Datos Argentina · Energía",
@@ -7407,7 +7551,7 @@
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
       "validatedAt": "2026-09-28T11:00:00-03:00",
       "availability": "NO DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -7418,7 +7562,7 @@
       "url": "https://www.tgs.com.ar/prensa/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "TGN · Comunicaciones",
@@ -7429,7 +7573,7 @@
       "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/",
       "validatedAt": "2026-09-28T14:39-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "BAGSA · Tarifas",
@@ -7440,7 +7584,7 @@
       "url": "https://www.bagsa.com.ar/index.php/tarifas/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "Revista Petroquímica",
@@ -7451,7 +7595,7 @@
       "url": "https://revistapetroquimica.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "Más Energía · LM Neuquén",
@@ -7462,7 +7606,7 @@
       "url": "https://mase.lmneuquen.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "América GLP",
@@ -7473,7 +7617,7 @@
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "MEGSA · Transporte firme",
@@ -7484,7 +7628,7 @@
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     {
       "name": "ENReGE · Concursos de capacidad",
@@ -7495,7 +7639,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:05-03:00"
     },
     {
       "name": "Boletín Oficial PBA · Gas/BAGSA",
@@ -7512,7 +7656,7 @@
       "validatedAt": "2026-09-30T08:31-03:00",
       "lastResult": "gas natural: 5 coincid. · última 13/05/2026 · BAGSA: 5 coincid. · última 02/02/2026",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:05-03:00"
     },
     {
       "name": "Argentina.gob.ar · Normativa gas",
@@ -7524,7 +7668,7 @@
       "validatedAt": "2026-09-28T14:49-03:00",
       "lastResult": "12 normas en listado · 0 nuevas · 0 revalidadas",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:05-03:00"
     },
     {
       "name": "Boletín Oficial Nación · Normativa gas",
@@ -7533,10 +7677,10 @@
       "cadence": "Cada 3 h",
       "status": "ACTIVA",
       "url": "https://www.boletinoficial.gob.ar/seccion/primera",
-      "checkedAt": "2026-09-30T12:00-03:00",
-      "lastResult": "284 normas · 0 nuevas · 2 revalidadas · 68 vistas enriquecidas · 3 ediciones consultadas",
+      "checkedAt": "2026-09-30T12:05-03:00",
+      "lastResult": "282 normas · 0 nuevas · 2 revalidadas · 66 vistas enriquecidas · 3 ediciones consultadas",
       "availability": "DISPONIBLE",
-      "validatedAt": "2026-09-30T12:00-03:00"
+      "validatedAt": "2026-09-30T12:04-03:00"
     }
   ],
   "basins": [
@@ -7671,14 +7815,14 @@
       "value": "462,97",
       "unit": "USD/t",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls",
       "note": "Referencia spot FOB Texas convertida a USD/t.",
       "details": "Conversión desde 0.864 USD/gal; 3,785411784 L/gal y densidad indicativa 0,493 kg/L.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T12:00-03:00",
+      "checkedAt": "2026-09-30T12:04-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7749,14 +7893,14 @@
       "value": "2,90",
       "unit": "USD/MMBtu",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls",
       "note": "Precio spot del gas en Henry Hub, Louisiana.",
       "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T12:00-03:00",
+      "checkedAt": "2026-09-30T12:04-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7764,8 +7908,8 @@
       "id": "wb_europe",
       "value": "21,11",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T12:00-03:00",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "checkedAt": "2026-09-30T12:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "Gas Europa · promedio mensual",
@@ -7782,8 +7926,8 @@
       "id": "wb_japan",
       "value": "13,94",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T12:00-03:00",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "checkedAt": "2026-09-30T12:04-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "GNL Japón · promedio mensual",
@@ -7800,7 +7944,7 @@
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
-    "updatedAt": "2026-09-30T12:00-03:00"
+    "updatedAt": "2026-09-30T12:04-03:00"
   },
   "systemKpis": [
     {
@@ -7809,7 +7953,7 @@
       "value": "≈561",
       "unit": "MMm³",
       "reference": "27/08/2026 · REAL",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "statusText": "DERIVADO GRÁFICO",
       "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
@@ -7822,7 +7966,7 @@
       "value": "129,0",
       "unit": "MMm³/d",
       "reference": "26/08/2026 · REAL",
-      "validatedAt": "2026-09-30T12:00-03:00",
+      "validatedAt": "2026-09-30T12:04-03:00",
       "statusText": "OFICIAL",
       "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
@@ -8110,7 +8254,7 @@
     "source": "ENReGE · Importaciones y Exportaciones Mensuales",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
     "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual.",
-    "checkedAt": "2026-09-30T12:00-03:00",
+    "checkedAt": "2026-09-30T12:04-03:00",
     "status": "current"
   },
   "basinMonthly2026": [
@@ -8401,7 +8545,7 @@
   "regulationScan": {
     "lastScannedDate": "2026-09-30",
     "source": "Boletín Oficial de la República Argentina · Primera Sección",
-    "lastRun": "2026-09-30T12:00-03:00",
+    "lastRun": "2026-09-30T12:04-03:00",
     "pagesOk": 3,
     "pagesError": 0,
     "candidates": 7,
@@ -8414,8 +8558,8 @@
     },
     "added": 0,
     "revalidated": 2,
-    "lastSuccessfulAt": "2026-09-30T12:00-03:00",
-    "previewBackfilled": 68
+    "lastSuccessfulAt": "2026-09-30T12:04-03:00",
+    "previewBackfilled": 66
   },
   "tariffAutomation": {
     "checkedAt": "2026-09-29T22:31-03:00",
@@ -8427,7 +8571,7 @@
     ]
   },
   "marketAutomation": {
-    "checkedAt": "2026-09-30T12:00-03:00",
+    "checkedAt": "2026-09-30T12:04-03:00",
     "readers": {
       "henry_hub": "ok",
       "mb_propane": "ok",
@@ -8436,15 +8580,15 @@
   },
   "bopbaScan": {
     "gas natural": {
-      "lastScannedDate": "2026-09-30T12:00:20.117725-03:00",
+      "lastScannedDate": "2026-09-30T12:04:44.404775-03:00",
       "complete": true,
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
     "BAGSA": {
-      "lastScannedDate": "2026-09-30T12:00:20.117725-03:00",
+      "lastScannedDate": "2026-09-30T12:04:44.404775-03:00",
       "complete": true,
-      "checkedAt": "2026-09-30T12:00-03:00"
+      "checkedAt": "2026-09-30T12:04-03:00"
     },
-    "cleanupVersion": 4
+    "cleanupVersion": 5
   }
 }
