@@ -249,7 +249,9 @@ def update_bopba(d, fetch, iso, today):
     items = {}
     for r in all_items:
         if r.get('jurisdiction') == 'PBA':
-            probe=' '.join(str(r.get(k,'')) for k in ('title','desc','num'))
+            # Old records used a generic title containing "BAGSA"; evaluate
+            # relevance from the actual excerpt only to avoid false positives.
+            probe=str(r.get('desc',''))
             if not _pba_relevant(probe):
                 removed += 1
                 continue
@@ -317,8 +319,9 @@ def update_bopba(d, fetch, iso, today):
         except Exception as exc:
             errors.append(term + ': ' + str(exc)[:140])
     d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
+    state['cleanupVersion'] = 2
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
-            row.update(last=iso(), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
+            row.update(last=iso(), next=iso(today + timedelta(hours=3)), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
                        note=f'{count} publicaciones provinciales incorporadas · {removed} coincidencias irrelevantes depuradas. ' + ('; '.join(errors) if errors else 'Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.'))
     print('BOPBA READER', count, 'added', removed, 'removed', errors)
