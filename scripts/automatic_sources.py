@@ -202,13 +202,8 @@ def _pba_relevant(text):
         return True
     if not re.search(r"\bgas\s+natural\b",text,re.I):
         return False
-    sector=r"(?:red(?:es)?|ramal(?:es)?|gasoducto(?:s)?|obra(?:s)?|licitaci[oó]n|concesi[oó]n|servicio|suministro|tarifa(?:s)?|regulaci[oó]n|estaci[oó]n|planta|infraestructura|cañer[ií]a|extensi[oó]n|ampliaci[oó]n|distribuci[oó]n|subdistribuci[oó]n|municipalidad)"
-    gas=r"gas\s+natural"
-    if re.search(sector+r".{0,180}"+gas,text,re.I) or re.search(gas+r".{0,180}"+sector,text,re.I):
-        return True
-    # Typical corporate-purpose notices mention fuels/GNC only as one of many
-    # commercial activities; keep them out unless an infrastructure/regulatory
-    # signal is present.
+    # Typical corporate-purpose notices mention gas/GNC as one activity
+    # among many. Exclude them before evaluating infrastructure proximity.
     corporate=("objeto social","constitución de sociedad","comercialización de productos derivados",
                "accesorios del automotor","autopartes","fraccionamiento","envasado",
                "compra, venta","importación, exportación","importacion, exportacion")
@@ -217,6 +212,10 @@ def _pba_relevant(text):
         return False
     if re.search(r"gas\s+natural\s+comprimido|\bGNC\b",text,re.I) and not re.search(r"red(?:es)?\s+de\s+gas\s+natural|gasoduct|licitaci[oó]n|\bBAGSA\b|Buenos Aires Gas|tarifa|suministro",text,re.I):
         return False
+    sector=r"(?:red(?:es)?|ramal(?:es)?|gasoducto(?:s)?|obra(?:s)?|licitaci[oó]n|concesi[oó]n|servicio|suministro|tarifa(?:s)?|regulaci[oó]n|estaci[oó]n|planta|infraestructura|cañer[ií]a|extensi[oó]n|ampliaci[oó]n|distribuci[oó]n|subdistribuci[oó]n|municipalidad)"
+    gas=r"gas\s+natural"
+    if re.search(sector+r".{0,180}"+gas,text,re.I) or re.search(gas+r".{0,180}"+sector,text,re.I):
+        return True
     return False
 
 def _pba_title(text):
