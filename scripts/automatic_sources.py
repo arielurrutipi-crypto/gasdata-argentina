@@ -51,6 +51,66 @@ def worldbank_latest(raw):
     return results
 
 
+def catalyst_latest(fetch):
+    hub='https://www.catalyst-commercial.co.uk/works/'
+    soup=BeautifulSoup(fetch(hub,timeout=30),'html.parser')
+    candidates=[]
+    month_map={m.lower():i for i,m in enumerate(('January','February','March','April','May','June','July','August','September','October','November','December'),1)}
+    for a in soup.select('a[href]'):
+        href=urljoin(hub,a['href'])
+        m=re.search(r'uk-energy-market-report-(\d{1,2})-([a-z]+)-(20\d{2})',href,re.I)
+        if not m or m.group(2).lower() not in month_map: continue
+        dt=datetime(int(m.group(3)),month_map[m.group(2).lower()],int(m.group(1)))
+        candidates.append((dt,href))
+    if not candidates:
+        raise ValueError('No se encontró el último UK Energy Market Report')
+    report_date,url=max(candidates,key=lambda x:x[0])
+    text=re.sub(r'\s+',' ',BeautifulSoup(fetch(url,timeout=30),'html.parser').get_text(' ',strip=True))
+    jkm=re.search(r'JKM\s+LNG\s+M\+1\s*\$?([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+    if not jkm:
+        jkm=re.search(r'JKM.{0,80}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+    ttf=re.search(r'TTF\s+spot.{0,100}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
+    if not ttf:
+        ttf=re.search(r'TTF.{0,100}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
+    settle=re.search(r'Settlement\s+(\d{1,2})\s+([A-Za-z]+)',text,re.I)
+    obs=report_date-timedelta(days=1)
+    if settle:
+        mon=month_map.get(settle.group(2).lower())
+        if mon:
+            year=report_date.year
+            obs=datetime(year,mon,int(settle.group(1)))
+            if obs>report_date: obs=obs.replace(year=year-1)
+    if not jkm or not ttf:
+        raise ValueError('El reporte Catalyst no expone JKM/TTF con el formato esperado')
+    return obs.date().isoformat(),float(jkm.group(1)),float(ttf.group(1)),url
+
+def pau_2026(fetch):
+    from pypdf import PdfReader
+    url='https://servicios.infoleg.gob.ar/infolegInternet/anexos/420000-424999/422817/res23-anexo1.pdf'
+    reader=PdfReader(io.BytesIO(fetch(url,timeout=40)))
+    text=' '.join((p.extract_text() or '') for p in reader.pages)
+    vals=[float(x) for x in re.findall(r'\b(3\.\d{3}|4\.\d{3})\b',text)]
+    if len(vals)<8:
+        raise ValueError('No se pudieron leer los PAU del Anexo Res. 23/2026')
+    return min(vals),max(vals),url
+
+def propano_ppe_from_bagsa(d,fetch):
+    import pdfplumber
+    row=next((x for x in d.get('tariffs',[]) if x.get('bagsa') and x.get('product')=='GLP' and x.get('documentUrl')),None)
+    if not row: raise ValueError('No hay cuadro GLP BAGSA vigente')
+    url=row['documentUrl']
+    with pdfplumber.open(io.BytesIO(fetch(url,timeout=40))) as pdf:
+        text=' '.join((p.extract_text() or '') for p in pdf.pages[:3])
+    # Standard non-subsidised table exposes the recognised purchase price in $/t.
+    candidates=[]
+    for raw in re.findall(r'\b\d{3}\.\d{3},\d{2}\b',text):
+        val=float(raw.replace('.','').replace(',','.'))
+        if 200000<val<1500000: candidates.append(val)
+    if not candidates:
+        raise ValueError('No se encontró precio de compra reconocido en el cuadro GLP')
+    recognised=max(candidates)
+    return recognised,recognised/0.60,url,row.get('res',''),row.get('validFrom','')
+
 def update_market(d, fetch, iso):
     items = {x['id']: x for x in d.get('marketPrices', [])}
     outcomes = {}
@@ -103,14 +163,67 @@ def update_market(d, fetch, iso):
         for key in ('wb_japan', 'wb_europe'):
             if key in items:
                 items[key].update(checkedAt=iso(), updateStatus='error', updateError=outcomes['worldbank'])
-    for key, item in items.items():
-        if not item.get('auto') and item.get('updateStatus') != 'error':
+    try:
+        period,jkm,ttf,url=catalyst_latest(fetch)
+        save('jkm',period,jkm,label='JKM LNG · Asia',group='GNL',unit='USD/MMBtu',
+             reference=period+' · M+1',source='Catalyst Commercial · market report',sourceUrl=url,
+             statusText='BENCHMARK · AUTOMÁTICO',note='JKM LNG M+1 extraído del último reporte de mercado publicado.',
+             details='Benchmark spot/M+1 del noreste asiático; no equivale a un netback argentino.')
+        save('ttf',period,ttf,label='TTF · gas natural Europa',group='GN internacional',unit='USD/MMBtu',
+             reference=period+' · spot',source='Catalyst Commercial · market report',sourceUrl=url,
+             statusText='BENCHMARK · AUTOMÁTICO',note='TTF spot extraído del último reporte de mercado publicado.',
+             details='Benchmark europeo de gas natural.')
+        outcomes['catalyst']='ok'
+    except Exception as exc:
+        outcomes['catalyst']=str(exc)[:180]
+        for key in ('jkm','ttf'):
+            if key in items: items[key].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['catalyst'])
+
+    try:
+        low,high,url=pau_2026(fetch)
+        item=items.get('pau',{'id':'pau'})
+        item.update(value=f'{low:.2f}–{high:.2f}'.replace('.',','),unit='USD/MMBtu',
+                    reference='Año 2026 · rango nacional por subzona',checkedAt=iso(),validatedAt=iso(),
+                    auto=True,updateStatus='current',statusText='OFICIAL · AUTOMÁTICO',
+                    source='Secretaría de Energía · Res. 23/2026',sourceUrl=url,
+                    note='Rango mínimo–máximo del Anexo oficial del Precio Anual Uniforme 2026 por subzona.')
+        item.pop('updateError',None);items['pau']=item;outcomes['pau']='ok'
+    except Exception as exc:
+        outcomes['pau']=str(exc)[:180]
+        if 'pau' in items: items['pau'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['pau'])
+
+    try:
+        recognised,ppe,url,res,valid=propano_ppe_from_bagsa(d,fetch)
+        item=items.get('glp_ppe_propano_arg',{'id':'glp_ppe_propano_arg'})
+        item.update(value=f'{ppe:,.0f}'.replace(',','.'),unit='ARS/t',
+                    reference=(valid or 'Cuadro vigente')+' · derivado de tarifa BAGSA',
+                    checkedAt=iso(),validatedAt=iso(),auto=True,updateStatus='current',
+                    statusText='DERIVADO · AUTOMÁTICO',source='BAGSA / ENReGE + Res. 126/2026',sourceUrl=url,
+                    note='PPE implícito = precio de compra reconocido en tarifa / 60%.',
+                    details=f'Precio reconocido: $ {recognised:,.2f}/t · Res. {res}. La Res. 126/2026 dispone trasladar 60% del PPE.'.replace(',','_').replace('.',',').replace('_','.'))
+        item.pop('updateError',None);items['glp_ppe_propano_arg']=item;outcomes['ppe_propano']='ok'
+    except Exception as exc:
+        outcomes['ppe_propano']=str(exc)[:180]
+        if 'glp_ppe_propano_arg' in items: items['glp_ppe_propano_arg'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['ppe_propano'])
+
+    supplemental={'megsa_pist','free_contracts','glp_ppe_arg','aramco_lpg','sonatrach_lpg'}
+    for key,item in items.items():
+        if key in supplemental:
+            item['supplemental']=True
+            if item.get('updateStatus')!='error': item['updateStatus']='reference'
+        elif not item.get('auto') and item.get('updateStatus') != 'error':
             item['updateStatus'] = 'manual'
     d['marketPrices'] = list(items.values())
     d['marketAutomation'] = {'checkedAt': iso(), 'readers': outcomes}
+    required=('henry_hub','mb_propane','worldbank','catalyst','pau','ppe_propano')
+    ok=all(outcomes.get(k)=='ok' for k in required)
     for row in d.get('updates', []):
         if row['name'] == 'Precios de mercado':
-            row.update(last=iso(), status='partial', note='Lectores automáticos: ' + ', '.join(k + ': ' + v for k, v in outcomes.items()) + '. Las demás referencias conservan su fecha y requieren revisión manual.')
+            row.update(last=iso(), status='updated' if ok else 'partial',
+                       mode='Automática' if ok else 'Automática parcial',
+                       strategy='EIA + Banco Mundial + Catalyst + normativa/tarifas argentinas',
+                       scope='Actualiza Henry Hub, Mont Belvieu, TTF, JKM, Gas Europa, GNL Japón, PAU 2026 y PPE implícito de propano. Las referencias puntuales históricas se conservan como complementarias y no se presentan como cotización vigente.',
+                       note='Lectores automáticos: '+', '.join(k+': '+v for k,v in outcomes.items())+'.')
     print('MARKET READERS', outcomes)
 
 
