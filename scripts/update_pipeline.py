@@ -1457,21 +1457,41 @@ def sync_tariffs_from_enargas(d):
         raw=fetch(ENARGAS_TARIFF_CURRENT_URL,timeout=30)
         soup=BeautifulSoup(raw,"html.parser")
         official={}
-        for a in soup.find_all("a",href=True):
-            label=clean(a.get_text(" ",strip=True))
-            parent=clean(a.parent.get_text(" ",strip=True)) if a.parent else label
-            hay=(" "+parent+" ").lower()
+        for tr in soup.find_all("tr"):
+            row_text=clean(tr.get_text(" ",strip=True))
+            if not row_text: continue
+            hay=(" "+row_text+" ").lower()
             provider=None
             for name,terms in TARIFF_PROVIDER_RULES:
                 if any(t in hay for t in terms):
                     provider=name;break
             if not provider: continue
+            a=tr.find("a",href=True)
+            if not a: continue
+            label=clean(a.get_text(" ",strip=True))
             res=_resolution_short(label)
             if not re.search(r"\d+/20\d{2}",res): continue
             official[provider]={
               "res":res,
               "resolutionUrl":urllib.parse.urljoin(ENARGAS_TARIFF_CURRENT_URL,a["href"])
             }
+        # Fallback for layouts that are not table rows: pair each known company
+        # text with the nearest following resolution link.
+        if not official:
+            text_links=[]
+            for a in soup.find_all("a",href=True):
+                label=clean(a.get_text(" ",strip=True))
+                res=_resolution_short(label)
+                if re.search(r"\d+/20\d{2}",res):
+                    text_links.append((a,res))
+            page_text=clean(soup.get_text(" ",strip=True)).lower()
+            for name,terms in TARIFF_PROVIDER_RULES:
+                if not any(t in (" "+page_text+" ") for t in terms): continue
+                for a,res in text_links:
+                    context=clean((a.parent.parent if a.parent and a.parent.parent else a.parent or a).get_text(" ",strip=True)).lower()
+                    if any(t in (" "+context+" ") for t in terms):
+                        official[name]={"res":res,"resolutionUrl":urllib.parse.urljoin(ENARGAS_TARIFF_CURRENT_URL,a["href"])}
+                        break
         if not official:
             raise ValueError("la página oficial no devolvió resoluciones tarifarias reconocibles")
 
