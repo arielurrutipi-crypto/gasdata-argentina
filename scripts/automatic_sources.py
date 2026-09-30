@@ -209,7 +209,8 @@ def _pba_relevant(text):
                "compra, venta","importación, exportación","importacion, exportacion",
                "propietaria, proyectista","empresaria, contratista","urbanización integral de tierras",
                "urbanizacion integral de tierras","construcción, demolición","construccion, demolicion",
-               "refacción de edificios","refaccion de edificios","obra pública o privada","obra publica o privada")
+               "refacción de edificios","refaccion de edificios","obra pública o privada","obra publica o privada",
+               "iii) constructora","constructora:","2. redes eléctricas","2. redes electricas")
     public_project=re.search(r"\bmunicipalidad\b|licitaci[oó]n\s+p[úu]blica|presupuesto\s+oficial|\bobra\s*:|\bexpediente\b|\bresoluci[oó]n\b|\bdecreto\b",text,re.I)
     if any(x in low for x in corporate) and not public_project:
         return False
@@ -245,9 +246,12 @@ def _pba_title(text):
 def _pba_category(text):
     low=(text or "").lower()
     if "tarifa" in low: return "Tarifas"
-    if any(x in low for x in ("licitación","licitacion","obra:","red de gas","gasoduct","ramal","infraestructura","extensión","extension","ampliación","ampliacion")):
+    if "bagsa" in low and any(x in low for x in ("aporte irrevocable","aumento de capital")):
+        return "Subdistribución"
+    if any(x in low for x in ("licitación","licitacion","obra:","red de gas","gasoduct","ramal","extensión","extension","ampliación","ampliacion")):
         return "Infraestructura"
     if "bagsa" in low or "subdistrib" in low: return "Subdistribución"
+    if "infraestructura" in low: return "Infraestructura"
     return "Normativa"
 
 
@@ -329,7 +333,7 @@ def update_bopba(d, fetch, iso, today):
         except Exception as exc:
             errors.append(term + ': ' + str(exc)[:140])
     d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
-    state['cleanupVersion'] = 3
+    state['cleanupVersion'] = 4
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
             row.update(last=iso(), next=iso(today + timedelta(hours=3)), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
