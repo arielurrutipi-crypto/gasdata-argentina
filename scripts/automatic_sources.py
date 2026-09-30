@@ -128,10 +128,10 @@ def monthly_values(words):
     output = {}
     for low, high, total, component in ((0, years[0], 'imports', 'lng'), (years[0], years[1], 'exports', 'chile')):
         labels = sorted((w for w in latest if low < w['top'] < high), key=lambda w: w['top'])
-        if not labels or len(labels) > 4:
-            raise ValueError('No se pudo alinear el último mes')
+        if len(labels) < 2 or len(labels) > 4:
+            raise ValueError('No se pudo alinear total y componente del último mes')
         output[total] = float(labels[0]['text'].replace(',', '.'))
-        # Component labels require color/legend alignment; never guess their identity.
+        output[component] = float(labels[1]['text'].replace(',', '.'))
     return output
 
 
