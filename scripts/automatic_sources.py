@@ -195,10 +195,62 @@ def update_bagsa(d, fetch, iso):
     print('BAGSA READER', len(parsed), errors)
 
 
+def _pba_relevant(text):
+    text=re.sub(r"\s+"," ",text or "").strip()
+    low=text.lower()
+    if re.search(r"\bBAGSA\b|Buenos Aires Gas",text,re.I):
+        return True
+    if not re.search(r"\bgas\s+natural\b",text,re.I):
+        return False
+    sector=r"(?:red(?:es)?|ramal(?:es)?|gasoducto(?:s)?|obra(?:s)?|licitaci[oó]n|concesi[oó]n|servicio|suministro|tarifa(?:s)?|regulaci[oó]n|estaci[oó]n|planta|infraestructura|cañer[ií]a|extensi[oó]n|ampliaci[oó]n|distribuci[oó]n|subdistribuci[oó]n|municipalidad)"
+    gas=r"gas\s+natural"
+    if re.search(sector+r".{0,180}"+gas,text,re.I) or re.search(gas+r".{0,180}"+sector,text,re.I):
+        return True
+    # Typical corporate-purpose notices mention fuels/GNC only as one of many
+    # commercial activities; keep them out unless an infrastructure/regulatory
+    # signal is present.
+    corporate=("objeto social","constitución de sociedad","comercialización de productos derivados",
+               "accesorios del automotor","autopartes","fraccionamiento","envasado")
+    if any(x in low for x in corporate):
+        return False
+    return False
+
+def _pba_title(text):
+    text=re.sub(r"\s+"," ",text or "").strip()
+    patterns=(
+      r"(Licitaci[oó]n P[úu]blica\s+N[º°]?\s*.*?)(?=Presupuesto|Solicitud|Consulta|Apertura|Valor del pliego|Expediente|$)",
+      r"((?:Obra|Proyecto)\s*:\s*.*?)(?=Presupuesto|Solicitud|Consulta|Apertura|Expediente|$)",
+      r"((?:Extensi[oó]n|Ampliaci[oó]n|Construcci[oó]n|Renovaci[oó]n)\s+de\s+(?:la\s+)?(?:Red|Gasoducto|Ramal).*?)(?=Presupuesto|Solicitud|Consulta|Apertura|Expediente|$)"
+    )
+    for pattern in patterns:
+        m=re.search(pattern,text,re.I)
+        if m:
+            return re.sub(r"\s+"," ",m.group(1)).strip(" -–—")[:300]
+    m=re.search(r"(.{0,90}\bgas\s+natural\b.{0,150})",text,re.I)
+    return (m.group(1).strip(" -–—") if m else text[:240]).strip()
+
+def _pba_category(text):
+    low=(text or "").lower()
+    if "tarifa" in low: return "Tarifas"
+    if "bagsa" in low or "subdistrib" in low: return "Subdistribución"
+    if any(x in low for x in ("licitación","licitacion","obra","red de gas","gasoduct","ramal","infraestructura","extensión","extension","ampliación","ampliacion")):
+        return "Infraestructura"
+    return "Normativa"
+
+
 def update_bopba(d, fetch, iso, today):
     state = d.setdefault('bopbaScan', {})
     base = 'https://boletinoficial.gba.gob.ar/buscar'
-    items = {r['url']: r for r in d.get('regulations', []) if r.get('url')}
+    all_items = [r for r in d.get('regulations', []) if r.get('url')]
+    removed = 0
+    items = {}
+    for r in all_items:
+        if r.get('jurisdiction') == 'PBA':
+            probe=' '.join(str(r.get(k,'')) for k in ('title','desc','num'))
+            if not _pba_relevant(probe):
+                removed += 1
+                continue
+        items[r['url']] = r
     errors = []
     count = 0
     for term in ('gas natural', 'BAGSA'):
@@ -225,16 +277,22 @@ def update_bopba(d, fetch, iso, today):
                     for anchor in box.select('a.page[href]'):
                         paragraph = anchor.find_next_sibling('p', class_='excerpt')
                         text = paragraph.get_text(' ', strip=True) if paragraph else ''
-                        # The official search stems BAGSA to BAGS: reject those false matches.
-                        if not re.search(r'\bBAGSA\b|\bgas\s+natural\b|Buenos Aires Gas', text, re.I):
+                        # The official search stems BAGSA to BAGS and can also
+                        # return corporate notices where gas/GNC is incidental.
+                        if not _pba_relevant(text):
                             continue
                         link = urljoin(base, anchor['href'])
                         if link not in items:
                             count += 1
+                        title=_pba_title(text)
+                        category=_pba_category(text)
+                        tags=['PBA', category]
+                        if re.search(r'\bBAGSA\b|Buenos Aires Gas', text, re.I): tags.append('BAGSA')
+                        if re.search(r'\bsubdistrib', text, re.I): tags.append('Subdistribución')
                         items[link] = {**items.get(link, {}), 'num': 'PBA · ' + date.isoformat() + ' · ' + anchor.get_text(' ', strip=True),
-                                       'title': 'Publicación provincial · gas natural / BAGSA', 'desc': text,
-                                       'issuer': 'Boletín Oficial PBA', 'jurisdiction': 'PBA', 'category': 'Normativa',
-                                       'tags': ['PBA', 'BAGSA' if re.search(r'\bBAGSA\b', text, re.I) else 'Gas natural'],
+                                       'title': title, 'desc': text[:650], 'disposition': title,
+                                       'issuer': 'Boletín Oficial PBA', 'jurisdiction': 'PBA', 'category': category,
+                                       'tags': list(dict.fromkeys(tags)),
                                        'date': date.strftime('%d/%m/%Y'), 'publishedAt': date.isoformat() + 'T00:00:00-03:00',
                                        'validatedAt': iso(), 'url': link, 'auto': True}
                 nxt = next((a for a in soup.select('a[href]') if 'Siguiente' in a.get_text()), None)
@@ -252,6 +310,6 @@ def update_bopba(d, fetch, iso, today):
     d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
-            row.update(last=iso(), status='partial' if errors else 'updated' if count else 'unchanged',
-                       note=f'{count} publicaciones provinciales incorporadas. ' + ('; '.join(errors) if errors else 'Páginas recorridas; coincidencias verificadas por texto exacto.'))
-    print('BOPBA READER', count, errors)
+            row.update(last=iso(), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
+                       note=f'{count} publicaciones provinciales incorporadas · {removed} coincidencias irrelevantes depuradas. ' + ('; '.join(errors) if errors else 'Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.'))
+    print('BOPBA READER', count, 'added', removed, 'removed', errors)
