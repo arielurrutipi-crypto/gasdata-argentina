@@ -210,7 +210,11 @@ def _pba_relevant(text):
                "propietaria, proyectista","empresaria, contratista","urbanización integral de tierras",
                "urbanizacion integral de tierras","construcción, demolición","construccion, demolicion",
                "refacción de edificios","refaccion de edificios","obra pública o privada","obra publica o privada",
-               "iii) constructora","constructora:","2. redes eléctricas","2. redes electricas")
+               "iii) constructora","constructora:","2. redes eléctricas","2. redes electricas",
+               "sistemas de electrificación","sistemas de electrificacion","estudio, proyecto, dirección",
+               "estudio, proyecto, direccion","proyección, dirección y ejecución","proyeccion, direccion y ejecucion",
+               "mantenimiento de espacios públicos","mantenimiento de espacios publicos",
+               "adm.dir.","repr:","pte:","cap $")
     public_project=re.search(r"\bmunicipalidad\b|licitaci[oó]n\s+p[úu]blica|presupuesto\s+oficial|\bobra\s*:|\bexpediente\b|\bresoluci[oó]n\b|\bdecreto\b",text,re.I)
     if any(x in low for x in corporate) and not public_project:
         return False
@@ -333,7 +337,7 @@ def update_bopba(d, fetch, iso, today):
         except Exception as exc:
             errors.append(term + ': ' + str(exc)[:140])
     d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
-    state['cleanupVersion'] = 4
+    state['cleanupVersion'] = 5
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
             row.update(last=iso(), next=iso(today + timedelta(hours=3)), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
