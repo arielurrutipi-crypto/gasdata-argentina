@@ -58,6 +58,8 @@ def catalyst_latest(fetch):
     month_map={m.lower():i for i,m in enumerate(('January','February','March','April','May','June','July','August','September','October','November','December'),1)}
     for a in soup.select('a[href]'):
         href=urljoin(hub,a['href'])
+        if '/works/uk-energy-market-report-' in href and not href.endswith('/'):
+            href=href+'/'
         m=re.search(r'uk-energy-market-report-(\d{1,2})-([a-z]+)-(20\d{2})',href,re.I)
         if not m or m.group(2).lower() not in month_map: continue
         dt=datetime(int(m.group(3)),month_map[m.group(2).lower()],int(m.group(1)))
