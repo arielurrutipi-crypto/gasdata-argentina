@@ -1372,6 +1372,168 @@ def validate_pages(d):
         try: fetch("https://www.bagsa.com.ar/index.php/tarifas/")
         except Exception as e: print("BAGSA",e)
 
+TARIFF_PROVIDER_RULES=(
+    ("TGN",("transportadora de gas del norte"," tgn ")),
+    ("TGS",("transportadora de gas del sur"," tgs ")),
+    ("Naturgy BAN",("naturgy ban","gas natural ban")),
+    ("Camuzzi Gas Pampeana",("camuzzi gas pampeana",)),
+    ("Camuzzi Gas del Sur",("camuzzi gas del sur",)),
+    ("Litoral Gas",("litoral gas",))
+)
+
+def _tariff_provider_from_reg(reg):
+    hay=(" "+str(reg.get("title",""))+" "+str(reg.get("desc",""))+" "+str(reg.get("disposition",""))+" "+str(reg.get("firstArticle",""))+" ").lower()
+    if "cuadro tarif" not in hay:
+        return None
+    for name,terms in TARIFF_PROVIDER_RULES:
+        if any(t in hay for t in terms):
+            return name
+    return None
+
+def _tariff_inferred_valid_from(published_at):
+    try:
+        dt=datetime.fromisoformat(str(published_at))
+    except Exception:
+        return ""
+    if dt.day>=25:
+        nxt=(dt.replace(day=28)+timedelta(days=4)).replace(day=1)
+        return nxt.date().isoformat()
+    return dt.replace(day=1).date().isoformat()
+
+def _tariff_regulation_meta(reg):
+    """Read effective date and a direct annex/PDF when the official page exposes them."""
+    url=str(reg.get("url") or "")
+    result={"validFrom":"","documentUrl":""}
+    if not url:
+        return result
+    try:
+        raw=fetch(url,timeout=30)
+        soup=BeautifulSoup(raw,"html.parser")
+        text=clean(soup.get_text(" ",strip=True))
+        months={
+          "enero":1,"febrero":2,"marzo":3,"abril":4,"mayo":5,"junio":6,
+          "julio":7,"agosto":8,"septiembre":9,"octubre":10,"noviembre":11,"diciembre":12
+        }
+        pats=(
+          r"(?:vigencia|vigentes|aplicar|aplicables|aplicaci[oó]n).{0,180}?(?:a partir de|desde)\s+(?:el\s+)?(?:d[ií]a\s+)?(\d{1,2})(?:°|º|ro)?\s+de\s+([a-záéíóúñ]+)\s+de\s+(20\d{2})",
+          r"(?:a partir de|desde)\s+(?:el\s+)?(?:d[ií]a\s+)?(\d{1,2})(?:°|º|ro)?\s+de\s+([a-záéíóúñ]+)\s+de\s+(20\d{2})"
+        )
+        for pat in pats:
+            m=re.search(pat,text,re.I)
+            if m and m.group(2).lower() in months:
+                result["validFrom"]=datetime(int(m.group(3)),months[m.group(2).lower()],int(m.group(1))).date().isoformat()
+                break
+        links=[]
+        for a in soup.find_all("a",href=True):
+            href=urllib.parse.urljoin(url,a["href"])
+            label=clean(a.get_text(" ",strip=True)).lower()
+            low=href.lower()
+            if low.endswith(".pdf") or "anexo" in label or "anexo" in low:
+                links.append((href,label))
+        if links:
+            pdf=next((h for h,l in links if h.lower().endswith(".pdf") and ("anexo" in l or "anexo" in h.lower())),None)
+            result["documentUrl"]=pdf or next((h for h,l in links if h.lower().endswith(".pdf")),links[0][0])
+    except Exception as e:
+        print("TARIFF META",url,e)
+    return result
+
+def _tariff_key(row):
+    return "|".join(str(row.get(k,"")) for k in ("name","product","res"))
+
+def sync_tariff_archive(d):
+    """Persist every 2026 tariff cycle and mark only the date-effective rows as current."""
+    archive={_tariff_key(x):x for x in d.get("tariffArchive",[]) if x.get("name") and x.get("res")}
+
+    # Exact current BAGSA/transport rows always win over inferred historical metadata.
+    for row in d.get("tariffs",[]):
+        if not str(row.get("validFrom","")).startswith("2026-"):
+            continue
+        item={**archive.get(_tariff_key(row),{}),**row}
+        item["year"]=2026
+        item["month"]=str(item.get("validFrom",""))[:7]
+        item["archiveSource"]="BAGSA" if item.get("bagsa") else item.get("name","")
+        item["effectiveDateSource"]="document"
+        archive[_tariff_key(item)]=item
+
+    # Backfill 2026 from the tariff resolutions already collected by Normativa.
+    reg_by_url={}
+    for reg in d.get("regulations",[]):
+        provider=_tariff_provider_from_reg(reg)
+        if not provider or not str(reg.get("publishedAt","")).startswith("2026-"):
+            continue
+        m=re.search(r"(\d+/2026)",str(reg.get("num","")))
+        if not m:
+            continue
+        res=m.group(1)
+        valid=_tariff_inferred_valid_from(reg.get("publishedAt"))
+        products=("GN",) if provider in ("TGN","TGS") else ("GN","GLP")
+        for product in products:
+            key="|".join((provider,product,res))
+            base=archive.get(key,{})
+            generic={
+              "name":provider,"product":product,"res":res,"validFrom":valid,
+              "validatedAt":reg.get("validatedAt"),"scope":"Transporte" if provider in ("TGN","TGS") else "Distribución · resolución ENReGE",
+              "bagsa":provider not in ("TGN","TGS"),"url":reg.get("url"),"auto":True,
+              "year":2026,"month":valid[:7],"archiveSource":"ENReGE / Boletín Oficial",
+              "effectiveDateSource":"publication_cycle"
+            }
+            # Preserve richer exact rows/documents already captured.
+            item={**generic,**base} if base else generic
+            archive[key]=item
+            if reg.get("url"):
+                reg_by_url[reg["url"]]=reg
+
+    # Gradually enrich historical rows with exact effective dates/direct annexes,
+    # capped so the hourly pipeline stays fast.
+    missing_urls=[]
+    for item in archive.values():
+        if item.get("url") and (not item.get("documentUrl") or item.get("effectiveDateSource")!="document"):
+            if item["url"] not in missing_urls:
+                missing_urls.append(item["url"])
+    enriched=0
+    for url in missing_urls[:8]:
+        reg=reg_by_url.get(url)
+        if not reg:
+            continue
+        meta=_tariff_regulation_meta(reg)
+        for item in archive.values():
+            if item.get("url")!=url:
+                continue
+            if meta.get("validFrom"):
+                item["validFrom"]=meta["validFrom"]
+                item["month"]=meta["validFrom"][:7]
+                item["effectiveDateSource"]="document"
+            if meta.get("documentUrl") and not item.get("documentUrl"):
+                item["documentUrl"]=meta["documentUrl"]
+                item["documentSource"]="Anexo oficial"
+            item["archiveCheckedAt"]=iso()
+        enriched+=1
+
+    today=now().date().isoformat()
+    grouped={}
+    for item in archive.values():
+        item["isCurrent"]=False
+        valid=str(item.get("validFrom",""))
+        if valid and valid<=today:
+            grouped.setdefault((item.get("name"),item.get("product")),[]).append(item)
+    for rows in grouped.values():
+        current=max(rows,key=lambda x:(str(x.get("validFrom","")),str(x.get("res",""))))
+        current["isCurrent"]=True
+        current["status"]="current"
+
+    rows=sorted(archive.values(),key=lambda x:(str(x.get("validFrom","")),str(x.get("name","")),str(x.get("product",""))),reverse=True)
+    d["tariffArchive"]=rows
+    d["tariffArchiveMeta"]={
+      "year":2026,"checkedAt":iso(),"count":len(rows),"enrichedThisRun":enriched,
+      "note":"Los cuadros nuevos se agregan al archivo; el vigente se determina por fecha de vigencia y los anteriores no se eliminan."
+    }
+
+    # Rebuild the compact current list from the archive. This also lets TGN/TGS
+    # roll over automatically on the effective date of a newly detected resolution.
+    current=[{k:v for k,v in x.items() if k not in ("isCurrent","year","month","archiveSource","effectiveDateSource","archiveCheckedAt")} for x in rows if x.get("isCurrent")]
+    if current:
+        d["tariffs"]=sorted(current,key=lambda x:(x.get("bagsa",False),x.get("name",""),x.get("product","")))
+
 def sync_tariffs_from_regulations(d):
     regs=d.get("regulations",[])
     mapping=(
@@ -1396,7 +1558,20 @@ def sync_tariffs_from_regulations(d):
         m=re.search(r"(\d+/\d{4})",str(latest.get("num","")))
         resolution=m.group(1) if m else latest.get("num",row.get("res"))
         if resolution!=row.get("res"):
-            # Publication and tariff-effective dates are not interchangeable.
+            # For transporters, read the new official resolution and switch only
+            # when its effective date has actually arrived. BAGSA distributors are
+            # handled by the BAGSA tariff reader, which has the exact PDF header.
+            if row.get("name") in ("TGN","TGS"):
+                meta=_tariff_regulation_meta(latest)
+                valid=meta.get("validFrom") or _tariff_inferred_valid_from(latest.get("publishedAt"))
+                if valid and valid<=now().date().isoformat():
+                    row.update(res=resolution,validFrom=valid,validatedAt=latest.get("validatedAt") or iso(),
+                               url=latest.get("url",row.get("url")),auto=True,status="current")
+                    if meta.get("documentUrl"):
+                        row["documentUrl"]=meta["documentUrl"]
+                        row["documentSource"]="Anexo oficial"
+                    row.pop("pendingResolution",None);row.pop("pendingUrl",None)
+                    continue
             row["pendingResolution"]=resolution
             row["pendingUrl"]=latest.get("url")
             row["status"]="review_effective_date"
@@ -1404,6 +1579,13 @@ def sync_tariffs_from_regulations(d):
         row["validatedAt"]=latest.get("validatedAt") or row.get("validatedAt")
         row["url"]=latest.get("url",row.get("url"))
         row["auto"]=True
+        if row.get("name") in ("TGN","TGS") and not row.get("documentUrl"):
+            meta=_tariff_regulation_meta(latest)
+            if meta.get("documentUrl"):
+                row["documentUrl"]=meta["documentUrl"]
+                row["documentSource"]="Anexo oficial"
+            if meta.get("validFrom"):
+                row["validFrom"]=meta["validFrom"]
 
 def bopba_monitor(d):
     """Check only the Provincial Official Gazette results relevant to GasData."""
@@ -1495,6 +1677,7 @@ def main():
     sync_tariffs_from_regulations(d)
     if d.get("tariffAutomation",{}).get("readerVersion")!=4 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
+    sync_tariff_archive(d)
     update_market(d,fetch,iso)
     validate_pages(d)
     production(d)
