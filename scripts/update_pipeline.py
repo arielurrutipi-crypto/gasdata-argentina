@@ -560,7 +560,7 @@ def _reg_date(text):
 def _first_article(text):
     text=clean(text or "")
     if not text: return ""
-    m=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]?\s*(.*?)(?=\s+\bART[ÍI]CULO\s+(?:2|SEGUNDO)\b|$)",text,re.I|re.S)
+    m=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]*\s*(.*?)(?=\s+\bART[ÍI]CULO\s+(?:2|SEGUNDO)\b|$)",text,re.I|re.S)
     if not m: return ""
     value=clean(m.group(1)).strip(" -–—")
     return value[:700]
@@ -1012,7 +1012,7 @@ def main():
     system_market(d)
     monthly_flows_status(d)
     if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
-    if _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
+    if not d.get("bopbaScan") or _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
     refresh_source_status(d)
     sync_update_catalog(d)
     d["meta"]["updatedAt"]=iso()
