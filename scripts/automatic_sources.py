@@ -139,8 +139,15 @@ MONTHS = {name: i for i, name in enumerate(('ENERO', 'FEBRERO', 'MARZO', 'ABRIL'
 
 
 def tariff_header(text):
-    date = re.search(r'VIGENCIA\s+DESDE\s+(\d{1,2})\s+DE\s+(\w+)\s+DE\s+(20\d{2})', text.upper())
-    resolution = re.search(r'RESFC-(20\d{2})-(\d+)-', text)
+    # Some BAGSA/Camuzzi PDFs embed digits with Greek Coptic-looking glyphs
+    # (Ϭϭ/Ϭϵ/ϮϬϮϲ instead of 01/09/2026). Normalize them before parsing.
+    digit_map=str.maketrans({
+        'Ϭ':'0','ϭ':'1','Ϯ':'2','ϯ':'3','ϰ':'4',
+        'ϱ':'5','ϲ':'6','ϳ':'7','ϴ':'8','ϵ':'9'
+    })
+    normalized=(text or '').translate(digit_map)
+    date = re.search(r'VIGENCIA\s+DESDE\s+(\d{1,2})\s+DE\s+(\w+)\s+DE\s+(20\d{2})', normalized.upper())
+    resolution = re.search(r'RESFC-(20\d{2})-(\d+)-', normalized)
     if not date or not resolution:
         raise ValueError('Faltan vigencia explícita o resolución en el cuadro')
     day, month, year = date.groups()
@@ -187,11 +194,12 @@ def update_bagsa(d, fetch, iso):
         d['tariffs'] = output
     except Exception as exc:
         errors.append(str(exc)[:180])
-    d['tariffAutomation'] = {'checkedAt': iso(), 'parsed': len(parsed), 'errors': errors}
+    d['tariffAutomation'] = {'checkedAt': iso(), 'parsed': len(parsed), 'errors': errors, 'readerVersion': 2}
     for row in d.get('updates', []):
         if row['name'] == 'Tarifas ENReGE/BAGSA':
-            row.update(last=iso(), status='partial' if errors else 'unchanged',
-                       note=f'{len(parsed)} cuadros BAGSA leídos con vigencia explícita. ' + '; '.join(errors))
+            row.update(last=iso(), status='partial' if errors else 'updated',
+                       mode='Automática',
+                       note=(f'{len(parsed)} cuadros BAGSA leídos automáticamente con resolución y vigencia explícitas. ' + '; '.join(errors)).strip())
     print('BAGSA READER', len(parsed), errors)
 
 
