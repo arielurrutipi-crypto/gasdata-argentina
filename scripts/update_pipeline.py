@@ -839,10 +839,10 @@ def update_regulations(d):
     preview_targets=sorted(
         (x for x in known.values() if x.get("url") and x.get("jurisdiction")!="PBA" and not x.get("firstArticle")),
         key=lambda x:x.get("publishedAt",""),reverse=True
-    )[:48]
+    )[:80]
     def load_preview(item):
         try:
-            raw=fetch(item["url"],timeout=25)
+            raw=fetch(item["url"],timeout=15)
             soup=BeautifulSoup(raw,"html.parser")
             article=soup.find("article")
             body=clean(article.get_text(" ",strip=True)) if article else clean(soup.get_text(" ",strip=True))
@@ -852,7 +852,7 @@ def update_regulations(d):
             print("REG PREVIEW",item.get("url"),e)
             return item,"",""
     if preview_targets:
-        with ThreadPoolExecutor(max_workers=6) as ex:
+        with ThreadPoolExecutor(max_workers=8) as ex:
             futs=[ex.submit(load_preview,x) for x in preview_targets]
             for fut in as_completed(futs):
                 item,preview,disposition=fut.result()
@@ -1042,7 +1042,8 @@ def main():
     update_news(d)
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
-    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or _update_due(d,"Normativa",3): update_regulations(d)
+    needs_reg_backfill=any(x.get("jurisdiction")!="PBA" and x.get("url") and not x.get("firstArticle") for x in d.get("regulations",[]))
+    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
     if _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
@@ -1053,7 +1054,7 @@ def main():
     system_market(d)
     monthly_flows_status(d)
     if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
-    needs_pba_migration=d.get("bopbaScan",{}).get("cleanupVersion")!=2 or any(x.get("jurisdiction")=="PBA" and not x.get("disposition") for x in d.get("regulations",[]))
+    needs_pba_migration=d.get("bopbaScan",{}).get("cleanupVersion")!=3 or any(x.get("jurisdiction")=="PBA" and not x.get("disposition") for x in d.get("regulations",[]))
     if not d.get("bopbaScan") or needs_pba_migration or _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
     refresh_source_status(d)
     sync_update_catalog(d)
