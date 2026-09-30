@@ -240,79 +240,122 @@ def _month_days(period):
     nxt=(dt.replace(day=28)+timedelta(days=4)).replace(day=1)
     return (nxt-dt).days
 
+def _ar_decimal(text):
+    return float(str(text).strip().replace("−","-").replace(",", "."))
+
+def _latest_hydrocarbon_board():
+    home="https://todohidrocarburos.com/"
+    soup=BeautifulSoup(fetch(home,timeout=25),"html.parser")
+    months={"enero":1,"febrero":2,"marzo":3,"abril":4,"mayo":5,"junio":6,"julio":7,"agosto":8,"septiembre":9,"octubre":10,"noviembre":11,"diciembre":12}
+    found=[]
+    for a in soup.find_all("a",href=True):
+        label=clean(a.get_text(" ",strip=True)).lower()
+        m=re.search(r"tablero de control de(?:l)?\s+("+ "|".join(months) +r")\s+de\s+(20\d{2})",label,re.I)
+        if not m: continue
+        month=months[m.group(1).lower()]; year=int(m.group(2))
+        found.append((year,month,urllib.parse.urljoin(home,a["href"])))
+    if not found: raise ValueError("no se encontró tablero mensual en TodoHidrocarburos")
+    year,month,url=max(found)
+    return f"{year:04d}-{month:02d}",url
+
+def _board_segment(text,start_label,end_label):
+    m=re.search(re.escape(start_label)+r"(.*?)"+re.escape(end_label),text,re.I|re.S)
+    if not m: raise ValueError("no se encontró bloque "+start_label)
+    return m.group(1)
+
+def _board_row(segment,label):
+    p=re.escape(label).replace(r"\ ",r"\s+")
+    m=re.search(p+r"\s+([\d,]+)\s+([+\-−]?\d+(?:\.\d+)?%)\s+([+\-−]?\d+(?:\.\d+)?%)",segment,re.I)
+    if not m: raise ValueError("fila no encontrada: "+label)
+    return _ar_decimal(m.group(1)),m.group(2).replace("−","-"),m.group(3).replace("−","-")
+
 def update_basin_production(d):
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Producción por cuenca/provincia"),None)
+    current=d.get("basinMonthlyMeta",{}).get("latest","")
+    api_error=""
+    # First try the official historical series. It is useful as an integrity
+    # check, but at present its public API may lag the current-year dashboards.
     try:
         ids=["PROD_GAS_SESCO_1","PROD_GAS_SESCO_2","PROD_GAS_SESCO_3","PROD_GAS_SESCO_4","PROD_GAS_SESCO_5"]
         rows=_series_rows(ids,30)
-        raw={p:v for p,v in rows}
-        current=d.get("basinMonthlyMeta",{}).get("latest","")
-        candidates=sorted(p for p in raw if p.startswith("2026-"))
-        if not candidates: raise ValueError("la API oficial no devolvió meses 2026")
-        latest=max(candidates)
-        if current and latest<current:
-            raise ValueError("la API oficial devolvió un período anterior al ya validado")
-        names=["Cuenca Austral","Golfo San Jorge","Cuenca Neuquina","Cuenca Noroeste","Cuenca Cuyana"]
-        existing={x.get("month"):x for x in d.get("basinMonthly2026",[])}
-        built={}
-        for period in candidates:
-            vals=raw[period]
-            days=_month_days(period)
-            # SESCO historical series are monthly Mm3. If the endpoint ever
-            # changes to daily averages, avoid dividing values already on that scale.
-            daily=[v/days for v in vals] if sum(vals)>500 else vals
-            total=sum(daily)
-            if not 80<total<220: raise ValueError("total por cuencas fuera de rango: "+period+" "+str(total))
-            prev=raw.get(str(int(period[:4])-1)+period[4:])
-            prev_daily=None
-            if prev:
-                prev_days=_month_days(str(int(period[:4])-1)+period[4:])
-                prev_daily=[v/prev_days for v in prev] if sum(prev)>500 else prev
-            basins=[]
-            for i,name in enumerate(names):
-                value=daily[i]
-                share=value/total*100 if total else 0
-                trend=""
-                if prev_daily and prev_daily[i]:
-                    trend=(value/prev_daily[i]-1)*100
-                basins.append({
-                    "name":name,"value":_format_ar(value,3),"unit":"MMm³/d",
-                    "share":_format_ar(share,1)+"%",
-                    "trend":(("+" if trend>=0 else "")+_format_ar(trend,2)+"%") if prev_daily else ""
-                })
-            old=existing.get(period,{})
-            built[period]={
-                **old,"month":period,
-                "label":("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")[int(period[-2:])-1],
-                "total":_format_ar(total,3),
-                "reference":("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")[int(period[-2:])-1]+" "+period[:4]+" · promedio diario",
-                "validatedAt":iso(),"source":"SESCO / Secretaría de Energía · API Series de Tiempo",
-                "sourceUrl":"https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco/archivo/energia_0d1af33c-2791-4114-a276-51fe70478a09",
-                "basins":basins
-            }
-        # Preserve any manually validated 2026 rows not returned by the API.
-        merged={**existing,**built}
-        d["basinMonthly2026"]=sorted(merged.values(),key=lambda x:x.get("month",""))
-        meta=d.setdefault("basinMonthlyMeta",{})
-        meta.update(year=2026,latest=max(merged),source="Producción de gas por cuenca · SESCO / Secretaría de Energía",
-                    officialUrl="https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco/archivo/energia_0d1af33c-2791-4114-a276-51fe70478a09",
-                    note="Serie mensual oficial. GasData convierte el volumen mensual de cada cuenca a promedio diario y calcula participación y variación interanual.",
-                    checkedAt=iso(),validatedAt=iso(),auto=True)
-        src=next((x for x in d.get("sources",[]) if x.get("name")=="Datos Argentina · Energía"),None)
-        if src:
-            src.update(availability="DISPONIBLE",checkedAt=iso(),validatedAt=iso(),
-                       lastResult="API Series operativa · cuencas hasta "+latest)
-        if u:
-            u.update(last=iso(),next=iso(now()+timedelta(days=1)),status="updated" if latest>current else "unchanged",
-                     mode="Automática parcial",strategy="API SESCO mensual · control de período y rango",
-                     scope="Cuencas se actualizan automáticamente desde la API oficial. Provincia conserva el último consolidado validado mientras se integra su serie oficial.",
-                     note="Cuencas: lectura automática oficial hasta "+latest+". Provincia: pendiente de integrar al mismo lector.")
-        print("BASIN API",latest,len(built))
+        api_latest=max((p for p,_ in rows),default="")
+        if api_latest>=current and api_latest.startswith("2026-"):
+            raise ValueError("lector API vigente aún no implementado para reemplazo directo")
+        api_error="API SESCO histórica disponible hasta "+api_latest
     except Exception as e:
-        print("BASIN API",e)
+        api_error=str(e)[:120]
+    try:
+        period,url=_latest_hydrocarbon_board()
+        if current and period<current:
+            raise ValueError("el último tablero publicado es anterior al período ya validado")
+        raw=fetch(url,timeout=30)
+        soup=BeautifulSoup(raw,"html.parser")
+        text=clean(soup.get_text(" ",strip=True))
+        basin_seg=_board_segment(text,"PRODUCCIÓN DE GAS NATURAL (Mm3/día)","PRODUCCIÓN DE GAS NATURAL POR PROVINCIA (Mm3/mes)")
+        province_seg=_board_segment(text,"PRODUCCIÓN DE GAS NATURAL POR PROVINCIA (Mm3/día)","PRODUCCIÓN DE GAS NATURAL NO CONVENCIONAL POR PROVINCIA (Mm3/mes)")
+        total,_,total_yoy=_board_row(basin_seg,"TOTAL PAIS")
+        basin_labels=[
+          ("Cuenca Neuquina","CUENCA NEUQUINA"),
+          ("Cuenca Austral","CUENCA AUSTRAL"),
+          ("Golfo San Jorge","CUENCA DEL GOLFO SAN JORGE"),
+          ("Cuenca Noroeste","CUENCA NOROESTE"),
+          ("Cuenca Cuyana","CUENCA CUYANA")
+        ]
+        basins=[]
+        for display,label in basin_labels:
+            value,mom,yoy=_board_row(basin_seg,label)
+            basins.append({"name":display,"value":_format_ar(value,3),"unit":"MMm³/d",
+                           "share":_format_ar(value/total*100,1)+"%","trend":yoy})
+        if abs(sum(_ar_decimal(x["value"]) for x in basins)-total)>0.08:
+            raise ValueError("la suma por cuencas no cierra con el total país")
+        month_names=("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")
+        label=month_names[int(period[-2:])-1]
+        existing={x.get("month"):x for x in d.get("basinMonthly2026",[])}
+        existing[period]={
+          **existing.get(period,{}),"month":period,"label":label,"total":_format_ar(total,3),
+          "reference":label+" "+period[:4]+" · promedio diario","validatedAt":iso(),
+          "source":"SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",
+          "sourceUrl":url,"basins":basins
+        }
+        d["basinMonthly2026"]=sorted(existing.values(),key=lambda x:x.get("month",""))
+        d.setdefault("basinMonthlyMeta",{}).update(
+          year=2026,latest=max(existing),source="Producción promedio diaria por cuenca · SESCO/Secretaría de Energía",
+          officialUrl="https://www.argentina.gob.ar/produccion/energia/planeamiento-energetico/panel-de-indicadores/produccion-gas-prom-diaria-cuenca",
+          note="Actualización automática desde el tablero mensual que consolida estadísticas SESCO. Se valida el cierre contra el total país antes de publicar.",
+          checkedAt=iso(),validatedAt=iso(),auto=True
+        )
+        province_names=["Chubut","Estado Nacional","Formosa","Jujuy","La Pampa","Mendoza","Neuquén","Rio Negro","SALTA","Santa Cruz","Tierra del Fuego"]
+        provinces=[]
+        for name in province_names:
+            value,mom,yoy=_board_row(province_seg,name)
+            display={"Rio Negro":"Río Negro","SALTA":"Salta"}.get(name,name)
+            provinces.append({"name":display,"value":_format_ar(value,3),
+                              "share":("<0,1%" if value/total*100<0.05 else _format_ar(value/total*100,1)+"%"),
+                              "reference":label+" "+period[:4],"mom":mom,"yoy":yoy})
+        ptotal,_,_=_board_row(province_seg,"Total general")
+        if abs(sum(_ar_decimal(x["value"]) for x in provinces)-ptotal)>0.08 or abs(ptotal-total)>0.08:
+            raise ValueError("la suma por provincias no cierra con el total país")
+        d["provinces"]=provinces
+        d.setdefault("provincesMeta",{}).update(
+          total=_format_ar(total,3),reference=label+" "+period[:4]+" · promedio diario",
+          source="SESCO / Secretaría de Energía · consolidado TodoHidrocarburos",sourceUrl=url,
+          officialUrl="https://www.argentina.gob.ar/economia/energia/planeamiento-energetico/panel-de-indicadores/produccion-de-gas-promedio-diaria-por",
+          note="Estado Nacional agrupa producción bajo jurisdicción nacional/offshore. Cuencas y provincias se publican sólo si ambos cierres coinciden con el total país.",
+          checkedAt=iso(),validatedAt=iso(),auto=True
+        )
         if u:
-            u.update(last=iso(),next=iso(now()+timedelta(days=1)),status="partial",mode="Automática parcial",
-                     note="No se reemplazaron datos por cuenca: "+str(e)[:180]+". Provincia conserva el último consolidado validado.")
+            u.update(last=iso(),next=iso(now()+timedelta(days=1)),
+                     status="updated" if period>current else "unchanged",mode="Automática",
+                     strategy="Último tablero mensual + validación de cierres",
+                     scope="Detecta automáticamente el último mes, extrae gas por cuenca y provincia y valida ambas sumas contra el total país antes de reemplazar datos.",
+                     note="Cuencas y provincias validadas automáticamente hasta "+period+". "+api_error+".")
+        print("BASIN/PROVINCE",period,total,url)
+    except Exception as e:
+        print("BASIN/PROVINCE",e)
+        if u:
+            u.update(last=iso(),next=iso(now()+timedelta(days=1)),status="partial",mode="Automática",
+                     note="Lectura mensual no validada; se conservan los últimos datos: "+str(e)[:180])
+
 
 def demand_priority(d):
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
@@ -1129,7 +1172,7 @@ def sync_update_catalog(d):
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
       ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Cuadros BAGSA + normativa","Lee resolución y vigencia explícita de cuadros BAGSA. Conserva referencias anteriores si falta verificar un producto. No interpreta todavía todos los importes tarifarios."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
-      ("Producción por cuenca/provincia","Diaria","Automática parcial","API SESCO mensual · control de período y rango","Cuencas se actualizan automáticamente desde la API oficial y provincia conserva el último consolidado validado mientras se integra su serie."),
+      ("Producción por cuenca/provincia","Diaria","Automática","Último tablero mensual + validación de cierres","Detecta el último tablero mensual, extrae gas por cuenca y provincia y sólo publica si ambas sumas cierran contra el total país."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
       ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
       ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
