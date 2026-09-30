@@ -322,7 +322,7 @@ def update_basin_production(d):
           year=2026,latest=max(existing),source="Producción promedio diaria por cuenca · SESCO/Secretaría de Energía",
           officialUrl="https://www.argentina.gob.ar/produccion/energia/planeamiento-energetico/panel-de-indicadores/produccion-gas-prom-diaria-cuenca",
           note="Actualización automática desde el tablero mensual que consolida estadísticas SESCO. Se valida el cierre contra el total país antes de publicar.",
-          checkedAt=iso(),validatedAt=iso(),auto=True
+          checkedAt=iso(),validatedAt=iso(),auto=True,readerVersion=2
         )
         province_names=["Chubut","Estado Nacional","Formosa","Jujuy","La Pampa","Mendoza","Neuquén","Rio Negro","SALTA","Santa Cruz","Tierra del Fuego"]
         provinces=[]
@@ -1170,7 +1170,7 @@ def sync_update_catalog(d):
     specs=[
       ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."),
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
-      ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Cuadros BAGSA + normativa","Lee resolución y vigencia explícita de cuadros BAGSA. Conserva referencias anteriores si falta verificar un producto. No interpreta todavía todos los importes tarifarios."),
+      ("Tarifas ENReGE/BAGSA","Diaria","Automática","Cuadros BAGSA + normativa","Detecta automáticamente los cuadros vigentes, resolución y fecha de vigencia para GN/GLP. Si un documento no puede verificarse, conserva la última referencia válida."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
       ("Producción por cuenca/provincia","Diaria","Automática","Último tablero mensual + validación de cierres","Detecta el último tablero mensual, extrae gas por cuenca y provincia y sólo publica si ambas sumas cierran contra el total país."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
@@ -1211,12 +1211,12 @@ def main():
     needs_reg_backfill=any(x.get("jurisdiction")!="PBA" and x.get("url") and not x.get("firstArticle") for x in d.get("regulations",[]))
     if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
-    if _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
+    if d.get("tariffAutomation",{}).get("readerVersion")!=2 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
     update_market(d,fetch,iso)
     validate_pages(d)
     production(d)
-    if _update_due(d,"Producción por cuenca/provincia",24): update_basin_production(d)
+    if d.get("basinMonthlyMeta",{}).get("readerVersion")!=2 or _update_due(d,"Producción por cuenca/provincia",24): update_basin_production(d)
     demand_priority(d)
     system_market(d)
     monthly_flows_status(d)
