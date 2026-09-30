@@ -932,7 +932,22 @@ def _reg_categories(text):
 
 def _reg_relevant(text):
     low=(text or "").lower()
-    return any(k in low for k in REGULATION_GAS_SIGNALS)
+    gas_strong=(
+      "gas natural","gas licuado","glp","gnl","lng","gasoduct","subdistrib",
+      "propano","butano","plan gas","pist","enargas","ley n° 24.076","ley n.º 24.076",
+      "transportadora de gas","transporte de gas","distribución de gas","distribucion de gas",
+      "comercializadores de gas","comercializador de gas","nag-"
+    )
+    electric=(
+      "sistema argentino de interconexión","sistema argentino de interconexion"," sadi ",
+      "mercado eléctrico mayorista","mercado electrico mayorista","energía eléctrica","energia electrica",
+      "parque solar","fotovoltaic","edenor","edesur","cammesa","línea de media tensión",
+      "linea de media tension","subsecretaría de energía eléctrica","subsecretaria de energia electrica"
+    )
+    has_gas=any(k in low for k in gas_strong)
+    if any(k in (" "+low+" ") for k in electric) and not has_gas:
+        return False
+    return has_gas or any(k in low for k in REGULATION_GAS_SIGNALS)
 
 def _reg_number(name):
     name=clean(name)
@@ -1183,6 +1198,10 @@ def update_regulations(d):
         try: dt=datetime.fromisoformat(x.get("publishedAt",""))
         except Exception: dt=None
         if dt and dt>=REGULATION_START:
+            if x.get("jurisdiction")!="PBA":
+                probe_text=" ".join(str(x.get(k,"")) for k in ("title","desc","issuer","firstArticle","disposition"))
+                if not _reg_relevant(probe_text):
+                    continue
             if not x.get("issuer") and "/normativa/nacional/" in str(x.get("url","")):
                 try:
                     p=_parse_regulation(_norm_url(x["url"]),{"snippet":x.get("desc","")})
@@ -1195,6 +1214,7 @@ def update_regulations(d):
                 x.pop("disposition",None)
             existing.append(x)
     state=d.setdefault("regulationScan",{})
+    state["relevanceVersion"]=2
     try:
         last=datetime.strptime(state.get("lastScannedDate",""),"%Y-%m-%d").date()
     except Exception:
@@ -1444,8 +1464,9 @@ def main():
     update_news(d)
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
+    needs_reg_relevance=scan.get("relevanceVersion")!=2
     needs_reg_backfill=any(x.get("jurisdiction")!="PBA" and x.get("url") and not x.get("firstArticle") for x in d.get("regulations",[]))
-    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
+    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_relevance or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
     if d.get("tariffAutomation",{}).get("readerVersion")!=4 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
