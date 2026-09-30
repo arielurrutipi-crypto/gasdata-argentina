@@ -10,7 +10,7 @@ class ReadersTest(unittest.TestCase):
 
     def test_monthly_coordinates(self):
         words = [dict(text=t, x0=x, x1=x+18, top=y) for t,x,y in [('10,34',640,429), ('6,67',910,448), ('6,3',912,475), ('16,77',841,144), ('8,94',910,195), ('7,79',910,230), ('2026',706,285), ('2026',706,513)]]
-        self.assertEqual(monthly_values(words), {'imports': 8.94, 'exports': 6.67})
+        self.assertEqual(monthly_values(words), {'imports': 8.94, 'lng': 7.79, 'exports': 6.67, 'chile': 6.3})
         with self.assertRaises(ValueError):
             monthly_values([])
 
