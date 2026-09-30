@@ -39,17 +39,37 @@ def upsert_kpi(d,item):
     d["kpis"].append(item)
 
 def rss(source,url):
-    root=ET.fromstring(fetch(url)); out=[]
-    for it in root.findall(".//item")[:60]:
-        title=(it.findtext("title") or "").strip()
-        desc=clean(it.findtext("description") or "")
+    raw=fetch(url); out=[]
+    try:
+        root=ET.fromstring(raw)
+        items=root.findall(".//item")[:60]
+        parsed=[]
+        for it in items:
+            parsed.append((
+              (it.findtext("title") or "").strip(),
+              clean(it.findtext("description") or ""),
+              it.findtext("pubDate") or "",
+              (it.findtext("link") or "").strip()
+            ))
+    except Exception:
+        # Several energy-sector feeds contain invalid entities or small HTML
+        # fragments. Fall back to a tolerant parser instead of dropping the source.
+        soup=BeautifulSoup(raw.decode("utf-8","ignore"),"html.parser")
+        parsed=[]
+        for it in soup.find_all("item")[:60]:
+            def tx(*names):
+                node=next((it.find(n) for n in names if it.find(n)),None)
+                return clean(node.get_text(" ",strip=True)) if node else ""
+            link=it.find("link")
+            href=(link.get("href") if link and link.get("href") else (link.get_text(strip=True) if link else ""))
+            parsed.append((tx("title"),tx("description","summary","content:encoded"),tx("pubdate","pubDate","published"),href))
+    for title,desc,pub,link in parsed:
         hay=(title+" "+desc).lower()
-        if not any(k in hay for k in KEYWORDS): continue
+        if not title or not any(k in hay for k in KEYWORDS): continue
         out.append({
           "source":source,"sourceType":"PRESS",
-          "publishedAt":iso(pdate(it.findtext("pubDate") or "")),
-          "feedValidatedAt":iso(),"title":title,"desc":desc[:520],
-          "tags":["Gas"],"url":(it.findtext("link") or "").strip()
+          "publishedAt":iso(pdate(pub)),"feedValidatedAt":iso(),
+          "title":title,"desc":desc[:520],"tags":["Gas"],"url":link
         })
     return out
 
@@ -79,16 +99,18 @@ def html_news(source,url,limit=12):
 def update_news(d):
     feeds=[
       ("EconoJournal","https://econojournal.com.ar/feed/"),
-      ("Mejor Energía","https://www.mejorenergia.com.ar/feed/"),
       ("RunRun Energético","https://runrunenergetico.com/feed/"),
       ("RunRun Energético · Gas","https://runrunenergetico.com/category/oil-gas/gas/feed/"),
       ("Revista Petroquímica","https://revistapetroquimica.com/feed/"),
-      ("TGS","https://www.tgs.com.ar/feed/"),
-      ("TGN","https://www.tgn.com.ar/feed/")
+      ("TGS","https://www.tgs.com.ar/feed/")
     ]
     html_sources=[
+      ("Mejor Energía","https://www.mejorenergia.com.ar/"),
+      ("TGN","https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/"),
       ("Más Energía · LM Neuquén","https://mase.lmneuquen.com/"),
-      ("América GLP","https://www.americaglp.com/")
+      ("América GLP","https://www.americaglp.com/"),
+      ("ENReGE · Noticias","https://www.enargas.gob.ar/secciones/noticias/noticias.php"),
+      ("Secretaría de Energía","https://www.argentina.gob.ar/economia/energia/noticias")
     ]
     fresh=[]; ok_sources=[]
     for source,url in feeds:
