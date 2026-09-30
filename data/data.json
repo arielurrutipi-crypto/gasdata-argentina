@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "updatedAt": "2026-09-30T11:51-03:00",
+    "updatedAt": "2026-09-30T11:56-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -60,8 +60,8 @@
       "value": "43,3917",
       "unit": "MMm³/d",
       "reference": "Vie 02/10/2026 · PROYECCIÓN",
-      "validatedAt": "2026-09-30T11:51-03:00",
-      "nextValidation": "2026-10-01T11:51-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
+      "nextValidation": "2026-10-01T11:55-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
@@ -108,7 +108,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta",
       "desc": "YPF iniciará una nueva campaña de estudios técnicos en el Golfo San Matías como parte del desarrollo de Argentina LNG, el proyecto diseñado para convertir la producción de gas de Vaca Muerta en una plataforma de exportación de gas natural licuado a gran escala. Los trabajos serán realizados desde el buque Rustrigen, una embarcación especializada […] The post Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -121,7 +121,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "PECOM concretó su primera exportación de crudo Escalante hacia Hawái",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -134,7 +134,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Vaca Muerta: DLS Archer activó dos equipos de alta especificación para YPF",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -146,7 +146,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El petróleo se mantiene cerca de US$100 mientras se recupera la oferta de Medio Oriente",
       "desc": "Los mercados petroleros comenzaron a registrar señales de mayor estabilidad luego de que las exportaciones de crudo de Medio Oriente recuperaran casi por completo los niveles previos al conflicto regional. Aun con esa mejora, los precios internacionales continúan operando cerca de los US$100 por barril. Según estimaciones de JPMorgan Chase y Goldman Sachs, los volúmenes […] The post El petróleo se mantiene cerca de US$100 mientras se recupera la oferta de Medio Oriente first appeared on Runrun energético .",
       "tags": [
@@ -158,7 +158,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T07:45-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Bahía Grande participará de los estudios geotécnicos del proyecto Argentina LNG de YPF ENI",
       "desc": "Bahía Grande, empresa especializada en logística y operaciones marítimas para la industria energética con más de 35 años de trayectoria, será parte del proyecto Argentina LNG impulsado por YPF/ENI, la inversión privada más grande de la historia del país. El plan tiene como objetivo extraer el gas natural de Vaca Muerta en Neuquén, para convertirlo […] The post Bahía Grande participará de los estudios geotécnicos del proyecto Argentina LNG de YPF ENI first appeared on Runrun energético .",
       "tags": [
@@ -170,7 +170,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T11:37-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Juan Luchilo, gerente general de Cammesa: “El sistema eléctrico tiene ir a un esquema lo más full gas posible”",
       "desc": "Juan Luchilo, gerente general de Cammesa, no tiene dudas. “El sistema eléctrico tiene ir a un esquema lo más full gas posible”, afirmó en el Renewables y Electricity Day organizado por EconoJournal. “Desde el momento que se establece que Vaca Muerta es una fuente infinita de gas, hay que poner generación en boca de pozo […]",
       "tags": [
@@ -182,7 +182,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T10:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Chevron invertirá US$13.800 millones para triplicar su producción en Vaca Muerta",
       "desc": "La petrolera estadounidense Chevron aceleró su apuesta por Vaca Muerta con un plan que busca transformar a El Trapial en uno de los principales motores de crecimiento de su producción no convencional durante la próxima década. El proyecto fue presentado al Régimen de Incentivo para Grandes Inversiones (RIGI) y contempla desembolsos por US$13.800 millones, una […] The post Chevron invertirá US$13.800 millones para triplicar su producción en Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -194,7 +194,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Un buque argentino avanza con estudios clave para el desarrollo del proyecto Argentina GNL en Río Negro",
       "desc": "El proyecto Argentina GNL continúa sumando etapas técnicas en la costa atlántica rionegrina. Esta semana, el buque argentino Rustrigen inició una nueva campaña geofísica y oceanográfica en el Golfo San Matías, destinada a recopilar información necesaria para el diseño de la futura infraestructura offshore vinculada a la exportación de gas natural licuado. Las tareas forman […] The post Un buque argentino avanza con estudios clave para el desarrollo del proyecto Argentina GNL en Río Negro first appeared on Runrun en",
       "tags": [
@@ -206,7 +206,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:45-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina quedó a menos de 75.000 barriles diarios de alcanzar el millón impulsada por Vaca Muerta",
       "desc": "La producción petrolera argentina volvió a alcanzar un máximo histórico y se ubicó a menos de 75.000 barriles diarios de una marca que hasta hace pocos años parecía inalcanzable: el millón de barriles por día. Durante agosto de 2026, el país registró una extracción promedio de 926.925 barriles diarios, impulsada por el crecimiento sostenido de […] The post Argentina quedó a menos de 75.000 barriles diarios de alcanzar el millón impulsada por Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -219,7 +219,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "GNL: aumentó el tránsito de buques por el estrecho de Ormuz pese al conflicto",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -304,7 +304,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:40-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "La producción argentina proyecta alcanzar un millón de barriles diarios",
       "desc": "El país se encamina a marcar un hito histórico de extracción impulsado por el desarrollo de la formación Vaca Muerta […] The post La producción argentina proyecta alcanzar un millón de barriles diarios first appeared on revistapetroquimica.com .",
       "tags": [
@@ -316,7 +316,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:27-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste",
       "desc": "La petrolera estatal Saudi Aramco retomó los flujos a través de esta infraestructura de 1.200 kilómetros tras reparar los daños […] The post Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste first appeared on revistapetroquimica.com .",
       "tags": [
@@ -328,7 +328,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T17:24-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Enrege: delegados sindicales de UPCN y ATE presionaron a la conducción del ente en la última reunión de directorio",
       "desc": "La reunión de directorio del Ente Nacional Regulador del Gas y la Electricidad (Enrege) venía transcurriendo este lunes sin mayores sobresaltos, con el foco puesto en la actualización de tarifas de octubre, el apagón del 19 de septiembre y el plan de retiros voluntarios. Sin embargo, apenas se terminaron de tratar los temas del día, […]",
       "tags": [
@@ -340,7 +340,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T16:09-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Elecciones 2027: con foco en el derrame de Vaca Muerta, se lanzó un primer espacio opositor a Rolando Figueroa",
       "desc": "Las elecciones provinciales del 2027 en Neuquén aún no tienen fecha, pero un espacio político lanzó este lunes su plataforma de campaña con la que buscará disputarle la gobernación a Rolando Figueroa. Se trata del partido Cumplir, liderado por la diputada Brenda Buchiniz e integrado por una amalgama de dirigentes que incluye desde un exfuncionario […]",
       "tags": [
@@ -392,7 +392,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Urea: el gas de Vaca Muerta cuesta hasta un 68% menos que el del Presal brasileño",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -405,7 +405,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Las claves para entender la apuesta del GNL argentino",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -418,7 +418,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El gas de Vaca Muerta podría llegar a Brasil a U$S 6,3/MMBTU",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -431,7 +431,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El Hub Norte y la necesidad de infraestructura para el gas asociado",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -444,7 +444,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "EXIM de Estados Unidos financiará a Argentina LNG con U$S 6.000 millones",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -457,7 +457,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Vaca Muerta: el motor salarial que domina Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -470,7 +470,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Un tren para descomprimir la \"ruta de la arena\" de Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -483,7 +483,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Halliburton capacitó a sus operarios para operar Zeus en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -496,7 +496,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El camino hacia el \"sello verde\" Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -509,7 +509,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Alto apoyo al Programa \"Gas do Povo\" a un año de su creación",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -522,7 +522,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Se viene el precio “Bahía Blanca” para la tonelada de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -535,7 +535,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina mira para su exportación América, Asia y China",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -548,7 +548,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Cuál es el precio internacional, la demanda y perspectiva del GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -561,7 +561,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Colombia: la importación de GLP alcanzó al 51,7%, y ya superó a la oferta nacional",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -574,7 +574,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "La suba del precio internacional tensiona importación en México",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -587,7 +587,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina: City Gas instaló su segunda expendedora",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -600,7 +600,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Seminario para entender a la Argentina como exportadora de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -613,7 +613,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Colombia: Colgas el mayor importador de GLP, con el 53% del volumen entre el 2020 y el 2025",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -626,7 +626,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Nuevo proyecto de u$s360 M de Compañía Mega para producir más de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -639,7 +639,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "SuperGasBras ya maneja una flota de 51 camiones eléctricos en Río de Janeiro",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -652,7 +652,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Transporte de GLP varado al pie de la Cordillera por nieve",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -703,7 +703,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "OLACDE proyecta exportaciones firmes de gas a Brasil por 10 millones de m³ diarios desde 2029",
       "desc": "La expansión del shale gas de Vaca Muerta podría abrir una nueva etapa para las exportaciones energéticas argentinas si avanzan las inversiones y acuerdos necesarios para abastecer de manera estable al mercado brasileño. Según estimaciones presentadas por la OLACDE, el primer objetivo consiste en alcanzar envíos firmes de 10 millones de metros cúbicos diarios de […] The post OLACDE proyecta exportaciones firmes de gas a Brasil por 10 millones de m³ diarios desde 2029 first appeared on Runrun energético .",
       "tags": [
@@ -727,7 +727,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T09:01-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El Gobierno precisó cuánto costará la energía para data centers, grandes desarrollos mineros y nuevos proyectos de infraestructura en Vaca Muerta",
       "desc": "El Gobierno publicó el viernes pasado la resolución 264 de la Secretaría de Energía, una normativa que establece las condiciones de borde bajo las cuales deberán incorporarse al Mercado Eléctrico Mayorista (MEM) las nuevas inversiones que impliquen un salto significativo en el consumo de electricidad. La regulación apunta fundamentalmente a anticipar el impacto que podrían […]",
       "tags": [
@@ -751,7 +751,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T07:12-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales",
       "desc": "La petrolera YPF aporta el 48,9% del crudo no convencional argentino con 317,4 mil barriles diarios, mientras que el 80,6% […] The post YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales first appeared on revistapetroquimica.com .",
       "tags": [
@@ -763,7 +763,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T06:50-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones",
       "desc": "Un corredor marítimo supervisado por Estados Unidos y rutas alternativas permitieron restablecer el flujo de 8 millones de barriles diarios […] The post Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones first appeared on revistapetroquimica.com .",
       "tags": [
@@ -788,7 +788,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T09:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "McDermott y Pumpco aparecen como piezas clave detrás del financiamiento de US$ 6.000 millones para Argentina LNG",
       "desc": "Una parte importante del financiamiento por hasta US$ 6.000 millones que YPF negocia con el Export-Import Bank de Estados Unidos (EXIM Bank) podría terminar respaldando contratos ya adjudicados a empresas estadounidenses dentro del proyecto Argentina LNG, la principal apuesta exportadora vinculada a Vaca Muerta. El esquema propuesto por EXIM contempla recursos destinados específicamente a la […] The post McDermott y Pumpco aparecen como piezas clave detrás del financiamiento de US$ 6.000 millones para Argentina LNG",
       "tags": [
@@ -824,7 +824,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T08:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "El Senado limitó Zona Fría y 1,6 millones de usuarios perderán subsidios al gas",
       "desc": "El Senado aprobó una modificación al régimen de Zona Fría que reducirá el alcance de los subsidios al gas natural y dejará fuera del beneficio a aproximadamente 1,6 millones de usuarios residenciales. La decisión representa uno de los cambios regulatorios más relevantes del año para el mercado energético argentino. Detrás de la reforma aparece el […] The post El Senado limitó Zona Fría y 1,6 millones de usuarios perderán subsidios al gas first appeared on Runrun energético .",
       "tags": [
@@ -884,7 +884,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T06:52-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU",
       "desc": "El mandatario excluyó expresamente de la invitación a las firmas que exploten recursos en las Islas Malvinas bajo ocupación ilegal. […] The post Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU first appeared on revistapetroquimica.com .",
       "tags": [
@@ -969,7 +969,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-24T07:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Rincón del Mangrullo sigue al frente del gas de YPF mientras crecen Bandurria Sur y El Orejano",
       "desc": "La producción de gas operada por YPF alcanzó en agosto los 30,3 millones de metros cúbicos diarios y mantuvo a Rincón del Mangrullo como el principal bloque gasífero de la compañía por cuarto mes consecutivo. Aunque la producción total registró una caída mensual del 3,2%, algunos desarrollos no convencionales lograron incrementar sus volúmenes y ganar […] The post Rincón del Mangrullo sigue al frente del gas de YPF mientras crecen Bandurria Sur y El Orejano first appeared on Runrun energético .",
       "tags": [
@@ -993,7 +993,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-21T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Complejo Industrial Neuquén: la apuesta de YPF para Argentina LNG",
       "desc": "La petrolera YPF presentó en Plaza Huincul los detalles del Complejo Industrial Neuquén, pieza clave del proyecto Argentina LNG que desarrolla junto con Eni y XRG. La primera etapa contempla una inversión de US$ 51.000 millones y una capacidad de 12 millones de toneladas anuales, con operaciones previstas desde 2030. El complejo se ubicará sobre […] The post Complejo Industrial Neuquén: la apuesta de YPF para Argentina LNG first appeared on Runrun energético .",
       "tags": [
@@ -1018,7 +1018,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-17T08:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina se perfila como potencia global en GLP gracias a Vaca Muerta",
       "desc": "El director de Midstream Gas & GLP de YPF, Pedro Locreille, anunció el 16 de septiembre de 2026 en el Seminario Internacional de GLP “De Argentina hacia el mundo” que la Argentina podría alcanzar hasta 9 millones de toneladas anuales del mencionado hidrocarburo hacia 2031, lo que ubicaría al país entre los cinco a siete […] The post Argentina se perfila como potencia global en GLP gracias a Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -1030,7 +1030,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-16T10:00-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Argentina LNG acelera su desarrollo: YPF firmará la FID antes de fin de año",
       "desc": "El presidente y CEO de YPF, Horacio Marín, confirmó en la feria internacional Gastech 2026 que el proyecto Argentina LNG alcanzará la Decisión Final de Inversión (FID) antes de fin de año, con inicio de obras programado para febrero de 2027. En el panel “Argentina LNG: Building the Next Global Energy Supply Hub”, Marín compartió […] The post Argentina LNG acelera su desarrollo: YPF firmará la FID antes de fin de año first appeared on Runrun energético .",
       "tags": [
@@ -1042,7 +1042,7 @@
       "source": "RunRun Energético · Gas",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-16T09:15-03:00",
-      "feedValidatedAt": "2026-09-30T11:51-03:00",
+      "feedValidatedAt": "2026-09-30T11:53-03:00",
       "title": "Río Negro avanza con infraestructura para exportar gas de Vaca Muerta",
       "desc": "El gobernador Alberto Weretilneck recorrió en el Puerto de San Antonio Este la descarga y acopio de 3.340 caños de 36 pulgadas destinados al gasoducto que conectará Vaca Muerta con la costa rionegrina. La obra, de 472 kilómetros, permitirá transportar hasta 27 millones de m³ de gas por día y abastecer el primer proyecto de […] The post Río Negro avanza con infraestructura para exportar gas de Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -1093,7 +1093,7 @@
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T11:45-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 25/09/2026 VISTO el Expediente N.° EX-2026-69172932- -APN-UDYE#ENREGE, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que,",
@@ -1117,7 +1117,7 @@
       "category": "Transporte",
       "title": "Autorízase Segunda Etapa de Privatización.",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T11:46-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Autorízase Segunda Etapa de Privatización.",
@@ -1201,7 +1201,7 @@
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
       "publishedAt": "2026-09-24T00:00-03:00",
-      "validatedAt": "2026-09-30T11:28-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
@@ -1212,7 +1212,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347890/20260924",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma DISTRIBUIDORA INTEGRAL DE ENERGÍA SOCIEDAD ANÓNIMA (DISTRIBUIDORA INTEGRAL DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma DISTRIBUIDORA INTEGRAL DE ENERGÍA SOCIEDAD ANÓNIMA (DISTRIBUIDORA INTEGRAL DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 654/2026",
@@ -2163,7 +2166,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 360/2026 RESFC-2026-360-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 360/2026 RESFC-2026-360-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71247980- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
@@ -2175,14 +2178,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345256/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Transportadora de Gas del Mercosur S.A. incluidos en el Anexo N.° IF-2026-73148730-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Transportadora de Gas del Mercosur S.A. incluidos en el Anexo N.° IF-2026-73148730-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 361/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 361/2026 RESFC-2026-361-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 361/2026 RESFC-2026-361-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71248457- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
@@ -2195,14 +2201,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345257/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148378-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73148378-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 362/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 362/2026 RESFC-2026-362-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 362/2026 RESFC-2026-362-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71247743- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
@@ -2214,7 +2223,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345258/20260731",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañia Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73148896-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañia Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73148896-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 363/2026",
@@ -2240,7 +2252,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 364/2026 RESFC-2026-364-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 364/2026 RESFC-2026-364-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71248984- -APN-UDYE#ENREGE; las Leyes N.° 24.076 -T.O. 2025 (B.O. 7- 7-25) y N.° 27.742 (B.O. 8-7-24); los Decretos N.° 1738/92 (B.O. 28-9-92), DNU N.° 55/23 (B.O. 18-12- 23), DNU N.° 1023/24 (B.O. 20-11-24",
@@ -2253,14 +2265,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345260/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Gasandes Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73147411-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Gasandes Argentina Sociedad Anónima, incluidos en el Anexo N.° IF-2026-73147411-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 365/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 365/2026 RESFC-2026-365-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 365/2026 RESFC-2026-365-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71264549- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2275,7 +2290,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345261/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Litoral Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632875-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Litoral Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632875-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 366/2026",
@@ -2326,7 +2344,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 368/2026 RESFC-2026-368-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 368/2026 RESFC-2026-368-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71265178- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2341,14 +2359,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345264/20260731",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632684-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632684-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 369/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 369/2026 RESFC-2026-369-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 369/2026 RESFC-2026-369-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71264861- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2363,14 +2384,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345265/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632790-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632790-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 370/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 370/2026 RESFC-2026-370-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 370/2026 RESFC-2026-370-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71264276- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2385,14 +2409,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345266/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Naturgy Noa Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632989-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Naturgy Noa Sociedad Anónima incluidos en el Anexo N.° IF-2026-73632989-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 371/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 371/2026 RESFC-2026-371-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 371/2026 RESFC-2026-371-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71264077- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2407,14 +2434,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345267/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Gas Nea Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633085-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Gas Nea Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633085-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 372/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 372/2026 RESFC-2026-372-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 372/2026 RESFC-2026-372-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71263231- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2429,14 +2459,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345268/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633183-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633183-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 373/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 373/2026 RESFC-2026-373-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 373/2026 RESFC-2026-373-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N.° EX-2026-71261467- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -2451,14 +2484,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345269/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas del Sur Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633241-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas del Sur Sociedad Anónima incluidos en el Anexo N.° IF-2026-73633241-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 374/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 374/2026 RESFC-2026-374-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 374/2026 RESFC-2026-374-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N° EX-2026-71737014-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARÍA DE ENERGÍA (SE), mediante la Resolución N° 190 de fecha 30 de julio de 2026, establece para el período comprendido entre el 1 de agosto de 2026 y e",
@@ -2469,14 +2505,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345270/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-73221925-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-73221925-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 375/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 375/2026 RESFC-2026-375-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 375/2026 RESFC-2026-375-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/07/2026 VISTO el Expediente N° EX-2026-71736902-APN-USDE#ENREGE, y CONSIDERANDO: Que la SECRETARIA DE ENERGÍA (SE), mediante la Resolución N° 190 de fecha 30 de julio de 2026, establece para el período comprendido entre el 1 de agosto de 2026 y e",
@@ -2488,14 +2527,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345271/20260731?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-73222344-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "disposition": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-73222344-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 187/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 187/2026 RESOL-2026-187-APN-SE#MEC",
       "publishedAt": "2026-07-31T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 187/2026 RESOL-2026-187-APN-SE#MEC",
@@ -2510,14 +2552,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345281/20260731",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Prorrógase para el mes de agosto de 2026 la bonificación adicional extraordinaria del VEINTICINCO POR CIENTO (25%), establecida para el mes de mayo de 2026, por el Artículo 1° de la Resolución N° 111 de fecha 30 de abril de 2026 de esta SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, sobre el consumo correspondiente, aplicable a los usuarios de gas natural y gas propano indiluido por redes, beneficiarios del Régimen de Subsidios Energéticos Focalizados (SEF), creado por el Decreto N° 943 de fecha 31 de diciembre de 2025.",
+      "disposition": "Prorrógase para el mes de agosto de 2026 la bonificación adicional extraordinaria del VEINTICINCO POR CIENTO (25%), establecida para el mes de mayo de 2026, por el Artículo 1° de la Resolución N° 111 de fecha 30 de abril de 2026 de esta SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, sobre el consumo correspondiente, aplicable a los usuarios de gas…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 331/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 331/2026 RESFC-2026-331-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 331/2026 RESFC-2026-331-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 28/07/2026 VISTO el Expediente N.° EX-2024-126763295- -APN-GDYE#ENARGAS; lo dispuesto por los artículos 37 y 38 de la Ley N.° 24.076 -T.O 2025 (B.O. 7-7-25) y su Decreto reglamentario N.° 1738/92 (B.O. 28-9-92); el Numeral 9.4.2.5 de las Reglas Bási",
@@ -2529,14 +2574,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345159/20260730",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Durante la vigencia de la emergencia energética, declarada por el Decreto N.° 55/23 y prorrogada por los Decretos Nros. 1023/24, 370/25 y 49/26 hasta el 31 de diciembre de 2027, suspender transitoriamente la aplicación de la Resolución N.° RESOL-2025-559-APN-DIRECTORIO#ENARGAS conforme los párrafos del Considerando que precede a la presente medida.",
+      "disposition": "Durante la vigencia de la emergencia energética, declarada por el Decreto N.° 55/23 y prorrogada por los Decretos Nros. 1023/24, 370/25 y 49/26 hasta el 31 de diciembre de 2027, suspender transitoriamente la aplicación de la Resolución N.° RESOL-2025-559-APN-DIRECTORIO#ENARGAS conforme los párrafos del Considerando que precede a la presente medida.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 336/2026",
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 336/2026 RESFC-2026-336-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-30T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 336/2026 RESFC-2026-336-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 29/07/2026 VISTO el Expediente N° EX-2023-93013721-APN-SD#ENRE y la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, y CONSIDERANDO: Que, en el considerando número 166 de la resolución de",
@@ -2546,14 +2594,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345160/20260730",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Reemplazar en el considerando 166 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, donde dice «“Transener c/ Provincia de Neuquén” (Fallos 323:3949)», debe decir «“Compañía de Transportes de Energía Eléctrica en Alta Tensión TRANSENER S.A. c/Neuquén, Provincia del s/ acción declarativa (C.30.XXXV)”» y; donde dice «“Central Puerto S.A.” (Fallos 329:595)», debe decir «“Ente Regulador de la Electricidad de la Pcia. de S.E. c/ resoluciones 535/97 - 1108/97 - E.N.R.E. - (exp. 1232/95 - 3492/97) y otro. E. 167. XXXVII.14/03/2006” (Fallos: 329:595)».",
+      "disposition": "Reemplazar en el considerando 166 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 330 de fecha 28 de julio de 2026, donde dice «“Transener c/ Provincia de Neuquén” (Fallos 323:3949)», debe decir «“Compañía de Transportes de Energía Eléctrica en Alta Tensión TRANSENER S.A. c/Neuquén, Provincia del s/ acción declarativa…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 180/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 180/2026 RESOL-2026-180-APN-SE#MEC",
       "publishedAt": "2026-07-28T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 180/2026 RESOL-2026-180-APN-SE#MEC",
@@ -2564,14 +2615,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345007/20260728",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Sustitúyese el Artículo 6° de la Resolución Nº 131 de fecha 31 de julio del 2003 de la SECRETARÍA DE ENERGÍA del ex MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS, por el siguiente: “Los “OPERADORES DE GAS LICUADO DE PETRÓLEO AUTOMOTOR (OGLPA)” para estar aprobados por la SUBSECRETARÍA DE HIDROCARBUROS, por sí o por medio de sus dependencias, deberán presentar la certificación del cumplimiento de las condiciones de seguridad vigentes, emitida por una de las Empresas Auditoras de Seguridad, debidamente registradas ante la SECRETARÍA DE ENERGÍA y efectuar su inscripción en el REGISTRO NACIONAL DE OPERADORES DE GAS LICUADO DE PETRÓLEO EN AUTOMOTORES (RNOGLPA), conforme las estipulaciones contenidas en los Anexos I, II, III, IV y V de la presente resolución y en el resto de la normativa vigente al momento de su inscripción. La referida aprobación de la SUBSECRETARÍA DE HI",
+      "disposition": "Sustitúyese el Artículo 6° de la Resolución Nº 131 de fecha 31 de julio del 2003 de la SECRETARÍA DE ENERGÍA del ex MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS, por el siguiente: “Los “OPERADORES DE GAS LICUADO DE PETRÓLEO AUTOMOTOR (OGLPA)” para estar aprobados por la SUBSECRETARÍA DE HIDROCARBUROS, por sí o por medio de sus…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 167/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 167/2026 RESOL-2026-167-APN-SE#MEC",
       "publishedAt": "2026-07-24T00:00-03:00",
-      "validatedAt": "2026-09-28T15:03-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 167/2026 RESOL-2026-167-APN-SE#MEC",
@@ -2585,14 +2639,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344887/20260724",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Durante la vigencia de la emergencia energética, declarada por el Decreto N° 55 del 16 de diciembre de 2023 y prorrogada por los Decretos Nros. 1.023 del 19 de noviembre de 2024, 370 del 30 de mayo de 2025 y 49 del 26 de enero de 2026 hasta el 31 de diciembre de 2027, las diferencias diarias acumuladas mensualmente, conforme con el Numeral 9.4.2.5. de las Reglas Básicas de la Licencia de Distribución (RBLD) de gas, cuyo modelo fue aprobado por el Decreto N° 2255/92, serán calculadas e incorporadas con su signo conforme al Numeral 9.4.2.6. de las RBLD, cada DOS (2) meses.",
+      "disposition": "Durante la vigencia de la emergencia energética, declarada por el Decreto N° 55 del 16 de diciembre de 2023 y prorrogada por los Decretos Nros. 1.023 del 19 de noviembre de 2024, 370 del 30 de mayo de 2025 y 49 del 26 de enero de 2026 hasta el 31 de diciembre de 2027, las diferencias diarias acumuladas mensualmente, conforme con el Numeral 9.4.2.5. de las…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 165/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 165/2026 RESOL-2026-165-APN-SE#MEC",
       "publishedAt": "2026-07-22T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 165/2026 RESOL-2026-165-APN-SE#MEC",
@@ -2603,14 +2660,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344760/20260722?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Apruébanse las tarifas máximas indicadas en el Anexo I (IF-2026-65293817-APN-SSH#MEC), que forma parte integrante de la presente medida, aplicables a los usuarios por los servicios de uso de boya para la carga y descarga de hidrocarburos a buques tanque y de almacenaje en la Terminal Marítima Puerto Rosales ubicada en la Provincia de BUENOS AIRES. Las tarifas aprobadas por la presente medida no incluyen el Impuesto al Valor Agregado (IVA).",
+      "disposition": "Apruébanse las tarifas máximas indicadas en el Anexo I (IF-2026-65293817-APN-SSH#MEC), que forma parte integrante de la presente medida, aplicables a los usuarios por los servicios de uso de boya para la carga y descarga de hidrocarburos a buques tanque y de almacenaje en la Terminal Marítima Puerto Rosales ubicada en la Provincia de BUENOS AIRES.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 166/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 166/2026 RESOL-2026-166-APN-SE#MEC",
       "publishedAt": "2026-07-22T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 166/2026 RESOL-2026-166-APN-SE#MEC",
@@ -2622,14 +2682,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344761/20260722?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Créase el REGISTRO DE OPERACIONES DE EXPORTACIÓN, en el cual deberán registrarse todas las Notificaciones de Exportación, Objeciones y Constancias de Libre Exportación de Hidrocarburos y sus derivados, sustanciadas y/o emitidas en el marco del Decreto N° 1.057 de fecha 28 de noviembre de 2024.",
+      "disposition": "Créase el REGISTRO DE OPERACIONES DE EXPORTACIÓN, en el cual deberán registrarse todas las Notificaciones de Exportación, Objeciones y Constancias de Libre Exportación de Hidrocarburos y sus derivados, sustanciadas y/o emitidas en el marco del Decreto N° 1.057 de fecha 28 de noviembre de 2024.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 282/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 282/2026 RESFC-2026-282-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-21T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 282/2026 RESFC-2026-282-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 17/07/2026 VISTO el Expediente N.° EX-2026-32154260- -APN-GDYE#ENARGAS, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que",
@@ -2643,14 +2706,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344601/20260721",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Inscribir a Cuñado Oil & Gas Sociedad Anónima como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
+      "disposition": "Inscribir a Cuñado Oil & Gas Sociedad Anónima como Comercializador de Gas Natural en el Registro de Comercializadores, en el ámbito de la Unidad Desempeño y Economía del Ente Nacional Regulador del Gas y la Electricidad, de conformidad con lo establecido en la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS y sus normas complementarias.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 163/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 163/2026 RESOL-2026-163-APN-SE#MEC",
       "publishedAt": "2026-07-20T00:00-03:00",
-      "validatedAt": "2026-09-28T15:03-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 163/2026 RESOL-2026-163-APN-SE#MEC",
@@ -2661,7 +2727,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344525/20260720",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma HFV ENERGÍA SOCIEDAD ANÓNIMA (HFV ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma HFV ENERGÍA SOCIEDAD ANÓNIMA (HFV ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 270/2026",
@@ -2689,7 +2758,7 @@
       "category": "Comercialización",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 271/2026 RESFC-2026-271-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-17T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 271/2026 RESFC-2026-271-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 15/07/2026 VISTO el Expediente N.° EX-2025-128318787- -APN-GDYE#ENARGAS, la Ley N.° 24.076 (T.O. 2025 - B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Qu",
@@ -2701,14 +2770,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344478/20260717",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Disponer la baja de Fox Petrol Sociedad Anónima como Comercializador de gas natural en el REGISTRO DE COMERCIALIZADORES, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "disposition": "Disponer la baja de Fox Petrol Sociedad Anónima como Comercializador de gas natural en el REGISTRO DE COMERCIALIZADORES, en el ámbito de la Unidad de Desempeño y Economía de este Organismo, de conformidad y con el alcance establecido en la Resolución N.º RESFC-2020-94-APN-DIRECTORIO#ENARGAS.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 158/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 158/2026 RESOL-2026-158-APN-SE#MEC",
       "publishedAt": "2026-07-13T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 158/2026 RESOL-2026-158-APN-SE#MEC",
@@ -2718,14 +2790,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344225/20260713",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma ACONCAGUA ENERGÍA TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (ACONCAGUA ENERGÍA TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "disposition": "Autorízase el ingreso de la firma ACONCAGUA ENERGÍA TRADING SOCIEDAD ANÓNIMA UNIPERSONAL (ACONCAGUA ENERGÍA TRADING S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 233/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 233/2026 RESFC-2026-233-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-07T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 233/2026 RESFC-2026-233-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 06/07/2026 Visto el Expediente N° EX-2026-47796658-APN-SD#ENRE y la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, y CONSIDERANDO: Que mediante el artículo 6 de la Resolución del Visto, s",
@@ -2738,7 +2813,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344099/20260707",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Reemplazar los valores tarifarios (expresados en $/kWh) detallados en el cuadro “Tarifa General” del IF-2026-52106633-APN-UARYEE#ENREGE, aprobado por el artículo 6 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, correspondientes al segmento de consumo G1, de modo que donde dice “176,194” debe decir “252,091”; al segmento G2, de modo que donde dice “193,444” debe decir “269,343”; al segmento G3, de modo que donde dice “182,648” debe decir “258,544” y; al segmento G4, de modo que donde dice “180,029” debe decir “255,926”",
+      "disposition": "Reemplazar los valores tarifarios (expresados en $/kWh) detallados en el cuadro “Tarifa General” del IF-2026-52106633-APN-UARYEE#ENREGE, aprobado por el artículo 6 de la Resolución del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) N° 26 de fecha 28 de mayo de 2026, correspondientes al segmento de consumo G1, de modo que donde dice “176,194”…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 215/2026",
@@ -2784,7 +2862,7 @@
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 214/2026 RESFC-2026-214-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-03T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 214/2026 RESFC-2026-214-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 01/07/2026 VISTO el Expediente N.° EX-2024-120672257- -APN-GAL#ENARGAS, la Ley N.° 24.076 – T.O. 2025 (B.O. 7-7-25), su Decreto Reglamentario N.º 1738/92, el Decreto N.º 2255/92 (B.O. 7-12-92), la Resolución N.° RESOL-2024-848-APN-DIRECTORIO#ENARGAS",
@@ -2798,14 +2876,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343978/20260703",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar la adecuación de la escala de multas establecida en el artículo 58 inc. a) de la Ley N.° 24.076 – T.O. 2025, aplicable a terceros no prestadores, determinando como monto mínimo PESOS CIENTO CUARENTA Y SEIS MIL TRESCIENTOS UNO ($ 146.301) y como monto máximo a PESOS CIENTO CUARENTA Y SEIS MILLONES TRESCIENTOS UN MIL ($ 146.301.000).",
+      "disposition": "Aprobar la adecuación de la escala de multas establecida en el artículo 58 inc. a) de la Ley N.° 24.076 – T.O. 2025, aplicable a terceros no prestadores, determinando como monto mínimo PESOS CIENTO CUARENTA Y SEIS MIL TRESCIENTOS UNO ($ 146.301) y como monto máximo a PESOS CIENTO CUARENTA Y SEIS MILLONES TRESCIENTOS UN MIL ($ 146.301.000).",
+      "operativePreview": true
     },
     {
       "num": "Resolución 199/2026",
       "category": "Infraestructura",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 199/2026 RESFC-2026-199-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-02T00:00-03:00",
-      "validatedAt": "2026-09-28T15:06-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 199/2026 RESFC-2026-199-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N° EX-2026-51477908-APN-SD#ENRE, la Ley N° 27.401 y el Decreto N° 452 de fecha 4 de julio de 2025, y CONSIDERANDO: Que a través de la Ley N° 27.401 se estableció un régimen de responsabilidad penal aplicable a las pers",
@@ -2815,32 +2896,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343909/20260702",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
-    },
-    {
-      "num": "PBA · 2026-07-01 · Página 79",
-      "title": "todo tipo sean públicas o privadas, obras civiles, viales, redes de todo tipo eléctricas, gas natural , agua potable, cloacas, pavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en general, gerenciamie",
-      "desc": ", y\nrefacción de edificios de cualquier naturaleza, proyecto y/o realización de obras y trabajos de arquitectura e ingeniería de\ntodo tipo sean públicas o privadas, obras civiles, viales, redes de todo tipo eléctricas, gas natural , agua potable, cloacas,\npavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en general,\ngerenciamiento de obras, dirección ejecutiva",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Infraestructura",
-      "tags": [
-        "PBA",
-        "Infraestructura"
-      ],
-      "date": "01/07/2026",
-      "publishedAt": "2026-07-01T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:28-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/14251/ver#page=79",
       "auto": true,
-      "disposition": "todo tipo sean públicas o privadas, obras civiles, viales, redes de todo tipo eléctricas, gas natural , agua potable, cloacas, pavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en general, gerenciamie"
+      "firstArticle": "Instruir a las licenciatarias de transporte y distribución de gas natural así como a las subdistribuidoras de gas natural, y a las concesionarias de transporte y distribución de electricidad de jurisdicción federal, a inscribirse en el Registro de Integridad y Transparencia para Empresas y Entidades (RITE) dependiente de la OFICINA ANTICORRUPCIÓN.",
+      "disposition": "Instruir a las licenciatarias de transporte y distribución de gas natural así como a las subdistribuidoras de gas natural, y a las concesionarias de transporte y distribución de electricidad de jurisdicción federal, a inscribirse en el Registro de Integridad y Transparencia para Empresas y Entidades (RITE) dependiente de la OFICINA ANTICORRUPCIÓN.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 161/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 161/2026 RESFC-2026-161-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 161/2026 RESFC-2026-161-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62718200- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); y CONSIDERANDO: Que mediante Decreto N.° 2458/92 (B.O. 22-12-92) se le otorgó una licencia de",
@@ -2852,14 +2918,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343780/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR SOCIEDAD ANÓNIMA, incluidos en el Anexo N.° IF-2026-63283675-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL SUR SOCIEDAD ANÓNIMA, incluidos en el Anexo N.° IF-2026-63283675-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 162/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 162/2026 RESFC-2026-162-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 162/2026 RESFC-2026-162-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62719367- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); y CONSIDERANDO: Que mediante Decreto N.° 2457/92 (B.O. 22-12-92) se le otorgó una licencia de",
@@ -2871,14 +2940,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343781/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE SOCIEDAD ANÓNIMA, incluidos en el Anexo N.° IF-2026-63282865-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los Cuadros Tarifarios a aplicar por TRANSPORTADORA DE GAS DEL NORTE SOCIEDAD ANÓNIMA, incluidos en el Anexo N.° IF-2026-63282865-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 163/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 163/2026 RESFC-2026-163-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 163/2026 RESFC-2026-163-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62723953- -APN-UDYE#ENREGE; las Leyes Nros. 17.319 (B.O. 30-6-67) y 24.076 - T.O. 2025 (B.O. 7-7-25); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 729/95 (B.O. 30-5-95); los Decretos de Necesidad y Urgencia",
@@ -2890,14 +2962,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343782/20260701",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63288505-APN-UDYE#ENREGE, que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63288505-APN-UDYE#ENREGE, que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 165/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 165/2026 RESFC-2026-165-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:53-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 165/2026 RESFC-2026-165-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62721690- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
@@ -2910,14 +2985,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343784/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO GASANDES ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289999-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO GASANDES ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289999-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 164/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 164/2026 RESFC-2026-164-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 164/2026 RESFC-2026-164-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62722767- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
@@ -2929,14 +3007,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343783/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63287919-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por COMPAÑÍA ENTRERRIANA DE GAS SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63287919-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 166/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 166/2026 RESFC-2026-166-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 166/2026 RESFC-2026-166-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62723666- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
@@ -2949,14 +3030,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343785/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO NORANDINO ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63290443-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por GASODUCTO NORANDINO ARGENTINA SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63290443-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 167/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 167/2026 RESFC-2026-167-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 167/2026 RESFC-2026-167-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62722903- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
@@ -2968,14 +3052,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343786/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por GAS LINK SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289529-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por GAS LINK SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63289529-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 168/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 168/2026 RESFC-2026-168-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 168/2026 RESFC-2026-168-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62723393- -APN-UDYE#ENREGE; las Leyes Nros. 17.319 (B.O. 30-6-67) y 24.076 - T.O. 2025 (B.O. 7-7-25); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 729/95 (B.O. 30-5-95); los Decretos de Necesidad y Urgencia",
@@ -2987,14 +3074,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343787/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por REFINERÍA DEL NORTE SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291025-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por REFINERÍA DEL NORTE SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291025-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 169/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 169/2026 RESFC-2026-169-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 169/2026 RESFC-2026-169-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62720390- -APN-UDYE#ENREGE; las Leyes Nros. 17.319 (B.O. 30-6-67) y 24.076 - T.O. 2025 (B.O. 7-7-25); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 729/95 (B.O. 30-5-95); los Decretos de Necesidad y Urgencia",
@@ -3006,14 +3096,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343788/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el anexo N.° IF-2026-63289027-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por ENEL GENERACIÓN CHILE S.A. SUCURSAL ARGENTINA incluidos en el anexo N.° IF-2026-63289027-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 170/2026",
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 170/2026 RESFC-2026-170-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 170/2026 RESFC-2026-170-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62723129- -APN-UDYE#ENREGE; la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25); el Decreto N.° 1738/92 (B.O. 28-9-92); los Decretos de Necesidad y Urgencia Nros. 55/23 (B.O. 18-12-23), 1023/24 (B.O. 20-11-24), 370",
@@ -3025,14 +3118,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343789/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios de transición a aplicar por TRANSPORTADORA DE GAS DEL MERCOSUR SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291252-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios de transición a aplicar por TRANSPORTADORA DE GAS DEL MERCOSUR SOCIEDAD ANÓNIMA incluidos en el anexo N.° IF-2026-63291252-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 171/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 171/2026 RESFC-2026-171-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 171/2026 RESFC-2026-171-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62844304- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 -T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urgen",
@@ -3047,14 +3143,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343790/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Naturgy Noa Sociedad Anónima incluidos en el Anexo N.° IF-2026-64057163-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Naturgy Noa Sociedad Anónima incluidos en el Anexo N.° IF-2026-64057163-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 172/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 172/2026 RESFC-2026-172-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 172/2026 RESFC-2026-172-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62846314- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 -T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urgen",
@@ -3069,7 +3168,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343791/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056166-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056166-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 173/2026",
@@ -3120,7 +3222,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 175/2026 RESFC-2026-175-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 175/2026 RESFC-2026-175-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62839247- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 -T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urgen",
@@ -3135,7 +3237,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343794/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056712-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056712-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 193/2026",
@@ -3164,7 +3269,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 194/2026 RESFC-2026-194-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 194/2026 RESFC-2026-194-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62838991- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -3179,14 +3284,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343813/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056419-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056419-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 195/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 195/2026 RESFC-2026-195-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 195/2026 RESFC-2026-195-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62838559- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 - T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urge",
@@ -3201,14 +3309,17 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343814/20260701?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056296-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-64056296-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 204/2026",
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 204/2026 RESFC-2026-204-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 204/2026 RESFC-2026-204-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 30/06/2026 VISTO el Expediente N.° EX-2026-62839449- -APN-UDYE#ENREGE; las Leyes N.° 17.319 (B.O. 30-6-67) y N.° 24.076 -T.O. 2025 (B.O. 7-7-2025); los Decretos Nros. 1738/92 (B.O. 28-9-92) y 2255/92 (B.O. 7-12-92); los Decretos de Necesidad y Urgen",
@@ -3224,7 +3335,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343815/20260701",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Aprobar los cuadros tarifarios a aplicar por Naturgy Ban Sociedad Anónima incluidos en el Anexo N.° IF-2026-64343669-APN-UDYE#ENREGE que forma parte de la presente.",
+      "disposition": "Aprobar los cuadros tarifarios a aplicar por Naturgy Ban Sociedad Anónima incluidos en el Anexo N.° IF-2026-64343669-APN-UDYE#ENREGE que forma parte de la presente.",
+      "operativePreview": true
     },
     {
       "num": "Resolución 205/2026",
@@ -3268,7 +3382,7 @@
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 147/2026 RESOL-2026-147-APN-SE#MEC",
       "publishedAt": "2026-07-01T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:54-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 147/2026 RESOL-2026-147-APN-SE#MEC",
@@ -3280,7 +3394,10 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343834/20260701",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Inclúyase en la Reconfiguración del Sistema de Transporte de Gas Natural, la asignación de CUATRO MILLONES CINCO MIL NOVECIENTOS CUARENTA Y SEIS METROS CÚBICOS por día (4.005.946 m3/d), de transporte firme a favor de NATURGY BAN S.A. sobre el Sistema de Transporte de TRANSPORTADORA DE GAS DEL SUR S.A. aguas arriba del punto de inyección en el Gasoducto Perito Francisco Pascasio Moreno (GPM) de ENERGÍA ARGENTINA S.A., rigiendo respecto de este transporte todas las previsiones establecidas en las Resoluciones Nros. 66 de fecha 12 de marzo de 2026 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA y 409 de fecha 13 de abril de 2026, del entonces ENTE NACIONAL REGULADOR DEL GAS (ENARGAS).",
+      "disposition": "Inclúyase en la Reconfiguración del Sistema de Transporte de Gas Natural, la asignación de CUATRO MILLONES CINCO MIL NOVECIENTOS CUARENTA Y SEIS METROS CÚBICOS por día (4.005.946 m3/d), de transporte firme a favor de NATURGY BAN S.A. sobre el Sistema de Transporte de TRANSPORTADORA DE GAS DEL SUR S.A. aguas arriba del punto de inyección en el Gasoducto…",
+      "operativePreview": true
     },
     {
       "num": "Resolución 146/2026",
@@ -3417,24 +3534,6 @@
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343286/20260618?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
       "auto": true
-    },
-    {
-      "num": "PBA · 2026-06-16 · Página 85",
-      "title": "po. Urbanización integral de tierras: provisión de infraestructura básica (red eléctrica, gas natural , agua potable, cloacas, desagües pluviales, alumbrado público, telefonía, fibra óptica, apertura y pavimentación de calles, forestación, parquizació",
-      "desc": "), cementerios privados (arts. 2103 y ss. CCCN) y clubes de\ncampo. Urbanización integral de tierras: provisión de infraestructura básica (red eléctrica, gas natural , agua potable,\ncloacas, desagües pluviales, alumbrado público, telefonía, fibra óptica, apertura y pavimentación de calles, forestación,\nparquización, señalización vial). Desarrollo, promoción, comercialización y administración de barrios",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Infraestructura",
-      "tags": [
-        "PBA",
-        "Infraestructura"
-      ],
-      "date": "16/06/2026",
-      "publishedAt": "2026-06-16T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:28-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/14219/ver#page=85",
-      "auto": true,
-      "disposition": "po. Urbanización integral de tierras: provisión de infraestructura básica (red eléctrica, gas natural , agua potable, cloacas, desagües pluviales, alumbrado público, telefonía, fibra óptica, apertura y pavimentación de calles, forestación, parquizació"
     },
     {
       "num": "Resolución 134/2026",
@@ -3616,7 +3715,7 @@
       "category": "GLP",
       "title": "Propano por redes — traslado del 60% del PPE",
       "publishedAt": "2026-06-03T00:00:00-03:00",
-      "validatedAt": "2026-09-28T15:03-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "sourceType": "OFFICIAL",
       "status": "unchanged",
       "desc": "El valor de gas propano por redes pasa a equivaler al 60% del Precio de Paridad de Exportación vigente.",
@@ -3626,7 +3725,10 @@
       ],
       "url": "https://www.argentina.gob.ar/normativa/nacional/norma-426357/texto",
       "issuer": "SECRETARIA DE ENERGIA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Sustitúyese el Artículo 8° de la Resolución N° 41 de fecha 26 de marzo de 2024 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el que quedará redactado de la siguiente forma: “ARTÍCULO 8°.- Instrúyese al ENARGAS a incluir como valor de gas propano por redes, el SESENTA POR CIENTO (60%) del valor que resulte del precio calculado conforme con el procedimiento previsto en el",
+      "disposition": "Sustitúyese el Artículo 8° de la Resolución N° 41 de fecha 26 de marzo de 2024 de la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA, el que quedará redactado de la siguiente forma: “ARTÍCULO 8°.- Instrúyese al ENARGAS a incluir como valor de gas propano por redes, el SESENTA POR CIENTO (60%) del valor que resulte del precio calculado conforme con el…",
+      "operativePreview": true
     },
     {
       "num": "PBA · 2026-06-02 · Página 45",
@@ -4828,14 +4930,14 @@
     },
     {
       "num": "PBA · 2026-04-17 · Página 5",
-      "title": "-05979976-GDEBA-DPTLMIYSPGP del Ministerio de Infraestructura y Servicios Públicos, por el cual se propicia aprobar una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de “Bue",
+      "title": "BAGSA — aporte irrevocable a cuenta de futuros aumentos de capital",
       "desc": "-05979976-GDEBA-DPTLMIYSPGP del Ministerio de Infraestructura y Servicios Públicos,\npor el cual se propicia aprobar una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros\naumentos de capital social a favor de “Buenos Aires Gas S.A.” ( BAGSA ), y\n \nCONSIDERANDO:\nQue por el Decreto N° 1094/03 se declaró de interés público la construcción y explotación de redes de distribución",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "17/04/2026",
@@ -4843,11 +4945,11 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14110/ver#page=5",
       "auto": true,
-      "disposition": "-05979976-GDEBA-DPTLMIYSPGP del Ministerio de Infraestructura y Servicios Públicos, por el cual se propicia aprobar una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de “Bue"
+      "disposition": "BAGSA — aporte irrevocable a cuenta de futuros aumentos de capital"
     },
     {
       "num": "PBA · 2026-04-17 · Página 6",
-      "title": "ARTÍCULO 1°. Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta l",
+      "title": "Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta la suma de Pesos doce mil trescientos millones ($12.300.000.000,00), para ",
       "desc": "ARTÍCULO 1°. Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto\nde aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta\nla suma de Pesos doce mil trescientos millones ($12.300.000.000,00), para el funcionamiento y operatoria de la\nmencionada sociedad durante el Ejercicio 2026",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
@@ -4862,7 +4964,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14110/ver#page=6",
       "auto": true,
-      "disposition": "ARTÍCULO 1°. Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta l"
+      "disposition": "Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta la suma de Pesos doce mil trescientos millones ($12.300.000.000,00), para "
     },
     {
       "num": "PBA · 2026-04-16 · Página 76",
@@ -4918,24 +5020,6 @@
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340688/20260414?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
       "auto": true
-    },
-    {
-      "num": "PBA · 2026-04-07 · Página 92",
-      "title": "ría todo tipo sean públicas o privadas, obras civiles, viales, redes todo tipo eléctricas gas natural agua potable cloacas pavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en gral",
-      "desc": ".: Morón, pcia. Bs. As. 5) Construcción, demolición, y refacción edificios cualquier naturaleza, proyecto y/o\nrealización obras y trabajos de arquitectura e ingeniería todo tipo sean públicas o privadas, obras civiles, viales, redes todo\ntipo eléctricas gas natural agua potable cloacas pavimento, actuando como propietaria, proyectista, empresaria, contratista\no subcontratista de obras en gral",
-      "issuer": "Boletín Oficial PBA",
-      "jurisdiction": "PBA",
-      "category": "Infraestructura",
-      "tags": [
-        "PBA",
-        "Infraestructura"
-      ],
-      "date": "07/04/2026",
-      "publishedAt": "2026-04-07T00:00:00-03:00",
-      "validatedAt": "2026-09-30T11:28-03:00",
-      "url": "https://boletinoficial.gba.gob.ar/secciones/14084/ver#page=92",
-      "auto": true,
-      "disposition": "ría todo tipo sean públicas o privadas, obras civiles, viales, redes todo tipo eléctricas gas natural agua potable cloacas pavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en gral"
     },
     {
       "num": "Resolución 384/2026",
@@ -5317,14 +5401,14 @@
     },
     {
       "num": "PBA · 2026-03-10 · Página 26",
-      "title": "descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el formulario que forma parte del link de descarga. Quien haya descargad",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma parte del link de descarga.\nQuien haya descargado el pliego podrá hacer consultas respecto del mismo hasta el 01 de abril de 2026 a través del correo\nelectrónico: licitacion.privada@ bagsa .com.ar.\nEl pliego es gratuito",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "10/03/2026",
@@ -5332,18 +5416,18 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14030/ver#page=26",
       "auto": true,
-      "disposition": "descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el formulario que forma parte del link de descarga. Quien haya descargad"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-03-09 · Página 56",
-      "title": "participar del presente llamado a Licitación, personas humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Co",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "participar del presente llamado a Licitación, personas\nhumanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "09/03/2026",
@@ -5351,18 +5435,18 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14027/ver#page=56",
       "auto": true,
-      "disposition": "participar del presente llamado a Licitación, personas humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Co"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-03-06 · Página 65",
-      "title": "humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "06/03/2026",
@@ -5370,7 +5454,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14024/ver#page=65",
       "auto": true,
-      "disposition": "humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "Resolución 56/2026",
@@ -5408,14 +5492,14 @@
     },
     {
       "num": "PBA · 2026-03-05 · Página 34",
-      "title": "a Licitación, personas humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "a Licitación, personas\nhumanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "05/03/2026",
@@ -5423,7 +5507,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14021/ver#page=34",
       "auto": true,
-      "disposition": "a Licitación, personas humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-03-05 · Página 35",
@@ -5431,10 +5515,10 @@
       "desc": "La apertura de las ofertas se llevará a cabo en la sede de BAGSA , el día 22 de abril de 2026 a las doce (12) horas.\nmar. 4 v. mar. 10\n\nMINISTERIO DE DESARROLLO DE LA COMUNIDAD\n \nLicitación Pública N° 2/2026 - Proceso PBAC N° 532-0136-LPU26\nAclaratoria\n \nPOR 1 DÍA - Circular aclaratoria con consulta N° 1. Objeto de la contratación: Servicio de Transporte de Pasajeros.\nFecha de apertura: 9",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "05/03/2026",
@@ -5484,14 +5568,14 @@
     },
     {
       "num": "PBA · 2026-03-04 · Página 46",
-      "title": ", como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link https://www. bagsa .c",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": ", como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma parte del link de descarga.\nQuien haya descargado",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "04/03/2026",
@@ -5499,7 +5583,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/14018/ver#page=46",
       "auto": true,
-      "disposition": ", como UTE o como UTE en Formación, siempre que se trate de Sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link https://www. bagsa .c"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "Resolución 52/2026",
@@ -5993,10 +6077,10 @@
       "desc": "civiles, hidráulicas, portuarias e inmuebles urbanos y rurales: mejoras en inmuebles,\ncontratación y subcontratación de personal para dichos fines. Sistemas de electrificación, instalaciones eléctricas,\nindustriales y domiciliarias; mantenimiento de instalaciones relativas a gas natural , agua potable, obras sanitarias, y de\nelectricidad y de otras ramas de la ingeniería; estudio, proyecto, dirección",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Infraestructura",
+      "category": "Normativa",
       "tags": [
         "PBA",
-        "Infraestructura"
+        "Normativa"
       ],
       "date": "13/02/2026",
       "publishedAt": "2026-02-13T00:00:00-03:00",
@@ -6069,10 +6153,10 @@
       "desc": "de construcción,\nherramientas, maquinarias, indumentaria de trabajo y elementos de protección personal (EPP). G) El mantenimiento de\nespacios públicos, parques y áreas verdes, así como el proyecto, construcción y mantenimiento de obras de urbanización\nen ámbitos públicos y privados. H) La proyección, dirección y ejecución de redes de gas natural , cloacales, de agua\npotable, fibra óptica, eléctricas y afines",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Infraestructura",
+      "category": "Normativa",
       "tags": [
         "PBA",
-        "Infraestructura"
+        "Normativa"
       ],
       "date": "06/02/2026",
       "publishedAt": "2026-02-06T00:00:00-03:00",
@@ -6101,14 +6185,14 @@
     },
     {
       "num": "PBA · 2026-02-02 · Página 47",
-      "title": ". Cumplido, archívese. Fallo: 797/2025. Daniel Carlos Chillo, Ariel Héctor Pietronave, Juan Pablo Peredo, Gustavo Eduardo Diez, Federico Gastón Thea. Rubricado: Gonzalo Sebastián Kodelia. ◢ LICITACIONES BUENOS AIRES GAS S.A. - BAGSA Licitac",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": ". Cumplido, archívese.\n \nFallo: 797/2025.\n \nDaniel Carlos Chillo, Ariel Héctor Pietronave, Juan Pablo Peredo, Gustavo Eduardo Diez, Federico Gastón\nThea. Rubricado: Gonzalo Sebastián Kodelia.\n\n◢ LICITACIONES\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta PP N° 1969-26 Obra de Suministro de Gas a la localidad de Anchorena\n- Urquiza",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "02/02/2026",
@@ -6116,7 +6200,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13965/ver#page=47",
       "auto": true,
-      "disposition": ". Cumplido, archívese. Fallo: 797/2025. Daniel Carlos Chillo, Ariel Héctor Pietronave, Juan Pablo Peredo, Gustavo Eduardo Diez, Federico Gastón Thea. Rubricado: Gonzalo Sebastián Kodelia. ◢ LICITACIONES BUENOS AIRES GAS S.A. - BAGSA Licitac"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "Resolución 28/2026",
@@ -6156,14 +6240,14 @@
     },
     {
       "num": "PBA · 2026-01-30 · Página 80",
-      "title": "descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario que forma parte del link de descarga. Quien haya descargad",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario\nque forma parte del link de descarga.\nQuien haya descargado el pliego podrá hacer consultas respecto del mismo hasta el 25 de febrero de 2026 a través del\ncorreo electrónico: licitacion.privada@ bagsa .com.ar.\nEl pliego",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "30/01/2026",
@@ -6171,18 +6255,18 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13962/ver#page=80",
       "auto": true,
-      "disposition": "descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario que forma parte del link de descarga. Quien haya descargad"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-01-30 · Página 79",
-      "title": "y descargados de manera gratuita a través de la página www.gba.gob.ar/Infraestructura/licitaciones. Los adquirentes podrán solicitar aclaraciones a través del correo electrónico minfrapba.dcop@gmail.com, hasta el día 11 de febrero de 2026.",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "y descargados de manera gratuita a través de la página\nwww.gba.gob.ar/Infraestructura/licitaciones.\nLos adquirentes podrán solicitar aclaraciones a través del correo electrónico minfrapba.dcop@gmail.com, hasta el día 11 de\nfebrero de 2026.\nNº de expediente: EX-2025-14304999-GDEBA-DPTLMIYSPGP.\n\nene. 26 v. ene. 30\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "30/01/2026",
@@ -6190,7 +6274,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13962/ver#page=79",
       "auto": true,
-      "disposition": "y descargados de manera gratuita a través de la página www.gba.gob.ar/Infraestructura/licitaciones. Los adquirentes podrán solicitar aclaraciones a través del correo electrónico minfrapba.dcop@gmail.com, hasta el día 11 de febrero de 2026."
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "Resolución 32/2026",
@@ -6590,14 +6674,14 @@
     },
     {
       "num": "PBA · 2026-01-29 · Página 37",
-      "title": "Nº 2 correspondiente, en respuesta a la consulta efectuada en el presente Proceso de Compra. EX-2025-34723560-GDEBA-DDPRYMGEMSGP. ene. 27 v. ene. 29 BUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026 POR 5 DÍAS - Objeto: Llama",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "Nº 2 correspondiente, en respuesta a la consulta efectuada en el presente Proceso de Compra.\nEX-2025-34723560-GDEBA-DDPRYMGEMSGP.\n\nene. 27 v. ene. 29\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta PP N° 1969-26 Obra de Suministro de Gas a la localidad de Anchorena\n- Urquiza - partido de Pergamino - provincia Buenos Aires",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "29/01/2026",
@@ -6605,18 +6689,18 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13960/ver#page=37",
       "auto": true,
-      "disposition": "Nº 2 correspondiente, en respuesta a la consulta efectuada en el presente Proceso de Compra. EX-2025-34723560-GDEBA-DDPRYMGEMSGP. ene. 27 v. ene. 29 BUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026 POR 5 DÍAS - Objeto: Llama"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-01-28 · Página 44",
-      "title": "o como UTE en formación, siempre que se trate de sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/publi",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "o como UTE en formación, siempre que se trate de sociedades regulamente constituidas con domicilio en el país.\nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario\nque forma parte del link de descarga.\nQuien haya descargado el pliego",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "28/01/2026",
@@ -6624,7 +6708,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13958/ver#page=44",
       "auto": true,
-      "disposition": "o como UTE en formación, siempre que se trate de sociedades regulamente constituidas con domicilio en el país. El Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link https://www. bagsa .com.ar/publi"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-01-28 · Página 43",
@@ -6647,14 +6731,14 @@
     },
     {
       "num": "PBA · 2026-01-27 · Página 65",
-      "title": "y Suministros del Municipio de Tandil, ubicada en calle Belgrano N° 417, planta alta, oficina N° 6. Recepción de ofertas: Hasta el 19 de febrero de 2026 a las 11:00 horas inclusive en la Dirección de Compras y Suministros. Expediente: EX-20",
+      "title": "BAGSA — Licitación pública / pliego de bases y condiciones",
       "desc": "y Suministros del Municipio\nde Tandil, ubicada en calle Belgrano N° 417, planta alta, oficina N° 6.\nRecepción de ofertas: Hasta el 19 de febrero de 2026 a las 11:00 horas inclusive en la Dirección de Compras y\nSuministros.\nExpediente: EX-2026-00015478-MUNITAN-DCS#SEA.\n\nene. 27 v. ene. 28\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta",
       "issuer": "Boletín Oficial PBA",
       "jurisdiction": "PBA",
-      "category": "Subdistribución",
+      "category": "Infraestructura",
       "tags": [
         "PBA",
-        "Subdistribución",
+        "Infraestructura",
         "BAGSA"
       ],
       "date": "27/01/2026",
@@ -6662,7 +6746,7 @@
       "validatedAt": "2026-09-30T11:29-03:00",
       "url": "https://boletinoficial.gba.gob.ar/secciones/13956/ver#page=65",
       "auto": true,
-      "disposition": "y Suministros del Municipio de Tandil, ubicada en calle Belgrano N° 417, planta alta, oficina N° 6. Recepción de ofertas: Hasta el 19 de febrero de 2026 a las 11:00 horas inclusive en la Dirección de Compras y Suministros. Expediente: EX-20"
+      "disposition": "BAGSA — Licitación pública / pliego de bases y condiciones"
     },
     {
       "num": "PBA · 2026-01-26 · Página 60",
@@ -6949,8 +7033,8 @@
     {
       "name": "Noticias",
       "cadence": "Cada 60 min",
-      "last": "2026-09-30T11:51-03:00",
-      "next": "2026-09-30T12:51-03:00",
+      "last": "2026-09-30T11:53-03:00",
+      "next": "2026-09-30T12:53-03:00",
       "status": "partial",
       "note": "Sin noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas",
       "mode": "Automática",
@@ -6960,10 +7044,10 @@
     {
       "name": "Normativa",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T11:46-03:00",
-      "next": "2026-09-30T14:46-03:00",
+      "last": "2026-09-30T11:55-03:00",
+      "next": "2026-09-30T14:55-03:00",
       "status": "unchanged",
-      "note": "Consulta 28/09/2026–30/09/2026 · 322 normas guardadas · 0 nuevas · 38 fichas enriquecidas con Art. 1° · 0 ediciones y 0 documentos pendientes de reintento.",
+      "note": "Consulta 28/09/2026–30/09/2026 · 287 normas guardadas · 0 nuevas · 46 fichas enriquecidas con Art. 1° · 0 ediciones y 0 documentos pendientes de reintento.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."
@@ -7003,8 +7087,8 @@
       "mode": "Automática",
       "strategy": "Relectura de ventana vigente",
       "scope": "Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia.",
-      "last": "2026-09-30T11:51-03:00",
-      "next": "2026-09-30T12:51-03:00",
+      "last": "2026-09-30T11:55-03:00",
+      "next": "2026-09-30T12:55-03:00",
       "status": "unchanged",
       "note": "Ventana oficial de 5 días revalidada."
     },
@@ -7014,8 +7098,8 @@
       "mode": "Automática parcial",
       "strategy": "Último reporte disponible",
       "scope": "Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo.",
-      "last": "2026-09-30T11:51-03:00",
-      "next": "2026-09-30T12:51-03:00",
+      "last": "2026-09-30T11:55-03:00",
+      "next": "2026-09-30T12:55-03:00",
       "status": "unchanged",
       "note": "Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo."
     },
@@ -7025,8 +7109,8 @@
       "mode": "Automática parcial",
       "strategy": "Totales del PDF verificados",
       "scope": "Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas.",
-      "last": "2026-09-30T11:51-03:00",
-      "next": "2026-09-30T12:51-03:00",
+      "last": "2026-09-30T11:55-03:00",
+      "next": "2026-09-30T12:55-03:00",
       "status": "unchanged",
       "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual."
     },
@@ -7044,10 +7128,10 @@
     {
       "name": "Boletín Oficial PBA",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T11:49-03:00",
-      "next": "2026-09-30T14:49-03:00",
+      "last": "2026-09-30T11:55-03:00",
+      "next": "2026-09-30T14:55-03:00",
       "status": "updated",
-      "note": "0 publicaciones provinciales incorporadas · 35 coincidencias irrelevantes depuradas. Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.",
+      "note": "0 publicaciones provinciales incorporadas · 3 coincidencias irrelevantes depuradas. Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."
@@ -7058,7 +7142,7 @@
       "mode": "Automática parcial",
       "strategy": "EIA diaria + Banco Mundial mensual",
       "scope": "Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.",
-      "last": "2026-09-30T11:51-03:00",
+      "last": "2026-09-30T11:55-03:00",
       "status": "partial",
       "note": "Lectores automáticos: henry_hub: ok, mb_propane: ok, worldbank: ok. Las demás referencias conservan su fecha y requieren revisión manual."
     }
@@ -7078,7 +7162,7 @@
       "url": "https://econojournal.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Mejor Energía",
@@ -7089,7 +7173,7 @@
       "url": "https://www.mejorenergia.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "RunRun Energético",
@@ -7100,7 +7184,7 @@
       "url": "https://runrunenergetico.com/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "ENReGE · Noticias",
@@ -7111,7 +7195,7 @@
       "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "ENReGE · Datos diarios",
@@ -7122,7 +7206,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "ENReGE · Tarifas",
@@ -7133,7 +7217,7 @@
       "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Secretaría de Energía · Noticias",
@@ -7144,7 +7228,7 @@
       "url": "https://www.argentina.gob.ar/economia/energia/noticias",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Datos Argentina · Energía",
@@ -7155,7 +7239,7 @@
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
       "validatedAt": "2026-09-28T11:00:00-03:00",
       "availability": "NO DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -7166,7 +7250,7 @@
       "url": "https://www.tgs.com.ar/prensa/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "TGN · Comunicaciones",
@@ -7177,7 +7261,7 @@
       "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/",
       "validatedAt": "2026-09-28T14:39-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "BAGSA · Tarifas",
@@ -7188,7 +7272,7 @@
       "url": "https://www.bagsa.com.ar/index.php/tarifas/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Revista Petroquímica",
@@ -7199,7 +7283,7 @@
       "url": "https://revistapetroquimica.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Más Energía · LM Neuquén",
@@ -7210,7 +7294,7 @@
       "url": "https://mase.lmneuquen.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "América GLP",
@@ -7221,7 +7305,7 @@
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "MEGSA · Transporte firme",
@@ -7232,7 +7316,7 @@
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "ENReGE · Concursos de capacidad",
@@ -7243,7 +7327,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Boletín Oficial PBA · Gas/BAGSA",
@@ -7260,7 +7344,7 @@
       "validatedAt": "2026-09-30T08:31-03:00",
       "lastResult": "gas natural: 5 coincid. · última 13/05/2026 · BAGSA: 5 coincid. · última 02/02/2026",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Argentina.gob.ar · Normativa gas",
@@ -7272,7 +7356,7 @@
       "validatedAt": "2026-09-28T14:49-03:00",
       "lastResult": "12 normas en listado · 0 nuevas · 0 revalidadas",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:51-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     {
       "name": "Boletín Oficial Nación · Normativa gas",
@@ -7281,10 +7365,10 @@
       "cadence": "Cada 3 h",
       "status": "ACTIVA",
       "url": "https://www.boletinoficial.gob.ar/seccion/primera",
-      "checkedAt": "2026-09-30T11:51-03:00",
-      "lastResult": "322 normas · 0 nuevas · 2 revalidadas · 38 vistas enriquecidas · 3 ediciones consultadas",
-      "availability": "DISPONIBLE",
-      "validatedAt": "2026-09-30T11:46-03:00"
+      "checkedAt": "2026-09-30T11:56-03:00",
+      "lastResult": "287 normas · 0 nuevas · 2 revalidadas · 46 vistas enriquecidas · 3 ediciones consultadas",
+      "availability": "NO DISPONIBLE",
+      "validatedAt": "2026-09-30T11:55-03:00"
     }
   ],
   "basins": [
@@ -7419,14 +7503,14 @@
       "value": "462,97",
       "unit": "USD/t",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls",
       "note": "Referencia spot FOB Texas convertida a USD/t.",
       "details": "Conversión desde 0.864 USD/gal; 3,785411784 L/gal y densidad indicativa 0,493 kg/L.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T11:51-03:00",
+      "checkedAt": "2026-09-30T11:55-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7497,14 +7581,14 @@
       "value": "2,90",
       "unit": "USD/MMBtu",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls",
       "note": "Precio spot del gas en Henry Hub, Louisiana.",
       "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T11:51-03:00",
+      "checkedAt": "2026-09-30T11:55-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7512,8 +7596,8 @@
       "id": "wb_europe",
       "value": "21,11",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T11:51-03:00",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "checkedAt": "2026-09-30T11:55-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "Gas Europa · promedio mensual",
@@ -7530,8 +7614,8 @@
       "id": "wb_japan",
       "value": "13,94",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T11:51-03:00",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "checkedAt": "2026-09-30T11:55-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "GNL Japón · promedio mensual",
@@ -7548,7 +7632,7 @@
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
-    "updatedAt": "2026-09-30T11:46-03:00"
+    "updatedAt": "2026-09-30T11:55-03:00"
   },
   "systemKpis": [
     {
@@ -7557,7 +7641,7 @@
       "value": "≈561",
       "unit": "MMm³",
       "reference": "27/08/2026 · REAL",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "statusText": "DERIVADO GRÁFICO",
       "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
@@ -7570,7 +7654,7 @@
       "value": "129,0",
       "unit": "MMm³/d",
       "reference": "26/08/2026 · REAL",
-      "validatedAt": "2026-09-30T11:51-03:00",
+      "validatedAt": "2026-09-30T11:55-03:00",
       "statusText": "OFICIAL",
       "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
@@ -7858,7 +7942,7 @@
     "source": "ENReGE · Importaciones y Exportaciones Mensuales",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
     "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual.",
-    "checkedAt": "2026-09-30T11:51-03:00",
+    "checkedAt": "2026-09-30T11:55-03:00",
     "status": "current"
   },
   "basinMonthly2026": [
@@ -8149,7 +8233,7 @@
   "regulationScan": {
     "lastScannedDate": "2026-09-30",
     "source": "Boletín Oficial de la República Argentina · Primera Sección",
-    "lastRun": "2026-09-30T11:46-03:00",
+    "lastRun": "2026-09-30T11:55-03:00",
     "pagesOk": 3,
     "pagesError": 0,
     "candidates": 7,
@@ -8162,8 +8246,8 @@
     },
     "added": 0,
     "revalidated": 2,
-    "lastSuccessfulAt": "2026-09-30T11:46-03:00",
-    "previewBackfilled": 38
+    "lastSuccessfulAt": "2026-09-30T11:55-03:00",
+    "previewBackfilled": 46
   },
   "tariffAutomation": {
     "checkedAt": "2026-09-29T22:31-03:00",
@@ -8175,7 +8259,7 @@
     ]
   },
   "marketAutomation": {
-    "checkedAt": "2026-09-30T11:51-03:00",
+    "checkedAt": "2026-09-30T11:55-03:00",
     "readers": {
       "henry_hub": "ok",
       "mb_propane": "ok",
@@ -8184,15 +8268,15 @@
   },
   "bopbaScan": {
     "gas natural": {
-      "lastScannedDate": "2026-09-30T11:49:39.102220-03:00",
+      "lastScannedDate": "2026-09-30T11:55:25.359656-03:00",
       "complete": true,
-      "checkedAt": "2026-09-30T11:49-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
     "BAGSA": {
-      "lastScannedDate": "2026-09-30T11:49:39.102220-03:00",
+      "lastScannedDate": "2026-09-30T11:55:25.359656-03:00",
       "complete": true,
-      "checkedAt": "2026-09-30T11:49-03:00"
+      "checkedAt": "2026-09-30T11:55-03:00"
     },
-    "cleanupVersion": 2
+    "cleanupVersion": 3
   }
 }
