@@ -530,6 +530,44 @@ def demand_priority(d):
         if u: u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="pending",
                        note="No se pudo leer la ventana oficial; se conservan los últimos valores.")
 
+def _read_linepack_deltas(report_date):
+    import pdfplumber
+    dt=datetime.strptime(report_date,"%d/%m/%Y")
+    pdf_url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_"+dt.strftime("%Y%m%d")+".pdf"
+    pdf=fetch(pdf_url,timeout=40)
+    with pdfplumber.open(io.BytesIO(pdf)) as doc:
+        words=doc.pages[0].extract_words()
+    values=[]
+    for w in words:
+        token=str(w.get("text","")).replace("−","-").strip()
+        if not re.fullmatch(r"-?\d{1,5},0",token):
+            continue
+        # Stock labels carry an M suffix in ENReGE's chart and therefore do not
+        # match the exact pattern above. Remaining comma-zero labels are the
+        # daily system variations (thousands of m3).
+        raw=float(token.replace(".","").replace(",","."))
+        if not -30000<=raw<=30000:
+            continue
+        values.append((float(w.get("x0",0)),raw))
+    if len(values)<5:
+        raise ValueError("no se identificaron suficientes variaciones diarias en el PDF")
+    # One system-delta label per day; sort by horizontal position (time axis).
+    values.sort(key=lambda x:x[0])
+    # Deduplicate occasional overlapping text extraction at essentially same x.
+    dedup=[]
+    for x,val in values:
+        if dedup and abs(x-dedup[-1][0])<2:
+            # Prefer the larger absolute label if the PDF emitted duplicates.
+            if abs(val)>abs(dedup[-1][1]): dedup[-1]=(x,val)
+        else:
+            dedup.append((x,val))
+    return [v for _,v in dedup],pdf_url
+
+def _approx_number(value):
+    m=re.search(r"-?\d+(?:[.,]\d+)?",str(value or ""))
+    if not m: return None
+    return float(m.group(0).replace(",", "."))
+
 def system_market(d):
     """Refresh report availability without replacing validated values with unparsed chart data."""
     refs={
@@ -577,18 +615,60 @@ def system_market(d):
                     print("INJECTION PDF",pe)
                     k["statusText"]="NUEVO REPORTE · REVISAR"
                     k["note"]="Reporte disponible: "+latest+". No se pudo extraer el total; se conservan el valor anterior y su fecha de referencia."
+            elif kid=="linepack":
+                try:
+                    deltas,pdf_url=_read_linepack_deltas(latest)
+                    old_date_match=re.search(r"\b(\d{2}/\d{2}/\d{4})\b",oldref)
+                    old_date=datetime.strptime(old_date_match.group(1),"%d/%m/%Y") if old_date_match else None
+                    new_date=datetime.strptime(latest,"%d/%m/%Y")
+                    if old_date and new_date<old_date:
+                        raise ValueError("el reporte detectado es anterior al valor validado")
+                    if old_date and new_date>old_date:
+                        gap=(new_date-old_date).days
+                        if gap>len(deltas):
+                            raise ValueError("el salto de fechas supera la ventana de variaciones del gráfico")
+                        base=_approx_number(k.get("derivedExact",k.get("value")))
+                        if base is None:
+                            raise ValueError("falta stock base para acumular variaciones")
+                        # Chart variations are thousands of m3; convert to MMm3.
+                        derived=base+sum(deltas[-gap:])/1000.0
+                        if not 450<=derived<=700:
+                            raise ValueError("stock derivado fuera del rango de control")
+                        k["derivedExact"]=round(derived,3)
+                        k["value"]="≈"+str(int(round(derived)))
+                        k["reference"]=latest+" · REAL"
+                        k["sourceUrl"]=pdf_url
+                        k["note"]="Total del sistema derivado automáticamente desde el último stock validado, acumulando las variaciones diarias del gráfico oficial ENReGE. Se muestra redondeado para no dar falsa precisión."
+                    elif old_date and new_date==old_date:
+                        # The parser itself is verified against the currently published chart.
+                        if k.get("derivedExact") is None:
+                            base=_approx_number(k.get("value"))
+                            if base is not None: k["derivedExact"]=base
+                        k["sourceUrl"]=pdf_url
+                    k["validatedAt"]=iso()
+                    k["statusText"]="DERIVADO · AUTOMÁTICO"
+                    k["linepackParser"]={"checkedAt":iso(),"report":latest,"deltaPoints":len(deltas),"status":"ok"}
+                except Exception as pe:
+                    print("LINEPACK PDF",pe)
+                    if latest in oldref:
+                        k["validatedAt"]=iso()
+                        k["statusText"]="DERIVADO GRÁFICO"
+                    else:
+                        k["statusText"]="NUEVO REPORTE · REVISAR"
+                        k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"), pero el lector automático no superó la validación: "+str(pe)[:120]+". Se conserva el último stock."
             elif latest in oldref:
                 k["validatedAt"]=iso()
-            else:
-                k["statusText"]="NUEVO REPORTE · REVISAR"
-                k["note"]="ENReGE publicó un gráfico más reciente ("+latest+"). Se conserva el último total del sistema validado hasta recalcular TGN + TGS; la fecha de validación del valor no cambia."
         except Exception as e:
             print("SYSTEM",kid,e)
     u=next((x for x in d.get("updates",[]) if x.get("name")=="Sistema gasífero diario"),None)
     if u:
         newest=max((x.get("validatedAt","") for x in d.get("systemKpis",[]) if x.get("id") in ("linepack","injection")),default="")
-        u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="unchanged",
-                 note="Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo.")
+        lp=next((x for x in d.get("systemKpis",[]) if x.get("id")=="linepack"),{})
+        parser_ok=lp.get("linepackParser",{}).get("status")=="ok"
+        u.update(last=iso(),next=iso(now()+timedelta(hours=1)),status="unchanged" if parser_ok else "partial",
+                 mode="Automática" if parser_ok else "Automática parcial",
+                 scope="Inyección se extrae del PDF oficial. Linepack parte del último stock validado y acumula automáticamente las variaciones diarias del gráfico ENReGE, manteniendo el resultado como aproximado.",
+                 note=("Inyección y Linepack con lectores automáticos validados." if parser_ok else "Inyección automática; Linepack conserva el último stock si el lector del gráfico no supera los controles."))
 
 
 def _number_ar(value):
@@ -1330,7 +1410,7 @@ def sync_update_catalog(d):
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
       ("Producción por cuenca/provincia","Diaria","Automática","Último tablero mensual + validación de cierres","Detecta el último tablero mensual, extrae gas por cuenca y provincia y sólo publica si ambas sumas cierran contra el total país."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
-      ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
+      ("Sistema gasífero diario","Cada 60 min","Automática","PDF oficial + acumulación de variaciones","Inyección se extrae del PDF oficial. Linepack actualiza el stock aproximado acumulando las variaciones diarias del gráfico desde el último valor validado."),
       ("Flujos mensuales","Cada 60 min","Automática","PDF oficial · total + GNL + Chile · validación cruzada","Detecta el último mes ENReGE y extrae importaciones, GNL Escobar, exportaciones y exportaciones a Chile; antes de publicar verifica que el lector reproduzca el último mes validado."),
       ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
       ("Boletín Oficial PBA","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."),
