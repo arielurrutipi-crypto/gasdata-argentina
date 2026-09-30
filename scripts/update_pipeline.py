@@ -1054,7 +1054,7 @@ def main():
     system_market(d)
     monthly_flows_status(d)
     if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
-    needs_pba_migration=d.get("bopbaScan",{}).get("cleanupVersion")!=4 or any(x.get("jurisdiction")=="PBA" and not x.get("disposition") for x in d.get("regulations",[]))
+    needs_pba_migration=d.get("bopbaScan",{}).get("cleanupVersion")!=5 or any(x.get("jurisdiction")=="PBA" and not x.get("disposition") for x in d.get("regulations",[]))
     if not d.get("bopbaScan") or needs_pba_migration or _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
     refresh_source_status(d)
     sync_update_catalog(d)
