@@ -71,11 +71,19 @@ def catalyst_latest(fetch):
         jkm=re.search(r'JKM\s+LNG\s+M\+1\s*\$?([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
         if not jkm:
             jkm=re.search(r'JKM.{0,100}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
-        ttf=re.search(r'TTF\s+(?:spot|day-ahead).{0,120}?\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
+        # Catalyst prose often says "TTF spot rose $0.60 to $24.52".
+        # Prefer the value after "to/at"; the first dollar figure is the daily move.
+        ttf=re.search(r'TTF\s+(?:spot|day-ahead).{0,140}?(?:to|at)\s+\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
         if not ttf:
-            ttf=re.search(r'TTF.{0,120}?\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
+            ttf=re.search(r'TTF\s+(?:spot|day-ahead)\s*(?:was|is|:)??\s*\$([0-9]+(?:\.[0-9]+)?)',text,re.I)
+        if not ttf:
+            ttf=re.search(r'TTF.{0,160}?(?:to|at)\s+\$([0-9]+(?:\.[0-9]+)?)\s*/?MMBtu',text,re.I)
         if not jkm or not ttf:
             errors.append(report_date.date().isoformat()+': sin JKM/TTF parseables')
+            continue
+        jkm_val=float(jkm.group(1)); ttf_val=float(ttf.group(1))
+        if not (5<jkm_val<100 and 5<ttf_val<100):
+            errors.append(report_date.date().isoformat()+f': valores fuera de rango JKM={jkm_val} TTF={ttf_val}')
             continue
         settle=re.search(r'Settlement\s+(\d{1,2})\s+([A-Za-z]+)',text,re.I)
         obs=report_date-timedelta(days=1)
@@ -85,7 +93,7 @@ def catalyst_latest(fetch):
                 year=report_date.year
                 obs=datetime(year,mon,int(settle.group(1)))
                 if obs>report_date: obs=obs.replace(year=year-1)
-        return obs.date().isoformat(),float(jkm.group(1)),float(ttf.group(1)),url
+        return obs.date().isoformat(),jkm_val,ttf_val,url
     raise ValueError('No hubo reporte Catalyst accesible y parseable: '+'; '.join(errors[:5]))
 
 def pau_2026(fetch):
