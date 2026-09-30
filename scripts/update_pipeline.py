@@ -930,8 +930,8 @@ def _reg_categories(text):
         cats.append("Mercado")
     return cats
 
-def _reg_relevant(text):
-    low=(text or "").lower()
+def _reg_electric_only(text):
+    low=(" "+(text or "").lower()+" ")
     gas_strong=(
       "gas natural","gas licuado","glp","gnl","lng","gasoduct","subdistrib",
       "propano","butano","plan gas","pist","enargas","ley n° 24.076","ley n.º 24.076",
@@ -944,10 +944,13 @@ def _reg_relevant(text):
       "parque solar","fotovoltaic","edenor","edesur","cammesa","línea de media tensión",
       "linea de media tension","subsecretaría de energía eléctrica","subsecretaria de energia electrica"
     )
-    has_gas=any(k in low for k in gas_strong)
-    if any(k in (" "+low+" ") for k in electric) and not has_gas:
+    return any(k in low for k in electric) and not any(k in low for k in gas_strong)
+
+def _reg_relevant(text):
+    low=(text or "").lower()
+    if _reg_electric_only(text):
         return False
-    return has_gas or any(k in low for k in REGULATION_GAS_SIGNALS)
+    return any(k in low for k in REGULATION_GAS_SIGNALS)
 
 def _reg_number(name):
     name=clean(name)
@@ -1200,7 +1203,7 @@ def update_regulations(d):
         if dt and dt>=REGULATION_START:
             if x.get("jurisdiction")!="PBA":
                 probe_text=" ".join(str(x.get(k,"")) for k in ("title","desc","issuer","firstArticle","disposition"))
-                if not _reg_relevant(probe_text):
+                if _reg_electric_only(probe_text):
                     continue
             if not x.get("issuer") and "/normativa/nacional/" in str(x.get("url","")):
                 try:
