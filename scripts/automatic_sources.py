@@ -157,50 +157,90 @@ def tariff_header(text):
 def update_bagsa(d, fetch, iso):
     import pdfplumber
     hub = 'https://www.bagsa.com.ar/index.php/tarifas/'
-    names = {'NATURGY': 'Naturgy BAN', 'CGP': 'Camuzzi Gas Pampeana', 'CGS': 'Camuzzi Gas del Sur', 'LITORAL': 'Litoral Gas'}
+    display_names = ['Naturgy BAN', 'Camuzzi Gas Pampeana', 'Litoral Gas', 'Camuzzi Gas del Sur']
     errors, parsed = [], {}
     try:
         soup = BeautifulSoup(fetch(hub), 'html.parser')
-        urls = sorted({urljoin(hub, a['href']) for a in soup.select('a[href]') if re.search(r'/(NATURGY|CGP|CGS|LITORAL)-(GN|GLP)-.*\.pdf$', a['href'], re.I)})
-        if not urls:
-            raise ValueError('No se encontraron cuadros BAGSA')
-        for url in urls:
+
+        # BAGSA lists four current references under GN and the same four providers
+        # under GLP. Use that page order as the product/provider authority instead
+        # of trusting the PDF filename: currently the CGS GN link itself points to
+        # a file named CGS-GLP.
+        ref_links=[]
+        for a in soup.select('a[href]'):
+            label=re.sub(r'\s+',' ',a.get_text(' ',strip=True))
+            m=re.fullmatch(r'Ref:\s*(\d+)\s*-\s*(20\d{2})',label,re.I)
+            if m:
+                ref_links.append((a,m.group(1)+'/'+m.group(2)))
+        if len(ref_links)<8:
+            raise ValueError('No se encontraron los 8 cuadros vigentes GN/GLP en la página BAGSA')
+        ref_links=ref_links[-8:]
+
+        expected=[]
+        for i,(a,page_ref) in enumerate(ref_links):
+            product='GN' if i<4 else 'GLP'
+            name=display_names[i%4]
+            expected.append((name,product,page_ref,urljoin(hub,a['href'])))
+
+        for name,product,page_ref,url in expected:
             try:
                 if urlparse(url).hostname not in ('www.bagsa.com.ar', 'bagsa.com.ar'):
                     raise ValueError('Documento fuera del dominio BAGSA')
-                match = re.search(r'/(NATURGY|CGP|CGS|LITORAL)-(GN|GLP)-', url, re.I)
-                name, product = names[match[1].upper()], match[2].upper()
                 with pdfplumber.open(io.BytesIO(fetch(url, timeout=40))) as pdf:
                     text = pdf.pages[0].extract_text() or ''
                 date, resolution = tariff_header(text)
-                candidate = dict(name=name, product=product, res=resolution, validFrom=date, validatedAt=iso(), checkedAt=iso(),
-                                 scope='Distribución · cuadro BAGSA', bagsa=True, url=url, auto=True, status='current')
-                key = (name, product)
-                if date >= parsed.get(key, {}).get('validFrom', ''):
-                    parsed[key] = candidate
+                if resolution != page_ref:
+                    raise ValueError(f'{name} {product}: referencia página {page_ref} distinta del PDF {resolution}')
+                # When BAGSA's hyperlink points to a PDF whose filename identifies
+                # the other product, keep the tariff hub as the user-facing source.
+                expected_token='-'+product+'-'
+                source_url=url if expected_token in url.upper() else hub
+                candidate = dict(
+                    name=name, product=product, res=resolution, validFrom=date,
+                    validatedAt=iso(), checkedAt=iso(),
+                    scope='Distribución · cuadro BAGSA', bagsa=True,
+                    url=source_url, documentUrl=url, auto=True, status='current'
+                )
+                parsed[(name,product)] = candidate
             except Exception as exc:
-                errors.append(str(exc)[:180])
-        # Replace a combined GN/GLP row only when all of its products were verified.
-        output = []
-        for row in d.get('tariffs', []):
-            products = [p.strip() for p in row.get('product', '').split('/')]
-            candidates = [parsed.get((row['name'], p)) for p in products]
-            if all(candidates) and all(c['validFrom'] >= row.get('validFrom', '') for c in candidates):
-                output.extend(candidates)
-            else:
-                output.append(row)
-                if row.get('bagsa'):
-                    errors.append(row['name'] + ': se conserva la referencia anterior; falta verificar un producto')
-        d['tariffs'] = output
+                errors.append(f'{name} {product}: {str(exc)[:150]}')
+
+        # Rebuild only BAGSA rows from verified current products, while preserving
+        # non-BAGSA rows (e.g. transport tariffs). If one product fails, retain the
+        # previous row for that provider/product instead of deleting valid data.
+        old_rows=d.get('tariffs',[])
+        non_bagsa=[r for r in old_rows if not r.get('bagsa')]
+        old_by_product={}
+        for row in old_rows:
+            if not row.get('bagsa'): continue
+            products=[p.strip() for p in row.get('product','').split('/')]
+            for product in products:
+                old_by_product[(row.get('name'),product)]={**row,'product':product}
+        bagsa_rows=[]
+        for name in display_names:
+            for product in ('GN','GLP'):
+                candidate=parsed.get((name,product))
+                if candidate:
+                    bagsa_rows.append(candidate)
+                elif (name,product) in old_by_product:
+                    bagsa_rows.append(old_by_product[(name,product)])
+                    errors.append(name+' '+product+': se conserva la referencia anterior')
+        d['tariffs']=non_bagsa+bagsa_rows
     except Exception as exc:
         errors.append(str(exc)[:180])
-    d['tariffAutomation'] = {'checkedAt': iso(), 'parsed': len(parsed), 'errors': errors, 'readerVersion': 2}
+
+    d['tariffAutomation'] = {
+        'checkedAt': iso(), 'parsed': len(parsed), 'expected': 8,
+        'errors': errors, 'readerVersion': 3
+    }
     for row in d.get('updates', []):
         if row['name'] == 'Tarifas ENReGE/BAGSA':
-            row.update(last=iso(), status='partial' if errors else 'updated',
-                       mode='Automática',
-                       note=(f'{len(parsed)} cuadros BAGSA leídos automáticamente con resolución y vigencia explícitas. ' + '; '.join(errors)).strip())
-    print('BAGSA READER', len(parsed), errors)
+            row.update(
+                last=iso(), status='partial' if errors else 'updated',
+                mode='Automática',
+                note=(f'{len(parsed)}/8 cuadros BAGSA verificados automáticamente (GN/GLP, resolución y vigencia). ' + '; '.join(errors)).strip()
+            )
+    print('BAGSA READER', len(parsed), '/8', errors)
 
 
 def _pba_relevant(text):
