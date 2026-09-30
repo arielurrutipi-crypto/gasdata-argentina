@@ -210,8 +210,12 @@ def _pba_relevant(text):
     # commercial activities; keep them out unless an infrastructure/regulatory
     # signal is present.
     corporate=("objeto social","constitución de sociedad","comercialización de productos derivados",
-               "accesorios del automotor","autopartes","fraccionamiento","envasado")
-    if any(x in low for x in corporate):
+               "accesorios del automotor","autopartes","fraccionamiento","envasado",
+               "compra, venta","importación, exportación","importacion, exportacion")
+    public_project=re.search(r"\bmunicipalidad\b|licitaci[oó]n\s+p[úu]blica|presupuesto\s+oficial|\bobra\s*:|\bexpediente\b|\bresoluci[oó]n\b|\bdecreto\b",text,re.I)
+    if any(x in low for x in corporate) and not public_project:
+        return False
+    if re.search(r"gas\s+natural\s+comprimido|\bGNC\b",text,re.I) and not re.search(r"red(?:es)?\s+de\s+gas\s+natural|gasoduct|licitaci[oó]n|\bBAGSA\b|Buenos Aires Gas|tarifa|suministro",text,re.I):
         return False
     return False
 
@@ -250,6 +254,12 @@ def update_bopba(d, fetch, iso, today):
             if not _pba_relevant(probe):
                 removed += 1
                 continue
+            title=_pba_title(probe)
+            category=_pba_category(probe)
+            tags=['PBA',category]
+            if re.search(r'\bBAGSA\b|Buenos Aires Gas',probe,re.I): tags.append('BAGSA')
+            if re.search(r'\bsubdistrib',probe,re.I): tags.append('Subdistribución')
+            r={**r,'title':title,'disposition':title,'category':category,'tags':list(dict.fromkeys(tags))}
         items[r['url']] = r
     errors = []
     count = 0
