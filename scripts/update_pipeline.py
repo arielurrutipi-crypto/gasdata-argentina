@@ -557,6 +557,15 @@ def _reg_date(text):
                 except Exception: pass
     return None
 
+def _first_article(text):
+    text=clean(text or "")
+    if not text: return ""
+    m=re.search(r"\bART[ÍI]CULO\s+1(?:[°ºo])?\s*[\.\-–—:]?\s*(.*?)(?=\s+\bART[ÍI]CULO\s+(?:2|SEGUNDO)\b|$)",text,re.I|re.S)
+    if not m: return ""
+    value=clean(m.group(1)).strip(" -–—")
+    return value[:700]
+
+
 def _discover_regulation_urls():
     base="https://www.argentina.gob.ar/normativa/busqueda-avanzada"
     since=REGULATION_START.strftime("%Y-%m-%d")
@@ -620,12 +629,14 @@ def _parse_regulation(url,hint=None):
     tags=list(dict.fromkeys(cats))
     low=text.lower()
     if "bagsa" in low or "subdistrib" in low: tags.append("BAGSA")
-    desc=(hint or {}).get("snippet") or title or summary[:280]
+    first_article=_first_article(summary)
+    desc=(hint or {}).get("snippet") or title or first_article or summary[:280]
     desc=clean(desc)[:420]
     return {
       "num":_reg_number(name),"category":primary,"title":title or _reg_number(name),
       "publishedAt":iso(dt),"validatedAt":iso(),"sourceType":"OFFICIAL",
-      "status":"updated","desc":desc,"tags":list(dict.fromkeys(tags)),
+      "status":"updated","desc":desc,"firstArticle":first_article,
+      "tags":list(dict.fromkeys(tags)),
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
 
@@ -683,14 +694,16 @@ def _parse_bora_detail(url,day,label):
     if "bagsa" in low or "subdistrib" in low: tags.append("BAGSA")
     num=_reg_number(label)
     if not num or num=="Norma": return None
+    first_article=_first_article(body)
     desc=title
     if not desc or desc==label[:260]:
-        desc=body[:380]
+        desc=first_article or body[:380]
     return {
       "num":num,"category":primary,"title":title or num,
       "publishedAt":iso(datetime.combine(day,datetime.min.time(),tzinfo=ART)),
       "validatedAt":iso(),"sourceType":"OFFICIAL","status":"updated",
-      "desc":clean(desc)[:420],"tags":list(dict.fromkeys(tags)),
+      "desc":clean(desc)[:420],"firstArticle":first_article,
+      "tags":list(dict.fromkeys(tags)),
       "url":url,"issuer":issuer or "Organismo oficial","auto":True
     }
 
@@ -785,6 +798,31 @@ def update_regulations(d):
                     refreshed+=1
                     continue
                 known[key]=item; added+=1
+    preview_backfilled=0
+    preview_targets=sorted(
+        (x for x in known.values() if x.get("url") and not x.get("firstArticle")),
+        key=lambda x:x.get("publishedAt",""),reverse=True
+    )[:16]
+    def load_preview(item):
+        try:
+            raw=fetch(item["url"],timeout=25)
+            soup=BeautifulSoup(raw,"html.parser")
+            article=soup.find("article")
+            body=clean(article.get_text(" ",strip=True)) if article else clean(soup.get_text(" ",strip=True))
+            return item,_first_article(body)
+        except Exception as e:
+            print("REG PREVIEW",item.get("url"),e)
+            return item,""
+    if preview_targets:
+        with ThreadPoolExecutor(max_workers=6) as ex:
+            futs=[ex.submit(load_preview,x) for x in preview_targets]
+            for fut in as_completed(futs):
+                item,preview=fut.result()
+                if preview:
+                    item["firstArticle"]=preview
+                    item["validatedAt"]=iso()
+                    preview_backfilled+=1
+
     items=list(known.values())
     items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
     d["regulations"]=items
@@ -793,7 +831,7 @@ def update_regulations(d):
                  lastRun=iso(),pagesOk=pages_ok,pagesError=len(failed_dates),candidates=len(candidates),
                  pendingDates=failed_dates,pendingDetails=failed_details,
                  complete=not incomplete,lastRange={"from":start_day.isoformat(),"to":end_day.isoformat()},
-                 added=added,revalidated=refreshed)
+                 added=added,revalidated=refreshed,previewBackfilled=preview_backfilled)
     if not incomplete: state["lastSuccessfulAt"]=iso()
     d["regulationCriteria"]={
       "title":"Criterio GasData",
@@ -806,7 +844,7 @@ def update_regulations(d):
       "content":"Primera Sección · normativa gas desde 01/01/2026",
       "cadence":"Cada 3 h","status":"REVISAR" if incomplete else "ACTIVA",
       "url":"https://www.boletinoficial.gob.ar/seccion/primera","checkedAt":iso(),
-      "lastResult":f"{len(items)} normas · {added} nuevas · {refreshed} revalidadas · {pages_ok} ediciones consultadas"
+      "lastResult":f"{len(items)} normas · {added} nuevas · {refreshed} revalidadas · {preview_backfilled} vistas enriquecidas · {pages_ok} ediciones consultadas"
     }
     if not incomplete: payload["validatedAt"]=iso()
     if src: src.update(payload)
@@ -817,7 +855,7 @@ def update_regulations(d):
     if u:
         u.update(last=iso(),next=iso(now()+timedelta(hours=3)),
                  status=("partial" if pages_ok else "pending") if incomplete else ("updated" if added else "unchanged"),
-                 note=f"Consulta {start_day:%d/%m/%Y}–{end_day:%d/%m/%Y} · {len(items)} normas guardadas · {added} nuevas · {len(failed_dates)} ediciones y {len(failed_details)} documentos pendientes de reintento.")
+                 note=f"Consulta {start_day:%d/%m/%Y}–{end_day:%d/%m/%Y} · {len(items)} normas guardadas · {added} nuevas · {preview_backfilled} fichas enriquecidas con Art. 1° · {len(failed_dates)} ediciones y {len(failed_details)} documentos pendientes de reintento.")
 
 
 def _update_due(d,name,hours):
@@ -933,7 +971,7 @@ def sync_update_catalog(d):
       ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
       ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
       ("Capacidad de transporte","Cada 3 h","Automática","Estado vigente","Relee concursos ENReGE y reventas MEGSA; mezcla por identificador y conserva concursos verificados si la página dinámica no expone el listado."),
-      ("Boletín Oficial PBA","Cada 3 h","Monitoreo automático","Búsqueda desde 01/01/2026","Consulta “gas natural” y “BAGSA”. Hoy informa coincidencias y última fecha; no incorpora automáticamente actos provinciales al listado nacional."),
+      ("Boletín Oficial PBA","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."),
       ("Precios de mercado","Cada 60 min","Automática parcial","EIA diaria + Banco Mundial mensual","Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.")
     ]
     out=[]
@@ -958,7 +996,7 @@ def refresh_source_status(d):
             src["checkedAt"]=iso()
 
 def main():
-    from automatic_sources import update_market, update_bagsa
+    from automatic_sources import update_market, update_bagsa, update_bopba
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
     update_news(d)
@@ -974,7 +1012,7 @@ def main():
     system_market(d)
     monthly_flows_status(d)
     if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
-    if _update_due(d,"Boletín Oficial PBA",3): bopba_monitor(d)
+    if _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
     refresh_source_status(d)
     sync_update_catalog(d)
     d["meta"]["updatedAt"]=iso()
