@@ -477,8 +477,8 @@ def system_market(d):
 def _number_ar(value):
     return float(str(value).replace(".","").replace(",","."))
 
-def _format_ar(value):
-    return f"{value:.2f}".replace(".",",")
+def _format_ar(value,decimals=2):
+    return f"{float(value):.{decimals}f}".replace(".",",")
 
 def _monthly_pdf_url(month):
     return "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/9/PEI_"+month.replace("-","")+".pdf"
