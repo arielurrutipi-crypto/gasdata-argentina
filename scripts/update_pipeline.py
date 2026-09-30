@@ -191,6 +191,107 @@ def production(d):
         if u: u.update(last=iso(),next=iso(now()+timedelta(days=15)),status="pending",
                        note="Consulta oficial fallida; se conserva el último valor y su período de referencia.")
 
+
+def _format_ar(v,decimals=2):
+    return f"{float(v):.{decimals}f}".replace(".",",")
+
+def _series_rows(series_ids,last=24):
+    qs=urllib.parse.urlencode({"ids":",".join(series_ids),"last":last,"metadata":"full"})
+    payload=json.loads(fetch("https://apis.datos.gob.ar/series/api/series/?"+qs,timeout=30).decode("utf-8"))
+    rows=payload.get("data") or []
+    if not rows: raise ValueError("API Series sin observaciones")
+    out=[]
+    for row in rows:
+        if not isinstance(row,list) or len(row)<len(series_ids)+1: continue
+        period=str(row[0])[:7]
+        vals=[]
+        for value in row[1:len(series_ids)+1]:
+            try: vals.append(float(value) if value is not None else None)
+            except Exception: vals.append(None)
+        if len(period)==7 and all(v is not None for v in vals):
+            out.append((period,vals))
+    if not out: raise ValueError("API Series devolvió filas sin formato esperado")
+    return out
+
+def _month_days(period):
+    dt=datetime.strptime(period+"-01","%Y-%m-%d")
+    nxt=(dt.replace(day=28)+timedelta(days=4)).replace(day=1)
+    return (nxt-dt).days
+
+def update_basin_production(d):
+    u=next((x for x in d.get("updates",[]) if x.get("name")=="Producción por cuenca/provincia"),None)
+    try:
+        ids=["PROD_GAS_SESCO_1","PROD_GAS_SESCO_2","PROD_GAS_SESCO_3","PROD_GAS_SESCO_4","PROD_GAS_SESCO_5"]
+        rows=_series_rows(ids,30)
+        raw={p:v for p,v in rows}
+        current=d.get("basinMonthlyMeta",{}).get("latest","")
+        candidates=sorted(p for p in raw if p.startswith("2026-"))
+        if not candidates: raise ValueError("la API oficial no devolvió meses 2026")
+        latest=max(candidates)
+        if current and latest<current:
+            raise ValueError("la API oficial devolvió un período anterior al ya validado")
+        names=["Cuenca Austral","Golfo San Jorge","Cuenca Neuquina","Cuenca Noroeste","Cuenca Cuyana"]
+        existing={x.get("month"):x for x in d.get("basinMonthly2026",[])}
+        built={}
+        for period in candidates:
+            vals=raw[period]
+            days=_month_days(period)
+            # SESCO historical series are monthly Mm3. If the endpoint ever
+            # changes to daily averages, avoid dividing values already on that scale.
+            daily=[v/days for v in vals] if sum(vals)>500 else vals
+            total=sum(daily)
+            if not 80<total<220: raise ValueError("total por cuencas fuera de rango: "+period+" "+str(total))
+            prev=raw.get(str(int(period[:4])-1)+period[4:])
+            prev_daily=None
+            if prev:
+                prev_days=_month_days(str(int(period[:4])-1)+period[4:])
+                prev_daily=[v/prev_days for v in prev] if sum(prev)>500 else prev
+            basins=[]
+            for i,name in enumerate(names):
+                value=daily[i]
+                share=value/total*100 if total else 0
+                trend=""
+                if prev_daily and prev_daily[i]:
+                    trend=(value/prev_daily[i]-1)*100
+                basins.append({
+                    "name":name,"value":_format_ar(value,3),"unit":"MMm³/d",
+                    "share":_format_ar(share,1)+"%",
+                    "trend":(("+" if trend>=0 else "")+_format_ar(trend,2)+"%") if prev_daily else ""
+                })
+            old=existing.get(period,{})
+            built[period]={
+                **old,"month":period,
+                "label":("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")[int(period[-2:])-1],
+                "total":_format_ar(total,3),
+                "reference":("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")[int(period[-2:])-1]+" "+period[:4]+" · promedio diario",
+                "validatedAt":iso(),"source":"SESCO / Secretaría de Energía · API Series de Tiempo",
+                "sourceUrl":"https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco/archivo/energia_0d1af33c-2791-4114-a276-51fe70478a09",
+                "basins":basins
+            }
+        # Preserve any manually validated 2026 rows not returned by the API.
+        merged={**existing,**built}
+        d["basinMonthly2026"]=sorted(merged.values(),key=lambda x:x.get("month",""))
+        meta=d.setdefault("basinMonthlyMeta",{})
+        meta.update(year=2026,latest=max(merged),source="Producción de gas por cuenca · SESCO / Secretaría de Energía",
+                    officialUrl="https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco/archivo/energia_0d1af33c-2791-4114-a276-51fe70478a09",
+                    note="Serie mensual oficial. GasData convierte el volumen mensual de cada cuenca a promedio diario y calcula participación y variación interanual.",
+                    checkedAt=iso(),validatedAt=iso(),auto=True)
+        src=next((x for x in d.get("sources",[]) if x.get("name")=="Datos Argentina · Energía"),None)
+        if src:
+            src.update(availability="DISPONIBLE",checkedAt=iso(),validatedAt=iso(),
+                       lastResult="API Series operativa · cuencas hasta "+latest)
+        if u:
+            u.update(last=iso(),next=iso(now()+timedelta(days=1)),status="updated" if latest>current else "unchanged",
+                     mode="Automática parcial",strategy="API SESCO mensual · control de período y rango",
+                     scope="Cuencas se actualizan automáticamente desde la API oficial. Provincia conserva el último consolidado validado mientras se integra su serie oficial.",
+                     note="Cuencas: lectura automática oficial hasta "+latest+". Provincia: pendiente de integrar al mismo lector.")
+        print("BASIN API",latest,len(built))
+    except Exception as e:
+        print("BASIN API",e)
+        if u:
+            u.update(last=iso(),next=iso(now()+timedelta(days=1)),status="partial",mode="Automática parcial",
+                     note="No se reemplazaron datos por cuenca: "+str(e)[:180]+". Provincia conserva el último consolidado validado.")
+
 def demand_priority(d):
     url="https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-estimacion-demanda-prioritaria.php"
     try:
@@ -1006,7 +1107,7 @@ def sync_update_catalog(d):
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
       ("Tarifas ENReGE/BAGSA","Diaria","Automática parcial","Cuadros BAGSA + normativa","Lee resolución y vigencia explícita de cuadros BAGSA. Conserva referencias anteriores si falta verificar un producto. No interpreta todavía todos los importes tarifarios."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
-      ("Producción por cuenca/provincia","Mensual","Pendiente de automatización","Último consolidado validado","Los valores por cuenca y provincia permanecen en el último mes validado hasta implementar lectura automática del dataset oficial."),
+      ("Producción por cuenca/provincia","Diaria","Automática parcial","API SESCO mensual · control de período y rango","Cuencas se actualizan automáticamente desde la API oficial y provincia conserva el último consolidado validado mientras se integra su serie."),
       ("Demanda prioritaria","Cada 60 min","Automática","Relectura de ventana vigente","Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia."),
       ("Sistema gasífero diario","Cada 60 min","Automática parcial","Último reporte disponible","Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo."),
       ("Flujos mensuales","Cada 60 min","Automática parcial","Totales del PDF verificados","Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas."),
@@ -1050,6 +1151,7 @@ def main():
     update_market(d,fetch,iso)
     validate_pages(d)
     production(d)
+    if _update_due(d,"Producción por cuenca/provincia",24): update_basin_production(d)
     demand_priority(d)
     system_market(d)
     monthly_flows_status(d)
