@@ -1218,7 +1218,7 @@ def main():
     needs_reg_backfill=any(x.get("jurisdiction")!="PBA" and x.get("url") and not x.get("firstArticle") for x in d.get("regulations",[]))
     if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
     sync_tariffs_from_regulations(d)
-    if d.get("tariffAutomation",{}).get("readerVersion")!=3 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
+    if d.get("tariffAutomation",{}).get("readerVersion")!=4 or _update_due(d,"Tarifas ENReGE/BAGSA",24) or not d.get('tariffAutomation'):
         update_bagsa(d,fetch,iso)
     update_market(d,fetch,iso)
     validate_pages(d)
