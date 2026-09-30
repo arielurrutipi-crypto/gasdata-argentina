@@ -52,22 +52,17 @@ def worldbank_latest(raw):
 
 
 def catalyst_latest(fetch):
-    hub='https://www.catalyst-commercial.co.uk/works/'
-    soup=BeautifulSoup(fetch(hub,timeout=30),'html.parser')
-    candidates=[]
     month_map={m.lower():i for i,m in enumerate(('January','February','March','April','May','June','July','August','September','October','November','December'),1)}
-    for a in soup.select('a[href]'):
-        href=urljoin(hub,a['href'])
-        if '/works/uk-energy-market-report-' in href and not href.endswith('/'):
-            href=href+'/'
-        m=re.search(r'uk-energy-market-report-(\d{1,2})-([a-z]+)-(20\d{2})',href,re.I)
-        if not m or m.group(2).lower() not in month_map: continue
-        dt=datetime(int(m.group(3)),month_map[m.group(2).lower()],int(m.group(1)))
-        candidates.append((dt,href))
-    if not candidates:
-        raise ValueError('No se encontró el último UK Energy Market Report')
+    # Catalyst's /works/ index can return 404 to automated clients while the
+    # individual public reports remain accessible. Probe recent canonical URLs.
+    today=datetime.now()
+    candidates=[]
+    for offset in range(0,16):
+        dt=today-timedelta(days=offset)
+        slug=dt.strftime('%d-%B-%Y').lower()
+        candidates.append((dt,'https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-'+slug+'/'))
     errors=[]
-    for report_date,url in sorted(candidates,key=lambda x:x[0],reverse=True)[:12]:
+    for report_date,url in candidates:
         try:
             text=re.sub(r'\s+',' ',BeautifulSoup(fetch(url,timeout=30),'html.parser').get_text(' ',strip=True))
         except Exception as exc:
@@ -91,7 +86,7 @@ def catalyst_latest(fetch):
                 obs=datetime(year,mon,int(settle.group(1)))
                 if obs>report_date: obs=obs.replace(year=year-1)
         return obs.date().isoformat(),float(jkm.group(1)),float(ttf.group(1)),url
-    raise ValueError('No hubo reporte Catalyst accesible y parseable: '+'; '.join(errors[:4]))
+    raise ValueError('No hubo reporte Catalyst accesible y parseable: '+'; '.join(errors[:5]))
 
 def pau_2026(fetch):
     from pypdf import PdfReader
