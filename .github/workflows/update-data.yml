@@ -4,6 +4,8 @@ on:
     - cron: '17 * * * *'
   push:
     paths:
+      - 'index.html'
+      - 'assets/**'
       - 'scripts/**'
       - '.github/workflows/update-data.yml'
   workflow_dispatch:
