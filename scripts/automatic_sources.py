@@ -206,7 +206,10 @@ def _pba_relevant(text):
     # among many. Exclude them before evaluating infrastructure proximity.
     corporate=("objeto social","constitución de sociedad","comercialización de productos derivados",
                "accesorios del automotor","autopartes","fraccionamiento","envasado",
-               "compra, venta","importación, exportación","importacion, exportacion")
+               "compra, venta","importación, exportación","importacion, exportacion",
+               "propietaria, proyectista","empresaria, contratista","urbanización integral de tierras",
+               "urbanizacion integral de tierras","construcción, demolición","construccion, demolicion",
+               "refacción de edificios","refaccion de edificios","obra pública o privada","obra publica o privada")
     public_project=re.search(r"\bmunicipalidad\b|licitaci[oó]n\s+p[úu]blica|presupuesto\s+oficial|\bobra\s*:|\bexpediente\b|\bresoluci[oó]n\b|\bdecreto\b",text,re.I)
     if any(x in low for x in corporate) and not public_project:
         return False
@@ -220,6 +223,9 @@ def _pba_relevant(text):
 
 def _pba_title(text):
     text=re.sub(r"\s+"," ",text or "").strip()
+    art=re.search(r"ART[ÍI]CULO\s+1[°ºo]?\.?\s*(.*?)(?=ART[ÍI]CULO\s+2|$)",text,re.I)
+    if art:
+        return re.sub(r"\s+"," ",art.group(1)).strip(" -–—")[:300]
     patterns=(
       r"(Licitaci[oó]n P[úu]blica\s+N[º°]?\s*.*?)(?=Presupuesto|Solicitud|Consulta|Apertura|Valor del pliego|Expediente|$)",
       r"((?:Obra|Proyecto)\s*:\s*.*?)(?=Presupuesto|Solicitud|Consulta|Apertura|Expediente|$)",
@@ -229,15 +235,19 @@ def _pba_title(text):
         m=re.search(pattern,text,re.I)
         if m:
             return re.sub(r"\s+"," ",m.group(1)).strip(" -–—")[:300]
+    if re.search(r"\bBAGSA\b|Buenos Aires Gas",text,re.I) and re.search(r"licitaci[oó]n|pliego",text,re.I):
+        return "BAGSA — Licitación pública / pliego de bases y condiciones"
+    if re.search(r"\bBAGSA\b|Buenos Aires Gas",text,re.I) and re.search(r"aporte irrevocable|aumento de capital",text,re.I):
+        return "BAGSA — aporte irrevocable a cuenta de futuros aumentos de capital"
     m=re.search(r"(.{0,90}\bgas\s+natural\b.{0,150})",text,re.I)
     return (m.group(1).strip(" -–—") if m else text[:240]).strip()
 
 def _pba_category(text):
     low=(text or "").lower()
     if "tarifa" in low: return "Tarifas"
-    if "bagsa" in low or "subdistrib" in low: return "Subdistribución"
-    if any(x in low for x in ("licitación","licitacion","obra","red de gas","gasoduct","ramal","infraestructura","extensión","extension","ampliación","ampliacion")):
+    if any(x in low for x in ("licitación","licitacion","obra:","red de gas","gasoduct","ramal","infraestructura","extensión","extension","ampliación","ampliacion")):
         return "Infraestructura"
+    if "bagsa" in low or "subdistrib" in low: return "Subdistribución"
     return "Normativa"
 
 
@@ -319,7 +329,7 @@ def update_bopba(d, fetch, iso, today):
         except Exception as exc:
             errors.append(term + ': ' + str(exc)[:140])
     d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
-    state['cleanupVersion'] = 2
+    state['cleanupVersion'] = 3
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
             row.update(last=iso(), next=iso(today + timedelta(hours=3)), status='partial' if errors else 'updated' if (count or removed) else 'unchanged',
