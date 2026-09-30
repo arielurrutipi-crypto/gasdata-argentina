@@ -1175,6 +1175,27 @@ def _scan_bora_dates(start_day,end_day,retry_dates=()):
             day,raw,err=fut.result()
             if raw is not None: pages.append((day,raw))
             else: failed.append(day.isoformat())
+
+    # BORA occasionally returns a transient 5xx/challenge for one edition while
+    # the surrounding dates work. Retry failed dates serially in the same run
+    # before marking the whole Normativa module as partial.
+    if failed:
+        retry_failed=[]
+        for raw_day in failed:
+            day=datetime.strptime(raw_day,"%Y-%m-%d").date()
+            url="https://www.boletinoficial.gob.ar/seccion/primera/"+day.strftime("%Y%m%d")
+            recovered=None
+            for timeout in (30,45):
+                try:
+                    recovered=fetch(url,timeout=timeout)
+                    break
+                except Exception as e:
+                    print("BORA RETRY",day,e)
+            if recovered is not None:
+                pages.append((day,recovered))
+            else:
+                retry_failed.append(raw_day)
+        failed=retry_failed
     candidates={}
     for day,raw in pages:
         soup=BeautifulSoup(raw,"html.parser")
