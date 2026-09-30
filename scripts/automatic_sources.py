@@ -158,7 +158,7 @@ def update_bagsa(d, fetch, iso):
     import pdfplumber
     hub = 'https://www.bagsa.com.ar/index.php/tarifas/'
     display_names = ['Naturgy BAN', 'Camuzzi Gas Pampeana', 'Litoral Gas', 'Camuzzi Gas del Sur']
-    errors, parsed = [], {}
+    errors, parsed, pending_headers, fallbacks = [], {}, [], []
     try:
         soup = BeautifulSoup(fetch(hub), 'html.parser')
 
@@ -203,7 +203,26 @@ def update_bagsa(d, fetch, iso):
                 )
                 parsed[(name,product)] = candidate
             except Exception as exc:
-                errors.append(f'{name} {product}: {str(exc)[:150]}')
+                pending_headers.append((name,product,page_ref,url,str(exc)[:150]))
+
+        # If one PDF has a broken embedded font/header, BAGSA's page reference is
+        # still authoritative for the product. Reuse the vigencia only from another
+        # successfully parsed document carrying that exact same resolution.
+        for name,product,page_ref,url,reason in pending_headers:
+            same_res=next((x for x in parsed.values() if x.get('res')==page_ref),None)
+            if same_res:
+                expected_token='-'+product+'-'
+                source_url=url if expected_token in url.upper() else hub
+                parsed[(name,product)] = dict(
+                    name=name, product=product, res=page_ref,
+                    validFrom=same_res['validFrom'], validatedAt=iso(), checkedAt=iso(),
+                    scope='Distribución · cuadro BAGSA', bagsa=True,
+                    url=source_url, documentUrl=url, auto=True, status='current',
+                    headerValidation='Vigencia cruzada con otro cuadro de la misma resolución'
+                )
+                fallbacks.append(name+' '+product+' ('+page_ref+')')
+            else:
+                errors.append(f'{name} {product}: {reason}')
 
         # Rebuild only BAGSA rows from verified current products, while preserving
         # non-BAGSA rows (e.g. transport tariffs). If one product fails, retain the
@@ -231,16 +250,16 @@ def update_bagsa(d, fetch, iso):
 
     d['tariffAutomation'] = {
         'checkedAt': iso(), 'parsed': len(parsed), 'expected': 8,
-        'errors': errors, 'readerVersion': 3
+        'errors': errors, 'fallbacks': fallbacks, 'readerVersion': 4
     }
     for row in d.get('updates', []):
         if row['name'] == 'Tarifas ENReGE/BAGSA':
             row.update(
                 last=iso(), status='partial' if errors else 'updated',
                 mode='Automática',
-                note=(f'{len(parsed)}/8 cuadros BAGSA verificados automáticamente (GN/GLP, resolución y vigencia). ' + '; '.join(errors)).strip()
+                note=(f'{len(parsed)}/8 cuadros BAGSA verificados automáticamente (GN/GLP, resolución y vigencia).' + ((' Validación cruzada: '+', '.join(fallbacks)+'.') if fallbacks else '') + ((' '+ '; '.join(errors)) if errors else '')).strip()
             )
-    print('BAGSA READER', len(parsed), '/8', errors)
+    print('BAGSA READER', len(parsed), '/8', 'fallbacks', fallbacks, 'errors', errors)
 
 
 def _pba_relevant(text):
