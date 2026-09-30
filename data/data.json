@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "updatedAt": "2026-09-30T11:23-03:00",
+    "updatedAt": "2026-09-30T11:29-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -60,8 +60,8 @@
       "value": "43,3917",
       "unit": "MMm³/d",
       "reference": "Vie 02/10/2026 · PROYECCIÓN",
-      "validatedAt": "2026-09-30T11:22-03:00",
-      "nextValidation": "2026-10-01T11:22-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "nextValidation": "2026-10-01T11:28-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
@@ -105,23 +105,11 @@
   ],
   "news": [
     {
-      "source": "RunRun Energético",
-      "sourceType": "PRESS",
-      "publishedAt": "2026-09-30T08:30-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
-      "title": "Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta",
-      "desc": "YPF iniciará una nueva campaña de estudios técnicos en el Golfo San Matías como parte del desarrollo de Argentina LNG, el proyecto diseñado para convertir la producción de gas de Vaca Muerta en una plataforma de exportación de gas natural licuado a gran escala. Los trabajos serán realizados desde el buque Rustrigen, una embarcación especializada […] The post Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta first appeared on Runrun energético .",
-      "tags": [
-        "Gas"
-      ],
-      "url": "https://runrunenergetico.com/argentina-lng-avanza-en-rio-negro-con-nuevos-estudios-para-exportar-gas-de-vaca-muerta/"
-    },
-    {
       "source": "Más Energía · LM Neuquén",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "PECOM concretó su primera exportación de crudo Escalante hacia Hawái",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -134,13 +122,25 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-30T08:30-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Vaca Muerta: DLS Archer activó dos equipos de alta especificación para YPF",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
         "Gas"
       ],
       "url": "https://mase.lmneuquen.com/vaca-muerta/vaca-muerta-dls-archer-activo-dos-equipos-alta-especificacion-ypf-n1255542"
+    },
+    {
+      "source": "RunRun Energético",
+      "sourceType": "PRESS",
+      "publishedAt": "2026-09-30T08:30-03:00",
+      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "title": "Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta",
+      "desc": "YPF iniciará una nueva campaña de estudios técnicos en el Golfo San Matías como parte del desarrollo de Argentina LNG, el proyecto diseñado para convertir la producción de gas de Vaca Muerta en una plataforma de exportación de gas natural licuado a gran escala. Los trabajos serán realizados desde el buque Rustrigen, una embarcación especializada […] The post Argentina LNG avanza en Río Negro con nuevos estudios para exportar gas de Vaca Muerta first appeared on Runrun energético .",
+      "tags": [
+        "Gas"
+      ],
+      "url": "https://runrunenergetico.com/argentina-lng-avanza-en-rio-negro-con-nuevos-estudios-para-exportar-gas-de-vaca-muerta/"
     },
     {
       "source": "RunRun Energético",
@@ -158,7 +158,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T11:37-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Juan Luchilo, gerente general de Cammesa: “El sistema eléctrico tiene ir a un esquema lo más full gas posible”",
       "desc": "Juan Luchilo, gerente general de Cammesa, no tiene dudas. “El sistema eléctrico tiene ir a un esquema lo más full gas posible”, afirmó en el Renewables y Electricity Day organizado por EconoJournal. “Desde el momento que se establece que Vaca Muerta es una fuente infinita de gas, hay que poner generación en boca de pozo […]",
       "tags": [
@@ -207,7 +207,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "GNL: aumentó el tránsito de buques por el estrecho de Ormuz pese al conflicto",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -292,7 +292,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:40-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "La producción argentina proyecta alcanzar un millón de barriles diarios",
       "desc": "El país se encamina a marcar un hito histórico de extracción impulsado por el desarrollo de la formación Vaca Muerta […] The post La producción argentina proyecta alcanzar un millón de barriles diarios first appeared on revistapetroquimica.com .",
       "tags": [
@@ -304,7 +304,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-29T06:27-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste",
       "desc": "La petrolera estatal Saudi Aramco retomó los flujos a través de esta infraestructura de 1.200 kilómetros tras reparar los daños […] The post Petróleo: Arabia Saudí reanuda exportaciones por el oleoducto Este-Oeste first appeared on revistapetroquimica.com .",
       "tags": [
@@ -316,7 +316,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T17:24-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Enrege: delegados sindicales de UPCN y ATE presionaron a la conducción del ente en la última reunión de directorio",
       "desc": "La reunión de directorio del Ente Nacional Regulador del Gas y la Electricidad (Enrege) venía transcurriendo este lunes sin mayores sobresaltos, con el foco puesto en la actualización de tarifas de octubre, el apagón del 19 de septiembre y el plan de retiros voluntarios. Sin embargo, apenas se terminaron de tratar los temas del día, […]",
       "tags": [
@@ -328,7 +328,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T16:09-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Elecciones 2027: con foco en el derrame de Vaca Muerta, se lanzó un primer espacio opositor a Rolando Figueroa",
       "desc": "Las elecciones provinciales del 2027 en Neuquén aún no tienen fecha, pero un espacio político lanzó este lunes su plataforma de campaña con la que buscará disputarle la gobernación a Rolando Figueroa. Se trata del partido Cumplir, liderado por la diputada Brenda Buchiniz e integrado por una amalgama de dirigentes que incluye desde un exfuncionario […]",
       "tags": [
@@ -380,7 +380,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Urea: el gas de Vaca Muerta cuesta hasta un 68% menos que el del Presal brasileño",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -393,7 +393,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Las claves para entender la apuesta del GNL argentino",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -406,7 +406,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "El gas de Vaca Muerta podría llegar a Brasil a U$S 6,3/MMBTU",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -419,7 +419,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "El Hub Norte y la necesidad de infraestructura para el gas asociado",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -432,7 +432,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "EXIM de Estados Unidos financiará a Argentina LNG con U$S 6.000 millones",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -445,7 +445,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Vaca Muerta: el motor salarial que domina Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -458,7 +458,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Un tren para descomprimir la \"ruta de la arena\" de Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -471,7 +471,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Halliburton capacitó a sus operarios para operar Zeus en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -484,7 +484,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "El camino hacia el \"sello verde\" Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -497,7 +497,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Alto apoyo al Programa \"Gas do Povo\" a un año de su creación",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -510,7 +510,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Se viene el precio “Bahía Blanca” para la tonelada de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -523,7 +523,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Argentina mira para su exportación América, Asia y China",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -536,7 +536,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Cuál es el precio internacional, la demanda y perspectiva del GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -549,7 +549,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Colombia: la importación de GLP alcanzó al 51,7%, y ya superó a la oferta nacional",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -562,7 +562,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "La suba del precio internacional tensiona importación en México",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -575,7 +575,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Argentina: City Gas instaló su segunda expendedora",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -588,7 +588,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Seminario para entender a la Argentina como exportadora de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -601,7 +601,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Colombia: Colgas el mayor importador de GLP, con el 53% del volumen entre el 2020 y el 2025",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -614,7 +614,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Nuevo proyecto de u$s360 M de Compañía Mega para producir más de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -627,7 +627,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "SuperGasBras ya maneja una flota de 51 camiones eléctricos en Río de Janeiro",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -640,7 +640,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T10:48-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:28-03:00",
       "title": "Transporte de GLP varado al pie de la Cordillera por nieve",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -715,7 +715,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T09:01-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "El Gobierno precisó cuánto costará la energía para data centers, grandes desarrollos mineros y nuevos proyectos de infraestructura en Vaca Muerta",
       "desc": "El Gobierno publicó el viernes pasado la resolución 264 de la Secretaría de Energía, una normativa que establece las condiciones de borde bajo las cuales deberán incorporarse al Mercado Eléctrico Mayorista (MEM) las nuevas inversiones que impliquen un salto significativo en el consumo de electricidad. La regulación apunta fundamentalmente a anticipar el impacto que podrían […]",
       "tags": [
@@ -739,7 +739,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T07:12-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales",
       "desc": "La petrolera YPF aporta el 48,9% del crudo no convencional argentino con 317,4 mil barriles diarios, mientras que el 80,6% […] The post YPF lidera la producción de Vaca Muerta mientras la declinación de pozos exige 6.100 millones de dólares anuales first appeared on revistapetroquimica.com .",
       "tags": [
@@ -751,7 +751,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-28T06:50-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones",
       "desc": "Un corredor marítimo supervisado por Estados Unidos y rutas alternativas permitieron restablecer el flujo de 8 millones de barriles diarios […] The post Conflicto en Ormuz: países del Golfo logran recuperar sus exportaciones first appeared on revistapetroquimica.com .",
       "tags": [
@@ -872,7 +872,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-09-25T06:52-03:00",
-      "feedValidatedAt": "2026-09-30T11:22-03:00",
+      "feedValidatedAt": "2026-09-30T11:27-03:00",
       "title": "Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU",
       "desc": "El mandatario excluyó expresamente de la invitación a las firmas que exploten recursos en las Islas Malvinas bajo ocupación ilegal. […] The post Javier Milei convocó a inversiones en Vaca Muerta durante la Asamblea General de la ONU first appeared on revistapetroquimica.com .",
       "tags": [
@@ -1077,11 +1077,45 @@
   ],
   "regulations": [
     {
+      "num": "PBA · 2026-09-28 · Página 80",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ") Comercial - Distribuidora: Compra,\nventa, por mayor y por menor, importación, exportación, representación, distribución de materiales de construcción,\ncorralón, revestimientos internos y externos. E) Fraccionamiento, industrialización, transporte y comercialización de\nproductos derivados del petroleo accesorios del automotor y gas natural comprimido: La elaboración, explotación,\nindustrialización",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "28/09/2026",
+      "publishedAt": "2026-09-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14412/ver#page=80",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-09-28 · Página 79",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y comercialización de productos derivados del petroleo\naccesorios del automotor y gas natural comprimido: La elaboración, explotación, industrialización, compra, venta,\nfraccionamiento, envasado, distribución y expendio de toda clase de productos derivados del petróleo. Toda actividad que\nen virtud de la materia haya sido reservada a profesionales con título habilitante, será realizada por medio de estos. F",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "28/09/2026",
+      "publishedAt": "2026-09-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14412/ver#page=79",
+      "auto": true
+    },
+    {
       "num": "Resolución 663/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T10:34-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 663/2026 RESFC-2026-663-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 25/09/2026 VISTO el Expediente N.° EX-2026-69172932- -APN-UDYE#ENREGE, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que,",
@@ -1095,14 +1129,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348066/20260928",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "4 de la Ley N.° 24.076 - T.O. 2025). Que, con fecha 9 de marzo de 2020, el ex Ente Nacional Regulador del Gas (ENARGAS), en ejercicio de las facultades regulatorias que le correspondían, dictó la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS, mediante la cual, en lo que aquí interesa, aprobó el Reglamento de Comercializadores (IF-2020-12929142-APN-GDYE#ENARGAS) y sus respectivos Subanexos. Que, allí se dispuso que “Se considera comercializador a toda persona jurídica de derecho público o privado que compra y vende gas natural y/o transporte de gas natural por cuenta y orden de terceros, y que ha sido reconocida expresamente como tal por el Ente Nacional Regulador del Gas (ENARGAS) e in"
     },
     {
       "num": "Decreto 1107/2026",
       "category": "Transporte",
       "title": "Autorízase Segunda Etapa de Privatización.",
       "publishedAt": "2026-09-28T00:00-03:00",
-      "validatedAt": "2026-09-30T10:34-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Autorízase Segunda Etapa de Privatización.",
@@ -1113,6 +1148,24 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348025/20260928",
       "issuer": "ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA",
+      "auto": true,
+      "firstArticle": "de la Ley N° 25.943 y su modificatoria, ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA puede por sí, por intermedio de terceros o asociada a terceros, generar, transportar, distribuir y comercializar energía eléctrica; y realizar actividades de comercio vinculadas con bienes energéticos y desarrollar cualquiera de las actividades previstas en su objeto, tanto en el país como en el extranjero; facultades que resultan asimismo comprendidas en su objeto social estatutario. Que por la Resolución N° 712/04 de la SECRETARÍA DE ENERGÍA entonces dependiente del ex-MINISTERIO DE PLANIFICACIÓN FEDERAL, INVERSIÓN PÚBLICA Y SERVICIOS se creó el “FONDO PARA INVERSIONES NECESARIAS QUE PERMITAN INCREMENTAR LA OFERTA D"
+    },
+    {
+      "num": "PBA · 2026-09-25 · Página 66",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", industrialización, transporte y comercialización de productos derivados del petróleo\naccesorios del automotor y gas natural comprimido: La elaboración, explotación, industrialización, compra, venta,\nfraccionamiento, envasado, distribución y expendio de toda clase de productos derivados del petróleo. Toda actividad que\nen virtud de la materia haya sido reservada a profesionales con título habilitante, será",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "25/09/2026",
+      "publishedAt": "2026-09-25T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14410/ver#page=66",
       "auto": true
     },
     {
@@ -1120,7 +1173,7 @@
       "category": "Mercado",
       "title": "SECRETARÍA DE ENERGÍA Resolución 257/2026 RESOL-2026-257-APN-SE#MEC",
       "publishedAt": "2026-09-25T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 257/2026 RESOL-2026-257-APN-SE#MEC",
@@ -1129,14 +1182,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347964/20260925?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "del referido decreto, con el fin de establecer los mecanismos para la sanción de precios en condiciones de competencia y libre acceso, mantener en términos reales los niveles de ingresos y cubrir las necesidades de inversión, para garantizar la prestación continua de los servicios públicos de transporte y distribución de energía eléctrica y gas natural en condiciones técnicas y económicas adecuadas para los prestadores y los usuarios de todas las categorías. Que en línea con las anteriores resoluciones de ésta Secretaría, resulta indispensable continuar con el dictado de medidas que tiendan a normalizar el funcionamiento del MEM acorde a las bases establecidas en la Ley N° 24.065, de modo qu"
     },
     {
       "num": "Resolución 264/2026",
       "category": "GNL",
       "title": "SECRETARÍA DE ENERGÍA Resolución 264/2026 RESOL-2026-264-APN-SE#MEC",
       "publishedAt": "2026-09-25T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 264/2026 RESOL-2026-264-APN-SE#MEC",
@@ -1149,14 +1203,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347965/20260925?anexos=1",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "3 de la citada resolución se estableció un régimen aplicable a determinadas demandas extratendenciales, resultando necesario adecuarlo para contemplar las distintas modalidades de vinculación de dichas demandas al SADI, ya sea mediante instalaciones de transporte o de distribución. Que la presente regulación establece las condiciones de participación de las Demandas Extratendenciales en el MEM, sin sustituir ni alterar las competencias de las autoridades regulatorias competentes en materia de acceso, conexión, ampliación y utilización de las redes de transporte y distribución. Que la incorporación de Grandes Demandas de Energía Eléctrica vinculadas a infraestructura asociada al Procesamiento"
     },
     {
       "num": "Resolución 254/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 254/2026 RESOL-2026-254-APN-SE#MEC",
       "publishedAt": "2026-09-24T00:00-03:00",
-      "validatedAt": "2026-09-28T15:07-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 254/2026 RESOL-2026-254-APN-SE#MEC",
@@ -1167,14 +1222,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347889/20260924",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Apruébase la tarifa máxima aplicable a los usuarios por el servicio de uso de muelle para la carga y descarga de hidrocarburos a buques tanque en la Terminal Marítima Puerto Rosales situada en la Provincia de BUENOS AIRES, en el valor de DÓLARES ESTADOUNIDENSES TRES CON SETENTA CENTAVOS (USD 3,70) por METRO CÚBICO (m3), según surge del Informe N° IF-2026-83280710-APN-DNTEI#MEC de fecha 28 de agosto de 2026 de la Dirección Nacional de Transporte e Infraestructura de esta Secretaría. La tarifa aprobada por la presente medida no incluye el Impuesto al Valor Agregado (IVA)."
     },
     {
       "num": "Resolución 255/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
       "publishedAt": "2026-09-24T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 255/2026 RESOL-2026-255-APN-SE#MEC",
@@ -1185,7 +1241,8 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347890/20260924",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma DISTRIBUIDORA INTEGRAL DE ENERGÍA SOCIEDAD ANÓNIMA (DISTRIBUIDORA INTEGRAL DE ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente."
     },
     {
       "num": "Resolución 654/2026",
@@ -1205,11 +1262,45 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-09-23 · Página 51",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", o el lugar que dicha dirección establezca dentro del Palacio\nmunicipal.\nDecreto N° 856/26.\nExpediente N° 831/26.\nsep. 22 v. sep. 23\n\nMUNICIPALIDAD DE TANDIL\nLicitación Pública Nº 16-01-2026\nPOR 2 DÍAS - Obra: Extensión de Red de Gas Natural Barrio Tunitas y Otros.\nPresupuesto oficial: $153.748.000,00.\nSolicitud de legajos: a compras_proveedores@tandil.gov.ar\nConsulta del pliego",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "23/09/2026",
+      "publishedAt": "2026-09-23T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14405/ver#page=51",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-09-22 · Página 69",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ".\nExpediente N° 831/26.\nsep. 22 v. sep. 23\n\nMUNICIPALIDAD DE TANDIL\nLicitación Pública Nº 16-01-2026\nPOR 2 DÍAS - Obra: Extensión de Red de Gas Natural Barrio Tunitas y Otros.\nPresupuesto oficial: $153.748.000,00.\nSolicitud de legajos: a compras_proveedores@tandil.gov.ar\nConsulta del pliego: autogestion.tandil.gov.ar < Doc. De Interés",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "22/09/2026",
+      "publishedAt": "2026-09-22T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14402/ver#page=69",
+      "auto": true
+    },
+    {
       "num": "Resolución 635/2026",
       "category": "Comercialización",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 635/2026 RESFC-2026-635-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-09-17T00:00-03:00",
-      "validatedAt": "2026-09-28T15:04-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 635/2026 RESFC-2026-635-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 15/09/2026 VISTO el Expediente N.° EX-2026-04513856- -APN-GDYE#ENARGAS, la Ley N.° 24.076 - T.O. 2025 (B.O. 7-7-25), el Decreto N.° 1738/92 (B.O. 11-9-92), y la Resolución N.° RESFC-2020-94-APN-DIRECTORIO#ENARGAS (B.O. 11-3-20), y; CONSIDERANDO: Que",
@@ -1221,14 +1312,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347571/20260917",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
-      "auto": true
+      "auto": true,
+      "firstArticle": "del Decreto N.° 452/25 (B.O. 7-7-25) se constituyó el ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD, creado por el artículo 161 de la Ley N.° 27.742 (B.O. 8-7-24), el que “... llevará a cabo todas las medidas necesarias para cumplir las misiones y funciones asignadas por las Leyes Nros. 24.076 y 24.065 al ENTE NACIONAL REGULADOR DEL GAS (ENARGAS) y al ENTE NACIONAL REGULADOR DE LA ELECTRICIDAD (ENRE), respectivamente.” Que el Directorio del ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENReGE) es competente para el dictado de este acto, en virtud de lo dispuesto en el artículo 161 de la Ley N.° 27.742, el artículo 11, inciso a) y h) del Decreto N.° 452/25, y el Decreto N.° 318/26 (B"
     },
     {
       "num": "Resolución 239/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 239/2026 RESOL-2026-239-APN-SE#MEC",
       "publishedAt": "2026-09-11T00:00-03:00",
-      "validatedAt": "2026-09-28T15:05-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 239/2026 RESOL-2026-239-APN-SE#MEC",
@@ -1239,14 +1331,15 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347304/20260911",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma EMPRESA PROVINCIAL DE ENERGIA DE CHUBUT SOCIEDAD ANÓNIMA UNIPERSONAL (EPECH S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente."
     },
     {
       "num": "Resolución 236/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 236/2026 RESOL-2026-236-APN-SE#MEC",
       "publishedAt": "2026-09-10T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 236/2026 RESOL-2026-236-APN-SE#MEC",
@@ -1257,7 +1350,8 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/347212/20260910",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma SECCO ENERGY SOCIEDAD ANÓNIMA UNIPERSONAL (SECCO ENERGY S.A.U.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente."
     },
     {
       "num": "Resolución 575/2026",
@@ -1278,11 +1372,45 @@
       "firstArticle": ", que: “Sujeto a las disposiciones de esta Resolución, las Licenciatarias de transporte y distribución de gas natural habilitadas conforme al régimen de la Ley N° 24.076 podrán financiar total o parcialmente proyectos de obras de transporte y distribución de los sistemas licenciados a través de la constitución de fideicomisos regidos por la Ley N.° 24.441 o la que la reemplace o modifique en el futuro, u otra figura que en general permitan financiar estas inversiones, siempre que cuenten con la aprobación expresa del proyecto por parte del Ente Nacional Regulador del Gas”. Que, en atención al análisis realizado en su momento por esta autoridad regulatoria, las obras a ejecutar por Camuzzi, c"
     },
     {
+      "num": "PBA · 2026-09-07 · Página 77",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", comercialización, representación, consignación y\nalmacenamiento de toda clase de bienes muebles y mercaderías lícitas, autopartes, accesorios, repuestos, componentes\nmecánicos, eléctricos y electrónicos para vehículos automotores, utilitarios, comerciales e industriales, incluyendo equipos,\nsistemas y componentes destinados a combustibles alternativos, gas natural comprimido (GNC), energías alternativas",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "07/09/2026",
+      "publishedAt": "2026-09-07T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14375/ver#page=77",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-09-07 · Página 72",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", exportación, representación\ny comercialización de maquinarias, equipos, herramientas, repuestos e insumos destinados a la perforación, extracción,\nprocesamiento, beneficio y transporte de minerales, hidrocarburos y gas natural , tanto en explotaciones a cielo abierto\ncomo subterráneas, conforme el Código de Minería de la Nación (Ley 1.919 y sus modificatorias) y demás normativa\ncomplementaria",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "07/09/2026",
+      "publishedAt": "2026-09-07T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14375/ver#page=72",
+      "auto": true
+    },
+    {
       "num": "Resolución 229/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 229/2026 RESOL-2026-229-APN-SE#MEC",
       "publishedAt": "2026-09-04T00:00-03:00",
-      "validatedAt": "2026-09-28T15:08-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 229/2026 RESOL-2026-229-APN-SE#MEC",
@@ -1292,7 +1420,8 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346920/20260904",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "Autorízase el ingreso de la firma GENNEIA ENERGÍA SOCIEDAD ANÓNIMA (GENNEIA ENERGÍA S.A.) en calidad de Participante Comercializador del MERCADO ELÉCTRICO MAYORISTA (MEM), ajustándose al cumplimiento de la normativa vigente."
     },
     {
       "num": "Resolución 552/2026",
@@ -1317,7 +1446,7 @@
       "category": "Subdistribución",
       "title": "SECRETARÍA DE ENERGÍA Resolución 224/2026 RESOL-2026-224-APN-SE#MEC",
       "publishedAt": "2026-09-02T00:00-03:00",
-      "validatedAt": "2026-09-28T15:15-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 224/2026 RESOL-2026-224-APN-SE#MEC",
@@ -1329,7 +1458,8 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346785/20260902",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
-      "auto": true
+      "auto": true,
+      "firstArticle": "de la referida resolución, los Productores Firmantes, suscriptores de acuerdos de provisión de gas natural con ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA en el marco del Plan Gas.Ar, destinados al abastecimiento de la demanda prioritaria de las prestadoras del servicio de distribución de gas natural que decidan adherir al régimen establecido en dicha resolución, deberán aceptar la cesión de los contratos de abastecimiento de gas natural a las distribuidoras respectivas, de acuerdo al procedimiento que determine e instrumente ENERGÍA ARGENTINA SOCIEDAD ANÓNIMA. Que, por el Artículo 3° de la resolución mencionada, se fijó un plazo de TREINTA (30) días hábiles administrativos desde la notificación del "
     },
     {
       "num": "Resolución 543/2026",
@@ -1449,6 +1579,23 @@
       ],
       "url": "https://www.argentina.gob.ar/normativa/nacional/norma-429514",
       "issuer": "SECRETARIA DE ENERGIA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-09-01 · Página 70",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "para automotores o de uso industrial, lubricantes, grasas, derivados del petróleo, aditivos, neumáticos,\nacumuladores, anexos para el automotor y productos de comercialización en estaciones de servicios. Venta de\ncombustibles líquidos y gaseosos, gas natural comprimido, gas licuado de petróleo automotor, lubricantes, repuestos de\nautomotores y reparaciones, mini shops. Transporte terrestre de combustibles",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "01/09/2026",
+      "publishedAt": "2026-09-01T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14364/ver#page=70",
       "auto": true
     },
     {
@@ -1831,6 +1978,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345968/20260818",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-08-12 · Página 95",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y habilitación de redes de distribución de gas natural de alta, media y baja presión,\ngasoductos, plantas reguladoras de presión e instalaciones industriales y domiciliarias de fluidos. 2. Redes Eléctricas y\nTelecomunicaciones: Ejecución, refacción, modificación y mantenimiento de obras públicas y privadas destinadas a redes\neléctricas (de media, baja y alta tensión), líneas telefónicas, tendido de fibra",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "12/08/2026",
+      "publishedAt": "2026-08-12T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14328/ver#page=95",
       "auto": true
     },
     {
@@ -2371,6 +2535,57 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-07-29 · Página 15",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "de Cálculo de Costos e Ingresos medios para el Transporte\nAutomotor de pasajeros urbano y suburbano del Área Metropolitana de Buenos Aires (AMBA)”, contempla dentro de la\nestructura de costos, a las unidades propulsadas por Gas Natural Comprimido (GNC) y energía eléctrica, junto con las de\ngasoil, con el objetivo de generar sistema de transporte sustentable, mediante la incorporación de tecnologías más",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "29/07/2026",
+      "publishedAt": "2026-07-29T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14301/ver#page=15",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-07-28 · Página 55",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ". Sesquicentenario 848, ldad. Los Polvorines, pdo. Malvinas Argentinas, pcia. Bs.\nAs; todos argentinos. 2) Lola Combustibles SRL. 3) 99 años dde. su inscripción. 4) Objeto: a) Comercial: Explotación de\nestaciones de servicio para automotores, con expendio por menor y por mayor de combustibles líquidos y gas natural comprimido, lubricantes y aceites para el motor, lavado y engrase de carrocerías chasis",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "28/07/2026",
+      "publishedAt": "2026-07-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14299/ver#page=55",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-07-28 · Página 54",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "23-14482458-9, arquitecto, casado 1eras\nnupcias con Liliana Graciela Rotstein, dom. Ruta 9 Km 47.5 S/N, Escobar, Pcia. Bs. As.; ambos argentinos. 2) Marcar\nCombustibles SRL 3) 99 años dde. su inscripción. 4) Objeto: a) Comercial: Explotación de estaciones de servicio para\nautomotores, con expendio por menor y por mayor de combustibles líquidos y gas natural comprimido, lubricantes y aceites",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "28/07/2026",
+      "publishedAt": "2026-07-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14299/ver#page=54",
+      "auto": true
+    },
+    {
       "num": "Resolución 180/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 180/2026 RESOL-2026-180-APN-SE#MEC",
@@ -2486,6 +2701,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-07-17 · Página 87",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "autorizado Javier Gastón Roumieu, abogado. Javier Gaston Roumieu,\nAbogado, Tomo VII Folio 299 CAQ. GAS NATURAL COMPRIMIDO ANDRES SA\nPOR 1 DÍA - Por acta de asamblea de fecha 17 de Junio de 2026, aumenta su capital a la suma de pesos 138.800.000,\nrepresentado por 1.388.000, acciones ordinarias, nominativas no endosables de pesos 100, v/n c/ una y con derecho a 1\nvoto por accion. Pergamino, 13 de julio",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "17/07/2026",
+      "publishedAt": "2026-07-17T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14284/ver#page=87",
+      "auto": true
+    },
+    {
       "num": "Resolución 270/2026",
       "category": "Subdistribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 270/2026 RESFC-2026-270-APN-DIRECTORIO#ENREGE",
@@ -2523,6 +2755,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344478/20260717",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-07-14 · Página 68",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "LSC. Estatuto social : 1)\ndenomina “Coquineta SA”, dom. legal jurisdicción Pcia. Bs. As. 2) duración 99 años, desde inscripción registral. 3) objeto :\n1) Estaciones de Servicio: Explotación estaciones servicio todo tipo vehículos, comercialización combustibles líquidos, gas natural comprimido (GNC), lubricantes, grasas, derivados petróleo, aditivos, agua destilada, neumáticos, cámaras, llantas",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "14/07/2026",
+      "publishedAt": "2026-07-14T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14274/ver#page=68",
       "auto": true
     },
     {
@@ -2637,6 +2886,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343909/20260702",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-07-01 · Página 79",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", y\nrefacción de edificios de cualquier naturaleza, proyecto y/o realización de obras y trabajos de arquitectura e ingeniería de\ntodo tipo sean públicas o privadas, obras civiles, viales, redes de todo tipo eléctricas, gas natural , agua potable, cloacas,\npavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista de obras en general,\ngerenciamiento de obras, dirección ejecutiva",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "01/07/2026",
+      "publishedAt": "2026-07-01T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14251/ver#page=79",
       "auto": true
     },
     {
@@ -3129,6 +3395,57 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-06-29 · Página 88",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "del petróleo en todas sus formas. 4)\nComercialización de combustibles alternativos, biocombustibles, gas natural comprimido (GNC), gas licuado de petróleo\n(GLP), hidrógeno, así como lubricantes sintéticos, semisintéticos y de base renovable, y la prestación de servicios de carga\nde vehículos eléctricos e híbridos. 5) Comercialización, distribución, importación y exportación de neumáticos y cámaras",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "29/06/2026",
+      "publishedAt": "2026-06-29T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14246/ver#page=88",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-06-29 · Página 86",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "de combustibles alternativos, biocombustibles, gas natural comprimido (GNC), gas licuado de petróleo (GLP), hidrógeno, así como lubricantes sintéticos, semisintéticos y de\nbase renovable, y la prestación de servicios de carga de vehículos eléctricos e híbridos. 5) Comercialización, distribución,\nimportación y exportación de neumáticos y cámaras para todo tipo de vehículos, así como la prestación",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "29/06/2026",
+      "publishedAt": "2026-06-29T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14246/ver#page=86",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-06-25 · Página 81",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", biocombustibles, gas natural comprimido (GNC), gas licuado de petróleo (GLP), hidrógeno, así como lubricantes sintéticos, semisintéticos y de base renovable, y la prestación\nde servicios de carga de vehículos eléctricos e híbridos. Comercialización, distribución, importación y exportación de\nneumáticos y cámaras para todo tipo de vehículos, así como la prestación de servicios de montaje, balanceo",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "25/06/2026",
+      "publishedAt": "2026-06-25T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14240/ver#page=81",
+      "auto": true
+    },
+    {
       "num": "Resolución 140/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 140/2026 RESOL-2026-140-APN-SE#MEC",
@@ -3223,6 +3540,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-06-16 · Página 85",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "), cementerios privados (arts. 2103 y ss. CCCN) y clubes de\ncampo. Urbanización integral de tierras: provisión de infraestructura básica (red eléctrica, gas natural , agua potable,\ncloacas, desagües pluviales, alumbrado público, telefonía, fibra óptica, apertura y pavimentación de calles, forestación,\nparquización, señalización vial). Desarrollo, promoción, comercialización y administración de barrios",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "16/06/2026",
+      "publishedAt": "2026-06-16T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14219/ver#page=85",
+      "auto": true
+    },
+    {
       "num": "Resolución 134/2026",
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 134/2026 RESOL-2026-134-APN-SE#MEC",
@@ -3262,6 +3596,40 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/342954/20260610",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-06-04 · Página 25",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "/23 promulgada por Decreto N° 1.668/23,\nmodificatoria de la normativa vigente en el Partido, por la que se propicia la creación del “Uso Específico 10” - R/UE10:\nPlanta de Gas Natural Licuado en el Área Rural del Partido sobre bien denominado catastralmente como Circunscripción III,\nParcela 38e.\nQue la Ley N° 15.477 establece que le corresponde al Ministerio de Gobierno intervenir en lo atinente",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "04/06/2026",
+      "publishedAt": "2026-06-04T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14198/ver#page=25",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-06-04 · Página 91",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "integral de\nautomotores, venta e instalación de equipos de gas natural comprimido (GNC) y accesorios; reparaciones y mantenimiento\nen general de automotores.- Taller eléctrico y mecánico, rectificación, reparación y tareas de precisión de motores,\nreparaciones de chapa y pintura; compra, venta, importación y exportación de bienes, equipos y autopartes, repuestos y\naccesorios para motores, combustibles",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "04/06/2026",
+      "publishedAt": "2026-06-04T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14198/ver#page=91",
       "auto": true
     },
     {
@@ -3397,6 +3765,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-06-02 · Página 45",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "DÍAS - Licitación Pública 04/01/26, Segundo Llamado. Obra: Extensión de Redes de Gas Natural Barrio Tunitas y\nOtros.\nPresupuesto oficial: $168.877.699,20.\nSolicitud de legajos: A compras_proveedores@tandil.gov.ar\nConsulta del pliego: autogestion.tandil.gov.ar < Doc. De Interés",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "02/06/2026",
+      "publishedAt": "2026-06-02T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14193/ver#page=45",
+      "auto": true
+    },
+    {
       "num": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución Sintetizada 20/2026",
       "category": "Comercialización",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución Sintetizada 20/2026",
@@ -3428,6 +3813,40 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/342683/20260602",
       "issuer": "Organismo oficial",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-06-01 · Página 89",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ".\nEl Pliego de Bases y Condiciones y Particulares es sin costo y no requerirá inscripción previa.\nPresupuesto oficial: $300.000.000,00 (Pesos Trescientos Millones con 00/100).\nExpediente N° EX-2026-00083628-SI-DRSAL.\njun. 1° v. jun. 2\n\nMUNICIPALIDAD DE TANDIL\nLicitación Pública Nº 04-01-26\nSegundo Llamado\nPOR 2 DÍAS - Licitación Pública 04/01/26, Segundo Llamado. Obra: Extensión de Redes de Gas Natural",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "01/06/2026",
+      "publishedAt": "2026-06-01T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14190/ver#page=89",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-05-29 · Página 105",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "líquidos y gaseosos, aceites, gas natural comprimido, lubricantes y aditivos de cualquier tipo, y derivados del petróleo en\ngeneral. III) Mediante la comercialización de repuestos y accesorios para todo tipo de rodados, y demás productos de\ncomercialización en estaciones de servicio. Y IV) Comercialización de golosinas, alimentos y bebidas cuyo expendio libre\nesté permitido; servicio de cafetería",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "29/05/2026",
+      "publishedAt": "2026-05-29T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14187/ver#page=105",
       "auto": true
     },
     {
@@ -3637,6 +4056,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-05-13 · Página 59",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "por objeto realizar, por\ncuenta propia, de terceros, ajena, o asociada a terceros, sean personas físicas o jurídicas domiciliadas dentro o fuera de la\nRepública Argentina, las siguientes actividades: (A) la compra de gas natural y la licuefacción del mismo, por si o por\nterceros para su transformación en gas natural licuado; o la obtención por sí o por terceros, de gas natural licuado",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "13/05/2026",
+      "publishedAt": "2026-05-13T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14160/ver#page=59",
+      "auto": true
+    },
+    {
       "num": "Resolución 115/2026",
       "category": "Subdistribución",
       "title": "SECRETARÍA DE ENERGÍA Resolución 115/2026 RESOL-2026-115-APN-SE#MEC",
@@ -3656,6 +4092,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341879/20260513",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-05-11 · Página 74",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "de todo tipo sean públicas o privadas, obras civiles, viales, redes de todo tipo eléctricas, gas natural , agua potable, cloacas, pavimento, actuando como propietaria, proyectista, empresaria, contratista o subcontratista\nde obras en general, gerenciamiento de obras, dirección ejecutiva de obras. Compra, venta, comercialización, fabricación,\nimportación, exportación, distribución, consignación",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "11/05/2026",
+      "publishedAt": "2026-05-11T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14154/ver#page=74",
       "auto": true
     },
     {
@@ -4505,6 +4958,40 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-04-24 · Página 69",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "el día 11/05/2026 a las 10:00 hs.\nLugar de apertura: Dirección de Compras.\n\nabr. 23 v. abr. 24\n\nMUNICIPALIDAD DE TANDIL\n \nLicitación Pública Nº 04-01-26\n \nPOR 2 DÍAS - Obra: Extensión de Redes de Gas Natural Barrio Tunitas y Otros.\nPresupuesto oficial: $168.877.699,20\nSolicitud de legajos: a compras_proveedores@tandil.gov.ar\nConsulta del pliego: autogestion.tandil.gov.ar < Doc. de Interés < Compras",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "24/04/2026",
+      "publishedAt": "2026-04-24T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14125/ver#page=69",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-23 · Página 73",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "el día 11/05/2026 a las 10:00 hs.\nLugar de apertura: Dirección de Compras.\n\nabr. 23 v. abr. 24\n\nMUNICIPALIDAD DE TANDIL\n \nLicitación Pública Nº 04-01-26\n \nPOR 2 DÍAS - Obra: Extensión de Redes de Gas Natural Barrio Tunitas y Otros.\nPresupuesto oficial: $168.877.699,20\nSolicitud de legajos: a compras_proveedores@tandil.gov.ar\nConsulta del pliego: autogestion.tandil.gov.ar < Doc. de Interés",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "23/04/2026",
+      "publishedAt": "2026-04-23T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14121/ver#page=73",
+      "auto": true
+    },
+    {
       "num": "Resolución 99/2026",
       "category": "GNL",
       "title": "SECRETARÍA DE ENERGÍA Resolución 99/2026 RESOL-2026-99-APN-SE#MEC",
@@ -4520,6 +5007,57 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341087/20260423",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-17 · Página 5",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "-05979976-GDEBA-DPTLMIYSPGP del Ministerio de Infraestructura y Servicios Públicos,\npor el cual se propicia aprobar una transferencia de fondos en concepto de aporte irrevocable a cuenta de futuros\naumentos de capital social a favor de “Buenos Aires Gas S.A.” ( BAGSA ), y\n \nCONSIDERANDO:\nQue por el Decreto N° 1094/03 se declaró de interés público la construcción y explotación de redes de distribución",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "17/04/2026",
+      "publishedAt": "2026-04-17T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14110/ver#page=5",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-17 · Página 6",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "ARTÍCULO 1°. Aprobar, en el marco de la Ley N° 13.358 y el Decreto N° 28/04, una transferencia de fondos en concepto\nde aporte irrevocable a cuenta de futuros aumentos de capital social a favor de Buenos Aires Gas S.A. ( BAGSA ) por hasta\nla suma de Pesos doce mil trescientos millones ($12.300.000.000,00), para el funcionamiento y operatoria de la\nmencionada sociedad durante el Ejercicio 2026",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "17/04/2026",
+      "publishedAt": "2026-04-17T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14110/ver#page=6",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-16 · Página 76",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ". III) Constructora: construcción y compraventa de toda clase de inmuebles y de todo tipo de\nobra, pública o privada, sea a través de contrataciones directas, concurso de precios, licitaciones o cualquier otra forma de\ncontratación prevista por la legislación vigente, incluye la realización de obras de pavimento y asfaltos, cloacas desagües,\ntendidos de redes de gas natural , movimientos de suelo",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "16/04/2026",
+      "publishedAt": "2026-04-16T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14106/ver#page=76",
       "auto": true
     },
     {
@@ -4557,6 +5095,57 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/340688/20260414?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-09 · Página 72",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ".\nIncluye servicios de electricidad ya sea de baja y media tensión, plomería, fontanería. Trabajos de gasista, instalaciones de gas natural y envasado, detección de fugas y pruebas de hermeticidad. Servicios de cerrajería integral, apertura,\nreparación y cambio de combinaciones y sistemas de seguridad. Prestación de servicios de fumigación, desinfección,\ndesinsectación y desratización en ámbitos",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "09/04/2026",
+      "publishedAt": "2026-04-09T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14091/ver#page=72",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-07 · Página 92",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ".: Morón, pcia. Bs. As. 5) Construcción, demolición, y refacción edificios cualquier naturaleza, proyecto y/o\nrealización obras y trabajos de arquitectura e ingeniería todo tipo sean públicas o privadas, obras civiles, viales, redes todo\ntipo eléctricas gas natural agua potable cloacas pavimento, actuando como propietaria, proyectista, empresaria, contratista\no subcontratista de obras en gral",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "07/04/2026",
+      "publishedAt": "2026-04-07T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14084/ver#page=92",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-04-06 · Página 77",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "para el automotor y demás productos de comercialización actual en\nestaciones de servicios. 3) Venta de combustibles líquidos y gaseosos, gas natural comprimido (GNC), gas licuado de\npetróleo automotor (GLPA), lubricantes, repuestos de automotores, reparaciones de los mismos, mini shops. 4) Transportes\nterrestres de combustibles, lubricantes y demás derivados del petróleo. 5) Servicios de lavado",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "06/04/2026",
+      "publishedAt": "2026-04-06T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14081/ver#page=77",
       "auto": true
     },
     {
@@ -4709,6 +5298,57 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-03-26 · Página 84",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "94032557, Vendedor; Zhang Chunqui, DNI 95225454, Comprador.\n\nmar. 18 v. mar. 26\n\nPOR 5 DÍAS - Morón. Dr. Marcelo G. Lettieri, Contador Público (UBA) C.P.C.E.CABA T. 173 F. 25, C.P.C.E.P.B.A T 104 F\n160, CUIT 20-16192412-2, comunica que TRASLUX S.A. CUIT 30-70750136-3, transfiere Estación de Servicio, Venta de Gas Natural Comprimido y Combustibles Líquidos (Dual). Sito en la calle Cañada de Juan",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "26/03/2026",
+      "publishedAt": "2026-03-26T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14065/ver#page=84",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-25 · Página 93",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", comerciantes, solteros y Cno General Belgrano 76 (Club El Carmen, Mna 266 lote 11) Gutiérrez, Berazategui. 2)\n11/3/26. 3) Av. Eva Perón 7501 Villa Brown, Florencio Varela. 4) I) Explotación estaciones de servicios: compra, venta,\nimportación, exportación y comercialización de combustibles, por mayor y menor, Gas Natural Comprimido, Gas Envasado,\ngarrafas, matafuegos, aceites lubricantes, accesorios, repuestos, baterías, cámaras y neumáticos; II) Agropecuarias:\n\nBOLETÍN OFICIAL DE LA PROVINCIA DE BUENOS AIRES\nLa Plata > miércoles 25 de marzo de 2026\n\nSECCIÓN OFICIAL > página 93",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "25/03/2026",
+      "publishedAt": "2026-03-25T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14062/ver#page=93",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-25 · Página 71",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", Vendedor; Zhang Chunqui,\nDNI 95225454, Comprador. Zhang Mingfeng, DNI 94032557, Vendedor; Zhang Chunqui, DNI 95225454, Comprador.\n\nmar. 18 v. mar. 26\n\nPOR 5 DÍAS - Morón. Dr. Marcelo G. Lettieri, Contador Público (UBA) C.P.C.E.CABA T. 173 F. 25, C.P.C.E.P.B.A T 104 F\n160, CUIT 20-16192412-2, comunica que TRASLUX S.A. CUIT 30-70750136-3, transfiere Estación de Servicio, Venta de Gas Natural Comprimido",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "25/03/2026",
+      "publishedAt": "2026-03-25T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14062/ver#page=71",
+      "auto": true
+    },
+    {
       "num": "Resolución 349/2026",
       "category": "Distribución",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 349/2026 RESOL-2026-349-APN-DIRECTORIO#ENARGAS",
@@ -4742,6 +5382,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339842/20260325",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-20 · Página 76",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "95225454, Comprador.\n\nmar. 18 v. mar. 26\n\nPOR 5 DÍAS - Morón. Dr. Marcelo G. Lettieri, Contador Público (UBA) C.P.C.E.CABA T. 173 F. 25, C.P.C.E.P.B.A T 104 F\n160, CUIT 20-16192412-2, comunica que TRASLUX S.A. CUIT 30-70750136-3, transfiere Estación de Servicio, Venta de Gas Natural Comprimido y Combustibles Líquidos (Dual). Sito en la calle Cañada de Juan Ruiz 703/705/709, Int. Grant\n676/680/686 Morón",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "20/03/2026",
+      "publishedAt": "2026-03-20T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14058/ver#page=76",
       "auto": true
     },
     {
@@ -4803,6 +5460,57 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339725/20260320",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-19 · Página 102",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", alquiler, administración de estaciones de servicios, mediante la comercialización y distribución de\ncombustibles e hidrocarburos, lubricantes y cualquier derivado del petróleo a granel. b) Servicio de recarga para vehículos\neléctricos. c) Compra y venta de combustibles líquidos y gaseosos, gas natural comprimido (GNC), y Gas Natural Licuado\n(G.N.L.). d) Compraventa e intermediación de toda clase",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "19/03/2026",
+      "publishedAt": "2026-03-19T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14055/ver#page=102",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-19 · Página 86",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", transfiere Estación de Servicio, Venta de Gas Natural Comprimido y Combustibles Líquidos (Dual). Sito en la calle Cañada de Juan Ruiz 703/705/709, Int. Grant\n676/680/686 Morón, a Stejer Petrol S.R.L. CUIT 30-71862298-7, Reclamos de ley en el mismo. Dr. Marcelo G. Lettieri,\nContador Público C.P.C.E. CABA T. 173 F. 25 C.P.C.E.P.B.A T 104 F 160.\n\nmar. 18 v. mar. 26\n\nPOR 5 DÍAS - Morón. Dr. Marcelo G",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "19/03/2026",
+      "publishedAt": "2026-03-19T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14055/ver#page=86",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-18 · Página 96",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ". Zhang Mingfeng, DNI 94032557, Vendedor; Zhang Chunqui, DNI 95225454, Comprador.\n\nmar. 18 v. mar. 26\n\nPOR 5 DÍAS - Morón. Dr. Marcelo G. Lettieri, Contador Público (UBA) C.P.C.E.CABA T. 173 F. 25, C.P.C.E.P.B.A T 104 F\n160, CUIT 20-16192412-2, comunica que TRASLUX S.A. CUIT 30-70750136-3, transfiere Estación de Servicio, Venta de Gas Natural Comprimido y Combustibles Líquidos (Dual). Sito",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "18/03/2026",
+      "publishedAt": "2026-03-18T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14052/ver#page=96",
       "auto": true
     },
     {
@@ -4938,6 +5646,57 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-03-10 · Página 26",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma parte del link de descarga.\nQuien haya descargado el pliego podrá hacer consultas respecto del mismo hasta el 01 de abril de 2026 a través del correo\nelectrónico: licitacion.privada@ bagsa .com.ar.\nEl pliego es gratuito",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "10/03/2026",
+      "publishedAt": "2026-03-10T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14030/ver#page=26",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-09 · Página 56",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "participar del presente llamado a Licitación, personas\nhumanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "09/03/2026",
+      "publishedAt": "2026-03-09T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14027/ver#page=56",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-06 · Página 65",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "humanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "06/03/2026",
+      "publishedAt": "2026-03-06T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14024/ver#page=65",
+      "auto": true
+    },
+    {
       "num": "Resolución 56/2026",
       "category": "Comercialización",
       "title": "SECRETARÍA DE ENERGÍA Resolución 56/2026 RESOL-2026-56-APN-SE#MEC",
@@ -4969,6 +5728,40 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339139/20260306",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-05 · Página 34",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "a Licitación, personas\nhumanas o jurídicas, en forma individual, como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "05/03/2026",
+      "publishedAt": "2026-03-05T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14021/ver#page=34",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-05 · Página 35",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "La apertura de las ofertas se llevará a cabo en la sede de BAGSA , el día 22 de abril de 2026 a las doce (12) horas.\nmar. 4 v. mar. 10\n\nMINISTERIO DE DESARROLLO DE LA COMUNIDAD\n \nLicitación Pública N° 2/2026 - Proceso PBAC N° 532-0136-LPU26\nAclaratoria\n \nPOR 1 DÍA - Circular aclaratoria con consulta N° 1. Objeto de la contratación: Servicio de Transporte de Pasajeros.\nFecha de apertura: 9",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "05/03/2026",
+      "publishedAt": "2026-03-05T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14021/ver#page=35",
       "auto": true
     },
     {
@@ -5007,6 +5800,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/339102/20260305",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-03-04 · Página 46",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", como UTE o como UTE en Formación, siempre que se trate de Sociedades\nregulamente constituidas con domicilio en el país. \nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 02 de marzo de 2026, debiendo completar el\nformulario que forma parte del link de descarga.\nQuien haya descargado",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "04/03/2026",
+      "publishedAt": "2026-03-04T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/14018/ver#page=46",
       "auto": true
     },
     {
@@ -5496,6 +6306,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-02-13 · Página 86",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "civiles, hidráulicas, portuarias e inmuebles urbanos y rurales: mejoras en inmuebles,\ncontratación y subcontratación de personal para dichos fines. Sistemas de electrificación, instalaciones eléctricas,\nindustriales y domiciliarias; mantenimiento de instalaciones relativas a gas natural , agua potable, obras sanitarias, y de\nelectricidad y de otras ramas de la ingeniería; estudio, proyecto, dirección",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "13/02/2026",
+      "publishedAt": "2026-02-13T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13988/ver#page=86",
+      "auto": true
+    },
+    {
       "num": "Resolución 62/2026",
       "category": "Transporte",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Resolución 62/2026 RESOL-2026-62-APN-DIRECTORIO#ENARGAS",
@@ -5554,6 +6381,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-02-06 · Página 53",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "de construcción,\nherramientas, maquinarias, indumentaria de trabajo y elementos de protección personal (EPP). G) El mantenimiento de\nespacios públicos, parques y áreas verdes, así como el proyecto, construcción y mantenimiento de obras de urbanización\nen ámbitos públicos y privados. H) La proyección, dirección y ejecución de redes de gas natural , cloacales, de agua\npotable, fibra óptica, eléctricas y afines",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "06/02/2026",
+      "publishedAt": "2026-02-06T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13974/ver#page=53",
+      "auto": true
+    },
+    {
       "num": "Resolución 31/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 31/2026 RESOL-2026-31-APN-SE#MEC",
@@ -5569,6 +6413,40 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/338186/20260205",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-02-03 · Página 76",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", o intermediación, a:A) Comercialización De Combustibles\ny Derivados: Compra, venta (mayorista y minorista), importación, exportación, distribución y consignación de combustibles\nlíquidos, gaseosos y sólidos. Incluye combustibles aeronáuticos (Jet A-1, Av gas ), terrestres, marítimos, gas natural (GNC,\nGNL, GLP), lubricantes y derivados. Operación de plantas de almacenaje, despacho en aeródromos",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "03/02/2026",
+      "publishedAt": "2026-02-03T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13968/ver#page=76",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-02-02 · Página 47",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ". Cumplido, archívese.\n \nFallo: 797/2025.\n \nDaniel Carlos Chillo, Ariel Héctor Pietronave, Juan Pablo Peredo, Gustavo Eduardo Diez, Federico Gastón\nThea. Rubricado: Gonzalo Sebastián Kodelia.\n\n◢ LICITACIONES\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta PP N° 1969-26 Obra de Suministro de Gas a la localidad de Anchorena\n- Urquiza",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "02/02/2026",
+      "publishedAt": "2026-02-02T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13965/ver#page=47",
       "auto": true
     },
     {
@@ -5605,6 +6483,40 @@
       ],
       "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-23-2026-422817/texto",
       "issuer": "SECRETARIA DE ENERGIA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-30 · Página 80",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario\nque forma parte del link de descarga.\nQuien haya descargado el pliego podrá hacer consultas respecto del mismo hasta el 25 de febrero de 2026 a través del\ncorreo electrónico: licitacion.privada@ bagsa .com.ar.\nEl pliego",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "30/01/2026",
+      "publishedAt": "2026-01-30T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13962/ver#page=80",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-30 · Página 79",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y descargados de manera gratuita a través de la página\nwww.gba.gob.ar/Infraestructura/licitaciones.\nLos adquirentes podrán solicitar aclaraciones a través del correo electrónico minfrapba.dcop@gmail.com, hasta el día 11 de\nfebrero de 2026.\nNº de expediente: EX-2025-14304999-GDEBA-DPTLMIYSPGP.\n\nene. 26 v. ene. 30\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "30/01/2026",
+      "publishedAt": "2026-01-30T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13962/ver#page=79",
       "auto": true
     },
     {
@@ -6004,6 +6916,142 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-01-29 · Página 37",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "Nº 2 correspondiente, en respuesta a la consulta efectuada en el presente Proceso de Compra.\nEX-2025-34723560-GDEBA-DDPRYMGEMSGP.\n\nene. 27 v. ene. 29\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta PP N° 1969-26 Obra de Suministro de Gas a la localidad de Anchorena\n- Urquiza - partido de Pergamino - provincia Buenos Aires",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "29/01/2026",
+      "publishedAt": "2026-01-29T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13960/ver#page=37",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-28 · Página 54",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "- La Matanza - San Cayetano Gas S.A., CUIT 30-64673910-8 (Representante Legal VALENTE ROSA\nALEJANDRA, DNI 23265260) transfiere Fondo de Comercio a Petromarval S.A. CUIT 30-71892408-8 (Representante\nLegal Valente Barbara Ailen, DNI 44391370), sito en Av. San Martín Nº 2192, Ramos Mejía, con rubro Estación de Carga\nde Gas Natural Comprimido. Reclamos de Ley en el mismo. Valente Rosa, DNI 23265260",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "28/01/2026",
+      "publishedAt": "2026-01-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13958/ver#page=54",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-28 · Página 44",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "o como UTE en formación, siempre que se trate de sociedades regulamente constituidas con domicilio en el país.\nEl Pliego de Bases y Condiciones se podrá descargar de la página web de BAGSA accediendo al link\nhttps://www. bagsa .com.ar/public_html/licitaciones-activas a partir del 26 de enero de 2026, debiendo completar el formulario\nque forma parte del link de descarga.\nQuien haya descargado el pliego",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "28/01/2026",
+      "publishedAt": "2026-01-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13958/ver#page=44",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-28 · Página 43",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "a las 11:00 horas, en la Dirección de Compras y Suministros del Municipio\nde Tandil, ubicada en calle Belgrano N° 417, planta alta, oficina N° 6.\nRecepción de ofertas: Hasta el 19 de febrero de 2026 a las 11:00 horas inclusive en la Dirección de Compras y\nSuministros.\nExpediente: EX-2026-00015478-MUNITAN-DCS#SEA.\n\nene. 27 v. ene. 28\n\nBUENOS AIRES GAS S.A. - BAGSA BOLETÍN OFICIAL DE LA PROVINCIA DE BUENOS AIRES\nLa Plata > miércoles 28 de enero de 2026\n\nSECCIÓN OFICIAL > página 43",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "28/01/2026",
+      "publishedAt": "2026-01-28T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13958/ver#page=43",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-27 · Página 66",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "- San Cayetano Gas S.A., CUIT 30-64673910-8 (Representante Legal VALENTE ROSA\nALEJANDRA, DNI 23265260) transfiere Fondo de Comercio a Petromarval S.A. CUIT 30-71892408-8 (Representante\nLegal Valente Barbara Ailen, DNI 44391370), sito en Av. San Martín Nº 2192, Ramos Mejía, con rubro Estación de Carga\nde Gas Natural Comprimido. Reclamos de Ley en el mismo. Valente Rosa, DNI 23265260, Presidente de San",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "27/01/2026",
+      "publishedAt": "2026-01-27T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13956/ver#page=66",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-27 · Página 65",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y Suministros del Municipio\nde Tandil, ubicada en calle Belgrano N° 417, planta alta, oficina N° 6.\nRecepción de ofertas: Hasta el 19 de febrero de 2026 a las 11:00 horas inclusive en la Dirección de Compras y\nSuministros.\nExpediente: EX-2026-00015478-MUNITAN-DCS#SEA.\n\nene. 27 v. ene. 28\n\nBUENOS AIRES GAS S.A. - BAGSA Licitación Abierta PP N° 1969/2026\n \nPOR 5 DÍAS - Objeto: Llama a Licitación Abierta",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "BAGSA"
+      ],
+      "date": "27/01/2026",
+      "publishedAt": "2026-01-27T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13956/ver#page=65",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-26 · Página 60",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "Decreto N° 0038-2026.\nExpediente N° 4107-3067/25.\n\nene. 23 v. ene. 26\n\nMUNICIPALIDAD DE TIGRE\n \nLicitación Pública Nº 53/2025\n \nPOR 2 DÍAS - Objeto: Contratación de Equipos, Herramientas, Materiales y Mano de Obra para la Construcción de Red\nExterna de Gas Natural , Proyectos: TI 104025, 304025, 504025, 604025 y 3806, con destino a Barrio Cina Cina, localidad\nde Troncos del Talar, partido",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "26/01/2026",
+      "publishedAt": "2026-01-26T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13954/ver#page=60",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-26 · Página 71",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "Ocantos, DNI Nro. 30533067.\n\nene. 22 v. ene. 28\n\nPOR 5 DÍAS - La Matanza - San Cayetano Gas S.A., CUIT 30-64673910-8 (Representante Legal VALENTE ROSA\nALEJANDRA, DNI 23265260) transfiere Fondo de Comercio a Petromarval S.A. CUIT 30-71892408-8 (Representante\nLegal Valente Barbara Ailen, DNI 44391370), sito en Av. San Martín Nº 2192, Ramos Mejía, con rubro Estación de Carga\nde Gas Natural Comprimido",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "26/01/2026",
+      "publishedAt": "2026-01-26T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13954/ver#page=71",
+      "auto": true
+    },
+    {
       "num": "Resolución 18/2026",
       "category": "Mercado",
       "title": "SECRETARÍA DE ENERGÍA Resolución 18/2026 RESOL-2026-18-APN-SE#MEC",
@@ -6017,6 +7065,57 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337730/20260126",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-23 · Página 53",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "Legal Valente Barbara Ailen, DNI 44391370), sito en Av. San Martín Nº 2192, Ramos Mejía, con rubro Estación de Carga\nde Gas Natural Comprimido. Reclamos de Ley en el mismo. Valente Rosa, DNI 23265260, Presidente de San Cayetano\nGas SA (Vendedor); Alejandra Valente Barbara Ailen, DNI 44391370, Presidente de Petromarval SA, (Comprador).\n\nene. 22 v. ene. 28\n\nPOR 5 DÍAS - Moreno. El señor NAJAMU",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "23/01/2026",
+      "publishedAt": "2026-01-23T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13952/ver#page=53",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-23 · Página 50",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ").\nDecreto N° 0038-2026.\nExpediente N° 4107-3067/25.\n\nene. 23 v. ene. 26\n\nMUNICIPALIDAD DE TIGRE\n \nLicitación Pública Nº 53/2025\n \nPOR 2 DÍAS - Objeto: Contratación de Equipos, Herramientas, Materiales y Mano de Obra para la Construcción de Red\nExterna de Gas Natural , Proyectos: TI 104025, 304025, 504025, 604025 y 3806, con destino a Barrio Cina Cina, localidad\nde Troncos del Talar, partido",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "23/01/2026",
+      "publishedAt": "2026-01-23T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13952/ver#page=50",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-22 · Página 69",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": ", DNI Nro. 30533067.\n\nene. 22 v. ene. 28\n\nPOR 5 DÍAS - La Matanza - San Cayetano Gas S.A., CUIT 30-64673910-8 (Representante Legal VALENTE ROSA\nALEJANDRA, DNI 23265260) transfiere Fondo de Comercio a Petromarval S.A. CUIT 30-71892408-8 (Representante\nLegal Valente Barbara Ailen, DNI 44391370), sito en Av. San Martín Nº 2192, Ramos Mejía, con rubro Estación de Carga\nde Gas Natural Comprimido. Reclamos",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "22/01/2026",
+      "publishedAt": "2026-01-22T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13950/ver#page=69",
       "auto": true
     },
     {
@@ -6034,6 +7133,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337600/20260121?anexos=1",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-20 · Página 72",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y minorista, importación, exportación, distribución, representación y consignación de combustibles líquidos,\ngaseosos y sólidos en todas sus formas, incluyendo específicamente combustibles aeronáuticos (Jet A-1, Av gas),\ncombustibles terrestres (naftas, gasoil, biodiesel), combustibles marítimos (Ifo, MGO, MDO), gas natural (GNC, GNL, GLP),\nlubricantes, grasas, fluidos, aditivos y demás derivados",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "20/01/2026",
+      "publishedAt": "2026-01-20T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13946/ver#page=72",
       "auto": true
     },
     {
@@ -6077,6 +7193,23 @@
       "auto": true
     },
     {
+      "num": "PBA · 2026-01-14 · Página 13",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "y de unidades móviles de medios de comunicación audiovisual;\ne) De atención de emergencias;\nf) De asistencia de vehículos averiados o accidentados, en el lugar del suceso o en el traslado al punto más\npróximo a aquel donde pueda quedar depositado, y en regreso en vacío;\ng) Cisterna de traslado de combustible, de Gas Natural Comprimido y Gas Licuado de Petróleo;\nh) De transporte de gases",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "14/01/2026",
+      "publishedAt": "2026-01-14T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13938/ver#page=13",
+      "auto": true
+    },
+    {
       "num": "Resolución 5/2026",
       "category": "Tarifas",
       "title": "SECRETARÍA DE ENERGÍA Resolución 5/2026 RESOL-2026-5-APN-SE#MEC",
@@ -6093,6 +7226,23 @@
       ],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/337134/20260106",
       "issuer": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "auto": true
+    },
+    {
+      "num": "PBA · 2026-01-05 · Página 107",
+      "title": "Publicación provincial · gas natural / BAGSA",
+      "desc": "., g)serv. de limpieza de ofic.públ. y/o priv.; h)manten. de parques y jardines en espac.públ. y/o priv.\ni)parquiz. de predios; j)serv.conexos a las activ.citadas.; k)Diseño y construc.de instalac.de gas natural . Finan\n(ex.op.L.Ent.Finan). Cap $30.000.000.- Adm.Dir.1 a 7 dir.tit., e igual o menor n° sup, por 3 ej. Repr: Pte. Pte: Katherine\nJ.Baldi; D.S. Edgardo J.Saldaña. Fisc.socios. Cie.últ.día",
+      "issuer": "Boletín Oficial PBA",
+      "jurisdiction": "PBA",
+      "category": "Normativa",
+      "tags": [
+        "PBA",
+        "Gas natural"
+      ],
+      "date": "05/01/2026",
+      "publishedAt": "2026-01-05T00:00:00-03:00",
+      "validatedAt": "2026-09-30T11:29-03:00",
+      "url": "https://boletinoficial.gba.gob.ar/secciones/13921/ver#page=107",
       "auto": true
     },
     {
@@ -6234,10 +7384,10 @@
     {
       "name": "Noticias",
       "cadence": "Cada 60 min",
-      "last": "2026-09-30T11:22-03:00",
-      "next": "2026-09-30T12:22-03:00",
+      "last": "2026-09-30T11:28-03:00",
+      "next": "2026-09-30T12:28-03:00",
       "status": "partial",
-      "note": "2 noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas",
+      "note": "Sin noticias nuevas · Fuentes consultadas: América GLP, EconoJournal, Más Energía · LM Neuquén, Revista Petroquímica",
       "mode": "Automática",
       "strategy": "Ventana reciente + deduplicación",
       "scope": "Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."
@@ -6245,10 +7395,10 @@
     {
       "name": "Normativa",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T11:22-03:00",
-      "next": "2026-09-30T14:22-03:00",
-      "status": "pending",
-      "note": "Consulta 28/09/2026–30/09/2026 · 255 normas guardadas · 0 nuevas · 2 fichas enriquecidas con Art. 1° · 3 ediciones y 0 documentos pendientes de reintento.",
+      "last": "2026-09-30T11:28-03:00",
+      "next": "2026-09-30T14:28-03:00",
+      "status": "unchanged",
+      "note": "Consulta 28/09/2026–30/09/2026 · 255 normas guardadas · 0 nuevas · 11 fichas enriquecidas con Art. 1° · 0 ediciones y 0 documentos pendientes de reintento.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."
@@ -6288,8 +7438,8 @@
       "mode": "Automática",
       "strategy": "Relectura de ventana vigente",
       "scope": "Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia.",
-      "last": "2026-09-30T11:22-03:00",
-      "next": "2026-09-30T12:22-03:00",
+      "last": "2026-09-30T11:28-03:00",
+      "next": "2026-09-30T12:28-03:00",
       "status": "unchanged",
       "note": "Ventana oficial de 5 días revalidada."
     },
@@ -6299,8 +7449,8 @@
       "mode": "Automática parcial",
       "strategy": "Último reporte disponible",
       "scope": "Inyección se extrae del PDF oficial; Linepack detecta nuevos reportes y conserva el último total validado si no puede recalcularlo.",
-      "last": "2026-09-30T11:22-03:00",
-      "next": "2026-09-30T12:22-03:00",
+      "last": "2026-09-30T11:28-03:00",
+      "next": "2026-09-30T12:28-03:00",
       "status": "unchanged",
       "note": "Últimos reportes ENReGE revisados; inyección se extrae automáticamente y Linepack conserva el último total validado si requiere recálculo."
     },
@@ -6310,8 +7460,8 @@
       "mode": "Automática parcial",
       "strategy": "Totales del PDF verificados",
       "scope": "Si aparece un mes nuevo, compara el lector con el mes ya validado y actualiza importaciones/exportaciones totales. Los desgloses GNL/Chile se muestran sólo para meses con cifras validadas.",
-      "last": "2026-09-30T11:22-03:00",
-      "next": "2026-09-30T12:22-03:00",
+      "last": "2026-09-30T11:28-03:00",
+      "next": "2026-09-30T12:28-03:00",
       "status": "unchanged",
       "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual."
     },
@@ -6329,10 +7479,10 @@
     {
       "name": "Boletín Oficial PBA",
       "cadence": "Cada 3 h",
-      "last": "2026-09-30T08:31-03:00",
+      "last": "2026-09-30T11:29-03:00",
       "next": "2026-09-30T11:31-03:00",
-      "status": "monitored",
-      "note": "Monitoreo desde 01/01/2026: se consulta la primera página de resultados para “gas natural” y “BAGSA”; no se incorporan actos provinciales al listado. Coincidencias visibles: 10.",
+      "status": "updated",
+      "note": "67 publicaciones provinciales incorporadas. Páginas recorridas; coincidencias verificadas por texto exacto.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Consulta “gas natural” y “BAGSA”, pagina los resultados, verifica coincidencias por texto e incorpora automáticamente publicaciones nuevas al listado de Normativa."
@@ -6343,7 +7493,7 @@
       "mode": "Automática parcial",
       "strategy": "EIA diaria + Banco Mundial mensual",
       "scope": "Henry Hub y propano: EIA. Gas Europa y GNL Japón: Banco Mundial. Las demás referencias se identifican como manuales y conservan su fecha.",
-      "last": "2026-09-30T11:22-03:00",
+      "last": "2026-09-30T11:28-03:00",
       "status": "partial",
       "note": "Lectores automáticos: henry_hub: ok, mb_propane: ok, worldbank: ok. Las demás referencias conservan su fecha y requieren revisión manual."
     }
@@ -6363,7 +7513,7 @@
       "url": "https://econojournal.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Mejor Energía",
@@ -6374,7 +7524,7 @@
       "url": "https://www.mejorenergia.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "RunRun Energético",
@@ -6385,7 +7535,7 @@
       "url": "https://runrunenergetico.com/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "ENReGE · Noticias",
@@ -6396,7 +7546,7 @@
       "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "ENReGE · Datos diarios",
@@ -6407,7 +7557,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "ENReGE · Tarifas",
@@ -6418,7 +7568,7 @@
       "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Secretaría de Energía · Noticias",
@@ -6429,7 +7579,7 @@
       "url": "https://www.argentina.gob.ar/economia/energia/noticias",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Datos Argentina · Energía",
@@ -6440,7 +7590,7 @@
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
       "validatedAt": "2026-09-28T11:00:00-03:00",
       "availability": "NO DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -6451,7 +7601,7 @@
       "url": "https://www.tgs.com.ar/prensa/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:22-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "TGN · Comunicaciones",
@@ -6462,7 +7612,7 @@
       "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/",
       "validatedAt": "2026-09-28T14:39-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "BAGSA · Tarifas",
@@ -6473,7 +7623,7 @@
       "url": "https://www.bagsa.com.ar/index.php/tarifas/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Revista Petroquímica",
@@ -6484,7 +7634,7 @@
       "url": "https://revistapetroquimica.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Más Energía · LM Neuquén",
@@ -6495,7 +7645,7 @@
       "url": "https://mase.lmneuquen.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "América GLP",
@@ -6506,7 +7656,7 @@
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "MEGSA · Transporte firme",
@@ -6517,7 +7667,7 @@
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "ENReGE · Concursos de capacidad",
@@ -6528,7 +7678,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Boletín Oficial PBA · Gas/BAGSA",
@@ -6545,7 +7695,7 @@
       "validatedAt": "2026-09-30T08:31-03:00",
       "lastResult": "gas natural: 5 coincid. · última 13/05/2026 · BAGSA: 5 coincid. · última 02/02/2026",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Argentina.gob.ar · Normativa gas",
@@ -6557,19 +7707,19 @@
       "validatedAt": "2026-09-28T14:49-03:00",
       "lastResult": "12 normas en listado · 0 nuevas · 0 revalidadas",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-09-30T11:23-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00"
     },
     {
       "name": "Boletín Oficial Nación · Normativa gas",
       "type": "Oficial",
       "content": "Primera Sección · normativa gas desde 01/01/2026",
       "cadence": "Cada 3 h",
-      "status": "REVISAR",
+      "status": "ACTIVA",
       "url": "https://www.boletinoficial.gob.ar/seccion/primera",
-      "checkedAt": "2026-09-30T11:23-03:00",
-      "lastResult": "255 normas · 0 nuevas · 0 revalidadas · 2 vistas enriquecidas · 0 ediciones consultadas",
-      "availability": "NO DISPONIBLE",
-      "validatedAt": "2026-09-30T04:34-03:00"
+      "checkedAt": "2026-09-30T11:29-03:00",
+      "lastResult": "255 normas · 0 nuevas · 2 revalidadas · 11 vistas enriquecidas · 3 ediciones consultadas",
+      "availability": "DISPONIBLE",
+      "validatedAt": "2026-09-30T11:28-03:00"
     }
   ],
   "basins": [
@@ -6704,14 +7854,14 @@
       "value": "462,97",
       "unit": "USD/t",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls",
       "note": "Referencia spot FOB Texas convertida a USD/t.",
       "details": "Conversión desde 0.864 USD/gal; 3,785411784 L/gal y densidad indicativa 0,493 kg/L.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T11:22-03:00",
+      "checkedAt": "2026-09-30T11:28-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -6782,14 +7932,14 @@
       "value": "2,90",
       "unit": "USD/MMBtu",
       "reference": "22/09/2026 · spot",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls",
       "note": "Precio spot del gas en Henry Hub, Louisiana.",
       "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado.",
       "observationDate": "2026-09-22",
-      "checkedAt": "2026-09-30T11:22-03:00",
+      "checkedAt": "2026-09-30T11:28-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -6797,8 +7947,8 @@
       "id": "wb_europe",
       "value": "21,11",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T11:22-03:00",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "checkedAt": "2026-09-30T11:28-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "Gas Europa · promedio mensual",
@@ -6815,8 +7965,8 @@
       "id": "wb_japan",
       "value": "13,94",
       "observationDate": "2026-08",
-      "checkedAt": "2026-09-30T11:22-03:00",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "checkedAt": "2026-09-30T11:28-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "GNL Japón · promedio mensual",
@@ -6833,7 +7983,7 @@
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
-    "updatedAt": "2026-09-30T11:22-03:00"
+    "updatedAt": "2026-09-30T11:28-03:00"
   },
   "systemKpis": [
     {
@@ -6842,7 +7992,7 @@
       "value": "≈561",
       "unit": "MMm³",
       "reference": "27/08/2026 · REAL",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "statusText": "DERIVADO GRÁFICO",
       "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
@@ -6855,7 +8005,7 @@
       "value": "129,0",
       "unit": "MMm³/d",
       "reference": "26/08/2026 · REAL",
-      "validatedAt": "2026-09-30T11:22-03:00",
+      "validatedAt": "2026-09-30T11:28-03:00",
       "statusText": "OFICIAL",
       "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
@@ -7143,7 +8293,7 @@
     "source": "ENReGE · Importaciones y Exportaciones Mensuales",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
     "note": "ENReGE publica actualmente Enero–Julio 2026. El selector se amplía cuando aparece un nuevo informe mensual.",
-    "checkedAt": "2026-09-30T11:22-03:00",
+    "checkedAt": "2026-09-30T11:28-03:00",
     "status": "current"
   },
   "basinMonthly2026": [
@@ -7434,25 +8584,21 @@
   "regulationScan": {
     "lastScannedDate": "2026-09-30",
     "source": "Boletín Oficial de la República Argentina · Primera Sección",
-    "lastRun": "2026-09-30T11:22-03:00",
-    "pagesOk": 0,
-    "pagesError": 3,
-    "candidates": 0,
-    "pendingDates": [
-      "2026-09-28",
-      "2026-09-29",
-      "2026-09-30"
-    ],
+    "lastRun": "2026-09-30T11:28-03:00",
+    "pagesOk": 3,
+    "pagesError": 0,
+    "candidates": 7,
+    "pendingDates": [],
     "pendingDetails": [],
-    "complete": false,
+    "complete": true,
     "lastRange": {
       "from": "2026-09-28",
       "to": "2026-09-30"
     },
     "added": 0,
-    "revalidated": 0,
-    "lastSuccessfulAt": "2026-09-30T04:34-03:00",
-    "previewBackfilled": 2
+    "revalidated": 2,
+    "lastSuccessfulAt": "2026-09-30T11:28-03:00",
+    "previewBackfilled": 11
   },
   "tariffAutomation": {
     "checkedAt": "2026-09-29T22:31-03:00",
@@ -7464,11 +8610,23 @@
     ]
   },
   "marketAutomation": {
-    "checkedAt": "2026-09-30T11:22-03:00",
+    "checkedAt": "2026-09-30T11:28-03:00",
     "readers": {
       "henry_hub": "ok",
       "mb_propane": "ok",
       "worldbank": "ok"
+    }
+  },
+  "bopbaScan": {
+    "gas natural": {
+      "lastScannedDate": "2026-09-30T11:28:31.131738-03:00",
+      "complete": true,
+      "checkedAt": "2026-09-30T11:29-03:00"
+    },
+    "BAGSA": {
+      "lastScannedDate": "2026-09-30T11:28:31.131738-03:00",
+      "complete": true,
+      "checkedAt": "2026-09-30T11:29-03:00"
     }
   }
 }
