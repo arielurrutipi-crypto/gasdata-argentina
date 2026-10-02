@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "updatedAt": "2026-10-02T18:32-03:00",
+    "updatedAt": "2026-10-02T19:32-03:00",
     "timezone": "ART (UTC−3)",
     "dataPolicy": "Toda cifra muestra fecha de referencia y fecha/hora de validación."
   },
@@ -60,8 +60,8 @@
       "value": "43,0281",
       "unit": "MMm³/d",
       "reference": "Lun 05/10/2026 · PROYECCIÓN",
-      "validatedAt": "2026-10-02T18:32-03:00",
-      "nextValidation": "2026-10-03T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
+      "nextValidation": "2026-10-03T19:32-03:00",
       "status": "unchanged",
       "statusText": "SIN CAMBIOS",
       "sourceType": "OFFICIAL",
@@ -109,7 +109,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T16:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Halliburton capacitó a sus operarios para operar Zeus en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -122,7 +122,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T16:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Alto apoyo al Programa \"Gas do Povo\" a un año de su creación",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -135,7 +135,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T15:36-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Se viene el precio “Bahía Blanca” para la tonelada de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -148,7 +148,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T15:36-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina mira para su exportación América, Asia y China",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -161,7 +161,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T15:36-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Cuál es el precio internacional, la demanda y perspectiva del GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -174,7 +174,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T15:36-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Colombia: la importación de GLP alcanzó al 51,7%, y ya superó a la oferta nacional",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -187,7 +187,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T15:36-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "La suba del precio internacional tensiona importación en México",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -200,7 +200,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina: City Gas instaló su segunda expendedora",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -213,7 +213,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Seminario para entender a la Argentina como exportadora de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -226,7 +226,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Colombia: Colgas el mayor importador de GLP, con el 53% del volumen entre el 2020 y el 2025",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -239,7 +239,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Nuevo proyecto de u$s360 M de Compañía Mega para producir más de GLP",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -252,7 +252,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "SuperGasBras ya maneja una flota de 51 camiones eléctricos en Río de Janeiro",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -265,7 +265,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Transporte de GLP varado al pie de la Cordillera por nieve",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -278,7 +278,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "El frente exportador del petróleo y el gas suman novedades desde Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -291,7 +291,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta, el mercado brasileño para el gas y la sociedad de siete empresas para exportar shale oil",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -304,7 +304,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Modo Shale: Vaca Muerta récord, la agenda internacional y las cuentas de Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -317,7 +317,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Cómo es la agenda que busca posicionar a Neuquén como exportador de GNL",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -330,7 +330,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "El Gobierno Nacional aumentó el valor tope para la importación sin arancel de vehículos eléctricos e híbridos",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -343,7 +343,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "YPF marcó un récord en Vaca Muerta con pozos slim de 4.770 metros de rama lateral",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -356,7 +356,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T13:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: la CEPH capacitará a 120 estudiantes de ingeniería en petróleo en Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -369,7 +369,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: las etapas de fractura dieron un salto del 5,8% en agosto",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -382,7 +382,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Conexplo 2026: Vaca Muerta, offshore y transición energética, en el centro del debate petrolero",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -395,7 +395,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "TGN - Transportadora Gas del Norte S.A.",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -408,7 +408,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "17/09/2026. TGN impulsa la construcción del Gasoducto Manuel Belgrano",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -421,7 +421,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Infografía: Proyecto de construcción del Gasoducto Manuel Belgrano",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -434,7 +434,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "11/08/2026. TGN anuncia a la nueva jefa de Relaciones Comunitarias y Sostenibilidad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -447,7 +447,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "12/05/2026. TGN presentó su Reporte de Sustentabilidad 2025",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -460,7 +460,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "07/05/2026. TGN lanzó la edición 2026 de su programa de Jóvenes Profesionales",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -473,7 +473,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "03/02/2026. Horacio Pizarro. Nuevo director general de TGN",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -486,7 +486,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "30/12/2025. TGN anuncia nuevo director Comercial y de Asuntos Regulatorios",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -499,7 +499,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T12:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: Pampa Energía apunta a centros de datos de IA",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -511,7 +511,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:42-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina Week: Pampa Energía aseguró que dispone de 800 MW de generación para data centers de inteligencia artificial en Vaca Muerta",
       "desc": "El presidente de Pampa Energía, Marcelo Mindlin, destacó el potencial de Vaca Muerta para abastecer en origen la creciente demanda energética de los data centers de inteligencia artificial durante una presentación en el Argentina Week en París. En ese sentido, aseguró que la compañía dispone de 800 MW de generación eléctrica para abastecer proyectos de […]",
       "tags": [
@@ -524,7 +524,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "02/06/2025. TGN presentó su Reporte de Sustentabilidad 2024",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -537,7 +537,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "15/04/2025. TGN lanzó el portal dirigido a sus clientes corporativos",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -550,7 +550,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "04/04/2025. TGN reconocida entre las 25 mejores empresas por Great Place to Work",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -563,7 +563,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "21/10/2024. TGN presentó su solicitud de prórroga de la licencia de transporte de gas",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -576,7 +576,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "ENReGE Ente Nacional Regulador del Gas y la Electricidad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -589,7 +589,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "14 de julio de 2026 ENReGE verificó en San Rafael el cumplimiento de las instrucciones impartidas para el otorgamiento de nuevas conexiones de gas",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -602,7 +602,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "02 de julio de 2026 El ENReGE instruye a transportistas y distribuidoras a inscribirse en el RITE",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -615,7 +615,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "13 de mayo de 2026 Primera reunión de Directorio del Ente Nacional Regulador del Gas y la Electricidad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -628,7 +628,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T11:35-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "12 de mayo de 2026 Asumieron las autoridades del Ente Nacional Regulador del Gas y la Electricidad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -641,7 +641,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T10:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Empleo en Río Negro: Vaca Muerta cambia los perfiles laborales que buscan las empresas",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -654,7 +654,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T10:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "29 de julio de 2026 El Gobierno Nacional convoca a Concurso Abierto de Antecedentes para designar al Presidente del Directorio del Ente Regulador del Gas y la Electricidad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -666,7 +666,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T10:11-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: aprueban el ingreso al RIGI de un proyecto por US$ 12.400 millones para Pluspetrol y GyP",
       "desc": "El Comité Evaluador del Régimen de Incentivo para Grandes Inversiones (RIGI) aprobó este viernes el ingreso del proyecto presentado por Pluspetrol y Gas y Petróleo del Neuquén (GyP) para el bloque Bajo del Choique-La Invernada por US$ 12.400 millones. La inversión a 25 años contempla alcanzar una producción superior a los 100.000 barriles por día, […]",
       "tags": [
@@ -679,7 +679,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T09:38-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Pluspetrol y GyP obtuvieron el RIGI para invertir USD 12.400 millones en Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -691,7 +691,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T09:28-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "La AOG Patagonia 2026 cada vez más cerca: las últimas novedades de su agenda",
       "desc": "De cara al inicio de una nueva edición, la AOG Patagonia se consolida como el punto de encuentro más importante de la industria de los hidrocarburos de la región. Empresarios, autoridades nacionales y provinciales, cámaras, especialistas y decisores vuelven a reunirse en el corazón de Vaca Muerta. Además de las más de 400 marcas expositoras […]",
       "tags": [
@@ -703,7 +703,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T09:15-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "TotalEnergies anuncia inversiones por US$10.000 millones para expandir gas y petróleo en Argentina",
       "desc": "La energética francesa TotalEnergies anunció una cartera de proyectos por cerca de US$10.000 millones en Argentina, orientada a ampliar la producción de gas y petróleo mediante desarrollos en Tierra del Fuego y Vaca Muerta. El anuncio fue realizado por su presidente y CEO, Patrick Pouyanné, durante la Argentina Week 2026 celebrada en París. Detrás de […] The post TotalEnergies anuncia inversiones por US$10.000 millones para expandir gas y petróleo en Argentina first appeared on Runrun energético .",
       "tags": [
@@ -715,7 +715,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T08:45-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Río Negro supervisa el tramo offshore de VMOS antes de su conexión con la exportación",
       "desc": "El Gobierno de Río Negro intensificó las tareas de fiscalización sobre el tramo offshore de VMOS (Vaca Muerta Oil Sur), una infraestructura clave para conectar la producción petrolera de Vaca Muerta con la terminal exportadora de Punta Colorada. El seguimiento provincial apunta a verificar la calidad constructiva y ambiental de una de las etapas más […] The post Río Negro supervisa el tramo offshore de VMOS antes de su conexión con la exportación first appeared on Runrun energético .",
       "tags": [
@@ -728,7 +728,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T08:31-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: aprobaron un RIGI a Pluspetrol y GyP con una inversión de USD 12.400 millones",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -740,7 +740,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T08:30-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "VMOS supera las 35.000 soldaduras y consolida la salida exportadora de Vaca Muerta",
       "desc": "El proyecto Vaca Muerta Oil Sur (VMOS) avanza como una de las obras de infraestructura energética más importantes de la historia argentina, con el objetivo de conectar la producción petrolera de Vaca Muerta con la terminal marítima de Punta Colorada, en la costa atlántica de Río Negro. La iniciativa busca ampliar la capacidad de transporte, […] The post VMOS supera las 35.000 soldaduras y consolida la salida exportadora de Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -752,7 +752,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T08:15-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "YPF acelera Argentina LNG y apunta al 26 de noviembre para definir la inversión",
       "desc": "YPF avanza hacia uno de los hitos más relevantes del proyecto Argentina LNG y fijó el 26 de noviembre como fecha objetivo para adoptar la Decisión Final de Inversión (FID), una instancia que definirá el paso del megaproyecto desde la etapa de planificación hacia su ejecución. La iniciativa busca transformar los recursos gasíferos de Vaca […] The post YPF acelera Argentina LNG y apunta al 26 de noviembre para definir la inversión first appeared on Runrun energético .",
       "tags": [
@@ -764,7 +764,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T08:00-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Río Negro impulsa una ampliación industrial de Facilities Energy vinculada a Vaca Muerta",
       "desc": "El gobierno de Río Negro incorporó a Facilities Energy al Régimen de Promoción Económica e Industrial provincial, una decisión que busca acelerar la expansión de una planta dedicada al procesamiento de condensados provenientes de Vaca Muerta. La medida fue formalizada por el gobernador Alberto Weretilneck durante una visita a las instalaciones que la compañía opera […] The post Río Negro impulsa una ampliación industrial de Facilities Energy vinculada a Vaca Muerta first appeared on Runrun energético .",
       "tags": [
@@ -776,7 +776,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T07:45-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "XRG apuesta por Vaca Muerta para convertir a Argentina en exportador global de GNL",
       "desc": "La compañía emiratí XRG, brazo internacional de inversiones energéticas de ADNOC, explicó los motivos que la llevaron a ingresar al proyecto Argentina LNG junto a YPF y Eni, una iniciativa que busca transformar los recursos de Vaca Muerta en una plataforma exportadora de gas natural licuado con alcance global. Durante la Argentina Week realizada en […] The post XRG apuesta por Vaca Muerta para convertir a Argentina en exportador global de GNL first appeared on Runrun energético .",
       "tags": [
@@ -788,7 +788,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T07:15-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Figueroa promocionó en París el gas de Vaca Muerta y apuntó a nuevos mercados",
       "desc": "El gobernador de Neuquén, Rolando Figueroa, participó en París del panel “Gas argentino en el mercado mundial”, donde presentó las ventajas competitivas de Vaca Muerta y defendió la capacidad de la provincia para transformarse en un proveedor relevante de energía para mercados internacionales de alta exigencia. Durante su intervención en la Argentina Week 2026, el […] The post Figueroa promocionó en París el gas de Vaca Muerta y apuntó a nuevos mercados first appeared on Runrun energético .",
       "tags": [
@@ -800,7 +800,7 @@
       "source": "RunRun Energético",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T07:00-03:00",
-      "feedValidatedAt": "2026-10-02T17:30-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Gobierno posterga otra vez los impuestos a los combustibles y evita una suba en octubre",
       "desc": "El Gobierno nacional volvió a diferir la aplicación plena de los aumentos pendientes en los impuestos que gravan los combustibles líquidos y el dióxido de carbono, una decisión que permitirá transitar octubre sin incorporar un nuevo ajuste tributario sobre los precios de las naftas y el gasoil. A través del Decreto 1126/2026, el Poder Ejecutivo […] The post Gobierno posterga otra vez los impuestos a los combustibles y evita una suba en octubre first appeared on Runrun energético .",
       "tags": [
@@ -812,7 +812,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T06:38-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "YPF, Eni y XRG fijan la decisión final de inversión de Argentina LNG para el 26 de noviembre",
       "desc": "El proyecto prevé iniciar obras en febrero con un desembolso inicial de US$ 30.000 millones y la generación de 40.000 […] The post YPF, Eni y XRG fijan la decisión final de inversión de Argentina LNG para el 26 de noviembre first appeared on revistapetroquimica.com .",
       "tags": [
@@ -824,7 +824,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-02T06:30-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Petróleo superó los US$ 100 tras la suspensión de exportaciones en China",
       "desc": "Las refinerías del país asiático frenaron los despachos externos de derivados, restringiendo la oferta mundial e impactando en insumos del […] The post Petróleo superó los US$ 100 tras la suspensión de exportaciones en China first appeared on revistapetroquimica.com .",
       "tags": [
@@ -837,7 +837,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T18:31-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "PECOM concretó su primera exportación de crudo Escalante hacia Hawái",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -850,7 +850,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T17:34-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: DLS Archer activó dos equipos de alta especificación para YPF",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -863,7 +863,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T16:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Figueroa llevó a París la hoja de ruta de Vaca Muerta: GNL, bajas emisiones y competitividad",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -875,7 +875,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T16:27-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Río Negro convocó a una audiencia pública en Sierra Grande por el proyecto Argentina LNG, a días de que YPF firme el FID",
       "desc": "El gobierno de Río Negro convocó a una audiencia pública en Sierra Grande por el proyecto Argentina LNG que lidera YPF para exportar gas licuado desde el Golfo San Matías. La instancia será para analizar cuatro estudios de impacto ambiental vinculados a la construcción del gasoducto dedicado y poliducto que saldrán desde Vaca Muerta, un […]",
       "tags": [
@@ -887,7 +887,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T15:04-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina Week: Figueroa destacó la previsibilidad del shale de Vaca Muerta como proveedor internacional",
       "desc": "En un contexto de alta volatilidad en los flujos globales de energía, el gobernador de Neuquén, Rolando Figueroa, remarcó durante su participación en la Argentina Week la capacidad de Vaca Muerta para fortalecerse como un proveedor atractivo, previsible y libre de riesgos geopolíticos. Sostuvo además que el rol de Río Negro como hub exportador será […]",
       "tags": [
@@ -900,7 +900,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T14:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina LNG entra en una etapa decisiva: YPF confirmó para noviembre la decisión final de inversión",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -913,7 +913,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T13:32-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Vaca Muerta: las razones detrás de la apuesta de XRG por Argentina LNG",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -926,7 +926,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T12:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "TotalEnergies anunció proyectos por cerca de US$10.000 millones con foco en Vaca Muerta y el offshore",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -939,7 +939,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T12:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "AOG: Vaca Muerta se prepara para su gran evento, más de 400 empresas llegan a Neuquén",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -952,7 +952,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T12:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Con una ley Mendoza quiere impulsar Vaca Muerta",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -977,7 +977,7 @@
       "source": "EconoJournal",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T11:13-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina Week: TotalEnergies anuncia una cartera de proyectos por US$10.000 millones en Vaca Muerta y Tierra del Fuego",
       "desc": "El CEO de TotalEnergies, Patrick Pouyanné, reveló que la compañía definió una cartera de proyectos por US$ 10.000 millones para invertir en Vaca Muerta y Tierra del Fuego, durante su participación en el Argentina Week en París. La mayor inversión será en la provincia de Neuquén para desarrollar el shale oil en el bloque San […]",
       "tags": [
@@ -1002,7 +1002,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T09:40-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Argentina LNG: Horacio Marín anunció la fecha para la firma del FID",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -1077,7 +1077,7 @@
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T07:33-03:00",
       "dateType": "detected",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Emilio Apud: \"Hay para todos con este nivel de inversión en Vaca Muerta\"",
       "desc": "Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
       "tags": [
@@ -1113,7 +1113,7 @@
       "source": "Revista Petroquímica",
       "sourceType": "PRESS",
       "publishedAt": "2026-10-01T06:37-03:00",
-      "feedValidatedAt": "2026-10-02T18:31-03:00",
+      "feedValidatedAt": "2026-10-02T19:30-03:00",
       "title": "Neuquén promueve la exportación de GNL en la Argentina Week Paris",
       "desc": "El gobernador Rolando Figueroa expone sobre el potencial hidrocarburífero de Vaca Muerta ante directivos y autoridades en el evento de […] The post Neuquén promueve la exportación de GNL en la Argentina Week Paris first appeared on revistapetroquimica.com .",
       "tags": [
@@ -1128,7 +1128,7 @@
       "category": "GNL",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 689/2026 RESFC-2026-689-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar la actualización del “Régimen para Estaciones de Carga de GNC Vehicular - Actualización 2026” y las “Pautas Mínimas del Seguro de Caución Obligatorio para las Estaciones de Carga de GNC Vehicular – Actualización 2026”, que como Anexos N.° IF-2026-68394601-APN-UIYN#ENREGE y N.° IF-2026-68394434-APN-UIYN#ENREGE respectivamente, forman parte de la…",
@@ -1150,7 +1150,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 710/2026 RESFC-2026-710-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios a aplicar por Transportadora de Gas del Norte Sociedad Anónima, incluidos en el Anexo N.° IF-2026-94781802-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1172,7 +1172,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 711/2026 RESFC-2026-711-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios a aplicar por Transportadora de Gas del Sur Sociedad Anónima, incluidos en el Anexo N.° IF-2026-94781211-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1194,7 +1194,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 712/2026 RESFC-2026-712-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Energía Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810347-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1216,7 +1216,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 714/2026 RESFC-2026-714-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Refinería del Norte Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809954-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1238,7 +1238,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 713/2026 RESFC-2026-713-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gas Link Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810489-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1260,7 +1260,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 715/2026 RESFC-2026-715-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Transportadora de Gas del Mercosur Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809775-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1282,7 +1282,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 716/2026 RESFC-2026-716-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Norandino Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810170-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1305,7 +1305,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 717/2026 RESFC-2026-717-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Compañía Entrerriana de Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-94809589-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1327,7 +1327,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 718/2026 RESFC-2026-718-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Enel Generación Chile Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810825-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1349,7 +1349,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 720/2026 RESFC-2026-720-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Metrogas Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418525-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1374,7 +1374,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 719/2026 RESFC-2026-719-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los Cuadros Tarifarios de Transición a aplicar por Gasoducto Gasandes Argentina Sociedad Anónima incluidos en el Anexo N.° IF-2026-94810638-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1397,7 +1397,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 721/2026 RESFC-2026-721-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Litoral Gas Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418168-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1422,7 +1422,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 722/2026 RESFC-2026-722-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas del Centro Sociedad Anónima incluidos en el Anexo N.° IF-2026-95417265-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1447,7 +1447,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 723/2026 RESFC-2026-723-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Distribuidora de Gas Cuyana Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416762-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1472,7 +1472,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 725/2026 RESFC-2026-725-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Naturgy NOA Sociedad Anónima incluidos en el Anexo N.° IF-2026-95419697-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1497,7 +1497,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 724/2026 RESFC-2026-724-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Naturgy BAN Sociedad Anónima incluidos en el Anexo N.° IF-2026-95419588-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1522,7 +1522,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 726/2026 RESFC-2026-726-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Gas NEA Sociedad Anónima incluidos en el Anexo N.° IF-2026-95418009-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1547,7 +1547,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 727/2026 RESFC-2026-727-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas Pampeana Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416358-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1572,7 +1572,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 729/2026 RESFC-2026-729-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Instruir a las prestadoras del servicio público de distribución de gas a aplicar, por cada metro cúbico (M3) de nueve mil trescientas kilocalorías (9.300 kc) facturado a sus usuarios de servicio completo, un recargo que se determinará aplicando, al precio del gas natural en el Punto de Ingreso al Sistema de Transporte (PIST), los porcentajes por subzona que…",
@@ -1597,7 +1597,7 @@
       "category": "GLP",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 728/2026 RESFC-2026-728-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:30-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los cuadros tarifarios a aplicar por Camuzzi Gas del Sur Sociedad Anónima incluidos en el Anexo N.° IF-2026-95416241-APN-UDYE#ENREGE que forma parte de la presente.",
@@ -1622,7 +1622,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 708/2026 RESFC-2026-708-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:31-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA (EDENOR S.A.), que se informan en el IF-2026-94580484-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
@@ -1644,7 +1644,7 @@
       "category": "Tarifas",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 709/2026 RESFC-2026-709-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:31-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "Aprobar los valores por categoría/subcategoría del Costo Propio de Distribución (CPD) de la EMPRESA DISTRIBUIDORA SUR SOCIEDAD ANÓNIMA (EDESUR S.A.), que se informan en el IF-2026-94581043-APN-UARYEE#ENREGE y que, como Anexo, integra este acto.",
@@ -1665,7 +1665,7 @@
       "category": "GLP",
       "title": "SECRETARÍA DE ENERGÍA Resolución 272/2026 RESOL-2026-272-APN-SE#MEC",
       "publishedAt": "2026-10-01T00:00-03:00",
-      "validatedAt": "2026-10-02T18:31-03:00",
+      "validatedAt": "2026-10-02T19:31-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "SECRETARÍA DE ENERGÍA Resolución 272/2026 RESOL-2026-272-APN-SE#MEC",
@@ -7172,7 +7172,7 @@
       "product": "GN",
       "res": "710/2026",
       "validFrom": "2026-10-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Transporte",
       "bagsa": false,
       "url": "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0710&Ano=2026",
@@ -7191,7 +7191,7 @@
       "product": "GN",
       "res": "711/2026",
       "validFrom": "2026-10-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Transporte",
       "bagsa": false,
       "url": "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0711&Ano=2026",
@@ -7210,7 +7210,7 @@
       "product": "GLP",
       "res": "727/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7230,7 +7230,7 @@
       "product": "GN",
       "res": "727/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7250,7 +7250,7 @@
       "product": "GLP",
       "res": "728/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7270,7 +7270,7 @@
       "product": "GN",
       "res": "728/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7290,7 +7290,7 @@
       "product": "GLP",
       "res": "721/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7310,7 +7310,7 @@
       "product": "GN",
       "res": "721/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7330,7 +7330,7 @@
       "product": "GLP",
       "res": "724/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7350,7 +7350,7 @@
       "product": "GN",
       "res": "724/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -7370,10 +7370,10 @@
     {
       "name": "Noticias",
       "cadence": "Cada 60 min",
-      "last": "2026-10-02T18:31-03:00",
-      "next": "2026-10-02T19:31-03:00",
+      "last": "2026-10-02T19:30-03:00",
+      "next": "2026-10-02T20:30-03:00",
       "status": "updated",
-      "note": "1 noticias nuevas · Fuentes consultadas: América GLP, ENReGE · Noticias, EconoJournal, Mejor Energía, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas, Secretaría de Energía, TGN, TGS",
+      "note": "11 noticias nuevas · Fuentes consultadas: América GLP, ENReGE · Noticias, EconoJournal, Mejor Energía, Más Energía · LM Neuquén, Revista Petroquímica, RunRun Energético, RunRun Energético · Gas, Secretaría de Energía, TGN, TGS",
       "mode": "Automática",
       "strategy": "Ventana reciente + deduplicación",
       "scope": "Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."
@@ -7381,10 +7381,10 @@
     {
       "name": "Normativa",
       "cadence": "Cada 3 h",
-      "last": "2026-10-02T18:31-03:00",
-      "next": "2026-10-02T21:31-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T22:32-03:00",
       "status": "partial",
-      "note": "Consulta 30/09/2026–02/10/2026 · 267 normas guardadas · 3 nuevas · 0 fichas enriquecidas con Art. 1° · 0 ediciones y 2 documentos pendientes de reintento.",
+      "note": "Consulta 30/09/2026–02/10/2026 · 267 normas guardadas · 3 nuevas · 0 fichas enriquecidas con Art. 1° · 0 ediciones y 5 documentos pendientes de reintento.",
       "mode": "Automática incremental",
       "strategy": "Backfill 01/01/2026 + solapamiento de 2 días",
       "scope": "Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."
@@ -7392,8 +7392,8 @@
     {
       "name": "Tarifas ENReGE",
       "cadence": "Diaria",
-      "last": "2026-10-02T18:32-03:00",
-      "next": "2026-10-03T18:32-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-03T19:32-03:00",
       "status": "updated",
       "note": "10 cuadros vigentes reconstruidos desde ENARGAS/ENReGE; BAGSA no alimenta datos tarifarios.",
       "mode": "Automática",
@@ -7428,8 +7428,8 @@
       "mode": "Automática",
       "strategy": "Relectura de ventana vigente",
       "scope": "Relee la ventana oficial de 5 días y reemplaza la serie cuando cambia.",
-      "last": "2026-10-02T18:32-03:00",
-      "next": "2026-10-02T19:32-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T20:32-03:00",
       "status": "unchanged",
       "note": "Ventana oficial de 5 días revalidada."
     },
@@ -7439,8 +7439,8 @@
       "mode": "Automática",
       "strategy": "PDF oficial + acumulación de variaciones",
       "scope": "Inyección se extrae del PDF oficial. Linepack actualiza el stock aproximado acumulando las variaciones diarias del gráfico desde el último valor validado.",
-      "last": "2026-10-02T18:32-03:00",
-      "next": "2026-10-02T19:32-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T20:32-03:00",
       "status": "unchanged",
       "note": "Inyección y Linepack con lectores automáticos validados."
     },
@@ -7450,16 +7450,16 @@
       "mode": "Automática",
       "strategy": "PDF oficial · total + GNL + Chile · validación cruzada",
       "scope": "Detecta el último mes ENReGE y extrae importaciones, GNL Escobar, exportaciones y exportaciones a Chile; antes de publicar verifica que el lector reproduzca el último mes validado.",
-      "last": "2026-10-02T18:32-03:00",
-      "next": "2026-10-02T19:32-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T20:32-03:00",
       "status": "unchanged",
       "note": "Totales, GNL Escobar y exportaciones a Chile se extraen del PDF oficial; el lector fue contrastado contra el último mes previamente validado."
     },
     {
       "name": "Capacidad de transporte",
       "cadence": "Cada 3 h",
-      "last": "2026-10-02T15:38-03:00",
-      "next": "2026-10-02T18:38-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T22:32-03:00",
       "status": "updated",
       "note": "ENReGE concursos abiertos + MEGSA reventas de transporte firme.",
       "mode": "Automática",
@@ -7469,8 +7469,8 @@
     {
       "name": "Boletín Oficial PBA",
       "cadence": "Cada 3 h",
-      "last": "2026-10-02T15:38-03:00",
-      "next": "2026-10-02T18:38-03:00",
+      "last": "2026-10-02T19:32-03:00",
+      "next": "2026-10-02T22:32-03:00",
       "status": "unchanged",
       "note": "0 publicaciones provinciales incorporadas · 0 coincidencias irrelevantes depuradas. Se conservan sólo BAGSA, regulación, tarifas, obras, redes y otra infraestructura de gas.",
       "mode": "Automática incremental",
@@ -7483,7 +7483,7 @@
       "mode": "Automática",
       "strategy": "EIA + Banco Mundial + Catalyst + normativa/tarifas argentinas",
       "scope": "Actualiza Henry Hub, Mont Belvieu, TTF, JKM, Gas Europa, GNL Japón, PAU 2026 y PPE implícito de propano. Las referencias puntuales históricas quedan como complementarias.",
-      "last": "2026-10-02T18:32-03:00",
+      "last": "2026-10-02T19:32-03:00",
       "status": "partial",
       "note": "Lectores automáticos: henry_hub: ok, mb_propane: ok, worldbank: ok, catalyst: ok, pau: ok, ppe_propano: No se encontró precio de compra reconocido en el cuadro GLP."
     }
@@ -7503,7 +7503,7 @@
       "url": "https://econojournal.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Mejor Energía",
@@ -7514,7 +7514,7 @@
       "url": "https://www.mejorenergia.com.ar/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "RunRun Energético",
@@ -7525,7 +7525,7 @@
       "url": "https://runrunenergetico.com/",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "ENReGE · Noticias",
@@ -7536,7 +7536,7 @@
       "url": "https://www.enargas.gob.ar/secciones/noticias/noticias.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "ENReGE · Datos diarios",
@@ -7547,7 +7547,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion.php",
       "validatedAt": "2026-09-28T14:48-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "ENReGE · Tarifas",
@@ -7556,9 +7556,9 @@
       "cadence": "Diaria",
       "status": "ACTIVA",
       "url": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Secretaría de Energía · Noticias",
@@ -7569,7 +7569,7 @@
       "url": "https://www.argentina.gob.ar/economia/energia/noticias",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Datos Argentina · Energía",
@@ -7580,7 +7580,7 @@
       "url": "https://datos.gob.ar/dataset/energia-produccion-petroleo-gas-sesco",
       "validatedAt": "2026-09-28T11:00:00-03:00",
       "availability": "NO DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "TGS · Prensa",
@@ -7591,7 +7591,7 @@
       "url": "https://www.tgs.com.ar/prensa/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "TGN · Comunicaciones",
@@ -7602,7 +7602,7 @@
       "url": "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/",
       "validatedAt": "2026-09-28T14:39-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Revista Petroquímica",
@@ -7613,7 +7613,7 @@
       "url": "https://revistapetroquimica.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Más Energía · LM Neuquén",
@@ -7624,7 +7624,7 @@
       "url": "https://mase.lmneuquen.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "América GLP",
@@ -7635,7 +7635,7 @@
       "url": "https://www.americaglp.com/",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "MEGSA · Transporte firme",
@@ -7646,7 +7646,7 @@
       "url": "https://negociacion.megsa.ar/Usuario/VisualizacionReventa.aspx?tipo=2",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "ENReGE · Concursos de capacidad",
@@ -7657,7 +7657,7 @@
       "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/concursos-reventas.php",
       "validatedAt": "2026-09-28T14:49-03:00",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Boletín Oficial PBA · Gas/BAGSA",
@@ -7674,7 +7674,7 @@
       "validatedAt": "2026-09-30T08:31-03:00",
       "lastResult": "gas natural: 5 coincid. · última 13/05/2026 · BAGSA: 5 coincid. · última 02/02/2026",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Argentina.gob.ar · Normativa gas",
@@ -7686,7 +7686,7 @@
       "validatedAt": "2026-09-28T14:49-03:00",
       "lastResult": "12 normas en listado · 0 nuevas · 0 revalidadas",
       "availability": "DISPONIBLE",
-      "checkedAt": "2026-10-02T18:32-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     {
       "name": "Boletín Oficial Nación · Normativa gas",
@@ -7695,7 +7695,7 @@
       "cadence": "Cada 3 h",
       "status": "REVISAR",
       "url": "https://www.boletinoficial.gob.ar/seccion/primera",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "lastResult": "267 normas · 3 nuevas · 45 revalidadas · 0 vistas enriquecidas · 3 ediciones consultadas",
       "availability": "DISPONIBLE",
       "validatedAt": "2026-10-02T07:32-03:00"
@@ -7757,7 +7757,7 @@
       "value": "3,34–4,06",
       "unit": "USD/MMBtu",
       "reference": "Año 2026 · rango nacional por subzona",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "OFICIAL · AUTOMÁTICO",
       "source": "Secretaría de Energía · Res. 23/2026",
       "sourceUrl": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/420000-424999/422817/res23-anexo1.pdf",
@@ -7765,7 +7765,7 @@
       "details": "BAGSA refs.: Naturgy BA Norte 3,790 · Litoral BA 3,855 · Camuzzi Pampeana BA 3,846 / Bahía Blanca 3,860 · Camuzzi Sur BA Sur 3,757",
       "group": "Gas Argentina",
       "updateStatus": "current",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "auto": true
     },
     {
@@ -7830,7 +7830,7 @@
       "note": "PPE implícito = precio de compra reconocido en tarifa / 60%.",
       "details": "Precio reconocido: $ 409.393,62/t · Res, 543/2026, La Res, 126/2026 dispone trasladar 60% del PPE,",
       "updateStatus": "error",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "auto": true,
       "updateError": "No se encontró precio de compra reconocido en el cuadro GLP"
     },
@@ -7841,14 +7841,14 @@
       "value": "479,05",
       "unit": "USD/t",
       "reference": "29/09/2026 · spot",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls",
       "note": "Referencia spot FOB Texas convertida a USD/t.",
       "details": "Conversión desde 0.894 USD/gal; 3,785411784 L/gal y densidad indicativa 0,493 kg/L.",
       "observationDate": "2026-09-29",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7891,14 +7891,14 @@
       "value": "25,43",
       "unit": "USD/MMBtu",
       "reference": "2026-09-29 · M+1",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "BENCHMARK · AUTOMÁTICO",
       "source": "Catalyst Commercial · market report",
       "sourceUrl": "https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-30-september-2026/",
       "note": "JKM LNG M+1 extraído del último reporte de mercado publicado.",
       "details": "Benchmark spot/M+1 del noreste asiático; no equivale a un netback argentino.",
       "updateStatus": "current",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "observationDate": "2026-09-29",
       "auto": true
     },
@@ -7909,14 +7909,14 @@
       "value": "23,02",
       "unit": "USD/MMBtu",
       "reference": "2026-09-29 · spot",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "BENCHMARK · AUTOMÁTICO",
       "source": "Catalyst Commercial · market report",
       "sourceUrl": "https://www.catalyst-commercial.co.uk/works/uk-energy-market-report-30-september-2026/",
       "note": "TTF spot extraído del último reporte de mercado publicado.",
       "details": "Benchmark europeo de gas natural.",
       "updateStatus": "current",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "observationDate": "2026-09-29",
       "auto": true
     },
@@ -7927,14 +7927,14 @@
       "value": "3,18",
       "unit": "USD/MMBtu",
       "reference": "29/09/2026 · spot",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "SPOT · AUTOMÁTICO",
       "source": "U.S. EIA",
       "sourceUrl": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDd.xls",
       "note": "Precio spot del gas en Henry Hub, Louisiana.",
       "details": "Es una referencia de gas de alimentación, no un precio de GNL entregado.",
       "observationDate": "2026-09-29",
-      "checkedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
       "auto": true,
       "updateStatus": "current"
     },
@@ -7942,8 +7942,8 @@
       "id": "wb_europe",
       "value": "25,42",
       "observationDate": "2026-09",
-      "checkedAt": "2026-10-02T18:32-03:00",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "Gas Europa · promedio mensual",
@@ -7960,8 +7960,8 @@
       "id": "wb_japan",
       "value": "14,25",
       "observationDate": "2026-09",
-      "checkedAt": "2026-10-02T18:32-03:00",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "checkedAt": "2026-10-02T19:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "auto": true,
       "updateStatus": "current",
       "label": "GNL Japón · promedio mensual",
@@ -7978,7 +7978,7 @@
   "regulationCriteria": {
     "title": "Criterio GasData",
     "text": "Listado automático de normativa oficial relevante para gas natural/GLP/GNL desde el 01/01/2026. Se consulta la Primera Sección del Boletín Oficial y se clasifica por Subdistribución, Transporte, Distribución, Tarifas, Precios, Subsidios, Comercialización, GLP, GNL, Infraestructura y Técnica/operativa. Cada 3 horas se revisan nuevamente los últimos días y se incorporan las normas nuevas detectadas.",
-    "updatedAt": "2026-10-02T18:31-03:00"
+    "updatedAt": "2026-10-02T19:32-03:00"
   },
   "systemKpis": [
     {
@@ -7987,7 +7987,7 @@
       "value": "≈561",
       "unit": "MMm³",
       "reference": "27/08/2026 · REAL",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "DERIVADO · AUTOMÁTICO",
       "source": "ENReGE · Evolución de LinePack Real del Sistema de Transporte",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/5/LPG_20260827.pdf",
@@ -7995,7 +7995,7 @@
       "visualGroup": "gn",
       "derivedExact": 561,
       "linepackParser": {
-        "checkedAt": "2026-10-02T18:32-03:00",
+        "checkedAt": "2026-10-02T19:32-03:00",
         "report": "27/08/2026",
         "deltaPoints": 11,
         "status": "ok"
@@ -8007,7 +8007,7 @@
       "value": "129,0",
       "unit": "MMm³/d",
       "reference": "26/08/2026 · REAL",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "statusText": "OFICIAL",
       "source": "ENReGE · Inyección Nacional por Gasoducto",
       "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos-despacho/graficos-programacion/6/ING_20260826.pdf",
@@ -8216,7 +8216,7 @@
     }
   ],
   "transportCapacityMeta": {
-    "validatedAt": "2026-10-02T15:38-03:00",
+    "validatedAt": "2026-10-02T19:32-03:00",
     "cadence": "Cada 3 horas",
     "note": "GasData separa concursos abiertos de capacidad firme de reventas de capacidad existente. Ambos pueden ser relevantes para detectar disponibilidad de transporte."
   },
@@ -8298,7 +8298,7 @@
     "source": "ENReGE · Importaciones y Exportaciones Mensuales",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/dod-graficos-de-programacion-items.php?cat=9",
     "note": "Totales, GNL Escobar y exportaciones a Chile se extraen del PDF oficial; el lector fue contrastado contra el último mes previamente validado.",
-    "checkedAt": "2026-10-02T18:32-03:00",
+    "checkedAt": "2026-10-02T19:32-03:00",
     "status": "current",
     "readerVersion": 2,
     "componentParserValidatedAt": "2026-09-30T12:51-03:00"
@@ -8641,7 +8641,7 @@
   "regulationScan": {
     "lastScannedDate": "2026-10-02",
     "source": "Boletín Oficial de la República Argentina · Primera Sección",
-    "lastRun": "2026-10-02T18:31-03:00",
+    "lastRun": "2026-10-02T19:32-03:00",
     "pagesOk": 3,
     "pagesError": 0,
     "candidates": 92,
@@ -8653,9 +8653,24 @@
         "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución Sintetizada 669/2026"
       },
       {
-        "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348315/20261001?anexos=1",
+        "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348305/20261001?anexos=1",
         "day": "2026-10-01",
-        "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 702/2026 RESFC-2026-702-APN-DIRECTORIO#ENREGE"
+        "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 692/2026 RESFC-2026-692-APN-DIRECTORIO#ENREGE"
+      },
+      {
+        "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348307/20261001?anexos=1",
+        "day": "2026-10-01",
+        "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 694/2026 RESFC-2026-694-APN-DIRECTORIO#ENREGE"
+      },
+      {
+        "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348311/20261001?anexos=1",
+        "day": "2026-10-01",
+        "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 698/2026 RESFC-2026-698-APN-DIRECTORIO#ENREGE"
+      },
+      {
+        "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348320/20261001",
+        "day": "2026-10-01",
+        "label": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 707/2026 RESFC-2026-707-APN-DIRECTORIO#ENREGE"
       }
     ],
     "complete": false,
@@ -8679,14 +8694,14 @@
       "Camuzzi Gas Pampeana GLP (543/2026)"
     ],
     "readerVersion": 5,
-    "officialCheckedAt": "2026-10-02T18:32-03:00",
+    "officialCheckedAt": "2026-10-02T19:32-03:00",
     "primarySource": "ENARGAS/ENReGE · Precios y tarifas",
     "primarySourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
     "officialCurrentCount": 6,
     "sourceMode": "single_primary"
   },
   "marketAutomation": {
-    "checkedAt": "2026-10-02T18:32-03:00",
+    "checkedAt": "2026-10-02T19:32-03:00",
     "readers": {
       "henry_hub": "ok",
       "mb_propane": "ok",
@@ -8698,14 +8713,14 @@
   },
   "bopbaScan": {
     "gas natural": {
-      "lastScannedDate": "2026-10-02T15:38:17.979951-03:00",
+      "lastScannedDate": "2026-10-02T19:32:35.058914-03:00",
       "complete": true,
-      "checkedAt": "2026-10-02T15:38-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     "BAGSA": {
-      "lastScannedDate": "2026-10-02T15:38:17.979951-03:00",
+      "lastScannedDate": "2026-10-02T19:32:35.058914-03:00",
       "complete": true,
-      "checkedAt": "2026-10-02T15:38-03:00"
+      "checkedAt": "2026-10-02T19:32-03:00"
     },
     "cleanupVersion": 5
   },
@@ -8739,7 +8754,7 @@
       "product": "GN",
       "res": "711/2026",
       "validFrom": "2026-10-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Transporte",
       "bagsa": false,
       "url": "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0711&Ano=2026",
@@ -8787,7 +8802,7 @@
       "product": "GN",
       "res": "710/2026",
       "validFrom": "2026-10-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Transporte",
       "bagsa": false,
       "url": "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0710&Ano=2026",
@@ -8836,7 +8851,7 @@
       "product": "GN",
       "res": "724/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -8886,7 +8901,7 @@
       "product": "GLP",
       "res": "724/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -8936,7 +8951,7 @@
       "product": "GN",
       "res": "721/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -8986,7 +9001,7 @@
       "product": "GLP",
       "res": "721/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -9036,7 +9051,7 @@
       "product": "GN",
       "res": "728/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -9086,7 +9101,7 @@
       "product": "GLP",
       "res": "728/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -9136,7 +9151,7 @@
       "product": "GN",
       "res": "727/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -9187,7 +9202,7 @@
       "product": "GLP",
       "res": "727/2026",
       "validFrom": "2026-09-01",
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
       "bagsa": true,
@@ -9210,7 +9225,7 @@
   ],
   "tariffArchiveMeta": {
     "year": 2026,
-    "checkedAt": "2026-10-02T18:32-03:00",
+    "checkedAt": "2026-10-02T19:32-03:00",
     "count": 20,
     "enrichedThisRun": 0,
     "note": "Los cuadros nuevos se agregan al archivo; el vigente se determina por fecha de vigencia y los anteriores no se eliminan."
@@ -9225,7 +9240,7 @@
       "month": "2026-08",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/08/2026–31/08/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260801.xlsx",
       "documentType": "xlsx",
@@ -9245,7 +9260,7 @@
       "month": "2026-08",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/08/2026–31/08/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260801.xlsx",
       "documentType": "xlsx",
@@ -9265,7 +9280,7 @@
       "month": "2026-07",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/07/2026–31/07/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260701.xlsx",
       "documentType": "xlsx",
@@ -9285,7 +9300,7 @@
       "month": "2026-07",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/07/2026–31/07/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260701.xlsx",
       "documentType": "xlsx",
@@ -9305,7 +9320,7 @@
       "month": "2026-06",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 04/06/2026–30/06/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260604.xlsx",
       "documentType": "xlsx",
@@ -9325,7 +9340,7 @@
       "month": "2026-06",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/06/2026–30/06/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260601.xlsx",
       "documentType": "xlsx",
@@ -9345,7 +9360,7 @@
       "month": "2026-06",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/06/2026–03/06/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260601.xlsx",
       "documentType": "xlsx",
@@ -9365,7 +9380,7 @@
       "month": "2026-05",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 04/05/2026–31/05/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260504.xlsx",
       "documentType": "xlsx",
@@ -9385,7 +9400,7 @@
       "month": "2026-05",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 04/05/2026–31/05/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260504.xlsx",
       "documentType": "xlsx",
@@ -9405,7 +9420,7 @@
       "month": "2026-05",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/05/2026–03/05/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260501.xlsx",
       "documentType": "xlsx",
@@ -9425,7 +9440,7 @@
       "month": "2026-05",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/05/2026–03/05/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260501.xlsx",
       "documentType": "xlsx",
@@ -9445,7 +9460,7 @@
       "month": "2026-04",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/04/2026–30/04/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260401.xlsx",
       "documentType": "xlsx",
@@ -9465,7 +9480,7 @@
       "month": "2026-04",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/04/2026–30/04/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260401.xlsx",
       "documentType": "xlsx",
@@ -9485,7 +9500,7 @@
       "month": "2026-03",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/03/2026–31/03/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260301.xlsx",
       "documentType": "xlsx",
@@ -9505,7 +9520,7 @@
       "month": "2026-03",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/03/2026–31/03/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260301.xlsx",
       "documentType": "xlsx",
@@ -9525,7 +9540,7 @@
       "month": "2026-02",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/02/2026–28/02/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260201.xlsx",
       "documentType": "xlsx",
@@ -9545,7 +9560,7 @@
       "month": "2026-02",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/02/2026–28/02/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260201.xlsx",
       "documentType": "xlsx",
@@ -9565,7 +9580,7 @@
       "month": "2026-01",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/01/2026–31/01/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260101.xlsx",
       "documentType": "xlsx",
@@ -9585,7 +9600,7 @@
       "month": "2026-01",
       "year": 2026,
       "isCurrent": false,
-      "validatedAt": "2026-10-02T18:32-03:00",
+      "validatedAt": "2026-10-02T19:32-03:00",
       "scope": "Período 01/01/2026–31/01/2026",
       "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260101.xlsx",
       "documentType": "xlsx",
@@ -9599,7 +9614,7 @@
   ],
   "tariffSeriesMeta": {
     "year": 2026,
-    "checkedAt": "2026-10-02T18:32-03:00",
+    "checkedAt": "2026-10-02T19:32-03:00",
     "count": 19,
     "source": "ENARGAS/ENReGE · Serie histórica de cuadros tarifarios",
     "sourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/cuadros-tarifarios-serie-historica.php",
