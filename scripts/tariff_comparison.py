@@ -1,5 +1,6 @@
 """Read the official normalized tariff XLSX series without rewriting workbooks."""
 import io, json, re, zipfile
+from urllib.parse import urljoin
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import timedelta, datetime
@@ -46,11 +47,25 @@ def update_tariff_comparison(d, fetch, now, iso):
     state = d.setdefault('tariffComparison',{})
     folder = BASE/'data'/'tariff-comparison'; folder.mkdir(parents=True,exist_ok=True)
     old = {r['key']:r for r in state.get('datasets',[])}
-    sources = [r for r in d.get('tariffSeries2026',[]) if r.get('documentType')=='xlsx' and re.fullmatch(r'2026-\d{2}',r.get('month',''))]
-    latest = {p:max((r['validFrom'] for r in sources if r['product']==p),default='') for p in ('GN','GLP')}
+    sources = [r for r in d.get('tariffSeries2026',[]) if r.get('documentType')=='xlsx' and re.fullmatch(r'20\d{2}-\d{2}',r.get('month',''))]
     try: due = now()>=datetime.fromisoformat(state['checkedAt'])+timedelta(hours=3)
     except (ValueError,KeyError): due = True
+    due=due or state.get('readerVersion')!=2
     errors=[]; result=[]
+    primary='https://www.enargas.gob.ar/secciones/precios-y-tarifas/cuadros-tarifarios.php'
+    current=state.get('currentSources',[])
+    if due:
+        try:
+            page=fetch(primary,timeout=40).decode('utf-8')
+            discovered=[]
+            for href,product,date in re.findall(r'href=[\"\']([^\"\']*tarifas-(gn|glp)-(20\d{6})\.xlsx)[\"\']',page,re.I):
+                period=datetime.strptime(date,'%Y%m%d').date().isoformat()
+                discovered.append({'documentType':'xlsx','month':period[:7],'validFrom':period,'product':product.upper(),'documentUrl':urljoin(primary,href)})
+            if not discovered: raise ValueError('La página vigente no publica enlaces de planillas 2026 reconocibles')
+            current=discovered;state['currentSources']=current
+        except Exception as error: errors.append({'key':'current-sources','error':str(error)[:180]})
+    sources=list({(r['validFrom'],r['product']):r for r in [*sources,*current]}.values())
+    latest = {p:max((r['validFrom'] for r in sources if r['product']==p),default='') for p in ('GN','GLP')}
     def process(source):
         key = source['validFrom']+'-'+source['product']; path = folder/(key+'.json'); previous = old.get(key)
         if previous and path.exists() and previous.get('sourceUrl')==source['documentUrl'] and (source['validFrom']!=latest[source['product']] or not due): return previous,None
@@ -64,4 +79,14 @@ def update_tariff_comparison(d, fetch, now, iso):
         for dataset,error in pool.map(process,sources):
             if dataset: result.append(dataset)
             if error: errors.append(error)
-    state.update(datasets=sorted(result,key=lambda r:r['key']),checkedAt=iso() if due or len(result)!=len(old) else state.get('checkedAt'),errors=errors,status='partial' if errors else 'updated',cadence='Cada 3 horas; el histórico se conserva')
+    if due:
+        try:
+            from tariff_pdf import update_resolution_comparison
+            newer,pdf_errors=update_resolution_comparison(state,folder,fetch,iso,result,FIELDS)
+            result.extend(newer);errors.extend(pdf_errors)
+        except Exception as error:
+            errors.append({'key':'resolution-annexes','error':str(error)[:180]})
+            result.extend(r for r in old.values() if r['key'] not in {s['key'] for s in result})
+    else:
+        result.extend(r for r in old.values() if r['key'] not in {s['key'] for s in result})
+    state.update(readerVersion=2,datasets=sorted(result,key=lambda r:r['key']),checkedAt=iso() if due or len(result)!=len(old) else state.get('checkedAt'),errors=errors,status='partial' if errors else 'updated',cadence='Cada 3 horas; el histórico se conserva')

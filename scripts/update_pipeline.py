@@ -1328,6 +1328,14 @@ def _tariff_regulation_meta(reg):
             elif "enargas.gov.ar" in (urllib.parse.urlparse(url).hostname or ""):
                 result["documentUrl"]=url
 
+        # Explicit effective date in the operative articles outranks historical dates in recitals.
+        from tariff_pdf import effective_date
+        try:
+            result["validFrom"]=effective_date(text)
+            return result
+        except ValueError:
+            if "RESUELVE" in text.upper():
+                text=text[text.upper().rfind("RESUELVE"):]
         months={
           "enero":1,"febrero":2,"marzo":3,"abril":4,"mayo":5,"junio":6,
           "julio":7,"agosto":8,"septiembre":9,"octubre":10,"noviembre":11,"diciembre":12
@@ -1776,3 +1784,4 @@ def main():
 
 if __name__=="__main__":
     main()
+

@@ -6,3 +6,5 @@
 
 
 .bill-estimator{padding:20px;margin:15px 0 22px}.bill-estimator h3{font-size:20px}.bill-estimator p{font-size:12px;line-height:1.6;color:#465b65}.bill-results{display:grid;grid-template-columns:1fr 1fr;gap:14px}.bill-card{padding:16px;border:1px solid #d2e2e7;border-radius:12px;background:#f7fbfc}.bill-card h4{margin:0 0 12px;font-size:14px}.bill-line{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #dfebed;padding:9px 0;font-size:12px}.bill-line b{text-align:right}.bill-total{display:flex;flex-direction:column;gap:7px;padding:15px 0 6px;font-size:12px}.bill-total strong{color:#126b70;font-size:24px}.bill-theory{border-top:1px solid #d2e2e7;padding-top:14px}.bill-estimator summary{font-weight:700;cursor:pointer;font-size:12px}.bill-estimator .bill-error{color:#874919}.bill-scope{padding:10px 12px;background:#eef5f6;border-radius:8px}@media(max-width:700px){.bill-results{grid-template-columns:1fr}.bill-estimator{padding:14px}.bill-total strong{font-size:21px}}
+
+.bill-estimator [hidden]{display:none!important}.comparison-coverage{font-size:11px;color:#465b65;line-height:1.5}

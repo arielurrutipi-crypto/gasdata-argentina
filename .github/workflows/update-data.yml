@@ -36,6 +36,7 @@ jobs:
           python -m unittest discover -s scripts -p 'test_automatic_sources.py'
           python -m unittest discover -s scripts -p 'test_news_reader.py'
           python -m unittest discover -s scripts -p 'test_tariff_comparison.py'
+          python -m unittest discover -s scripts -p 'test_tariff_pdf.py'
       - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
@@ -84,3 +85,4 @@ jobs:
       - name: Publicar datos actualizados
         id: deployment
         uses: actions/deploy-pages@v4
+

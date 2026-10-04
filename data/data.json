@@ -8782,7 +8782,7 @@
       "name": "Camuzzi Gas Pampeana",
       "product": "GLP",
       "res": "727/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8802,7 +8802,7 @@
       "name": "Camuzzi Gas Pampeana",
       "product": "GN",
       "res": "727/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8822,7 +8822,7 @@
       "name": "Camuzzi Gas del Sur",
       "product": "GLP",
       "res": "728/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8842,7 +8842,7 @@
       "name": "Camuzzi Gas del Sur",
       "product": "GN",
       "res": "728/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8862,7 +8862,7 @@
       "name": "Litoral Gas",
       "product": "GLP",
       "res": "721/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8882,7 +8882,7 @@
       "name": "Litoral Gas",
       "product": "GN",
       "res": "721/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8902,7 +8902,7 @@
       "name": "Naturgy BAN",
       "product": "GLP",
       "res": "724/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -8922,7 +8922,7 @@
       "name": "Naturgy BAN",
       "product": "GN",
       "res": "724/2026",
-      "validFrom": "2026-09-01",
+      "validFrom": "2026-10-01",
       "validatedAt": "2026-10-04T20:30-03:00",
       "checkedAt": "2026-09-30T12:45-03:00",
       "scope": "Distribución · referencia aplicable a BAGSA",
@@ -22860,11 +22860,185 @@
         "url": "data/tariff-comparison/2026-08-01-GN.json",
         "count": 13512,
         "checkedAt": "2026-10-04T19:51-03:00"
+      },
+      {
+        "key": "2026-09-01-GLP",
+        "month": "2026-09",
+        "period": "2026-09-01",
+        "product": "GLP",
+        "sourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260901.xlsx",
+        "url": "data/tariff-comparison/2026-09-01-GLP.json",
+        "count": 5589,
+        "checkedAt": "2026-10-04T20:37-03:00"
+      },
+      {
+        "key": "2026-09-01-GN",
+        "month": "2026-09",
+        "period": "2026-09-01",
+        "product": "GN",
+        "sourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260901.xlsx",
+        "url": "data/tariff-comparison/2026-09-01-GN.json",
+        "count": 13512,
+        "checkedAt": "2026-10-04T20:37-03:00"
+      },
+      {
+        "key": "2026-10-01-GLP",
+        "period": "2026-10-01",
+        "month": "2026-10",
+        "product": "GLP",
+        "count": 764,
+        "sourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
+        "sourceKind": "pdf",
+        "sources": [
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0721&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0724&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0726&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0727&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0728&Ano=2026"
+        ],
+        "url": "data/tariff-comparison/2026-10-01-GLP.json",
+        "checkedAt": "2026-10-04T20:38-03:00",
+        "companies": [
+          "Buenos Aires Gas S.A. (BAGSA)",
+          "Camuzzi Gas Pampeana S.A.",
+          "Camuzzi Gas del Sur S.A.",
+          "Distrigas S.A.",
+          "GasNea S.A.",
+          "Hidrocarburos del Neuquén S.A. (HIDENESA)",
+          "Litoral Gas S.A."
+        ],
+        "coverageNote": "Anexos PDF oficiales: cargo fijo, cargo variable y reserva de capacidad. Los desgloses no extraídos quedan sin dato.",
+        "unmatchedZones": [
+          "3 alcances ambiguos omitidos",
+          "BARRANCAS",
+          "BERUTTI",
+          "CARLOS TEJEDOR,\nGONZÁLEZ\nMORENO,\nURDAMPILLETA Y\nTRES ALGARROBOS",
+          "HIPÓLITO YRIGOYEN"
+        ]
+      },
+      {
+        "key": "2026-10-01-GN",
+        "period": "2026-10-01",
+        "month": "2026-10",
+        "product": "GN",
+        "count": 2967,
+        "sourceUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/resoluciones-tarifas-vigentes.php",
+        "sourceKind": "pdf",
+        "sources": [
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0720&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0721&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0722&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0723&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0724&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0725&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0726&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0727&Ano=2026",
+          "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0728&Ano=2026"
+        ],
+        "url": "data/tariff-comparison/2026-10-01-GN.json",
+        "checkedAt": "2026-10-04T20:38-03:00",
+        "companies": [
+          "Camuzzi Gas Pampeana S.A.",
+          "Camuzzi Gas del Sur S.A.",
+          "Distribuidora de Gas Cuyana S.A.",
+          "Distribuidora de Gas del Centro S.A.",
+          "GasNea S.A.",
+          "Litoral Gas S.A.",
+          "MetroGAS S.A.",
+          "Naturgy BAN S.A.",
+          "Naturgy NOA S.A."
+        ],
+        "coverageNote": "Anexos PDF oficiales: cargo fijo, cargo variable y reserva de capacidad. Los desgloses no extraídos quedan sin dato.",
+        "unmatchedZones": [
+          "3 alcances ambiguos omitidos",
+          "6 alcances ambiguos omitidos",
+          "BARRANCAS",
+          "BERUTTI",
+          "CARLOS TEJEDOR,\nGONZÁLEZ\nMORENO,\nURDAMPILLETA Y\nTRES ALGARROBOS",
+          "CHEPES,\nAIMOGASTA",
+          "CHEPES, VILLA\nUNIÓN, AIMOGASTA",
+          "CHILECITO",
+          "HIPÓLITO YRIGOYEN",
+          "VILLA UNIÓN"
+        ]
       }
     ],
-    "checkedAt": "2026-10-04T19:51-03:00",
+    "checkedAt": "2026-10-04T17:39-03:00",
     "errors": [],
     "status": "updated",
-    "cadence": "Cada 3 horas; el histórico se conserva"
+    "cadence": "Cada 3 horas; el histórico se conserva",
+    "currentSources": [
+      {
+        "documentType": "xlsx",
+        "month": "2026-09",
+        "validFrom": "2026-09-01",
+        "product": "GN",
+        "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-gn-20260901.xlsx"
+      },
+      {
+        "documentType": "xlsx",
+        "month": "2026-09",
+        "validFrom": "2026-09-01",
+        "product": "GLP",
+        "documentUrl": "https://www.enargas.gob.ar/secciones/precios-y-tarifas/descargas/tarifas-glp-20260901.xlsx"
+      }
+    ],
+    "resolutionTables": {
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0725&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "4151e1811ff0eadff4464eaaf05417ca37c9ac276c3734f8a1f9fb7bae265fe3",
+        "file": "resolution-0725.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0724&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "2eee067267d5de0b2a848b4354a43ee75b0449e931501760c3ab0fe906655364",
+        "file": "resolution-0724.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0722&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "4e99f636b3cef41d090fc3e702f555f5ac946e4e957609c607e078baac3b85b5",
+        "file": "resolution-0722.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0723&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "5895d034c6c2a527a995d100c778f13ef3bb034cf8a70e625bcb0db190911ff6",
+        "file": "resolution-0723.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0721&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "87f0bccaacf85647a56247f0232910b4a80525805915aa03a4aaf6993a229000",
+        "file": "resolution-0721.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0720&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "090fdb97e72b2a23abc99517f33aaac00e5529a24051f015a126d81186d5cdb3",
+        "file": "resolution-0720.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0727&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "200b7d9af72a98907a9e1e297f37dfc6a938990a7a33b7c83361e775151f7a04",
+        "file": "resolution-0727.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0728&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "16467d3428667c5494cbf968e7251bdf80e63b0a3184bd22935423831a916218",
+        "file": "resolution-0728.json",
+        "parserVersion": 2
+      },
+      "https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&Numero=0726&Ano=2026": {
+        "period": "2026-10-01",
+        "sha256": "bb6c37e60b60f13e23aac3b97b72bd1f3116aae53fdcfac7404ad13ade350de7",
+        "file": "resolution-0726.json",
+        "parserVersion": 2
+      }
+    },
+    "readerVersion": 2
   }
 }
