@@ -17,7 +17,7 @@ SOURCES = [
     ("Mejor Energía", "https://www.mejorenergia.com.ar/", None),
     ("Revista Petroquímica", "https://revistapetroquimica.com/", "https://revistapetroquimica.com/feed/"),
     ("América GLP", "https://www.americaglp.com/", None),
-    ("TGS", "https://www.tgs.com.ar/", "https://www.tgs.com.ar/feed/"),
+    ("TGS", "https://www.tgs.com.ar/", None),
     ("TGN", "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/", None),
     ("ENReGE · Noticias", "https://www.enargas.gob.ar/secciones/noticias/noticias.php", None),
     ("Secretaría de Energía", "https://www.argentina.gob.ar/economia/energia/noticias", None),
