@@ -119,8 +119,11 @@ def feed_items(raw, source):
                     "imageUrl": web_url(image, url), "dateType": "published" if published(node.findtext("pubDate")) else "unknown"})
     return out
 
+def is_article(row):
+    return not re.search(r"sportsbook|casino|bet-label|leon.?bet|amazonslots|grams-bets|gambling|glücksspiel|στοίχημα", row.get("title", "")+" "+row.get("desc", ""), re.I)
+
 def update_news(d, fetch, now, iso):
-    existing = {x.get("url", "").rstrip("/"): x for x in d.get("news", [])}
+    existing = {x.get("url", "").rstrip("/"): x for x in d.get("news", []) if is_article(x)}
     checked = iso()
     statuses = []
     fresh = []
@@ -155,7 +158,7 @@ def update_news(d, fetch, now, iso):
             return [], {"name": source, "url": home, "checkedAt": checked, "status": "error", "error": str(e)[:180], "edition": "international" if source in INTERNATIONAL else "national"}
     with ThreadPoolExecutor(max_workers=6) as pool:
         for rows, status in pool.map(collect, SOURCES):
-            fresh.extend(rows); statuses.append(status)
+            fresh.extend(row for row in rows if is_article(row)); statuses.append(status)
     unique = {}
     for row in fresh: unique.setdefault(row["url"].rstrip("/"), row)
     def enrich(row):
