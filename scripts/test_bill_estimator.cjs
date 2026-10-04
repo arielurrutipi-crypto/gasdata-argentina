@@ -1,0 +1,31 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const nodes=new Map();const node=id=>{if(!nodes.has(id))nodes.set(id,{value:'',innerHTML:'',textContent:'',addEventListener(){}});return nodes.get(id)};
+const c={D:{marketPrices:[]},COMPARE_FILTERS:[],comparisonRowsA:[],comparisonRowsB:[],$:s=>node(s.slice(1)),fmt2:n=>n.toFixed(2),esc:s=>String(s??''),safeNewsUrl:s=>s};vm.createContext(c);vm.runInContext(fs.readFileSync(require('path').join(__dirname,'../assets/bill-estimator.js'),'utf8'),c);
+const base={EMPRESA:'Prueba',TIPODESUMINISTRO:'GN',SUBZONACODIGO:'1',SUBZONA:'Zona',SERVICIO:'Unbundling',CATEGORIA:'P3',TIPOTARIFA:'Plenas',CUADRO:'Sin SEF'};const rows=[{...base,CARGOTIPO:'Cargo Fijo ($)',CARGO:427625.11},...[[7.15,0,1000],[4.47,1001,9000],[1.74,9001,'']].map(([CARGO,CONSUMOM3INICIO,CONSUMOM3FIN])=>({...base,CARGOTIPO:'Cargo Variable ($/m3)',CARGO,CONSUMOM3INICIO,CONSUMOM3FIN}))];c.rows=rows;
+assert.equal(vm.runInContext('billCalculate(rows,0).total',c),427625.11);
+assert.equal(vm.runInContext('billCalculate(rows,1000).variable',c),7150);
+assert.equal(vm.runInContext('billCalculate(rows,1001).variable',c),7154.47);
+assert.equal(vm.runInContext('billCalculate(rows,9000).variable',c),7150+8000*4.47);
+assert.equal(vm.runInContext('billCalculate(rows,9001).variable',c),7150+8000*4.47+1.74);
+assert(vm.runInContext('billCalculate(rows,-1).error',c));
+assert(vm.runInContext('billCalculate([...rows,{...rows[0],SUBZONA:"otra"}],100).error',c));
+assert(vm.runInContext('billCalculate(rows.filter(r=>r.CARGOTIPO!=="Cargo Fijo ($)"),100).error',c));
+assert(vm.runInContext('billCalculate([...rows,rows.find(r=>r.CARGOTIPO==="Cargo Variable ($/m3)")],100).error',c));
+c.capRows=rows.filter(r=>!['Cargo Variable ($/m3)','Capacidad ($ por m3/d)'].includes(r.CARGOTIPO)).map(r=>({...r,CATEGORIA:'FD'}));c.capRows.push({...rows[0],CATEGORIA:'FD',CARGOTIPO:'Cargo Variable ($/m3)',CARGO:2,CONSUMOM3INICIO:'0',CONSUMOM3FIN:''},{...rows[0],CATEGORIA:'FD',CARGOTIPO:'Capacidad ($ por m3/d)',CARGO:3});
+assert(vm.runInContext('billCalculate(capRows,100).error',c));assert.equal(vm.runInContext('billCalculate(capRows,100,10000).total',c),427625.11+200+30000);
+assert.deepEqual(Array.from(vm.runInContext('billMarketRange("≈ 2,9–4,1")',c)),[2.9,4.1]);assert.equal(vm.runInContext('billMarketRange("625 / 660")',c),null);
+c.D.marketPrices=[{id:'free_contracts',label:'Contratos',value:'≈ 2,9–4,1',unit:'USD/MMBtu',reference:'Sep 2026'}];node('billGasSource').value='free_contracts';node('billFX').value='1000';
+let gas=vm.runInContext('billGasScenario(100,true)',c);assert(Math.abs(gas.min-100*2.9*1000*9300/252164.401)<1e-6);assert(gas.max>gas.min);
+assert.equal(vm.runInContext('billGasScenario(100,false).min',c),0);node('billFX').value='';assert(vm.runInContext('billGasScenario(100,true).error',c));node('billGasSource').value='custom';node('billCustomUnit').value='ARS/m³';node('billGasCustom').value='200';assert.equal(vm.runInContext('billGasScenario(100,true).max',c),20000);
+console.log('OK: consumo cero, 1000/1001/9000/9001, bloques, faltantes/duplicados, reserva, rango de mercado, conversión, contrato manual y sin doble suma.');
+
+node('billCustomUnit').value='USD/MMBtu';node('billGasCustom').value='3.85';node('billFX').value='1500';assert(Math.abs(vm.runInContext('billGasScenario(100,true).min',c)-21298.6051686276)<0.01);console.log('OK: precio manual USD/MMBtu con tipo de cambio y caso de la captura.');
+
+node('billTransportMode').value='pending';assert(vm.runInContext('billTransportScenario(100,null,{needsCapacity:false}).pending',c));assert(!vm.runInContext('billTransportScenario(100,10,{needsCapacity:true}).pending',c));
+node('billTransportMode').value='variable';node('billTransportRate').value='20';assert.equal(vm.runInContext('billTransportScenario(100,null,{needsCapacity:false}).cost',c),2000);
+node('billTransportMode').value='firm';assert(vm.runInContext('billTransportScenario(100,null,{needsCapacity:false}).error',c));assert.equal(vm.runInContext('billTransportScenario(100,50,{needsCapacity:false}).cost',c),1000);assert(vm.runInContext('billTransportScenario(100,50,{needsCapacity:true}).error',c));
+node('billTransportMode').value='monthly';assert.equal(vm.runInContext('billTransportScenario(100,null,{needsCapacity:false}).cost',c),20);
+node('billTransportMode').value='included';assert.equal(vm.runInContext('billTransportScenario(100,null,{needsCapacity:false}).cost',c),0);
+vm.runInContext('renderBillGasPricePreview()',c);assert(node('billGasPricePreview').innerHTML.includes('3.85'));assert(node('billGasPricePreview').innerHTML.includes('212.99'));
+node('billGasSource').value='free_contracts';node('billFX').value='';vm.runInContext('renderBillGasPricePreview()',c);assert(node('billGasPricePreview').innerHTML.includes('≈ 2,9–4,1'));assert(node('billGasPricePreview').innerHTML.includes('Pendiente'));
+console.log('OK: transporte pendiente, variable, firme, mensual, reserva sin duplicación; precio visible aun sin tipo de cambio.');
