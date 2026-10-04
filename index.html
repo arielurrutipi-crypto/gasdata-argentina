@@ -344,7 +344,7 @@ async function refreshData(){
     const data=await response.json();
     if(!data.meta?.updatedAt||!Array.isArray(data.updates))throw new Error('Datos incompletos');
     const payload=JSON.stringify(data),changed=payload!==lastPayload;
-    if(changed){D=data;render();lastPayload=payload;}
+    if(changed){D=data;render();lastPayload=payload;}else{renderHome();}
     lastViewCheck=Date.now();
     message.textContent=(changed?'Vista actualizada · ':'Sin nueva versión · ')+fmt(new Date().toISOString());
   }catch(error){
