@@ -38,114 +38,11 @@ def upsert_kpi(d,item):
             d["kpis"][i]={**x,**item}; return
     d["kpis"].append(item)
 
-def rss(source,url):
-    raw=fetch(url); out=[]
-    try:
-        root=ET.fromstring(raw)
-        items=root.findall(".//item")[:60]
-        parsed=[]
-        for it in items:
-            parsed.append((
-              (it.findtext("title") or "").strip(),
-              clean(it.findtext("description") or ""),
-              it.findtext("pubDate") or "",
-              (it.findtext("link") or "").strip()
-            ))
-    except Exception:
-        # Several energy-sector feeds contain invalid entities or small HTML
-        # fragments. Fall back to a tolerant parser instead of dropping the source.
-        soup=BeautifulSoup(raw.decode("utf-8","ignore"),"html.parser")
-        parsed=[]
-        for it in soup.find_all("item")[:60]:
-            def tx(*names):
-                node=next((it.find(n) for n in names if it.find(n)),None)
-                return clean(node.get_text(" ",strip=True)) if node else ""
-            link=it.find("link")
-            href=(link.get("href") if link and link.get("href") else (link.get_text(strip=True) if link else ""))
-            parsed.append((tx("title"),tx("description","summary","content:encoded"),tx("pubdate","pubDate","published"),href))
-    for title,desc,pub,link in parsed:
-        hay=(title+" "+desc).lower()
-        if not title or not any(k in hay for k in KEYWORDS): continue
-        out.append({
-          "source":source,"sourceType":"PRESS",
-          "publishedAt":iso(pdate(pub)),"feedValidatedAt":iso(),
-          "title":title,"desc":desc[:520],"tags":["Gas"],"url":link
-        })
-    return out
-
-
-def html_news(source,url,limit=12):
-    """Fallback for sites without a stable RSS. Date shown is first detection time."""
-    raw=fetch(url).decode("utf-8","ignore")
-    out=[]; seen=set()
-    for href,label in re.findall(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',raw,re.I|re.S):
-        title=clean(label)
-        if len(title)<28 or len(title)>180: continue
-        hay=title.lower()
-        if not any(k in hay for k in KEYWORDS): continue
-        full=urllib.parse.urljoin(url,href)
-        if not full.startswith(("http://","https://")) or full in seen: continue
-        if any(x in full.lower() for x in ("/tag/","/category/","/autor/","/author/","#")): continue
-        seen.add(full)
-        out.append({
-          "source":source,"sourceType":"PRESS","publishedAt":iso(),"dateType":"detected",
-          "feedValidatedAt":iso(),"title":title,
-          "desc":"Artículo detectado en la portada de la fuente; consultar el enlace para la fecha de publicación original.",
-          "tags":["Gas"],"url":full
-        })
-        if len(out)>=limit: break
-    return out
+from news_reader import update_news as read_news
+from resolution_export import update_resolution_export
 
 def update_news(d):
-    feeds=[
-      ("EconoJournal","https://econojournal.com.ar/feed/"),
-      ("RunRun Energético","https://runrunenergetico.com/feed/"),
-      ("RunRun Energético · Gas","https://runrunenergetico.com/category/oil-gas/gas/feed/"),
-      ("Revista Petroquímica","https://revistapetroquimica.com/feed/"),
-      ("TGS","https://www.tgs.com.ar/feed/")
-    ]
-    html_sources=[
-      ("Mejor Energía","https://www.mejorenergia.com.ar/"),
-      ("TGN","https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/"),
-      ("Más Energía · LM Neuquén","https://mase.lmneuquen.com/"),
-      ("América GLP","https://www.americaglp.com/"),
-      ("ENReGE · Noticias","https://www.enargas.gob.ar/secciones/noticias/noticias.php"),
-      ("Secretaría de Energía","https://www.argentina.gob.ar/economia/energia/noticias")
-    ]
-    fresh=[]; ok_sources=[]
-    for source,url in feeds:
-        try:
-            fresh+=rss(source,url); ok_sources.append(source)
-        except Exception as e:
-            print("RSS",source,e)
-    for source,url in html_sources:
-        try:
-            fresh+=html_news(source,url); ok_sources.append(source)
-        except Exception as e:
-            print("HTML NEWS",source,e)
-
-    existing={(x.get("url") or "").rstrip("/"):x for x in d.get("news",[]) if x.get("url")}
-    new_keys={(x.get("url") or "").rstrip("/") for x in fresh if x.get("url") and (x.get("url") or "").rstrip("/") not in existing}
-    prepared=[]
-    for x in fresh:
-        key=(x.get("url") or "").rstrip("/")
-        if x.get("dateType")=="detected" and key in existing:
-            # Don't make an old homepage item look new every hour.
-            x["publishedAt"]=existing[key].get("publishedAt",x["publishedAt"])
-        prepared.append(x)
-
-    seen=set(); merged=[]
-    for x in sorted(prepared+d.get("news",[]),key=lambda z:z.get("publishedAt",""),reverse=True):
-        k=(x.get("url") or x.get("title") or "").rstrip("/")
-        if not k or k in seen: continue
-        seen.add(k); merged.append(x)
-    if merged:
-        d["news"]=merged[:80]
-    u=next((x for x in d["updates"] if x["name"]=="Noticias"),None)
-    if u:
-        u.update(last=iso(),next=iso(now()+timedelta(hours=1)),
-                 status="pending" if not ok_sources else ("partial" if len(ok_sources)<len(feeds)+len(html_sources) else ("updated" if new_keys else "unchanged")),
-                 note=(f"{len(new_keys)} noticias nuevas · " if new_keys else "Sin noticias nuevas · ")+"Fuentes consultadas: "+(", ".join(sorted(set(ok_sources))) if ok_sources else "ninguna disponible"))
+    return read_news(d, fetch, now, iso)
 
 def official_series(series_id):
     qs=urllib.parse.urlencode({"ids":series_id,"last":1,"metadata":"full"})
@@ -1807,7 +1704,7 @@ def bopba_monitor(d):
 def sync_update_catalog(d):
     existing={x.get("name"):x for x in d.get("updates",[]) if x.get("name")}
     specs=[
-      ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS (hasta 60 entradas por fuente) y portadas; incorpora URLs nuevas y conserva hasta 80 noticias."),
+      ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS y portadas; verifica la fecha original, obtiene resumen e imagen y agrupa las últimas 24 horas por medio. Reutiliza metadatos por URL y conserva hasta 600 referencias."),
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
       ("Tarifas ENReGE","Diaria","Automática","Fuente primaria única: ENARGAS/ENReGE","Las resoluciones vigentes, sus documentos oficiales y la serie histórica 2026 se leen exclusivamente desde Precios y Tarifas de ENARGAS/ENReGE. BAGSA no alimenta los datos tarifarios."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),
@@ -1847,6 +1744,7 @@ def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
     update_news(d)
+    update_resolution_export(d, now, iso)
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
     needs_reg_relevance=scan.get("relevanceVersion")!=2
