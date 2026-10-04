@@ -1,5 +1,6 @@
 """Persistent cross-publisher news archive for BAGSA mentions."""
 import hashlib
+import json
 import re
 import unicodedata
 import urllib.parse
@@ -8,6 +9,7 @@ import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from pathlib import Path
 from bs4 import BeautifulSoup
 
 START = datetime(2026, 1, 1).date()
@@ -56,6 +58,11 @@ def read_feed(raw, start, end, checked):
 def update_bagsa_news(d, now, iso):
     state = d.setdefault("bagsaNewsScan", {})
     archive = {row.get("id") or identity(row): row for row in d.get("bagsaNews", [])}
+    seed = Path(__file__).resolve().parents[1] / "data" / "bagsa_initial_archive.json"
+    if seed.exists():
+        for row in json.loads(seed.read_text()):
+            key = identity(row)
+            if key not in archive: archive[key] = {**row, "id": key}
     # Mentions discovered by the existing media readers join the same permanent archive.
     for row in d.get("news", []):
         if not MATCH.search(row.get("title", "")+" "+row.get("desc", "")): continue
@@ -96,12 +103,53 @@ def update_bagsa_news(d, now, iso):
                     archive[key]["lastSeenAt"] = checked
                 else:
                     archive[key] = row; new_count += 1
+    if errors:
+        # A simpler RSS search provides an independent request when the date-filtered
+        # endpoint is unavailable. Preserve the partial-backfill warning until complete.
+        for term in ("BAGSA", '"Buenos Aires Gas"'):
+            url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": term, "hl": "es", "gl": "AR", "ceid": "AR:es"})
+            try:
+                request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/rss+xml, application/xml"})
+                with urllib.request.urlopen(request, timeout=25) as response: raw = response.read()
+                rows, _ = read_feed(raw, START, today, checked)
+                for row in rows:
+                    key = row["id"]
+                    if key in archive: archive[key]["lastSeenAt"] = checked
+                    else: archive[key] = row; new_count += 1
+                print("BAGSA simple RSS:", term, len(rows), "results")
+            except Exception as error:
+                print("BAGSA simple RSS unavailable:", term, str(error)[:180])
+    # GDELT indexes news article text across publishers and supplies direct source links.
+    alternate_ok = False
+    try:
+        url = "https://api.gdeltproject.org/api/v2/doc/doc?" + urllib.parse.urlencode({"query": '(BAGSA OR "Buenos Aires Gas")', "mode": "artlist", "format": "json", "maxrecords": 250, "timespan": "7d", "sort": "datedesc"})
+        with urllib.request.urlopen(url, timeout=30) as response: payload = json.loads(response.read())
+        if not isinstance(payload, dict): raise ValueError("Respuesta GDELT inválida")
+        for item in payload.get("articles", []):
+            link = item.get("url", "")
+            title = clean(item.get("title", ""))
+            if not title or not link.startswith(("https://", "http://")): continue
+            date = datetime.strptime(item["seendate"], "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+            host = urllib.parse.urlparse(link).hostname or item.get("domain", "")
+            row = {"title": title, "source": item.get("domain") or host, "sourceUrl": "https://"+host,
+                   "url": link, "image": item.get("socialimage", ""), "desc": "", "edition": "national",
+                   "publishedAt": date.isoformat(timespec="seconds"), "dateType": "detected",
+                   "provider": "GDELT", "matchedBy": "Búsqueda BAGSA / Buenos Aires Gas en texto indexado",
+                   "firstSeenAt": checked, "lastSeenAt": checked}
+            key = identity(row); row["id"] = key
+            if key in archive: archive[key]["lastSeenAt"] = checked
+            else: archive[key] = row; new_count += 1
+        alternate_ok = True
+        print("BAGSA GDELT:", len(payload.get("articles", [])), "results")
+    except Exception as error:
+        print("BAGSA GDELT unavailable:", str(error)[:180])
     # No length limit: older BAGSA items are never evicted by the general-news window.
     d["bagsaNews"] = sorted(archive.values(), key=lambda row: row.get("publishedAt", ""), reverse=True)
     state.update(checkedAt=checked, nextAt=iso(now()+timedelta(hours=1)),
                  startDate=START.isoformat(), newCount=new_count, total=len(archive), errors=errors,
                  status="partial" if errors else "updated" if new_count else "unchanged",
                  query=TERMS, provider="Google News · medios indexados")
+    state["alternativeAvailable"] = alternate_ok
     if not errors: state["initialBackfillComplete"] = True
     source = next((row for row in d.setdefault("sources", []) if row.get("name") == "Noticias BAGSA · búsqueda abierta"), None)
     values = {"name": "Noticias BAGSA · búsqueda abierta", "type": "Monitoreo de prensa",
