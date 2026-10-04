@@ -1704,7 +1704,7 @@ def bopba_monitor(d):
 def sync_update_catalog(d):
     existing={x.get("name"):x for x in d.get("updates",[]) if x.get("name")}
     specs=[
-      ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS y portadas; verifica la fecha original, obtiene resumen e imagen y agrupa las últimas 24 horas por medio. Reutiliza metadatos por URL y conserva hasta 600 referencias."),
+      ("Noticias","Cada 60 min","Automática","Ventana reciente + deduplicación","Consulta RSS y portadas; verifica la fecha original, obtiene resumen e imagen y muestra las últimas 72 horas en Inicio y las últimas 5 noticias por medio, incluidas fuentes internacionales. Reutiliza metadatos por URL y conserva hasta 600 referencias."),
       ("Normativa","Cada 3 h","Automática incremental","Backfill 01/01/2026 + solapamiento de 2 días","Primera ejecución recorre el año; luego consulta sólo desde la última fecha procesada menos 2 días para capturar publicaciones tardías."),
       ("Tarifas ENReGE","Diaria","Automática","Fuente primaria única: ENARGAS/ENReGE","Las resoluciones vigentes, sus documentos oficiales y la serie histórica 2026 se leen exclusivamente desde Precios y Tarifas de ENARGAS/ENReGE. BAGSA no alimenta los datos tarifarios."),
       ("Producción nacional","Cada 15 días","Automática","Último período publicado","Busca la publicación oficial más reciente y nunca reemplaza un período por otro más antiguo."),

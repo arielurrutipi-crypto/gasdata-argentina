@@ -21,7 +21,12 @@ SOURCES = [
     ("TGN", "https://www.tgn.com.ar/prensa-y-novedades/comunicaciones/", None),
     ("ENReGE · Noticias", "https://www.enargas.gob.ar/secciones/noticias/noticias.php", None),
     ("Secretaría de Energía", "https://www.argentina.gob.ar/economia/energia/noticias", None),
+    ("LNG Industry", "https://www.lngindustry.com/", "https://www.lngindustry.com/rss/lngindustry.xml"),
+    ("Offshore Energy", "https://www.offshore-energy.biz/", "https://www.offshore-energy.biz/feed/"),
+    ("Energy Voice", "https://www.energyvoice.com/", "https://www.energyvoice.com/feed/"),
 ]
+
+INTERNATIONAL = {"LNG Industry", "Offshore Energy", "Energy Voice"}
 
 def text(value):
     return re.sub(r"\s+", " ", BeautifulSoup(value or "", "html.parser").get_text(" ", strip=True)).strip()
@@ -141,9 +146,13 @@ def update_news(d, fetch, now, iso):
                     seen.add(url)
                     rows.append({"source": source, "title": title, "url": url, "dateType": "unknown"})
                     if len(rows) >= 16: break
-            return rows, {"name": source, "url": home, "checkedAt": checked, "status": "ok"}
+            edition = "international" if source in INTERNATIONAL else "national"
+            if edition == "international": rows = rows[:12]
+            for row in rows:
+                row.update(edition=edition, language="en" if edition == "international" else "es")
+            return rows, {"name": source, "url": home, "checkedAt": checked, "status": "ok", "edition": edition, "language": "en" if edition == "international" else "es"}
         except Exception as e:
-            return [], {"name": source, "url": home, "checkedAt": checked, "status": "error", "error": str(e)[:180]}
+            return [], {"name": source, "url": home, "checkedAt": checked, "status": "error", "error": str(e)[:180], "edition": "international" if source in INTERNATIONAL else "national"}
     with ThreadPoolExecutor(max_workers=6) as pool:
         for rows, status in pool.map(collect, SOURCES):
             fresh.extend(rows); statuses.append(status)
@@ -152,7 +161,9 @@ def update_news(d, fetch, now, iso):
     def enrich(row):
         old = existing.get(row["url"].rstrip("/"), {})
         # Cached article metadata is reused; feed metadata is still checked hourly.
-        if old.get("articleMetadataCheckedAt"):
+        if row.get("edition") == "international" and all(row.get(key) for key in ("publishedAt", "desc", "imageUrl")):
+            row["metadataSource"] = "RSS"
+        elif old.get("articleMetadataCheckedAt"):
             for key in ("imageUrl", "desc", "articleMetadataCheckedAt"):
                 if not row.get(key) and old.get(key): row[key] = old[key]
             if old.get("dateType") == "published" and not row.get("publishedAt"):
@@ -180,6 +191,15 @@ def update_news(d, fetch, now, iso):
     for row in prepared: merged[row["url"].rstrip("/")] = row
     d["news"] = sorted(merged.values(), key=lambda x: x.get("publishedAt", ""), reverse=True)[:600]
     d["newsSources"] = statuses
+    for status in statuses:
+        if status.get("edition") != "international": continue
+        item = next((x for x in d.setdefault("sources", []) if x.get("name") == status["name"]), None)
+        values = {"name": status["name"], "type": "Prensa internacional", "url": status["url"],
+                  "content": "Noticias energéticas internacionales · inglés", "cadence": "Cada hora",
+                  "checkedAt": checked, "status": "ACTIVA" if status["status"] == "ok" else "REVISAR"}
+        if status["status"] == "ok": values["validatedAt"] = checked
+        if item: item.update(values)
+        else: d["sources"].append(values)
     new_count = sum(row["url"].rstrip("/") not in existing for row in prepared)
     u = next((x for x in d.get("updates", []) if x.get("name") == "Noticias"), None)
     if u:
