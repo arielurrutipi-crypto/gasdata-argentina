@@ -23,10 +23,10 @@ SOURCES = [
     ("Secretaría de Energía", "https://www.argentina.gob.ar/economia/energia/noticias", None),
     ("LNG Industry", "https://www.lngindustry.com/", "https://www.lngindustry.com/rss/lngindustry.xml"),
     ("Offshore Energy", "https://www.offshore-energy.biz/", "https://www.offshore-energy.biz/feed/"),
-    ("Energy Voice", "https://www.energyvoice.com/", "https://www.energyvoice.com/feed/"),
+    ("Energy Global", "https://www.energyglobal.com/", "https://www.energyglobal.com/rss/energyglobal.xml"),
 ]
 
-INTERNATIONAL = {"LNG Industry", "Offshore Energy", "Energy Voice"}
+INTERNATIONAL = {"LNG Industry", "Offshore Energy", "Energy Global"}
 
 def text(value):
     return re.sub(r"\s+", " ", BeautifulSoup(value or "", "html.parser").get_text(" ", strip=True)).strip()
@@ -123,7 +123,7 @@ def is_article(row):
     return not re.search(r"sportsbook|casino|bet-label|leon.?bet|amazonslots|grams-bets|gambling|glücksspiel|στοίχημα", row.get("title", "")+" "+row.get("desc", ""), re.I)
 
 def update_news(d, fetch, now, iso):
-    existing = {x.get("url", "").rstrip("/"): x for x in d.get("news", []) if is_article(x)}
+    existing = {x.get("url", "").rstrip("/"): x for x in d.get("news", []) if is_article(x) and x.get("source") != "Energy Voice"}
     checked = iso()
     statuses = []
     fresh = []
@@ -193,6 +193,7 @@ def update_news(d, fetch, now, iso):
     merged = dict(existing)
     for row in prepared: merged[row["url"].rstrip("/")] = row
     d["news"] = sorted(merged.values(), key=lambda x: x.get("publishedAt", ""), reverse=True)[:600]
+    d["sources"] = [x for x in d.get("sources", []) if x.get("name") != "Energy Voice"]
     d["newsSources"] = statuses
     for status in statuses:
         if status.get("edition") != "international": continue

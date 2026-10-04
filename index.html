@@ -265,7 +265,7 @@ function radarMini(x){
   if(!x)return'<div class="radar-card"><div class="lab">Dato no disponible</div><div class="val">—</div></div>';
   return'<div class="radar-card"><div class="lab">'+esc(x.label||'Referencia')+'</div><div class="val">'+esc(fmtComposite2(x.value))+'</div><div class="unit">'+esc(x.unit||'')+'</div><div class="ref">'+esc(x.reference||x.statusText||'')+'</div></div>'
 }
-const INTERNATIONAL_NEWS={'LNG Industry':'GNL, licuefacción, regasificación y transporte marítimo.','Offshore Energy':'Proyectos offshore, gas, GNL y nuevas energías.','Energy Voice':'Petróleo, gas, renovables y transición energética.'};
+const INTERNATIONAL_NEWS={'LNG Industry':'GNL, licuefacción, regasificación y transporte marítimo.','Offshore Energy':'Proyectos offshore, gas, GNL y nuevas energías.','Energy Global':'Renovables, almacenamiento y transición energética.'};
 function newsSourceName(s){return String(s||'Fuente').replace(/ · Gas$/,'')}
 function newsIsArticle(n){return !/sportsbook|casino|bet-label|leon.?bet|amazonslots|grams-bets|gambling|glücksspiel|στοίχημα/i.test((n.title||'')+' '+(n.desc||''))}
 function recentNews(){let now=Date.now();return(D.news||[]).filter(x=>{let at=Date.parse(x.publishedAt);return newsIsArticle(x)&&x.edition!=='international'&&x.dateType!=='detected'&&x.dateType!=='unknown'&&Number.isFinite(at)&&at<=now&&at>=now-72*3600e3}).sort((a,b)=>Date.parse(b.publishedAt)-Date.parse(a.publishedAt))}
