@@ -9,6 +9,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
+from news_translation import translate_news
 
 SOURCES = [
     ("EconoJournal", "https://econojournal.com.ar/", "https://econojournal.com.ar/feed/"),
@@ -163,6 +164,8 @@ def update_news(d, fetch, now, iso):
     for row in fresh: unique.setdefault(row["url"].rstrip("/"), row)
     def enrich(row):
         old = existing.get(row["url"].rstrip("/"), {})
+        for key in ("titleEs", "descEs", "translatedAt", "translationHash", "translationEngine"):
+            if old.get(key): row[key] = old[key]
         # Cached article metadata is reused; feed metadata is still checked hourly.
         if row.get("edition") == "international" and all(row.get(key) for key in ("publishedAt", "desc", "imageUrl")):
             row["metadataSource"] = "RSS"
@@ -194,6 +197,7 @@ def update_news(d, fetch, now, iso):
     for row in prepared: merged[row["url"].rstrip("/")] = row
     d["news"] = sorted(merged.values(), key=lambda x: x.get("publishedAt", ""), reverse=True)[:600]
     d["sources"] = [x for x in d.get("sources", []) if x.get("name") != "Energy Voice"]
+    translate_news(d, iso)
     d["newsSources"] = statuses
     for status in statuses:
         if status.get("edition") != "international": continue
@@ -210,4 +214,8 @@ def update_news(d, fetch, now, iso):
         failures = [x["name"] for x in statuses if x["status"] == "error"]
         u.update(last=checked, next=iso(now()+timedelta(hours=1)),
                  status="partial" if failures else ("updated" if new_count else "unchanged"),
-                 note=f"{new_count} URLs nuevas. Fecha original, resumen e imagen de la fuente; metadatos reutilizados por URL." + (" Fuentes con error: " + ", ".join(failures) if failures else ""))
+                 note=f"{new_count} URLs nuevas. Fecha original, resumen e imagen de la fuente; metadatos reutilizados por URL. Traducción automática al español guardada para las internacionales." + (" Fuentes con error: " + ", ".join(failures) if failures else ""))
+
+        if d.get("newsTranslation", {}).get("status") == "pending":
+            u["status"] = "partial"
+            u["note"] += " Traducción pendiente: " + d["newsTranslation"].get("error", "reintentando en la próxima consulta")
