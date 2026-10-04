@@ -1,0 +1,67 @@
+"""Read the official normalized tariff XLSX series without rewriting workbooks."""
+import io, json, re, zipfile
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from datetime import timedelta, datetime
+from concurrent.futures import ThreadPoolExecutor
+
+BASE = Path(__file__).resolve().parents[1]
+FIELDS = ['EMPRESA','TIPODESUMINISTRO','SUBZONACODIGO','SUBZONA','TIPOTARIFA','CUADRO','SERVICIO','CATEGORIA','CARGOTIPO','CARGO','CONSUMOM3INICIO','CONSUMOM3FIN','VIGENCIADESDE']
+NS = {'m':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+def read_xlsx(raw):
+    with zipfile.ZipFile(io.BytesIO(raw)) as z:
+        strings = []
+        if 'xl/sharedStrings.xml' in z.namelist():
+            strings = [''.join(n.itertext()) for n in ET.fromstring(z.read('xl/sharedStrings.xml')).findall('m:si',NS)]
+        rows = ET.fromstring(z.read('xl/worksheets/sheet1.xml')).findall('m:sheetData/m:row',NS)
+        def cells(row):
+            result = {}
+            for cell in row.findall('m:c',NS):
+                col = re.sub(r'\d','',cell.get('r',''))
+                v = cell.findtext('m:v','',NS)
+                if cell.get('t')=='s': v = strings[int(v)] if v else ''
+                elif cell.get('t')=='inlineStr': v = ''.join(cell.find('m:is',NS).itertext())
+                result[col] = v
+            return result
+        header = cells(rows[0]); order = {v:k for k,v in header.items()}
+        if set(FIELDS)-set(order): raise ValueError('La planilla cambió de estructura: faltan columnas oficiales')
+        dictionaries = [[] for _ in FIELDS]; indices = [{} for _ in FIELDS]; encoded = []
+        for row in rows[1:]:
+            values = cells(row)
+            if not values.get(order['EMPRESA']): continue
+            record = []
+            for i,field in enumerate(FIELDS):
+                value = values.get(order[field],'')
+                if field=='CARGO':
+                    try: value = float(value.replace('.','').replace(',','.')) if ',' in value else float(value)
+                    except ValueError: raise ValueError('Importe no numérico en '+row.get('r',''))
+                if value not in indices[i]:
+                    indices[i][value]=len(dictionaries[i]); dictionaries[i].append(value)
+                record.append(indices[i][value])
+            encoded.append(record)
+        if not encoded: raise ValueError('Planilla sin filas tarifarias')
+        return {'schema':1,'columns':FIELDS,'values':dictionaries,'rows':encoded}
+
+def update_tariff_comparison(d, fetch, now, iso):
+    state = d.setdefault('tariffComparison',{})
+    folder = BASE/'data'/'tariff-comparison'; folder.mkdir(parents=True,exist_ok=True)
+    old = {r['key']:r for r in state.get('datasets',[])}
+    sources = [r for r in d.get('tariffSeries2026',[]) if r.get('documentType')=='xlsx' and re.fullmatch(r'2026-\d{2}',r.get('month',''))]
+    latest = {p:max((r['validFrom'] for r in sources if r['product']==p),default='') for p in ('GN','GLP')}
+    try: due = now()>=datetime.fromisoformat(state['checkedAt'])+timedelta(hours=3)
+    except (ValueError,KeyError): due = True
+    errors=[]; result=[]
+    def process(source):
+        key = source['validFrom']+'-'+source['product']; path = folder/(key+'.json'); previous = old.get(key)
+        if previous and path.exists() and previous.get('sourceUrl')==source['documentUrl'] and (source['validFrom']!=latest[source['product']] or not due): return previous,None
+        try:
+            data = read_xlsx(fetch(source['documentUrl'],timeout=40))
+            data.update(month=source['month'],period=source['validFrom'],product=source['product'],sourceUrl=source['documentUrl'],checkedAt=iso())
+            path.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+            return {'key':key,'month':source['month'],'period':source['validFrom'],'product':source['product'],'sourceUrl':source['documentUrl'],'url':'data/tariff-comparison/'+key+'.json','count':len(data['rows']),'checkedAt':iso()},None
+        except Exception as error: return previous,{'key':key,'error':str(error)[:180]}
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for dataset,error in pool.map(process,sources):
+            if dataset: result.append(dataset)
+            if error: errors.append(error)
+    state.update(datasets=sorted(result,key=lambda r:r['key']),checkedAt=iso() if due or len(result)!=len(old) else state.get('checkedAt'),errors=errors,status='partial' if errors else 'updated',cadence='Cada 3 horas; el histórico se conserva')

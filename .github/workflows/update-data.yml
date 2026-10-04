@@ -35,6 +35,7 @@ jobs:
         run: |
           python -m unittest discover -s scripts -p 'test_automatic_sources.py'
           python -m unittest discover -s scripts -p 'test_news_reader.py'
+          python -m unittest discover -s scripts -p 'test_tariff_comparison.py'
       - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
@@ -44,7 +45,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/update_pipeline.py
-            git add data/data.json
+            git add data/data.json data/tariff-comparison
             if git diff --cached --quiet; then
               echo "Sin cambios"
               exit 0

@@ -40,6 +40,7 @@ def upsert_kpi(d,item):
 
 from news_reader import update_news as read_news
 from bagsa_news import update_bagsa_news
+from tariff_comparison import update_tariff_comparison
 from resolution_export import update_resolution_export
 
 def update_news(d):
@@ -1756,6 +1757,7 @@ def main():
     sync_tariffs_from_enargas(d)
     sync_enargas_tariff_series(d)
     sync_tariff_archive(d)
+    update_tariff_comparison(d, fetch, now, iso)
     update_market(d,fetch,iso)
     validate_pages(d)
     production(d)
