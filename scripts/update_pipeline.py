@@ -39,6 +39,7 @@ def upsert_kpi(d,item):
     d["kpis"].append(item)
 
 from news_reader import update_news as read_news
+from bagsa_news import update_bagsa_news
 from resolution_export import update_resolution_export
 
 def update_news(d):
@@ -1744,6 +1745,7 @@ def main():
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
     update_news(d)
+    update_bagsa_news(d, now, iso)
     update_resolution_export(d, now, iso)
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
