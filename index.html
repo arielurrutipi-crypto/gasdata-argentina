@@ -33,7 +33,7 @@
 .news-language-switch{display:flex;gap:6px;margin:0 0 14px}.news-language-switch button{border:1px solid #cbd9df;background:white;color:#315567;border-radius:8px;padding:7px 12px;font-size:11px;font-weight:800;cursor:pointer}.news-language-switch button.active{background:#17596a;color:white;border-color:#17596a}.news-language-label{font-size:8px;color:#197a86;font-weight:700}
 .bagsa-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bagsa-news-filters{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin:14px 0}.bagsa-news-filters label{display:grid;gap:5px;font-size:10px;color:var(--mut);font-weight:700}.bagsa-news-filters label:first-child{flex:1;min-width:200px}.bagsa-news-filters input{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:11px}.bagsa-news-filters button{padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--teal);font-size:10px;font-weight:800;cursor:pointer}#bagsaScanStatus{font-size:10px;color:var(--mut)}@media(max-width:650px){.bagsa-news-grid{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="assets/portal-tools.css?v=20261004-8">
+<link rel="stylesheet" href="assets/portal-tools.css?v=20261004-9">
 </head>
 <body>
 <header class="top"><div class="bar"><div class="brand">GasData Argentina<small>Gas natural · GLP · regulación · mercado</small></div><div class="search"><input id="q" placeholder="Buscar BAGSA, TGS, GLP, resolución, Vaca Muerta…"></div><div class="stamp"><div id="globalTime">—</div><button type="button" id="refreshData" style="margin-top:6px">Actualizar vista</button><div id="refreshStatus" role="status" aria-live="polite" style="font-size:12px;margin-top:4px"></div></div></div><nav class="nav" id="nav"><button class="active" data-p="inicio">Inicio</button><button data-p="seguimiento">Mi seguimiento <span class="portal-nav-count" id="followingNavCount">0</span></button><button data-p="noticias">Noticias</button><button data-p="normativa">Normativa legal</button><button data-p="tecnica">Normativa técnica</button><button data-p="tarifas">Tarifas</button><button data-p="mercado">Mercado</button><button data-p="calculadora">Calculadora</button><button data-p="actualizaciones">Actualizaciones</button><button data-p="fuentes">Fuentes</button></nav></header>
@@ -396,8 +396,8 @@ window.addEventListener('pagehide',saveHomeSnapshot);
 window.addEventListener('focus',()=>{if(Date.now()-lastViewCheck>15000)refreshData()});
 refreshData();
 </script>
-<script src="assets/portal-tools.js?v=20261004-8"></script>
-<script src="assets/bill-estimator.js?v=20261004-8"></script>
+<script src="assets/portal-tools.js?v=20261004-9"></script>
+<script src="assets/bill-estimator.js?v=20261004-9"></script>
 </body></html>
 
 

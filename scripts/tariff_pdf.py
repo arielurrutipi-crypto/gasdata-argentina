@@ -1,6 +1,6 @@
 """Fallback to official resolution annex tables when normalized XLSX lags.
-Only monthly fixed, consumption and reservation charges are emitted. Missing
-component breakdowns remain missing rather than inheriting a previous month.
+Monthly charges and explicitly published component tables are emitted. Missing
+components remain missing rather than inheriting a previous month.
 """
 import io,re,unicodedata
 from datetime import datetime
@@ -31,6 +31,21 @@ def effective_date(text):
     m=re.search(r'vigencia\s+a\s*partir\s*del?\s*(\d{1,2})(?:[°º])?\s*de\s*(\w+)\s*de\s*(20\d{2})',text,re.I)
     if not m or m[2].lower() not in months:raise ValueError('Vigencia no legible en la parte resolutiva')
     return datetime(int(m[3]),months[m[2].lower()],int(m[1])).date().isoformat()
+
+def component_kind(label):
+    label=norm(label)
+    if label.startswith(norm('Precio en el Punto de Ingreso')) or label.startswith(norm('Precio de compra')):return 'PIST o Precio de compra ($/m3)'
+    if label.startswith('DIFERENCIASDIARIASACUMULADAS'):return 'Diferencia Diaria Acumulada ($/m3)'
+    if label.startswith('COSTOGASRETENIDO') or label.startswith('COSTODEGASRETENIDO'):return 'Gas Retenido ($/m3)'
+    if label.startswith('COSTOTRANSPORTE') or label.startswith('COSTODETRANSPORTE'):return 'Costo Transporte ($/m3)'
+    return None
+
+def annex_categories(label,known,components=False):
+    if components and norm(label)=='RESIDENCIALES':return sorted(known)
+    cats=[c for c in known if re.search(r'(?<![A-Z0-9])'+re.escape(c)+r'(?![A-Z0-9°])',label)]
+    if label.startswith('R2 -'):cats=[c for c in known if c=='R2']
+    if label.startswith('SGP'):cats=[c for c in known if c=='SGP']
+    return cats
 
 def parse_annex(raw,templates):
     import pdfplumber
@@ -72,18 +87,22 @@ def parse_annex(raw,templates):
             for table in page.extract_tables():
                 if not table or len(table)<2:continue
                 header=table[0];first=norm(header[0])
-                if first not in ('TIPOCARGO','CATEGORIALOCALIDAD'):continue
+                components=first.startswith('COMPONENTESDELCARGO')
+                if first not in ('TIPOCARGO','CATEGORIALOCALIDAD') and not components:continue
                 start=next((i for i in range(1,len(header)) if header[i] and 'CATEGOR' not in norm(header[i]) and amount_like(table[1][i])),None)
                 if start is None:continue
                 current_kind='';current_categories=''
                 for row in table[1:]:
                     if len(row)!=len(header):continue
-                    if first=='TIPOCARGO':
+                    if first=='TIPOCARGO' or components:
                         if row[0]:current_kind=row[0]
                         if row[1]:current_categories=row[1]
                         label=current_kind;catlabel=current_categories;range_text=' '.join(str(v or '') for v in row[2:start])
                     else:label=catlabel=row[0] or '';range_text=''
-                    if 'Fijo' in label or '$/mes' in label:kind='Cargo Fijo ($)'
+                    if components:
+                        kind=component_kind(label)
+                        if not kind:continue
+                    elif 'Fijo' in label or '$/mes' in label:kind='Cargo Fijo ($)'
                     elif 'Reserva' in label:kind='Capacidad ($ por m3/d)'
                     elif 'consumo' in label.lower() or 'Consumo' in label or '$/m3' in label:kind='Cargo Variable ($/m3)'
                     else:continue
@@ -92,9 +111,7 @@ def parse_annex(raw,templates):
                     if ' a ' in range_text and len(nums)>=2:begin,end=nums[:2]
                     elif 's de' in range_text and nums:begin=str(int(nums[0])+1)
                     known=set(r['CATEGORIA'] for r in pool)
-                    cats=[c for c in known if re.search(r'(?<![A-Z0-9])'+re.escape(c)+r'(?![A-Z0-9°])',catlabel)]
-                    if catlabel.startswith('R2 -'):cats=[c for c in known if c=='R2']
-                    if catlabel.startswith('SGP'):cats=[c for c in known if c=='SGP']
+                    cats=annex_categories(catlabel,known,components)
                     for j in range(start,len(header)):
                         if not header[j] or not amount_like(row[j]):continue
                         zones=[z for z in set(r['SUBZONA'] for r in pool) if norm(z)==norm(header[j])]
@@ -137,10 +154,10 @@ def update_resolution_comparison(state,folder,fetch,iso,datasets,fields):
         key=re.search(r'Numero=(\d+)',url)[1];path=folder/('resolution-'+key+'.json');previous=cache.get(url)
         try:
             raw=fetch(url,timeout=40);digest=hashlib.sha256(raw).hexdigest()
-            if previous and previous.get('sha256')==digest and previous.get('parserVersion')==2 and path.exists():data=json.loads(path.read_text())
+            if previous and previous.get('sha256')==digest and previous.get('parserVersion')==3 and path.exists():data=json.loads(path.read_text())
             else:
                 period,records,unmatched=parse_annex(raw,templates);data=encode(records,fields);data.update(period=period,sourceUrl=url,unmatchedZones=unmatched);path.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-            return url,dict(period=data['period'],sha256=digest,file=path.name,parserVersion=2),data,None
+            return url,dict(period=data['period'],sha256=digest,file=path.name,parserVersion=3),data,None
         except Exception as e:
             data=json.loads(path.read_text()) if previous and path.exists() else None
             return url,previous,data,{'key':'resolution-'+key,'error':str(e)[:180]}
@@ -157,5 +174,5 @@ def update_resolution_comparison(state,folder,fetch,iso,datasets,fields):
     result=[]
     for (period,product),group in grouped.items():
         key=period+'-'+product;records=group['rows'];data=encode(records,fields);data.update(period=period,month=period[:7],product=product,checkedAt=iso(),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']));(folder/(key+'.json')).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-        companies=sorted(set(r['EMPRESA'] for r in records));result.append(dict(key=key,period=period,month=period[:7],product=product,count=len(records),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']),url='data/tariff-comparison/'+key+'.json',checkedAt=iso(),companies=companies,coverageNote='Anexos PDF oficiales: cargo fijo, cargo variable y reserva de capacidad. Los desgloses no extraídos quedan sin dato.',unmatchedZones=sorted(group['unmatched'])))
+        companies=sorted(set(r['EMPRESA'] for r in records));result.append(dict(key=key,period=period,month=period[:7],product=product,count=len(records),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']),url='data/tariff-comparison/'+key+'.json',checkedAt=iso(),companies=companies,coverageNote='Anexos PDF oficiales: cargos y componentes publicados legibles. Los conceptos no extraídos quedan sin dato; no se copian valores de meses anteriores.',unmatchedZones=sorted(group['unmatched'])))
     return result,errors
