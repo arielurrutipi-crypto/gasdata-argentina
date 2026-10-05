@@ -50,7 +50,7 @@ def update_tariff_comparison(d, fetch, now, iso):
     sources = [r for r in d.get('tariffSeries2026',[]) if r.get('documentType')=='xlsx' and re.fullmatch(r'20\d{2}-\d{2}',r.get('month',''))]
     try: due = now()>=datetime.fromisoformat(state['checkedAt'])+timedelta(hours=3)
     except (ValueError,KeyError): due = True
-    due=due or state.get('readerVersion')!=3
+    due=due or state.get('readerVersion')!=4
     errors=[]; result=[]
     primary='https://www.enargas.gob.ar/secciones/precios-y-tarifas/cuadros-tarifarios.php'
     current=state.get('currentSources',[])
@@ -80,6 +80,8 @@ def update_tariff_comparison(d, fetch, now, iso):
             if dataset: result.append(dataset)
             if error: errors.append(error)
     if due:
+        from transport_tariffs import update_transport_references
+        errors.extend({'key':'transport-references',**e} for e in update_transport_references(state,folder,fetch,iso))
         try:
             from tariff_pdf import update_resolution_comparison
             newer,pdf_errors=update_resolution_comparison(state,folder,fetch,iso,result,FIELDS)
@@ -90,4 +92,4 @@ def update_tariff_comparison(d, fetch, now, iso):
     else:
         result.extend(r for r in old.values() if r['key'] not in {s['key'] for s in result})
     result.extend(r for r in old.values() if r['key'] not in {s['key'] for s in result})
-    state.update(readerVersion=3,datasets=sorted(result,key=lambda r:r['key']),checkedAt=iso() if due or len(result)!=len(old) else state.get('checkedAt'),errors=errors,status='partial' if errors else 'updated',cadence='Cada 3 horas; el histórico se conserva')
+    state.update(readerVersion=4,datasets=sorted(result,key=lambda r:r['key']),checkedAt=iso() if due or len(result)!=len(old) else state.get('checkedAt'),errors=errors,status='partial' if errors else 'updated',cadence='Cada 3 horas; el histórico se conserva')

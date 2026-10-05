@@ -37,6 +37,8 @@ jobs:
           python -m unittest discover -s scripts -p 'test_news_reader.py'
           python -m unittest discover -s scripts -p 'test_tariff_comparison.py'
           python -m unittest discover -s scripts -p 'test_tariff_pdf.py'
+          python -m unittest discover -s scripts -p 'test_transport_tariffs.py'
+          node scripts/test_bill_estimator.cjs
       - name: Actualizar y guardar fuentes
         run: |
           git config user.name "gasdata-bot"
