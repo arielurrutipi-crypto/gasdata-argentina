@@ -19,6 +19,12 @@ class AnnexTests(unittest.TestCase):
         self.assertIsNone(component_kind('Precio Incluido en los Cargos por m3 de Consumo ($/m3)'))
         self.assertEqual(set(annex_categories('P1-P2-P3', {'P1','P2','P3','SDB'}, True)), {'P1','P2','P3'})
         self.assertEqual(set(annex_categories('RESIDENCIALES', {'R1','R2 1°'}, True)), {'R1','R2 1°'})
+    def test_components_reject_tonnes_and_accept_incidence(self):
+        self.assertIsNone(component_kind('Precio de compra reconocido ($/tonelada)'))
+        self.assertEqual(component_kind('Incidencia del Precio del Gas sobre los cargos por m3 consumido (%)'),'incidencia del Precio del Gas sobre los cargos por m3 consumido (%)')
+    def test_source_coordinates_survive_encoding(self):
+        r={k:'' for k in FIELDS};r.update(CARGO=305.58,_pdfSource=dict(url='https://official.test/annex.pdf',page=27,table=7,row=2,column=1,line=13))
+        self.assertEqual(decode(encode([r],FIELDS)),[r])
     def test_next_month_is_discovered_by_date(self):
         self.assertEqual(effective_date('RESUELVE: tendrán vigencia a partir del 1° de noviembre de 2026.'), '2026-11-01')
 if __name__=='__main__':unittest.main()

@@ -12,7 +12,10 @@ def norm(s):
     return re.sub(r'[^A-Z0-9]','',s.replace('PROVINCIA','PROV').replace('PROV. DE','PROV').replace('PROV.','PROV').replace(' DE ',' ').replace(' Y ',' '))
 
 def decode(data):
-    return [dict(zip(data['columns'],[data['values'][i][v] for i,v in enumerate(row)])) for row in data['rows']]
+    records=[dict(zip(data['columns'],[data['values'][i][v] for i,v in enumerate(row)])) for row in data['rows']]
+    for record,proof in zip(records,data.get('provenance',[])):
+        if proof:record['_pdfSource']=dict(url=data['sourceDocuments'][proof[0]],page=proof[1],table=proof[2],row=proof[3],column=proof[4],line=proof[5] if len(proof)>5 else None)
+    return records
 
 def encode(records,fields):
     values=[[] for _ in fields];indexes=[{} for _ in fields];rows=[]
@@ -23,7 +26,11 @@ def encode(records,fields):
             if v not in indexes[i]:indexes[i][v]=len(values[i]);values[i].append(v)
             row.append(indexes[i][v])
         rows.append(row)
-    return dict(schema=1,columns=fields,values=values,rows=rows)
+    result=dict(schema=1,columns=fields,values=values,rows=rows)
+    if any(r.get('_pdfSource') for r in records):
+        documents=sorted({r['_pdfSource']['url'] for r in records if r.get('_pdfSource')})
+        result.update(sourceDocuments=documents,provenance=[[documents.index(p['url']),p['page'],p['table'],p['row'],p['column'],p.get('line')] if (p:=r.get('_pdfSource')) else None for r in records])
+    return result
 
 def effective_date(text):
     months={'enero':1,'febrero':2,'marzo':3,'abril':4,'mayo':5,'junio':6,'julio':7,'agosto':8,'septiembre':9,'octubre':10,'noviembre':11,'diciembre':12}
@@ -34,9 +41,11 @@ def effective_date(text):
 
 def component_kind(label):
     label=norm(label)
+    if 'TONELADA' in label:return None
     if label.startswith(norm('Precio en el Punto de Ingreso')) or label.startswith(norm('Precio de compra')):return 'PIST o Precio de compra ($/m3)'
     if label.startswith('DIFERENCIASDIARIASACUMULADAS'):return 'Diferencia Diaria Acumulada ($/m3)'
     if label.startswith('COSTOGASRETENIDO') or label.startswith('COSTODEGASRETENIDO'):return 'Gas Retenido ($/m3)'
+    if label.startswith('INCIDENCIADELPRECIODELGAS'):return 'incidencia del Precio del Gas sobre los cargos por m3 consumido (%)'
     if label.startswith('COSTOTRANSPORTE') or label.startswith('COSTODETRANSPORTE'):return 'Costo Transporte ($/m3)'
     return None
 
@@ -57,7 +66,7 @@ def parse_annex(raw,templates):
         if not re.fullmatch(r'-?\d[\d.]*,\d{2}',s):raise ValueError('Importe ilegible: '+s)
         return float(s.replace('.','').replace(',','.'))
     with pdfplumber.open(io.BytesIO(raw)) as pdf:
-        for page in pdf.pages:
+        for page_number,page in enumerate(pdf.pages,1):
             title=page.extract_text() or '';upper=title.upper()
             if 'SIN IMPUESTOS' not in upper:continue
             product='GLP' if 'PROPANO/BUTANO' in upper or 'GAS PROPANO' in upper else 'GN'
@@ -84,22 +93,48 @@ def parse_annex(raw,templates):
             if product=='GN' and service is None:
                 service='Residencial' if 'A USUARIOS RESIDENCIALES' in upper else 'Clubes de Barrio' if 'CLUBES DE BARRIO' in upper and 'ENTIDADES' not in upper else 'Servicio General'
                 pool=[r for r in pool if r['SERVICIO']==service]
-            for table in page.extract_tables():
+            for table_number,table in enumerate(page.extract_tables(),1):
                 if not table or len(table)<2:continue
                 header=table[0];first=norm(header[0])
-                components=first.startswith('COMPONENTESDELCARGO')
-                if first not in ('TIPOCARGO','CATEGORIALOCALIDAD') and not components:continue
-                start=next((i for i in range(1,len(header)) if header[i] and 'CATEGOR' not in norm(header[i]) and amount_like(table[1][i])),None)
+                components=first.startswith('COMPONENTESDELCARGO');glp_percentages=first=='CATEGORIALOCALIDAD' and str(table[1][1] or '').strip().endswith('%');percentages=first in ('CONCEPTO','') and len(header)>1 and 'CATEGORIA' in norm(header[1])
+                if product=='GLP' and first=='LOCALIDADCONCEPTO':
+                    # These components are published with localities down rows, not across columns.
+                    target_pool=[r for r in pool if (r['CATEGORIA'].startswith('BP') if 'ENTIDADES DE BIEN' in upper else not r['CATEGORIA'].startswith(('BP','CB')))]
+                    for row_number,row in enumerate(table[1:],2):
+                        names=str(row[0] or '').splitlines()
+                        for j,label in enumerate(header[1:],1):
+                            kind=component_kind(label)
+                            if not kind:continue
+                            cells=str(row[j] or '').splitlines()
+                            if len(cells)!=len(names) or not all(amount_like(v) for v in cells):
+                                unmatched.add('Componentes GLP con filas desalineadas');continue
+                            for line,(name,cell) in enumerate(zip(names,cells)):
+                                zones=[z for z in set(r['SUBZONA'] for r in target_pool) if norm(z)==norm(name)]
+                                if len(zones)!=1:unmatched.add(name);continue
+                                for template in target_pool:
+                                    if template['SUBZONA']!=zones[0] or template['CARGOTIPO']!=kind:continue
+                                    record={k:v for k,v in template.items() if k!='_pdfSource'}
+                                    record.update(CARGO=amount(cell),VIGENCIADESDE=datetime.fromisoformat(period).strftime('%d/%m/%Y'))
+                                    key=tuple(record[k] for k in record if k not in ('CARGO','VIGENCIADESDE'))
+                                    if key in ambiguous:continue
+                                    if key in output and output[key]['CARGO']!=record['CARGO']:
+                                        ambiguous.add(key);del output[key];continue
+                                    record['_pdfSource']=dict(url='',page=page_number,table=table_number,row=row_number,column=j,line=line)
+                                    output[key]=record
+                    continue
+                if first not in ('TIPOCARGO','CATEGORIALOCALIDAD') and not components and not percentages:continue
+                start=next((i for i in range(1,len(header)) if header[i] and 'CATEGOR' not in norm(header[i]) and amount_like(str(table[1][i] or '').rstrip('%'))),None)
                 if start is None:continue
                 current_kind='';current_categories=''
-                for row in table[1:]:
+                for row_number,row in enumerate(table[1:],2):
                     if len(row)!=len(header):continue
-                    if first=='TIPOCARGO' or components:
+                    if first=='TIPOCARGO' or components or percentages:
                         if row[0]:current_kind=row[0]
                         if row[1]:current_categories=row[1]
                         label=current_kind;catlabel=current_categories;range_text=' '.join(str(v or '') for v in row[2:start])
                     else:label=catlabel=row[0] or '';range_text=''
-                    if components:
+                    if glp_percentages:kind='incidencia del Precio del Gas sobre los cargos por m3 consumido (%)'
+                    elif components or percentages:
                         kind=component_kind(label)
                         if not kind:continue
                     elif 'Fijo' in label or '$/mes' in label:kind='Cargo Fijo ($)'
@@ -111,9 +146,10 @@ def parse_annex(raw,templates):
                     if ' a ' in range_text and len(nums)>=2:begin,end=nums[:2]
                     elif 's de' in range_text and nums:begin=str(int(nums[0])+1)
                     known=set(r['CATEGORIA'] for r in pool)
-                    cats=annex_categories(catlabel,known,components)
+                    cats=annex_categories(catlabel,known,components or percentages)
                     for j in range(start,len(header)):
-                        if not header[j] or not amount_like(row[j]):continue
+                        cell=str(row[j] or '').strip();is_percent=cell.endswith('%')
+                        if not header[j] or not amount_like(cell.rstrip('%')) or ((percentages or glp_percentages) and not is_percent):continue
                         zones=[z for z in set(r['SUBZONA'] for r in pool) if norm(z)==norm(header[j])]
                         if len(zones)!=1:
                             # Strict alias list for labels expanded in the PDF.
@@ -121,12 +157,24 @@ def parse_annex(raw,templates):
                             mapped=aliases.get(norm(header[j]));zones=[z for z in set(r['SUBZONA'] for r in pool) if norm(z)==mapped] if mapped else []
                         if len(zones)!=1:unmatched.add(str(header[j]));continue
                         candidates=[r for r in pool if r['SUBZONA']==zones[0] and r['CATEGORIA'] in cats and r['CARGOTIPO']==kind and r['CONSUMOM3INICIO']==begin and r['CONSUMOM3FIN']==end]
+                        if not candidates and kind in ('Cargo Fijo ($)','Cargo Variable ($/m3)','Capacidad ($ por m3/d)'):
+                            # The PDF defines this month's brackets; last month's templates identify only the user scope.
+                            scopes={}
+                            for r in pool:
+                                if r['SUBZONA']==zones[0] and r['CATEGORIA'] in cats and r['CARGOTIPO']==kind:
+                                    scope=tuple(r[k] for k in ('EMPRESA','SUBZONA','SERVICIO','CATEGORIA','TIPOTARIFA','CUADRO'))
+                                    scopes.setdefault(scope,r)
+                            candidates=list(scopes.values())
                         for template in candidates:
-                            record=dict(template,CARGO=amount(row[j]),VIGENCIADESDE=datetime.fromisoformat(period).strftime('%d/%m/%Y'))
+                            record={k:v for k,v in template.items() if k!='_pdfSource'}
+                            record.update(CARGO=amount(cell.rstrip('%'))/(100 if is_percent else 1),VIGENCIADESDE=datetime.fromisoformat(period).strftime('%d/%m/%Y'),CONSUMOM3INICIO=begin,CONSUMOM3FIN=end)
+                            if is_percent and kind=='Gas Retenido ($/m3)' and 'SDB' in catlabel:record['CARGOTIPO']='Gas Retenido sobre precio a usuarios (%)'
+                            elif is_percent and kind!='incidencia del Precio del Gas sobre los cargos por m3 consumido (%)':continue
                             key=tuple(record[k] for k in record if k not in ('CARGO','VIGENCIADESDE'))
                             if key in ambiguous:continue
                             if key in output and output[key]['CARGO']!=record['CARGO']:
                                 ambiguous.add(key);del output[key];continue
+                            record['_pdfSource']=dict(url='',page=page_number,table=table_number,row=row_number,column=j)
                             output[key]=record;titles[key]=title
     if not output:raise ValueError('No se extrajeron cargos comparables del anexo')
     if ambiguous:unmatched.add(str(len(ambiguous))+' alcances ambiguos omitidos')
@@ -154,10 +202,12 @@ def update_resolution_comparison(state,folder,fetch,iso,datasets,fields):
         key=re.search(r'Numero=(\d+)',url)[1];path=folder/('resolution-'+key+'.json');previous=cache.get(url)
         try:
             raw=fetch(url,timeout=40);digest=hashlib.sha256(raw).hexdigest()
-            if previous and previous.get('sha256')==digest and previous.get('parserVersion')==3 and path.exists():data=json.loads(path.read_text())
+            if previous and previous.get('sha256')==digest and previous.get('parserVersion')==4 and path.exists():data=json.loads(path.read_text())
             else:
-                period,records,unmatched=parse_annex(raw,templates);data=encode(records,fields);data.update(period=period,sourceUrl=url,unmatchedZones=unmatched);path.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-            return url,dict(period=data['period'],sha256=digest,file=path.name,parserVersion=3),data,None
+                period,records,unmatched=parse_annex(raw,templates)
+                for record in records:record['_pdfSource']['url']=url
+                data=encode(records,fields);data.update(period=period,sourceUrl=url,unmatchedZones=unmatched);path.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+            return url,dict(period=data['period'],sha256=digest,file=path.name,parserVersion=4),data,None
         except Exception as e:
             data=json.loads(path.read_text()) if previous and path.exists() else None
             return url,previous,data,{'key':'resolution-'+key,'error':str(e)[:180]}
@@ -174,5 +224,5 @@ def update_resolution_comparison(state,folder,fetch,iso,datasets,fields):
     result=[]
     for (period,product),group in grouped.items():
         key=period+'-'+product;records=group['rows'];data=encode(records,fields);data.update(period=period,month=period[:7],product=product,checkedAt=iso(),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']));(folder/(key+'.json')).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-        companies=sorted(set(r['EMPRESA'] for r in records));result.append(dict(key=key,period=period,month=period[:7],product=product,count=len(records),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']),url='data/tariff-comparison/'+key+'.json',checkedAt=iso(),companies=companies,coverageNote='Anexos PDF oficiales: cargos y componentes publicados legibles. Los conceptos no extraídos quedan sin dato; no se copian valores de meses anteriores.',unmatchedZones=sorted(group['unmatched'])))
+        companies=sorted(set(r['EMPRESA'] for r in records));result.append(dict(key=key,period=period,month=period[:7],product=product,count=len(records),sourceUrl=page,sourceKind='pdf',sources=sorted(group['sources']),url='data/tariff-comparison/'+key+'.json',checkedAt=iso(),companies=companies,coverageStatus='partial',coverageNote='Lectura parcial de anexos PDF oficiales, con enlace a la página de origen por concepto. Sin dato significa no extraído, no que el organismo no lo publicó. No se copian valores anteriores ni se completan faltantes con cero.',unmatchedZones=sorted(group['unmatched'])))
     return result,errors
