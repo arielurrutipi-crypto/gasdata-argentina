@@ -4,7 +4,7 @@ body{background:#fff}
 .top{background:#fff;color:var(--ink);padding:22px 24px 0;border-bottom:1px solid var(--line);box-shadow:0 2px 10px #00000004}
 .bar,.nav,.shell,.foot{max-width:1280px}
 .bar{gap:24px}
-.brand{font-family:Georgia,'Times New Roman',serif;font-size:28px;letter-spacing:-.8px;white-space:nowrap;font-weight:700}
+.brand{font-family:'Michelangelus',Georgia,'Times New Roman',serif;font-size:28px;letter-spacing:-.8px;white-space:nowrap;font-weight:700}
 .brand small{font-family:system-ui,Arial,sans-serif;font-size:10px;letter-spacing:.03em;color:var(--mut);margin-top:5px}
 .search input{background:#fff;color:var(--ink);border-color:#ddd;border-radius:4px;padding:10px 12px}
 .search input:focus{outline:2px solid #197a8630;outline-offset:2px}
@@ -18,16 +18,16 @@ body{background:#fff}
 .shell{padding:30px 24px}
 .home-top{background:#fff;color:var(--ink);border:0;border-radius:0;box-shadow:none;padding:22px 0 28px;margin:0 0 24px;border-bottom:1px solid #dcdcdc;align-items:center}
 .home-top .ey{color:#197a86;font-size:10px;letter-spacing:.12em}
-.home-top h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-1px;margin:12px 0}
+.home-top h1{font-family:'Michelangelus',Georgia,'Times New Roman',serif;font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-1px;margin:12px 0}
 .home-top p,.home-global-status,.home-global-status span{color:var(--mut)}
 .home-global-status b{color:#17596a}
-.heading h2,.home-section-head h2,.source-news-head h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.35px}
+.heading h2,.home-section-head h2,.source-news-head h3{font-family:'Michelangelus',Georgia,'Times New Roman',serif;letter-spacing:-.35px}
 .heading h2{font-size:27px}
 .news-grid{gap:26px}
 .news-card{border-radius:3px;border:1px solid #e8e8e8;box-shadow:0 2px 5px #00000004;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
 .news-image{transition:filter .24s ease}
 .news-body{background:#fff;position:relative;transition:transform .24s ease,box-shadow .24s ease}
-.news-body h3{font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;line-height:1.25;letter-spacing:-.3px}
+.news-body h3{font-family:'Michelangelus',Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;line-height:1.25;letter-spacing:-.3px}
 .news-body p{color:#686868}
 .source-news{border-radius:4px;box-shadow:none}
 .source-news-head{background:#fff;border-bottom:1px solid #e7e7e7}

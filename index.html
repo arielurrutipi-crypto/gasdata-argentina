@@ -33,11 +33,11 @@
 .news-language-switch{display:flex;gap:6px;margin:0 0 14px}.news-language-switch button{border:1px solid #cbd9df;background:white;color:#315567;border-radius:8px;padding:7px 12px;font-size:11px;font-weight:800;cursor:pointer}.news-language-switch button.active{background:#17596a;color:white;border-color:#17596a}.news-language-label{font-size:8px;color:#197a86;font-weight:700}
 .bagsa-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bagsa-news-filters{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin:14px 0}.bagsa-news-filters label{display:grid;gap:5px;font-size:10px;color:var(--mut);font-weight:700}.bagsa-news-filters label:first-child{flex:1;min-width:200px}.bagsa-news-filters input{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:11px}.bagsa-news-filters button{padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--teal);font-size:10px;font-weight:800;cursor:pointer}#bagsaScanStatus{font-size:10px;color:var(--mut)}@media(max-width:650px){.bagsa-news-grid{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="assets/portal-tools.css?v=20261013-01">
-<link rel="stylesheet" href="assets/editorial-theme.css?v=20261013-01">
+<link rel="stylesheet" href="assets/portal-tools.css?v=20261013-02">
+<link rel="stylesheet" href="assets/editorial-theme.css?v=20261013-02">
 </head>
 <body>
-<header class="top"><div class="bar"><div class="brand">GasData Argentina<small>Gas natural · GLP · regulación · mercado</small></div><div class="search"><input id="q" placeholder="Buscar BAGSA, TGS, GLP, resolución, Vaca Muerta…"></div><div class="stamp"><div id="globalTime">—</div><button type="button" id="refreshData" style="margin-top:6px">Actualizar vista</button><div id="refreshStatus" role="status" aria-live="polite" style="font-size:12px;margin-top:4px"></div></div></div><nav class="nav" id="nav"><button class="active" data-p="inicio">Inicio</button><button data-p="seguimiento">Mi seguimiento <span class="portal-nav-count" id="followingNavCount">0</span></button><button data-p="noticias">Noticias</button><button data-p="normativa">Normativa legal</button><button data-p="tecnica">Normativa técnica</button><button data-p="tarifas">Tarifas</button><button data-p="mercado">Mercado</button></nav></header>
+<header class="top"><div class="bar"><div class="brand">GasData Argentina<small>Gas natural · GLP · regulación · mercado</small></div><div class="search"><input id="q" placeholder="Buscar BAGSA, TGS, GLP, resolución, Vaca Muerta…"></div></div><nav class="nav" id="nav"><button class="active" data-p="inicio">Inicio</button><button data-p="seguimiento">Mi seguimiento <span class="portal-nav-count" id="followingNavCount">0</span></button><button data-p="noticias">Noticias</button><button data-p="normativa">Normativa legal</button><button data-p="tecnica">Normativa técnica</button><button data-p="tarifas">Tarifas</button><button data-p="mercado">Mercado</button></nav></header>
 <main class="shell">
 <section class="page active" id="inicio"><div class="home-tools-switch" aria-label="Vista de Inicio"><button type="button" class="active" data-home-tool="news" aria-pressed="true">Noticias de las últimas 72 horas</button><button type="button" data-home-tool="changes" aria-pressed="false">Novedades desde mi última visita <span id="visitNavCount" class="portal-nav-count">0</span></button></div><div id="homeNewsPanel">
 <div class="home-top"><div><span class="ey">GASDATA ARGENTINA · ACTUALIDAD ENERGÉTICA</span><h1>Las noticias de las últimas 72 horas.</h1><p>Las novedades de los medios del sector, reunidas en un solo lugar.</p></div><div class="home-global-status"><b id="homeNewsCount">Actualizando…</b><span id="homeUpdatedAt">—</span></div></div>
@@ -251,7 +251,7 @@ function render(){
 let core=D.kpis||[],sys=D.systemKpis||[];
 let nationalProd=core.find(x=>x.id==='national_prod'),dem=core.find(x=>x.id==='demand_priority'),imp=sys.find(x=>x.id==='imports_month'),exp=sys.find(x=>x.id==='exports_month');
 let market=[nationalProd,dem].filter(Boolean);
-$('#globalTime').textContent='Datos publicados · ejecución '+fmt(D.meta.updatedAt);
+
 renderHome();
 if(typeof renderPortalTools==='function')renderPortalTools();
 updateExportStatus();
@@ -295,11 +295,11 @@ function updateExportStatus(){
 $('#exportResolutions').onclick=()=>{updateExportStatus();if($('#exportResolutions').disabled)return;let rows=exportRows();if(!rows.length){$('#exportStatus').textContent='No hay resoluciones en el rango seleccionado.';return}let blob=gasdataXlsx([['Número de resolución','Descripción breve'],...rows.map(x=>[x.num,x.desc])]),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Resoluciones_'+$('#exportIssuer').value+'_'+$('#exportFrom').value+'_'+$('#exportTo').value+'.xlsx';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('#exportStatus').textContent='Excel descargado: '+rows.length+' resoluciones, sin filtros temáticos.'};
 
 let dataLoading=false,lastPayload='',lastViewCheck=0;
+function setRefreshStatus(text){document.documentElement.dataset.refreshStatus=text}
 async function refreshData(){
   if(dataLoading)return;
   dataLoading=true;
-  const button=$('#refreshData'),message=$('#refreshStatus');
-  button.disabled=true;message.textContent='Buscando datos publicados…';
+  setRefreshStatus('Buscando datos publicados…');
   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
   try{
     const response=await fetch('data/data.json?ts='+Date.now(),{cache:'no-store',signal:controller.signal});
@@ -309,21 +309,21 @@ async function refreshData(){
     const payload=JSON.stringify(data),changed=payload!==lastPayload;
     if(changed){D=data;render();lastPayload=payload;}else{renderHome();}
     lastViewCheck=Date.now();
-    message.textContent=(changed?'Vista actualizada · ':'Sin nueva versión · ')+fmt(new Date().toISOString());
+    setRefreshStatus((changed?'Vista actualizada · ':'Sin nueva versión · ')+fmt(new Date().toISOString()));
   }catch(error){
-    message.textContent=lastPayload?'No se pudo comprobar la actualización; se conserva la vista anterior.':'No se pudieron cargar los datos. Reintentá con Actualizar vista.';
+    setRefreshStatus(lastPayload?'No se pudo comprobar la actualización; se conserva la vista anterior.':'No se pudieron cargar los datos. Se reintentará automáticamente.');
     console.error(error);
-  }finally{clearTimeout(timeout);dataLoading=false;button.disabled=false;}
+  }finally{clearTimeout(timeout);dataLoading=false;}
 }
-$('#refreshData').addEventListener('click',refreshData);
+
 setInterval(()=>{if(!document.hidden)refreshData()},60000);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)saveHomeSnapshot();else refreshData()});
 window.addEventListener('pagehide',saveHomeSnapshot);
 window.addEventListener('focus',()=>{if(Date.now()-lastViewCheck>15000)refreshData()});
 refreshData();
 </script>
-<script src="assets/portal-tools.js?v=20261013-01"></script>
-<script src="assets/bill-estimator.js?v=20261013-01"></script><script src="assets/bagsa-estimator.js?v=20261013-01"></script>
+<script src="assets/portal-tools.js?v=20261013-02"></script>
+<script src="assets/bill-estimator.js?v=20261013-02"></script><script src="assets/bagsa-estimator.js?v=20261013-02"></script>
 </body></html>
 
 
