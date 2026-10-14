@@ -2,19 +2,19 @@
   "meta": {
     "schemaVersion": 1,
     "strategy": "hybrid",
-    "generatedAt": "2026-10-13T13:27:50.763105+00:00",
+    "generatedAt": "2026-10-14T20:44-03:00",
     "inventoryVerifiedAt": "2026-10-13",
     "excludedProjectIds": [
       "G07"
     ],
     "officialStatus": "partial",
-    "newsLinkedAt": "2026-10-13T13:27:50.763105+00:00",
-    "pendingCount": 2,
-    "officialLastSuccessAt": "2026-10-13T10:23-03:00",
+    "newsLinkedAt": "2026-10-14T20:44-03:00",
+    "pendingCount": 5,
+    "officialLastSuccessAt": "2026-10-14T20:44-03:00",
     "officialErrors": 1,
     "newsFrequency": "Cada hora, colector existente",
     "officialFrequency": "Descubrimiento diario; documentos en rotación semanal",
-    "newsCursor": "2026-10-12T10:36:00+00:00"
+    "newsCursor": "2026-10-13T12:45:00+00:00"
   },
   "projects": [
     {
@@ -8842,7 +8842,7 @@
       "publishedAt": "2026-10-01T19:27:26+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -8922,7 +8922,7 @@
       "publishedAt": "2026-10-12T10:36:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "los toldos ii este"
       ]
@@ -8938,7 +8938,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -8954,7 +8954,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -8970,7 +8970,7 @@
       "publishedAt": "2026-10-09T11:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -8987,7 +8987,7 @@
       "publishedAt": "2026-10-07T11:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9004,7 +9004,7 @@
       "publishedAt": "2026-10-07T09:32:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vaca muerta oil sur"
       ]
@@ -9020,7 +9020,7 @@
       "publishedAt": "2026-10-06T13:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oleoducto sur"
@@ -9037,7 +9037,7 @@
       "publishedAt": "2026-10-06T09:36:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vaca muerta oil sur"
       ]
@@ -9053,7 +9053,7 @@
       "publishedAt": "2026-10-06T08:48:33-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -9069,7 +9069,7 @@
       "publishedAt": "2026-10-06T08:48:33-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "san matias pipeline",
         "gasoducto + southern energy"
@@ -9086,7 +9086,7 @@
       "publishedAt": "2026-10-06T08:34:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9102,7 +9102,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9118,7 +9118,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "san matias pipeline"
       ]
@@ -9134,7 +9134,7 @@
       "publishedAt": "2026-10-05T10:43:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9150,7 +9150,7 @@
       "publishedAt": "2026-03-12",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "tgs + ngl"
       ]
@@ -9166,7 +9166,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9182,7 +9182,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9198,7 +9198,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9214,7 +9214,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9223,14 +9223,14 @@
       "id": "03950acdbf662d7798ff2308",
       "projectId": "G08",
       "url": "https://www.tgn.com.ar/assets/media/2026/09/2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf",
-      "title": "17/09/2026. TGN impulsa la construcción del Gasoducto Manuel Belgrano",
+      "title": "2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf",
       "source": "TGN",
       "sourceType": "official",
-      "summary": "TGN aborda trabajos de obra vinculados a Gasoducto Manuel Belgrano y obras complementarias TGN. La referencia se conserva para seguir los hitos de esta obra.",
+      "summary": "TGN aborda novedades del proyecto vinculados a Gasoducto Manuel Belgrano y obras complementarias TGN. La referencia se conserva para seguir los hitos de esta obra.",
       "publishedAt": "2026-09-17",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano",
         "tgn + manuel belgrano"
@@ -9247,7 +9247,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano"
       ]
@@ -9263,7 +9263,7 @@
       "publishedAt": "2026-10-02T11:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9280,7 +9280,7 @@
       "publishedAt": "2026-10-02T11:30:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9297,7 +9297,7 @@
       "publishedAt": "2026-10-02T11:15:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9313,7 +9313,7 @@
       "publishedAt": "2026-10-02T10:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng",
         "ypf + eni + gnl",
@@ -9331,7 +9331,7 @@
       "publishedAt": "2026-10-02T09:38:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9347,7 +9347,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9363,7 +9363,7 @@
       "publishedAt": "2026-10-01T12:58:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9379,7 +9379,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9395,7 +9395,7 @@
       "publishedAt": "2026-10-01T09:29:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9411,7 +9411,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-13T13:27:50.763105+00:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9741,6 +9741,217 @@
         "reversion gasoducto norte",
         "la carlota tio pujio"
       ]
+    },
+    "1bfd8383ceeacdd3fb9081df": {
+      "id": "1bfd8383ceeacdd3fb9081df",
+      "projectId": "P03",
+      "url": "https://runrunenergetico.com/vmos-avanza-con-infraestructura-clave-y-se-prepara-para-exportar-crudo-en-2027/",
+      "title": "VMOS avanza con infraestructura clave y se prepara para exportar crudo en 2027",
+      "source": "RunRun Energético",
+      "sourceType": "press",
+      "summary": "RunRun Energético aborda novedades del proyecto vinculados a Vaca Muerta Oleoducto Sur — VMOS, sistema integral. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-10-13T12:45:00+00:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "vmos",
+        "vaca muerta oil sur"
+      ]
+    },
+    "9dbd5a49c6b57927fc9f1789": {
+      "id": "9dbd5a49c6b57927fc9f1789",
+      "projectId": "P01",
+      "url": "https://www.oldelval.com/oldelval-inaugura-el-proyecto-duplicar/",
+      "title": "Oldelval inaugura el Proyecto Duplicar – OLDELVAL",
+      "source": "Oldelval",
+      "sourceType": "official",
+      "summary": "Oldelval aborda puesta en marcha vinculados a Proyecto Duplicar — ampliación sistema Oldelval. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "oldelval + duplicar"
+      ]
+    },
+    "f287a3df312aba484e0e367d": {
+      "id": "f287a3df312aba484e0e367d",
+      "projectId": "P01",
+      "url": "https://www.oldelval.com/oldelval-lleno-el-oleoducto-del-proyecto-duplicar-y-se-acerca-a-su-puesta-en-marcha/",
+      "title": "Oldelval llenó el oleoducto del Proyecto Duplicar y se acerca a su puesta en marcha – OLDELVAL",
+      "source": "Oldelval",
+      "sourceType": "official",
+      "summary": "Oldelval aborda puesta en marcha vinculados a Proyecto Duplicar — ampliación sistema Oldelval. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "oldelval + duplicar"
+      ]
+    },
+    "d1b3c13ff0b507c16b5fa8d9": {
+      "id": "d1b3c13ff0b507c16b5fa8d9",
+      "projectId": "P01",
+      "url": "https://www.oldelval.com/la-cuenca-neuquina-podra-crecer-un-50-mas-ricardo-hosel-ceo-de-oldelval-detalla-los-avances-del-proyecto-duplicar/",
+      "title": "“La Cuenca Neuquina podrá crecer un 50% más”: Ricardo Hösel, CEO de Oldelval, detalla los avances del Proyecto Duplicar – OLDELVAL",
+      "source": "Oldelval",
+      "sourceType": "official",
+      "summary": "Oldelval aborda novedades del proyecto vinculados a Proyecto Duplicar — ampliación sistema Oldelval. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "oldelval + duplicar"
+      ]
+    },
+    "2a62c53bce80cb3e32870e67": {
+      "id": "2a62c53bce80cb3e32870e67",
+      "projectId": "P01",
+      "url": "https://www.oldelval.com/oldelval-alcanzo-un-hito-crucial-para-el-proyecto-duplicar-y-avanza-a-paso-firme-hacia-el-aumento-de-la-capacidad-de-transporte/",
+      "title": "Oldelval alcanzó un hito crucial para el Proyecto Duplicar y avanza a paso firme hacia el aumento de la capacidad de transporte – OLDELVAL",
+      "source": "Oldelval",
+      "sourceType": "official",
+      "summary": "Oldelval aborda ampliación de capacidad vinculados a Proyecto Duplicar — ampliación sistema Oldelval. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "oldelval + duplicar"
+      ]
+    },
+    "56b5019e91aa325e3749ce3e": {
+      "id": "56b5019e91aa325e3749ce3e",
+      "projectId": "G11",
+      "url": "https://totalenergies.com/newsroom/argentina-production-start-fenix-offshore-gas-field/?lang=eng",
+      "title": "Argentina: Production Start-up at Fenix Offshore Gas Field | Newsroom TotalEnergies",
+      "source": "TotalEnergies",
+      "sourceType": "official",
+      "summary": "TotalEnergies aborda novedades del proyecto vinculados a Proyecto Fénix — infraestructura offshore CMA-1. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2024-09-20T03:58:35+00:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "fenix + gas",
+        "fenix + totalenergies"
+      ]
+    },
+    "a611c7bf0532a821004e018b": {
+      "id": "a611c7bf0532a821004e018b",
+      "projectId": "G11",
+      "url": "https://totalenergies.com/infographics/argentina-fenix-gas-project-glance",
+      "title": "Argentina: The Fenix Gas Project at a Glance",
+      "source": "TotalEnergies",
+      "sourceType": "official",
+      "summary": "TotalEnergies aborda novedades del proyecto vinculados a Proyecto Fénix — infraestructura offshore CMA-1. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2024-10-15",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "fenix + gas"
+      ]
+    },
+    "ed19289992db8a92d8f0d52f": {
+      "id": "ed19289992db8a92d8f0d52f",
+      "projectId": "G12",
+      "url": "https://www.pluspetrol.net/es/operaciones/argentina/la-calera",
+      "title": "La Calera",
+      "source": "Pluspetrol",
+      "sourceType": "official",
+      "summary": "Pluspetrol aborda novedades del proyecto vinculados a La Calera — Central Processing Facility, puesta en marcha 2025. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "la calera + pluspetrol"
+      ]
+    },
+    "5e82ff73ecc7df987049eba7": {
+      "id": "5e82ff73ecc7df987049eba7",
+      "projectId": "G14",
+      "url": "https://southern-nrg.com/el-proyecto/",
+      "title": "El Proyecto – Southern Energy",
+      "source": "Southern Energy",
+      "sourceType": "official",
+      "summary": "Southern Energy aborda novedades del proyecto vinculados a Southern Energy — terminales flotantes Hilli Episeyo y Esperanza. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "southern energy"
+      ]
+    },
+    "d96e7397848a1f189cb929fc": {
+      "id": "d96e7397848a1f189cb929fc",
+      "projectId": "G15",
+      "url": "https://gobierno.rionegro.gov.ar/articulo/61941/san-matias-pipeline-inicia-el-traslado-de-canos-y-las-excavaciones",
+      "title": "San Matías Pipeline inicia el traslado de caños y las excavaciones | Gobierno y Trabajo",
+      "source": "Río Negro",
+      "sourceType": "official",
+      "summary": "Río Negro aborda trabajos de obra vinculados a San Matías Pipeline — gasoducto dedicado Southern Energy. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-10-05",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "san matias pipeline",
+        "smp + gasoducto"
+      ]
+    },
+    "c7354fac69ea012f5f318240": {
+      "id": "c7354fac69ea012f5f318240",
+      "projectId": "G16",
+      "url": "https://www.eni.com/en-IT/media/press-release/2026/08/argentina-lng-submits-application-for-rigi-approval.html",
+      "title": "Argentina LNG submits application for RIGI approval",
+      "source": "ENI",
+      "sourceType": "official",
+      "summary": "ENI aborda inversión o encuadre RIGI vinculados a Argentina LNG — proyecto integrado YPF–Eni–XRG, fase 12 MTPA. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-08-14",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "argentina lng"
+      ]
+    },
+    "34084b02276c719b7c975982": {
+      "id": "34084b02276c719b7c975982",
+      "projectId": "G16",
+      "url": "https://rionegro.gov.ar/articulo/61852/rio-negro-convoca-a-audiencia-publica-por-el-proyecto-argentina-gnl",
+      "title": "Río Negro convoca a audiencia pública por el Proyecto Argentina LNG | Gobierno de Río Negro",
+      "source": "Río Negro",
+      "sourceType": "official",
+      "summary": "Río Negro aborda evaluación ambiental o permisos vinculados a Argentina LNG — proyecto integrado YPF–Eni–XRG, fase 12 MTPA. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-10-01",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "argentina lng"
+      ]
+    },
+    "c3ae8d421065481abe038999": {
+      "id": "c3ae8d421065481abe038999",
+      "projectId": "G16",
+      "url": "https://argentina-lng.ypf.com/index-en.html",
+      "title": "Argentina LNG",
+      "source": "YPF",
+      "sourceType": "official",
+      "summary": "YPF aborda novedades del proyecto vinculados a Argentina LNG — proyecto integrado YPF–Eni–XRG, fase 12 MTPA. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "matchedAliases": [
+        "argentina lng"
+      ]
     }
   },
   "candidates": {
@@ -9911,118 +10122,179 @@
       "detectedAt": "2026-10-13T10:23-03:00",
       "status": "historical",
       "datePrecision": "instant"
+    },
+    "d19ecfd8af212a03296baedc": {
+      "field": "stage",
+      "proposal": "Puesta en marcha / operación a verificar",
+      "kind": "status",
+      "scope": "Por verificar; puede referir a un componente",
+      "id": "d19ecfd8af212a03296baedc",
+      "projectId": "P01",
+      "newsId": "9dbd5a49c6b57927fc9f1789",
+      "sourceUrl": "https://www.oldelval.com/oldelval-inaugura-el-proyecto-duplicar/",
+      "sourceType": "official",
+      "sourceDate": null,
+      "detectedAt": "2026-10-14T20:44-03:00",
+      "status": "pending",
+      "datePrecision": "unknown"
+    },
+    "32531cd96ce725d1eb170d38": {
+      "field": "stage",
+      "proposal": "Puesta en marcha / operación a verificar",
+      "kind": "status",
+      "scope": "Por verificar; puede referir a un componente",
+      "id": "32531cd96ce725d1eb170d38",
+      "projectId": "P01",
+      "newsId": "f287a3df312aba484e0e367d",
+      "sourceUrl": "https://www.oldelval.com/oldelval-lleno-el-oleoducto-del-proyecto-duplicar-y-se-acerca-a-su-puesta-en-marcha/",
+      "sourceType": "official",
+      "sourceDate": null,
+      "detectedAt": "2026-10-14T20:44-03:00",
+      "status": "pending",
+      "datePrecision": "unknown"
+    },
+    "2ee1b7055ec824a57cc20720": {
+      "field": "progress",
+      "proposal": 50.0,
+      "kind": "progress",
+      "scope": "Físico / alcance por verificar",
+      "evidence": "Ricardo Hösel, CEO de Oldelval, detalla los avances del Proyecto Duplicar “La Cuenca Neuquina podrá crecer un 50% más”: Ricardo",
+      "id": "2ee1b7055ec824a57cc20720",
+      "projectId": "P01",
+      "newsId": "d1b3c13ff0b507c16b5fa8d9",
+      "sourceUrl": "https://www.oldelval.com/la-cuenca-neuquina-podra-crecer-un-50-mas-ricardo-hosel-ceo-de-oldelval-detalla-los-avances-del-proyecto-duplicar/",
+      "sourceType": "official",
+      "sourceDate": null,
+      "detectedAt": "2026-10-14T20:44-03:00",
+      "status": "pending",
+      "datePrecision": "unknown"
+    },
+    "a2f1f56fae1a2e6b1b0d9d3f": {
+      "field": "stage",
+      "proposal": "Construcción a verificar",
+      "kind": "status",
+      "scope": "Por verificar; puede referir a un componente",
+      "id": "a2f1f56fae1a2e6b1b0d9d3f",
+      "projectId": "G15",
+      "newsId": "d96e7397848a1f189cb929fc",
+      "sourceUrl": "https://gobierno.rionegro.gov.ar/articulo/61941/san-matias-pipeline-inicia-el-traslado-de-canos-y-las-excavaciones",
+      "sourceType": "official",
+      "sourceDate": "2026-10-05",
+      "detectedAt": "2026-10-14T20:44-03:00",
+      "status": "historical",
+      "datePrecision": "day"
     }
   },
   "sourceChecks": {
     "https://www.energia-argentina.com.ar/novedades/": {
       "name": "ENARSA",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.tgs.com.ar/prensa/": {
       "name": "TGS",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 3
     },
     "https://www.tgn.com.ar/prensa-y-novedades/novedades/": {
       "name": "TGN",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
-      "discovered": 1
+      "discovered": 2
     },
     "https://www.oldelval.com/novedades/": {
       "name": "Oldelval",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 10
     },
     "https://southern-nrg.com/novedades/": {
       "name": "Southern Energy",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 5
     },
     "https://rionegro.gov.ar/": {
       "name": "Río Negro",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.santafe.gob.ar/ms/enerfe/": {
       "name": "Santa Fe / ENERFE",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.pluspetrol.net/es/noticias": {
       "name": "Pluspetrol",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.tecpetrol.com/es/noticias": {
       "name": "Tecpetrol",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://pampa.com/prensa/": {
       "name": "Pampa Energía",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.litoralgas.com.ar/site/informacion-util/noticias/": {
       "name": "Litoralgas",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://totalenergies.com/newsroom": {
       "name": "TotalEnergies",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
     "https://www.axionenergy.com/en-movimiento/": {
       "name": "AXION",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "retryAt": "2026-10-13T16:23:10.347254-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "retryAt": "2026-10-15T02:44:38.441159-03:00",
       "status": "error",
-      "error": "HTTP Error 502: Bad Gateway"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     "https://www.argentina.gob.ar/economia/energia/noticias": {
       "name": "Secretaría de Energía",
       "type": "hub",
-      "checkedAt": "2026-10-13T10:23-03:00",
-      "lastSuccessAt": "2026-10-13T10:23-03:00",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "discovered": 0
     },
@@ -10232,6 +10504,134 @@
       "lastSuccessAt": "2026-10-13T10:23-03:00",
       "status": "ok",
       "hash": "6b02e762c370dcda362226fd1c9771b01a2d62ecad6c16167d6096b41333ff41",
+      "changed": false
+    },
+    "https://www.oldelval.com/oldelval-inaugura-el-proyecto-duplicar/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "d89aa2c154f0f229561faa7573032f5998b94ef4ea93d74cd9a158568a9a4f1a",
+      "changed": false
+    },
+    "https://www.oldelval.com/oldelval-lleno-el-oleoducto-del-proyecto-duplicar-y-se-acerca-a-su-puesta-en-marcha/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "05ccf2f787537e2ff25b13563756136ea8edbab1b4d998f4f2d7ce22f6dded3e",
+      "changed": false
+    },
+    "https://www.oldelval.com/la-cuenca-neuquina-podra-crecer-un-50-mas-ricardo-hosel-ceo-de-oldelval-detalla-los-avances-del-proyecto-duplicar/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "a454baee7d2ce9c0a2e5da7b4cd66597069af829240c68d65af09903cee07446",
+      "changed": false
+    },
+    "https://www.oldelval.com/oldelval-alcanzo-un-hito-crucial-para-el-proyecto-duplicar-y-avanza-a-paso-firme-hacia-el-aumento-de-la-capacidad-de-transporte/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "cfea57fe1489062529967c3b0d8907f6fe5e6b8b058723c872860731b9da274e",
+      "changed": false
+    },
+    "https://www.tgn.com.ar/assets/media/2026/09/2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "039bcc3b8113162cc8236c651fecb8a605e03952a7d792dbbaf300008a810fb5",
+      "changed": false
+    },
+    "https://www.tgs.com.ar/tgs-avanza-con-la-decision-final-de-inversion-para-su-proyecto-de-procesamiento-de-liquidos-en-vaca-muerta/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "b868b0758c1e8257598f7e75fcd8445fad11a7693aa15b903738053f59a8fded",
+      "changed": false
+    },
+    "https://www.tgs.com.ar/wp-content/uploads/2025/04/tgs_Memoria-y-Estados-Financieros-2024_ESP_OK.pdf": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "4539c49e56ecd1d1b6a3bb3883af652e9c9594e5efebca846a5cc7e45e260c5e",
+      "changed": false
+    },
+    "https://totalenergies.com/newsroom/argentina-production-start-fenix-offshore-gas-field/?lang=eng": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "3226f6bc6756e5d59524dbaa6de4c6b997c7f624f17be8a7bff357dd1a67dec1",
+      "changed": false
+    },
+    "https://totalenergies.com/infographics/argentina-fenix-gas-project-glance": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "ae27a7466dc313f02d5d7c95dda7db3290fd27050a74385b8f6f6ffec7aab6d1",
+      "changed": false
+    },
+    "https://www.pluspetrol.net/es/operaciones/argentina/la-calera": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "899ca4a6c30e8184d44e5028690506edae23b41ac443640c643e8d6bd7940af2",
+      "changed": false
+    },
+    "https://www.techint.com/media/dbbjthvq/tec-rse2022-esp.pdf": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "4ff354bdbf3d59110f9da335f89b66860463c373bf71e8f197966c5fd53a44f2",
+      "changed": false
+    },
+    "https://southern-nrg.com/el-proyecto/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "01ac0cdaab640d48e7d7e9955ed44774709d0f1d19e7f14b32b9b970cd99c6f2",
+      "changed": false
+    },
+    "https://gobierno.rionegro.gov.ar/articulo/61941/san-matias-pipeline-inicia-el-traslado-de-canos-y-las-excavaciones": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "8c72a618c32a541a96af3008379c6d6fa1c5ca3d39d68e2c8a85f83bf5d61112",
+      "changed": false
+    },
+    "https://www.eni.com/en-IT/media/press-release/2026/08/argentina-lng-submits-application-for-rigi-approval.html": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "18abf76ef50bfdfca9ef2640d15e68765862b142e1bc7c7d16fb03d204b6106c",
+      "changed": false
+    },
+    "https://rionegro.gov.ar/articulo/61852/rio-negro-convoca-a-audiencia-publica-por-el-proyecto-argentina-gnl": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "5ef90d54be60dcbe871999665a37719359551fe9dad5d96c785e7995ac59170b",
+      "changed": false
+    },
+    "https://argentina-lng.ypf.com/index-en.html": {
+      "type": "document",
+      "checkedAt": "2026-10-14T20:44-03:00",
+      "lastSuccessAt": "2026-10-14T20:44-03:00",
+      "status": "ok",
+      "hash": "72a5b3158fbfffcb5de65b7fd4d6ef677c65f324c5e0d47999470b981010b694",
       "changed": false
     }
   },
