@@ -60,6 +60,11 @@
        else if(!previous&&((records.initialized&&row.event.kind!=='project')||(recent!==null&&recent>=now-72*3600000)))add(row.key+'|'+hash(row.sig),{...row.event,title:'Incorporado · '+row.event.title});
        records.baseline[row.key]={sig:row.sig,summary:row.summary};
      }
+     const contests=new Map((data.transportCapacity||[]).map(r=>[r.id,r]));
+     for(const e of Object.values(records.events)){
+       if(e.deadlineAt){const current=contests.get(e.contestId);if((fullTime(e.deadlineAt)||0)<=now||(current&&(/CERRAD|DESIERT|CANCELAD|VENCID/i.test(current.status||'')||current.deadlineAt!==e.deadlineAt)))e.obsolete=true;}
+       if(infra&&e.id.startsWith('candidate|')){const candidate=infra.candidates?.[e.id.slice('candidate|'.length)];if(!candidate||candidate.status!=='pending')e.obsolete=true;}
+     }
      for(const r of data.transportCapacity||[]){
        const end=fullTime(r.deadlineAt),days=end===null?null:(end-now)/86400000;
        if(days===null||days<0||days>7||/CERRAD|DESIERT|CANCELAD|VENCID/i.test(r.status||''))continue;
