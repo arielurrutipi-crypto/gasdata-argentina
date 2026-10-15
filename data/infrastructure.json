@@ -2,16 +2,16 @@
   "meta": {
     "schemaVersion": 1,
     "strategy": "hybrid",
-    "generatedAt": "2026-10-14T20:44-03:00",
+    "generatedAt": "2026-10-14T21:10-03:00",
     "inventoryVerifiedAt": "2026-10-13",
     "excludedProjectIds": [
       "G07"
     ],
     "officialStatus": "partial",
-    "newsLinkedAt": "2026-10-14T20:44-03:00",
+    "newsLinkedAt": "2026-10-14T21:10-03:00",
     "pendingCount": 5,
-    "officialLastSuccessAt": "2026-10-14T20:44-03:00",
-    "officialErrors": 1,
+    "officialLastSuccessAt": "2026-10-14T21:10-03:00",
+    "officialErrors": 2,
     "newsFrequency": "Cada hora, colector existente",
     "officialFrequency": "Descubrimiento diario; documentos en rotación semanal",
     "newsCursor": "2026-10-13T12:45:00+00:00"
@@ -8842,7 +8842,7 @@
       "publishedAt": "2026-10-01T19:27:26+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -8922,7 +8922,7 @@
       "publishedAt": "2026-10-12T10:36:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "los toldos ii este"
       ]
@@ -8938,7 +8938,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -8954,7 +8954,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -8970,7 +8970,7 @@
       "publishedAt": "2026-10-09T11:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -8987,7 +8987,7 @@
       "publishedAt": "2026-10-07T11:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9004,7 +9004,7 @@
       "publishedAt": "2026-10-07T09:32:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vaca muerta oil sur"
       ]
@@ -9020,7 +9020,7 @@
       "publishedAt": "2026-10-06T13:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oleoducto sur"
@@ -9037,7 +9037,7 @@
       "publishedAt": "2026-10-06T09:36:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vaca muerta oil sur"
       ]
@@ -9053,7 +9053,7 @@
       "publishedAt": "2026-10-06T08:48:33-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -9069,7 +9069,7 @@
       "publishedAt": "2026-10-06T08:48:33-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "san matias pipeline",
         "gasoducto + southern energy"
@@ -9086,7 +9086,7 @@
       "publishedAt": "2026-10-06T08:34:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9102,7 +9102,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9118,7 +9118,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "san matias pipeline"
       ]
@@ -9134,7 +9134,7 @@
       "publishedAt": "2026-10-05T10:43:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -9150,7 +9150,7 @@
       "publishedAt": "2026-03-12",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "tgs + ngl"
       ]
@@ -9166,7 +9166,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9182,7 +9182,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9198,7 +9198,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9214,7 +9214,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9223,14 +9223,14 @@
       "id": "03950acdbf662d7798ff2308",
       "projectId": "G08",
       "url": "https://www.tgn.com.ar/assets/media/2026/09/2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf",
-      "title": "2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf",
+      "title": "17/09/2026. TGN impulsa la construcción del Gasoducto Manuel Belgrano",
       "source": "TGN",
       "sourceType": "official",
-      "summary": "TGN aborda novedades del proyecto vinculados a Gasoducto Manuel Belgrano y obras complementarias TGN. La referencia se conserva para seguir los hitos de esta obra.",
+      "summary": "TGN aborda trabajos de obra vinculados a Gasoducto Manuel Belgrano y obras complementarias TGN. La referencia se conserva para seguir los hitos de esta obra.",
       "publishedAt": "2026-09-17",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano",
         "tgn + manuel belgrano"
@@ -9247,7 +9247,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano"
       ]
@@ -9263,7 +9263,7 @@
       "publishedAt": "2026-10-02T11:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9280,7 +9280,7 @@
       "publishedAt": "2026-10-02T11:30:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9297,7 +9297,7 @@
       "publishedAt": "2026-10-02T11:15:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9313,7 +9313,7 @@
       "publishedAt": "2026-10-02T10:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng",
         "ypf + eni + gnl",
@@ -9331,7 +9331,7 @@
       "publishedAt": "2026-10-02T09:38:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9347,7 +9347,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9363,7 +9363,7 @@
       "publishedAt": "2026-10-01T12:58:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9379,7 +9379,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9395,7 +9395,7 @@
       "publishedAt": "2026-10-01T09:29:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -9411,7 +9411,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9753,7 +9753,7 @@
       "publishedAt": "2026-10-13T12:45:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-14T20:44-03:00",
-      "lastDetectedAt": "2026-10-14T20:44-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -9951,6 +9951,87 @@
       "lastDetectedAt": "2026-10-14T20:44-03:00",
       "matchedAliases": [
         "argentina lng"
+      ]
+    },
+    "82f46bbb2f81bdbb5905d286": {
+      "id": "82f46bbb2f81bdbb5905d286",
+      "projectId": "G17",
+      "url": "https://www.litoralgas.com.ar/site/informacion-util/noticias/litoralgas-avanza-en-la-puesta-en-funcionamiento-del-gasoducto-regional-centro-ii/",
+      "title": "Litoralgas - Litoralgas avanza en la puesta en funcionamiento del Gasoducto Regional Centro II",
+      "source": "Litoralgas",
+      "sourceType": "official",
+      "summary": "Litoralgas aborda novedades del proyecto vinculados a Gasoducto Regional Centro II. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-04-01",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T21:10-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
+      "matchedAliases": [
+        "gasoducto regional centro ii"
+      ]
+    },
+    "a82b09cdf287f42b08a2ea2f": {
+      "id": "a82b09cdf287f42b08a2ea2f",
+      "projectId": "G19",
+      "url": "https://www.santafe.gob.ar/noticias/noticia/286309/",
+      "title": "Pullaro inauguró el Gasoducto Regional Sur: “En Santa Fe la obra pública no es sinónimo de corrupción, sino de desarrollo, igualdad y trabajo”",
+      "source": "Santa Fe",
+      "sourceType": "official",
+      "summary": "Santa Fe aborda puesta en marcha vinculados a Gasoducto Regional Sur — ampliaciones y refuerzos. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-06-11",
+      "datePrecision": "day",
+      "firstDetectedAt": "2026-10-14T21:10-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
+      "matchedAliases": [
+        "gasoducto regional sur + santa fe",
+        "gasoducto regional sur + pullaro"
+      ]
+    },
+    "60abd0d56dbaaf58f4158bde": {
+      "id": "60abd0d56dbaaf58f4158bde",
+      "projectId": "G22",
+      "url": "https://www.argentina.gob.ar/noticias/mas-de-13000-nuevos-usuarios-de-mar-del-plata-y-balcarce-tendran-gas-natural",
+      "title": "Más de 13.000 nuevos usuarios de Mar del Plata y Balcarce tendrán gas natural",
+      "source": "Secretaría de Energía",
+      "sourceType": "official",
+      "summary": "Secretaría de Energía aborda puesta en marcha, ampliación de capacidad vinculados a Repotenciación Gasoducto de la Costa — ramales y PC Las Armas. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2023-07-13T20:16:58-03:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-10-14T21:10-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
+      "matchedAliases": [
+        "gasoducto de la costa"
+      ]
+    },
+    "7201ea1bac96f6e454317be2": {
+      "id": "7201ea1bac96f6e454317be2",
+      "projectId": "P01",
+      "url": "https://www.oldelval.com/proyecto-duplicar/",
+      "title": "Proyecto Duplicar – OLDELVAL",
+      "source": "Oldelval",
+      "sourceType": "official",
+      "summary": "Oldelval aborda novedades del proyecto vinculados a Proyecto Duplicar — ampliación sistema Oldelval. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T21:10-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
+      "matchedAliases": [
+        "oldelval + duplicar"
+      ]
+    },
+    "ad50f46875c990c416e03fa7": {
+      "id": "ad50f46875c990c416e03fa7",
+      "projectId": "P02",
+      "url": "https://www.techint.com/es/nuestros-proyectos/duplicar-norte",
+      "title": "DUPLICAR NORTE",
+      "source": "Techint",
+      "sourceType": "official",
+      "summary": "Techint aborda novedades del proyecto vinculados a Duplicar Norte. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": null,
+      "datePrecision": "unknown",
+      "firstDetectedAt": "2026-10-14T21:10-03:00",
+      "lastDetectedAt": "2026-10-14T21:10-03:00",
+      "matchedAliases": [
+        "duplicar norte"
       ]
     }
   },
@@ -10183,6 +10264,52 @@
       "detectedAt": "2026-10-14T20:44-03:00",
       "status": "historical",
       "datePrecision": "day"
+    },
+    "f9d51bf726030372e6ed61c6": {
+      "field": "stage",
+      "proposal": "Puesta en marcha / operación a verificar",
+      "kind": "status",
+      "scope": "Por verificar; puede referir a un componente",
+      "id": "f9d51bf726030372e6ed61c6",
+      "projectId": "G19",
+      "newsId": "a82b09cdf287f42b08a2ea2f",
+      "sourceUrl": "https://www.santafe.gob.ar/noticias/noticia/286309/",
+      "sourceType": "official",
+      "sourceDate": "2026-06-11",
+      "detectedAt": "2026-10-14T21:10-03:00",
+      "status": "historical",
+      "datePrecision": "day"
+    },
+    "6982f610cec3dcd4b35f6e3c": {
+      "field": "stage",
+      "proposal": "Puesta en marcha / operación a verificar",
+      "kind": "status",
+      "scope": "Por verificar; puede referir a un componente",
+      "id": "6982f610cec3dcd4b35f6e3c",
+      "projectId": "G22",
+      "newsId": "60abd0d56dbaaf58f4158bde",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/mas-de-13000-nuevos-usuarios-de-mar-del-plata-y-balcarce-tendran-gas-natural",
+      "sourceType": "official",
+      "sourceDate": "2023-07-13T20:16:58-03:00",
+      "detectedAt": "2026-10-14T21:10-03:00",
+      "status": "historical",
+      "datePrecision": "instant"
+    },
+    "eda0042594aa2cefee6254ba": {
+      "field": "progress",
+      "proposal": 80.0,
+      "kind": "progress",
+      "scope": "Componente por verificar",
+      "evidence": "el Gasoducto de la Costa. También anunció el avance del 80% del tramo de 18km de Tandil y de la",
+      "id": "eda0042594aa2cefee6254ba",
+      "projectId": "G22",
+      "newsId": "60abd0d56dbaaf58f4158bde",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/mas-de-13000-nuevos-usuarios-de-mar-del-plata-y-balcarce-tendran-gas-natural",
+      "sourceType": "official",
+      "sourceDate": "2023-07-13T20:16:58-03:00",
+      "detectedAt": "2026-10-14T21:10-03:00",
+      "status": "historical",
+      "datePrecision": "instant"
     }
   },
   "sourceChecks": {
@@ -10632,6 +10759,101 @@
       "lastSuccessAt": "2026-10-14T20:44-03:00",
       "status": "ok",
       "hash": "72a5b3158fbfffcb5de65b7fd4d6ef677c65f324c5e0d47999470b981010b694",
+      "changed": false
+    },
+    "https://www.litoralgas.com.ar/site/informacion-util/noticias/litoralgas-avanza-en-la-puesta-en-funcionamiento-del-gasoducto-regional-centro-ii/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "d87b1a0cad61d5d3935797fad565b57c4b1f37d4f3e8e287a9f62e4b42d2fb4a",
+      "changed": false
+    },
+    "https://www.santafe.gob.ar/noticias/noticia/285590/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "f4fa65794aed7ab68f462a5d8a4759c2eb7c56e0a8344daa7041fbdc91b55ed1",
+      "changed": false
+    },
+    "https://www.santafe.gob.ar/noticias/noticia/284101/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "7989a9065d5eec68e05b21e4af2f32b546970c81eb069d7da018b9ef3aaecf0b",
+      "changed": false
+    },
+    "https://www.santafe.gob.ar/noticias/noticia/286309/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "3cbf8b1891016701d1059b91f21fd4c67d3a8dd47b42bc041a7c21ae602b55c3",
+      "changed": false
+    },
+    "https://www.santafe.gob.ar/ms/enerfe/2021/05/21/gasoducto-regional-sur/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "02376c79786e4b0e0f07758f64602783d82e1ef60ded1a875ee9274e1c3a3791",
+      "changed": false
+    },
+    "https://www.santafe.gob.ar/noticias/noticia/imprimir/282855/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "c36b848e2a666bc4007c217fcc941ea1c33516767a5fbffc593a00ccb5b266ad",
+      "changed": false
+    },
+    "https://legislaturacba.gob.ar/wp-content/uploads/2022/11/26-10-2022-Anexo-Ley-10485.pdf": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "retryAt": "2026-10-15T03:10:31.230616-03:00",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    "https://www.argentina.gob.ar/noticias/mas-de-13000-nuevos-usuarios-de-mar-del-plata-y-balcarce-tendran-gas-natural": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "46335d5fa9979062f785ccf6246962143969d2012d373d9af715aa8df4a84e3b",
+      "changed": false
+    },
+    "https://www.camuzzigas.com.ar/comunicados/factibilidadesmdq-08-08-2019/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "9804d8bed6d0e27e612274dbad963e19fa162f5009f5dad02e0a6b24b7e81472",
+      "changed": false
+    },
+    "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-67-2022-360655/actualizacion": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "8a03b3c062e620af44cda00981f164f37f2b6207013a3e4ac9e7a0ec93144b68",
+      "changed": false
+    },
+    "https://www.oldelval.com/proyecto-duplicar/": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "ed163f4f24ec76bfa173d36e1852c814750c5e28326d7f224677693eb5e546a7",
+      "changed": false
+    },
+    "https://www.techint.com/es/nuestros-proyectos/duplicar-norte": {
+      "type": "document",
+      "checkedAt": "2026-10-14T21:10-03:00",
+      "lastSuccessAt": "2026-10-14T21:10-03:00",
+      "status": "ok",
+      "hash": "7a3cb38c645ad38da8eac2508bb0339d1952f978acd9bc284db3831a3ce91d73",
       "changed": false
     }
   },
