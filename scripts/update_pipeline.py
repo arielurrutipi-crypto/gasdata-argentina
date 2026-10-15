@@ -43,6 +43,7 @@ from bagsa_news import update_bagsa_news
 from tariff_comparison import update_tariff_comparison
 from resolution_export import update_resolution_export
 from infrastructure import update_infrastructure
+from infrastructure_layers import update_layers
 
 def update_news(d):
     return read_news(d, fetch, now, iso)
@@ -1756,6 +1757,7 @@ def main():
     sync_update_catalog(d)
     update_news(d)
     update_infrastructure(d, fetch, now, iso)
+    update_layers(d, fetch, now, iso)
     update_bagsa_news(d, now, iso)
     update_resolution_export(d, now, iso)
     scan=d.get("regulationScan",{})

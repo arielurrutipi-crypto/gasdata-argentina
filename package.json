@@ -1,0 +1,6 @@
+{
+  "name": "gasdata-portal-checks",
+  "private": true,
+  "scripts": {"test:portal": "node scripts/test_portal_enhancements.cjs"},
+  "devDependencies": {"jsdom": "26.1.0"}
+}

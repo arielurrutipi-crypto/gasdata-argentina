@@ -6,6 +6,8 @@
  const link=u=>/^https:\/\//.test(u||'')?esc(u):'#';
  const color=p=>p.products.includes('GNL')?'#7954a4':p.products.includes('Petróleo / líquidos')?'#bb751d':'#147e8a';
  let geography=null,basemap=null,last=null,overview=null,detailMap=null,detailNode=null,active=null,frame=null,baseError=false;
+ let systems=null,systemsPromise=null;
+ const systemOptions={network:false,compressors:false,basins:false,operator:''},systemMaps=new Map();
  const allBounds=[[-56,-75],[-21,-52]];
  const valid=p=>p&&Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&p.lat>=-90&&p.lat<=90&&p.lon>=-180&&p.lon<=180;
  const points=p=>(geography?.projects[p.id]?.points||[]).filter(valid);
@@ -13,14 +15,49 @@
  const coords=ps=>ps.map(p=>[p.lat,p.lon]);
  function mapAt(node){
    const m=L.map(node,{scrollWheelZoom:false,zoomSnap:0.25,zoomDelta:0.5,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
+   m.createPane('infraSystem');m.getPane('infraSystem').style.zIndex=350;
+   systemMaps.set(m,L.layerGroup().addTo(m));m.on('unload',()=>systemMaps.delete(m));
    m.createPane('infraReference');m.getPane('infraReference').style.zIndex=150;
    if(basemap)L.geoJSON(basemap,{pane:'infraReference',style:f=>({color:'#9bafb4',weight:1,fillColor:f.properties.name==='Argentina'?'#edf4f0':'#f5f4ef',fillOpacity:1}),interactive:false}).addTo(m);
    m.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/">Natural Earth</a>');
    const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',updateWhenIdle:true,keepBuffer:1});
    tiles.on('tileerror',()=>{const n=node.parentElement?.querySelector('.infra-tile-status');if(n)n.textContent='El fondo detallado no respondió. Se conserva la cartografía de referencia y los proyectos.';});
-   tiles.addTo(m);m.fitBounds(allBounds,{padding:[18,18]});return m;
+   tiles.addTo(m);m.fitBounds(allBounds,{padding:[18,18]});installSystemControls(node);drawSystem(m);return m;
  }
- function popup(p){return `<div class="infra-map-popup"><span>${esc(p.id)} · ${esc(label(p))}</span><b>${esc(p.name)}</b><p>${esc(p.verifiedStatus)}</p><small>Ubicación aproximada · ${esc(p.provinces.join(' / '))}</small><button type="button" data-infra-open="${esc(p.id)}">Abrir ficha →</button></div>`;}
+ function operator(p){const v=String(p.operator||'');return /gas del norte|\btgn\b/i.test(v)?'TGN':/gas del sur|\btgs\b/i.test(v)?'TGS':/energ[ií]a argentina|enarsa/i.test(v)?'ENARSA':'Otras';}
+ const networkColor=p=>({TGS:'#306bb3',TGN:'#c35649',ENARSA:'#448568',Otras:'#727c85'})[operator(p)];
+ function systemDate(v){if(!v)return 'No informada';const d=new Date(v);return isNaN(d)?'No informada':new Intl.DateTimeFormat('es-AR',{dateStyle:'short',timeZone:'America/Argentina/Buenos_Aires'}).format(d);}
+ function installSystemControls(node){
+   const container=node.parentElement;if(container.querySelector('[data-system-controls]'))return;
+   node.insertAdjacentHTML('beforebegin',`<details class="gd-system-controls" data-system-controls><summary>Capas del sistema gasífero <span data-system-count></span></summary><div class="gd-layer-choices"><label><input type="checkbox" data-system-layer="network" ${systemOptions.network?'checked':''}> Gasoductos publicados</label><label><input type="checkbox" data-system-layer="compressors" ${systemOptions.compressors?'checked':''}> Plantas compresoras</label><label><input type="checkbox" data-system-layer="basins" ${systemOptions.basins?'checked':''}> Cuencas productivas</label><label>Transportista<select data-system-operator><option value="">Todas</option>${['TGS','TGN','ENARSA','Otras'].map(v=>`<option value="${v}" ${systemOptions.operator===v?'selected':''}>${v}</option>`).join('')}</select></label></div><p class="gd-network-legend"><span style="--pin:#306bb3">TGS</span><span style="--pin:#c35649">TGN</span><span style="--pin:#448568">ENARSA</span><span style="--pin:#727c85">Otras</span> · colores de las líneas; los proyectos conservan sus colores por energía.</p><p class="gd-layer-status" role="status"></p><details class="gd-layer-evidence"><summary>Fuentes y vigencia de las capas</summary><div data-system-sources></div></details></details>`);
+   systemMetadata();
+ }
+ function systemMetadata(){
+   root.querySelectorAll('[data-system-controls]').forEach(el=>{
+     el.querySelectorAll('[data-system-layer]').forEach(x=>x.checked=systemOptions[x.dataset.systemLayer]);el.querySelector('[data-system-operator]').value=systemOptions.operator;
+     el.querySelector('[data-system-count]').textContent=Object.keys(systemOptions).filter(k=>k!=='operator'&&systemOptions[k]).length+' activas';
+     el.querySelector('[data-system-sources]').innerHTML=systems?`<p>${esc(systems.meta.geometryNote)}</p>`+systems.layers.map(l=>`<p><a href="${link(l.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} · ${esc(l.source)} ↗</a><br>${l.features.length} elementos · última consulta ${systemDate(l.checkedAt)} · última válida ${systemDate(l.lastSuccessAt)} · edición de la fuente ${systemDate(l.sourceUpdatedAt)}${l.status==='error'?' · error: se conserva la última capa válida':''}</p>`).join('')+'<p>Actualización semanal; ante fallos se reintenta a las 6 horas. Las capas publicadas no certifican que cada instalación esté operativa.</p>':'Las capas se consultan al activarlas. Se descargan desde GasData, sin consultar los servicios oficiales desde tu navegador.';
+   });
+ }
+ function drawSystem(m){
+   const group=systemMaps.get(m);if(!group)return;group.clearLayers();if(!systems)return;
+   const selected=systems.layers.filter(l=>l.id==='basins'?systemOptions.basins:l.id==='compressors'?systemOptions.compressors:systemOptions.network).sort((a,b)=>(a.id==='basins'?-1:0)-(b.id==='basins'?-1:0));
+   for(const layer of selected){const fs=layer.features.filter(f=>layer.id==='basins'||!systemOptions.operator||operator(f.properties)===systemOptions.operator);
+     L.geoJSON({type:'FeatureCollection',features:fs},{pane:'infraSystem',style:f=>layer.id==='basins'?{color:'#8e6d48',weight:1,fillColor:'#d7bd85',fillOpacity:.18}:{color:networkColor(f.properties),weight:2.2,opacity:.75},pointToLayer:(f,ll)=>L.circleMarker(ll,{pane:'infraSystem',radius:5,color:'#253d46',weight:1.5,fillColor:networkColor(f.properties),fillOpacity:1}),onEachFeature:(f,path)=>{const p=f.properties;path.bindPopup(`<div class="infra-map-popup"><b>${esc(p.name)}</b><p>${esc(layer.label)}</p>${p.operator?`<p>Operador publicado: ${esc(p.operator)}</p>`:''}${p.section?`<p>Tramo: ${esc(p.section)}</p>`:''}${p.diameter!=null?`<p>Diámetro publicado: ${esc(p.diameter)} pulgadas</p>`:''}<small>Geometría oficial generalizada para visualización. No certifica estado operativo ni un plano de ingeniería.</small><a href="${link(layer.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fuente oficial ↗</a></div>`);}}).addTo(group);
+   }
+ }
+ async function loadSystems(force=false){
+   if(systems&&!force){systemMaps.forEach((g,m)=>drawSystem(m));return;}if(systemsPromise)return systemsPromise;
+   const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),25000);
+   root.querySelectorAll('.gd-layer-status').forEach(n=>n.textContent='Cargando capas oficiales…');
+   systemsPromise=(async()=>{try{const res=await fetch('data/infrastructure-layers.json',{cache:'no-cache',signal:abort.signal});if(!res.ok)throw Error('HTTP '+res.status);const d=await res.json();if(d.meta?.schemaVersion!==1||!Array.isArray(d.layers))throw Error('Formato desconocido');systems=d;systemMaps.forEach((g,m)=>drawSystem(m));systemMetadata();root.querySelectorAll('.gd-layer-status').forEach(n=>n.textContent=d.layers.some(l=>l.status==='error')?'Hay fuentes con error. Se conserva la última geometría válida.':'Capas oficiales listas. Activá sólo las que quieras visualizar.');}catch(e){root.querySelectorAll('.gd-layer-status').forEach(n=>n.textContent='No se pudieron renovar las capas. Se conserva la última versión cargada; los proyectos siguen disponibles.');}finally{clearTimeout(timer);systemsPromise=null;}})();return systemsPromise;
+ }
+ root.addEventListener('change',e=>{
+   if(e.target.dataset.systemLayer){systemOptions[e.target.dataset.systemLayer]=e.target.checked;systemMetadata();loadSystems();}
+   if(e.target.hasAttribute('data-system-operator')){systemOptions.operator=e.target.value;if(systemOptions.operator)systemOptions.network=true;systemMetadata();loadSystems();}
+ });
+ setInterval(()=>{if(systems&&!document.hidden)loadSystems(true);},3600000);
+ function popup(p){return `<div class="infra-map-popup"><span>${esc(p.id)} · ${esc(label(p))}</span><b>${esc(p.name)}</b><p>${esc(p.verifiedStatus)}</p><small>Ubicación aproximada · ${esc(p.provinces.join(' / '))}</small><button type="button" data-infra-open="${esc(p.id)}">Abrir ficha →</button><button type="button" data-project-follow="${esc(p.id)}">☆ Seguir obra</button></div>`;}
  function fit(m,ps){if(ps.length===1)m.setView([ps[0].lat,ps[0].lon],9);else if(ps.length)m.fitBounds(coords(ps),{padding:[35,35],maxZoom:10});}
  function drawOverview(){
    if(!overview||!last)return;
@@ -46,7 +83,7 @@
    const p=last?.projects.find(x=>x.id===id);if(!p||!overview)return;
    active=id;fit(overview.map,points(p));drawOverview();
    const geo=geography.projects[id];
-   root.querySelector('#infraMapSelection').innerHTML=`<b>${esc(p.name)}</b><span>${esc(p.verifiedStatus)} · ${esc(p.provinces.join(' / '))}</span><small>${esc(geo.note)}</small><button type="button" data-infra-open="${esc(p.id)}">Abrir ficha →</button>`;
+   root.querySelector('#infraMapSelection').innerHTML=`<b>${esc(p.name)}</b><span>${esc(p.verifiedStatus)} · ${esc(p.provinces.join(' / '))}</span><small>${esc(geo.note)}</small><button type="button" data-infra-open="${esc(p.id)}">Abrir ficha →</button><button type="button" data-project-follow="${esc(p.id)}">☆ Seguir obra</button>`;
    overview.map.closePopup();
  }
  function sidebar(){
