@@ -12,7 +12,7 @@
  const label=p=>p.products.includes('GNL')?'GNL':p.products.includes('Petróleo / líquidos')?'Petróleo / líquidos':'Gas';
  const coords=ps=>ps.map(p=>[p.lat,p.lon]);
  function mapAt(node){
-   const m=L.map(node,{scrollWheelZoom:false,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
+   const m=L.map(node,{scrollWheelZoom:false,zoomSnap:0.25,zoomDelta:0.5,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
    m.createPane('infraReference');m.getPane('infraReference').style.zIndex=150;
    if(basemap)L.geoJSON(basemap,{pane:'infraReference',style:f=>({color:'#9bafb4',weight:1,fillColor:f.properties.name==='Argentina'?'#edf4f0':'#f5f4ef',fillOpacity:1}),interactive:false}).addTo(m);
    m.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/">Natural Earth</a>');
