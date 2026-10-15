@@ -29,3 +29,13 @@ Las imágenes principales son esquemas originales SVG, fijos por ID, sin escala 
 ## Comprobaciones
 
 `python -m unittest discover -s scripts -p 'test_infrastructure.py'` comprueba aliases, exclusiones, archivo permanente, fechas, alcance de porcentajes, fallas, frecuencia, revisión y escritura atómica. El workflow incluye estas pruebas además de sus lectores y estimador existentes.
+
+## Exploración geográfica
+
+El mapa general y cada ficha utilizan Leaflet 1.9.4 (BSD-2-Clause, copias locales), fondo OpenStreetMap con atribución ODbL y geometrías Natural Earth de dominio público como respaldo. Sólo se solicitan teselas visibles; no se descargan áreas ni se precargan mapas. La rueda está desactivada para no capturar el desplazamiento de la página.
+
+`data/infrastructure-geography.json` mantiene las referencias cartográficas separadas de los datos actualizados por el colector. Contiene 33 proyectos; G07 no está incluido. Cada punto está identificado como aproximado: centros de localidades o referencias regionales, nunca coordenadas relevadas de plantas ni una polilínea que aparente ser una traza oficial. Los proyectos cercanos se agrupan por proximidad visual, sin desplazar artificialmente sus coordenadas. Los mismos siete filtros controlan mapa, panel y listado.
+
+Las fichas muestran su mapa interactivo y los documentos de origen. La imagen oficial del GPM se reproduce sin modificaciones, con atribución a Secretaría de Energía y licencia CC BY 4.0 según Argentina.gob.ar/terminos-y-condiciones. Material de empresas o medios sin licencia explícita permanece enlazado a su publicación original; no se copia a GasData. Los mapas históricos conservan contexto y denominaciones originales.
+
+Los datos de ubicación y las imágenes documentales no se sustituyen a partir de noticias: requieren revisión, como el resto de los hechos estructurales de la opción C. No se cambió ninguna frecuencia de consulta existente. Si falla el fondo o la carga cartográfica, el inventario, sus fichas y las automatizaciones siguen funcionando.

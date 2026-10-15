@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "verifiedAt": "2026-10-14",
+    "coordinates": "Referencias aproximadas elaboradas a partir de localidades/áreas documentadas. No son coordenadas de instalaciones ni trazas de ingeniería.",
+    "basemap": "Natural Earth (dominio público) + OpenStreetMap (ODbL)",
+    "basemapSource": "https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "projects": {
+    "G01": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Salliqueló — localidad",
+          "lat": -36.75,
+          "lon": -62.96,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.energia-argentina.com.ar/transporte-de-gas/",
+        "https://www.argentina.gob.ar/economia/energia/gasoducto-presidente-nestor-kirchner/cronologia"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Mapa oficial del tramo I",
+          "url": "https://www.argentina.gob.ar/economia/energia/gasoducto-presidente-nestor-kirchner/ubicacion-objetivos-y-beneficios",
+          "publisher": "Secretaría de Energía",
+          "image": "assets/infrastructure/gpm-mapa-oficial.jpg",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://www.argentina.gob.ar/terminos-y-condiciones",
+          "note": "Documento histórico: conserva la denominación GPNK. Reproducción sin modificaciones."
+        }
+      ]
+    },
+    "G02": {
+      "points": [
+        {
+          "label": "Mercedes — localidad",
+          "lat": -34.65,
+          "lon": -59.43,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Los Cardales — localidad",
+          "lat": -34.33,
+          "lon": -58.99,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.energia-argentina.com.ar/el-gasoducto-mercedes-cardales-comenzo-a-transportar-gas/",
+        "https://www.argentina.gob.ar/noticias/se-puso-en-marcha-la-planta-compresora-mercedes"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Mapa del sistema y obras complementarias",
+          "url": "https://www.energia-argentina.com.ar/transporte-de-gas/",
+          "publisher": "ENARSA",
+          "note": "Consultar la cartografía en la página original."
+        }
+      ]
+    },
+    "G03": {
+      "points": [
+        {
+          "label": "Ordoqui — localidad",
+          "lat": -35.96,
+          "lon": -61.2,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.energia-argentina.com.ar/el-gasoducto-mercedes-cardales-comenzo-a-transportar-gas/",
+        "https://gpnk.energia-argentina.com.ar/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Mapa histórico: GPM y loop de Ordoqui",
+          "url": "https://www.argentina.gob.ar/economia/energia/gasoducto-presidente-nestor-kirchner/ubicacion-objetivos-y-beneficios",
+          "publisher": "Secretaría de Energía",
+          "image": "assets/infrastructure/gpm-mapa-oficial.jpg",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://www.argentina.gob.ar/terminos-y-condiciones",
+          "note": "Mapa de contexto del sistema: ubica Ordoqui en NEUBA II; no es un plano de detalle del loop. Conserva la denominación histórica GPNK."
+        },
+        {
+          "title": "Obras complementarias y ubicación",
+          "url": "https://gpnk.energia-argentina.com.ar/",
+          "publisher": "ENARSA",
+          "note": "Micrositio histórico del proyecto; consultar Ordoqui."
+        }
+      ]
+    },
+    "G04": {
+      "points": [
+        {
+          "label": "La Carlota — localidad",
+          "lat": -33.42,
+          "lon": -63.3,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Tío Pujio — localidad",
+          "lat": -32.29,
+          "lon": -63.36,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Ferreyra — referencia urbana",
+          "lat": -31.46,
+          "lon": -64.1,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.energia-argentina.com.ar/titulo-noticia-6/",
+        "https://www.energia-argentina.com.ar/nuevo-hito-en-el-proyecto-reversion-gasoducto-norte/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Geovisor oficial: Reversión del Gasoducto Norte",
+          "url": "https://observatorio.energia-argentina.com.ar/geovisor.php?geovisor=32",
+          "publisher": "ENARSA",
+          "note": "Activar las capas de Reversión del Norte en el visor original."
+        }
+      ]
+    },
+    "G05": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Casa de Piedra — localidad",
+          "lat": -38.22,
+          "lon": -67.16,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Doblas — localidad",
+          "lat": -37.15,
+          "lon": -64.01,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Chacharramendi — localidad",
+          "lat": -37.33,
+          "lon": -65.65,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tgs.com.ar/adjudican-a-tgs-las-obras-de-ampliacion-del-gasoducto-perito-moreno/",
+        "https://www.tgs.com.ar/tgs-avanza-con-las-obras-de-ampliacion-del-gasoducto-perito-moreno-y-lanza-los-concursos-abiertos-para-adjudicar-la-capacidad-de-transporte-firme-incremental/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Ampliación del GPM: alcance publicado",
+          "url": "https://www.tgs.com.ar/tgs-avanza-con-las-obras-de-ampliacion-del-gasoducto-perito-moreno-y-lanza-los-concursos-abiertos-para-adjudicar-la-capacidad-de-transporte-firme-incremental/",
+          "publisher": "TGS",
+          "note": "Documentación original de las nuevas plantas y obras."
+        }
+      ]
+    },
+    "G06": {
+      "points": [
+        {
+          "label": "Salliqueló — localidad",
+          "lat": -36.75,
+          "lon": -62.96,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Gran Buenos Aires — referencia regional",
+          "lat": -34.65,
+          "lon": -58.6,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tgs.com.ar/adjudican-a-tgs-las-obras-de-ampliacion-del-gasoducto-perito-moreno/",
+        "https://www.tgs.com.ar/tgs-avanza-con-las-obras-de-ampliacion-del-gasoducto-perito-moreno-y-lanza-los-concursos-abiertos-para-adjudicar-la-capacidad-de-transporte-firme-incremental/"
+      ],
+      "note": "Referencias de cabecera y área de consumo. No se georreferencian loops ni plantas específicos.",
+      "documents": [
+        {
+          "title": "Tramos finales: alcance publicado",
+          "url": "https://www.tgs.com.ar/tgs-avanza-con-las-obras-de-ampliacion-del-gasoducto-perito-moreno-y-lanza-los-concursos-abiertos-para-adjudicar-la-capacidad-de-transporte-firme-incremental/",
+          "publisher": "TGS",
+          "note": "Documentación original del paquete de ampliación."
+        }
+      ]
+    },
+    "G08": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        },
+        {
+          "label": "La Carlota — localidad",
+          "lat": -33.42,
+          "lon": -63.3,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tgn.com.ar/assets/media/2026/09/2026-09-17_Comunicado_de_Prensa_TGN-Gasoducto_Manuel_Belgrano.pdf"
+      ],
+      "note": "Se ubican los extremos anunciados del nuevo ducto. No incluye la localización de cada loop del sistema TGN.",
+      "documents": []
+    },
+    "G09": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Bahía Blanca — localidad",
+          "lat": -38.72,
+          "lon": -62.27,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tgs.com.ar/tgs-avanza-con-la-decision-final-de-inversion-para-su-proyecto-de-procesamiento-de-liquidos-en-vaca-muerta/",
+        "https://www.tgs.com.ar/tgs-anuncio-la-mayor-inversion-de-la-historia-para-un-proyecto-de-liquidos-de-gas-natural-ngls-en-argentina/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G10": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tgs.com.ar/wp-content/uploads/2025/04/tgs_Memoria-y-Estados-Financieros-2024_ESP_OK.pdf",
+        "https://www.tgs.com.ar/wp-content/uploads/2026/03/Annual-Report-FFSS-12-2025-completo.pdf"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G11": {
+      "points": [
+        {
+          "label": "Fénix — área offshore orientativa",
+          "lat": -53.35,
+          "lon": -67.55,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://totalenergies.com/newsroom/argentina-production-start-fenix-offshore-gas-field/?lang=eng",
+        "https://totalenergies.com/infographics/argentina-fenix-gas-project-glance"
+      ],
+      "note": "Punto orientativo en el área offshore al este de Tierra del Fuego. No es la coordenada de la plataforma.",
+      "documents": [
+        {
+          "title": "Infografía oficial Fénix y conexión a Vega Pléyade",
+          "url": "https://totalenergies.com/infographics/argentina-fenix-gas-project-glance",
+          "publisher": "TotalEnergies",
+          "note": "Mapa y esquema originales. © TotalEnergies; consulta en origen."
+        }
+      ]
+    },
+    "G12": {
+      "points": [
+        {
+          "label": "Añelo / área La Calera — referencia regional",
+          "lat": -38.35,
+          "lon": -68.79,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.pluspetrol.net/es/operaciones/argentina/la-calera",
+        "https://www.techint.com/media/dbbjthvq/tec-rse2022-esp.pdf"
+      ],
+      "note": "Referencia regional cercana a Añelo; ubicación exacta de la CPF no verificada.",
+      "documents": []
+    },
+    "G13": {
+      "points": [
+        {
+          "label": "Añelo / área La Calera — referencia regional",
+          "lat": -38.35,
+          "lon": -68.79,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.pluspetrol.net/es/operaciones/argentina/la-calera"
+      ],
+      "note": "Referencia regional cercana a Añelo; ubicación exacta de la ampliación no verificada.",
+      "documents": []
+    },
+    "G14": {
+      "points": [
+        {
+          "label": "Golfo San Matías — área marítima de referencia",
+          "lat": -41.15,
+          "lon": -64.8,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://southern-nrg.com/el-proyecto/",
+        "https://southern-nrg.com/san-matias-pipeline-obtiene-prestamo-por-usd-900-m-para-el-gasoducto-dedicado/"
+      ],
+      "note": "Referencia del golfo; no representa el punto de fondeo de los buques.",
+      "documents": [
+        {
+          "title": "Mapa de ubicación del proyecto FLNG",
+          "url": "https://southern-nrg.com/el-proyecto/",
+          "publisher": "Southern Energy",
+          "note": "Mapa del Golfo San Matías en la página original."
+        }
+      ]
+    },
+    "G15": {
+      "points": [
+        {
+          "label": "Tratayén — referencia regional",
+          "lat": -38.38,
+          "lon": -68.72,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Allen — localidad",
+          "lat": -38.98,
+          "lon": -67.83,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Golfo San Matías — área marítima de referencia",
+          "lat": -41.15,
+          "lon": -64.8,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://southern-nrg.com/san-matias-pipeline-obtiene-prestamo-por-usd-900-m-para-el-gasoducto-dedicado/",
+        "https://gobierno.rionegro.gov.ar/articulo/61941/san-matias-pipeline-inicia-el-traslado-de-canos-y-las-excavaciones"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Gasoducto dedicado: ubicación y alcance",
+          "url": "https://southern-nrg.com/el-proyecto/",
+          "publisher": "Southern Energy",
+          "note": "Mapa de contexto en la página del proyecto; no confundir con una traza ejecutiva."
+        }
+      ]
+    },
+    "G16": {
+      "points": [
+        {
+          "label": "Añelo / área La Calera — referencia regional",
+          "lat": -38.35,
+          "lon": -68.79,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Sierra Grande / costa — referencia regional",
+          "lat": -41.61,
+          "lon": -65.12,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.eni.com/en-IT/media/press-release/2026/08/argentina-lng-submits-application-for-rigi-approval.html",
+        "https://rionegro.gov.ar/articulo/61852/rio-negro-convoca-a-audiencia-publica-por-el-proyecto-argentina-gnl"
+      ],
+      "note": "Áreas de origen y destino del proyecto integrado. No representa su traza aprobada.",
+      "documents": [
+        {
+          "title": "Mapa del proyecto Argentina LNG",
+          "url": "https://argentina-lng.ypf.com/index-en.html",
+          "publisher": "YPF",
+          "note": "Documentación gráfica del proyecto integrado en origen."
+        }
+      ]
+    },
+    "G17": {
+      "points": [
+        {
+          "label": "Recreo — localidad",
+          "lat": -31.49,
+          "lon": -60.73,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Esperanza — localidad",
+          "lat": -31.45,
+          "lon": -60.93,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Rafaela — localidad",
+          "lat": -31.25,
+          "lon": -61.49,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Sunchales — localidad",
+          "lat": -30.94,
+          "lon": -61.56,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.litoralgas.com.ar/site/informacion-util/noticias/litoralgas-avanza-en-la-puesta-en-funcionamiento-del-gasoducto-regional-centro-ii/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G18": {
+      "points": [
+        {
+          "label": "Esperanza — localidad",
+          "lat": -31.45,
+          "lon": -60.93,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Santa Fe — localidad",
+          "lat": -31.63,
+          "lon": -60.7,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Arroyo Leyes — localidad",
+          "lat": -31.57,
+          "lon": -60.49,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.santafe.gob.ar/noticias/noticia/285590/",
+        "https://www.santafe.gob.ar/noticias/noticia/284101/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G19": {
+      "points": [
+        {
+          "label": "Venado Tuerto — localidad",
+          "lat": -33.75,
+          "lon": -61.97,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Firmat — localidad",
+          "lat": -33.46,
+          "lon": -61.48,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Melincué — localidad",
+          "lat": -33.66,
+          "lon": -61.46,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.santafe.gob.ar/noticias/noticia/286309/",
+        "https://www.santafe.gob.ar/ms/enerfe/2021/05/21/gasoducto-regional-sur/"
+      ],
+      "note": "Selección de localidades beneficiarias; no representa todos los ramales del proyecto.",
+      "documents": [
+        {
+          "title": "Croquis de ampliación y refuerzo Regional Sur",
+          "url": "https://www.santafe.gob.ar/ms/enerfe/2021/05/21/gasoducto-regional-sur/",
+          "publisher": "ENERFE / Santa Fe",
+          "note": "Dos croquis originales del alcance publicado en 2021."
+        }
+      ]
+    },
+    "G20": {
+      "points": [
+        {
+          "label": "Chañar Ladeado — localidad",
+          "lat": -33.33,
+          "lon": -62.04,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Berabevú — localidad",
+          "lat": -33.34,
+          "lon": -61.86,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Los Quirquinchos — localidad",
+          "lat": -33.37,
+          "lon": -61.72,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.santafe.gob.ar/noticias/noticia/imprimir/282855/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G21": {
+      "points": [
+        {
+          "label": "Límite Córdoba–Santa Fe — referencia regional",
+          "lat": -31.5,
+          "lon": -62.1,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://legislaturacba.gob.ar/wp-content/uploads/2022/11/26-10-2022-Anexo-Ley-10485.pdf"
+      ],
+      "note": "Localización regional Córdoba–Santa Fe; recorrido específico pendiente de verificación.",
+      "documents": []
+    },
+    "G22": {
+      "points": [
+        {
+          "label": "Balcarce — localidad",
+          "lat": -37.85,
+          "lon": -58.26,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Mar del Plata — localidad",
+          "lat": -38.0,
+          "lon": -57.55,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Las Armas — localidad",
+          "lat": -37.09,
+          "lon": -57.82,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.argentina.gob.ar/noticias/mas-de-13000-nuevos-usuarios-de-mar-del-plata-y-balcarce-tendran-gas-natural",
+        "https://www.camuzzigas.com.ar/comunicados/factibilidadesmdq-08-08-2019/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G23": {
+      "points": [
+        {
+          "label": "Barrancas — localidad",
+          "lat": -32.24,
+          "lon": -60.98,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Desvío Arijón — localidad",
+          "lat": -31.87,
+          "lon": -60.89,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-67-2022-360655/actualizacion",
+        "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-66-2026-423872/texto"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "G24": {
+      "points": [
+        {
+          "label": "Aldea Brasilera — localidad",
+          "lat": -31.89,
+          "lon": -60.59,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-67-2022-360655/actualizacion",
+        "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-66-2026-423872/texto"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "P01": {
+      "points": [
+        {
+          "label": "Allen — localidad",
+          "lat": -38.98,
+          "lon": -67.83,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Puerto Rosales — área portuaria",
+          "lat": -38.92,
+          "lon": -62.06,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.oldelval.com/proyecto-duplicar/",
+        "https://www.oldelval.com/segui-en-vivo-la-inauguracion-del-proyecto-duplicar-de-oldelval/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Mapa del sistema Duplicar",
+          "url": "https://www.oldelval.com/proyecto-duplicar/",
+          "publisher": "Oldelval",
+          "note": "Consultar el gráfico original del sistema."
+        }
+      ]
+    },
+    "P02": {
+      "points": [
+        {
+          "label": "Auca Mahuida — área de referencia",
+          "lat": -37.75,
+          "lon": -68.75,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Allen — localidad",
+          "lat": -38.98,
+          "lon": -67.83,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.oldelval.com/oldelval-confirmo-la-ejecucion-del-proyecto-duplicar-norte/",
+        "https://www.oldelval.com/oldelval-firmo-un-acuerdo-con-rio-negro-por-el-oleoducto-duplicar-norte/"
+      ],
+      "note": "Auca Mahuida se representa por un área orientativa, no por la estación de bombeo.",
+      "documents": [
+        {
+          "title": "Ficha técnica y localización Duplicar Norte",
+          "url": "https://www.techint.com/es/nuestros-proyectos/duplicar-norte",
+          "publisher": "Techint E&C",
+          "note": "Ubicación y alcance en la ficha original del contratista."
+        }
+      ]
+    },
+    "P03": {
+      "points": [
+        {
+          "label": "Allen — localidad",
+          "lat": -38.98,
+          "lon": -67.83,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Chelforó — localidad",
+          "lat": -39.08,
+          "lon": -66.53,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Punta Colorada — área de referencia",
+          "lat": -41.69,
+          "lon": -65.02,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/322830/1",
+        "https://www.techint.com/es/noticias/2026/la-fuerza-de-la-union-finalizamos-la-construccion-del-vaca-muerta-oil-sur-vmos"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": [
+        {
+          "title": "Ficha técnica y localización VMOS",
+          "url": "https://www.techint.com/es/nuestros-proyectos/vmos",
+          "publisher": "Techint E&C",
+          "note": "Ubicación y alcance en la ficha original del contratista."
+        }
+      ]
+    },
+    "P04": {
+      "points": [
+        {
+          "label": "Loma Campana — área regional",
+          "lat": -38.5,
+          "lon": -68.7,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Allen — localidad",
+          "lat": -38.98,
+          "lon": -67.83,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/904851/000119312526126363/d95578d20f.htm",
+        "https://www.sec.gov/Archives/edgar/data/904851/000119312525067155/d866694d20f.htm"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "P05": {
+      "points": [
+        {
+          "label": "Loma Campana — área regional",
+          "lat": -38.5,
+          "lon": -68.7,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Puesto Hernández — área de referencia",
+          "lat": -37.21,
+          "lon": -68.96,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/904851/000119312525067155/d866694d20f.htm"
+      ],
+      "note": "Se muestran las áreas del corredor neuquino; no su continuidad logística completa.",
+      "documents": []
+    },
+    "P06": {
+      "points": [
+        {
+          "label": "Puesto Hernández — área de referencia",
+          "lat": -37.21,
+          "lon": -68.96,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Concepción / Bío Bío, Chile — referencia regional",
+          "lat": -36.82,
+          "lon": -73.05,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.argentina.gob.ar/normativa/nacional/decreto-1106-2024-407405/texto",
+        "https://www.sec.gov/Archives/edgar/data/904851/000119312525067155/d866694d20f.htm"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "P07": {
+      "points": [
+        {
+          "label": "Puerto Rosales — área portuaria",
+          "lat": -38.92,
+          "lon": -62.06,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.otamerica.com/titulo-otamerica-argentina-alcanza-un-nuevo-hito-logistico-con-la-llegada-del-primer-buque-suezmax/",
+        "https://puertorosales.com/node/455"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    },
+    "P08": {
+      "points": [
+        {
+          "label": "Rincón de los Sauces / Los Toldos — referencia regional",
+          "lat": -37.39,
+          "lon": -68.92,
+          "certainty": "approximate"
+        },
+        {
+          "label": "Auca Mahuida — área de referencia",
+          "lat": -37.75,
+          "lon": -68.75,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.tecpetrol.com/es/noticias/2026/los-toldos-ii-este",
+        "https://www.tecpetrol.com/es/noticias/2026/rigi-los-toldos-ii-este"
+      ],
+      "note": "Referencia regional de Rincón de los Sauces; no es la posición exacta de la CPF.",
+      "documents": [
+        {
+          "title": "Ficha técnica y localización Los Toldos II Este",
+          "url": "https://www.techint.com/es/nuestros-proyectos/los-toldos-ii-este",
+          "publisher": "Techint E&C",
+          "note": "Ubicación y alcance en la ficha original del contratista."
+        }
+      ]
+    },
+    "P09": {
+      "points": [
+        {
+          "label": "Rincón de Aranda — referencia regional de Vaca Muerta",
+          "lat": -38.15,
+          "lon": -69.0,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://ri.pampa.com/press-release/aprobacion-del-proyecto-rincon-de-aranda-rda-al-regimen-de-incentivo-para-grandes-inversiones-rigi/",
+        "https://pampa.com/prensa/pampa-energia-aumento-48-sus-resultados-operativos-en-el-primer-trimestre-de-2026/"
+      ],
+      "note": "Referencia regional de Vaca Muerta; límites del bloque y planta pendientes de georreferenciación.",
+      "documents": []
+    },
+    "P10": {
+      "points": [
+        {
+          "label": "Campana — localidad",
+          "lat": -34.16,
+          "lon": -58.96,
+          "certainty": "approximate"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.axionenergy.com/refineria/inversion-axion-energy-dejamos-de-importar-diesel-premium-y-lo-producimos-en-campana/",
+        "https://www.axionenergy.com/en-movimiento/universo-axion/tecnologia-refineria-y-futuro-asi-se-prepara-axion-energy/"
+      ],
+      "note": "Localidades o áreas documentadas, ubicadas de forma aproximada. Los puntos no representan instalaciones precisas.",
+      "documents": []
+    }
+  }
+}
