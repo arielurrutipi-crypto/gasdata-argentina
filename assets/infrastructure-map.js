@@ -13,7 +13,8 @@
  const coords=ps=>ps.map(p=>[p.lat,p.lon]);
  function mapAt(node){
    const m=L.map(node,{scrollWheelZoom:false,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
-   if(basemap)L.geoJSON(basemap,{style:f=>({color:'#9bafb4',weight:1,fillColor:f.properties.name==='Argentina'?'#edf4f0':'#f5f4ef',fillOpacity:1}),interactive:false}).addTo(m);
+   m.createPane('infraReference');m.getPane('infraReference').style.zIndex=150;
+   if(basemap)L.geoJSON(basemap,{pane:'infraReference',style:f=>({color:'#9bafb4',weight:1,fillColor:f.properties.name==='Argentina'?'#edf4f0':'#f5f4ef',fillOpacity:1}),interactive:false}).addTo(m);
    m.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/">Natural Earth</a>');
    const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',updateWhenIdle:true,keepBuffer:1});
    tiles.on('tileerror',()=>{const n=node.parentElement?.querySelector('.infra-tile-status');if(n)n.textContent='El fondo detallado no respondió. Se conserva la cartografía de referencia y los proyectos.';});
