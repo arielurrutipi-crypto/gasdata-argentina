@@ -145,7 +145,7 @@
    if(e.target.closest('#gdAlertsReadAll')){Object.values(records.events).forEach(e=>{e.readAt=stamp();if(e.followKey&&portalSaved[e.followKey])portalSaved[e.followKey].status='read';});portalWrite(PORTAL_STORE,portalSaved);persist();renderFollowing();renderAlerts();}
    if(e.target.closest('#gdAlertsMore')){limit+=12;renderAlerts();}
    if(e.target.closest('#gdCompareClear')){chosen=[];portalWrite(COMPARE_STORE,chosen);renderProjectComparison();}
-   if(e.target.closest('[data-gd-health-open]')){page('inicio');$('#gasdataFreshness').open=true;$('#gasdataFreshness').scrollIntoView({block:'center',behavior:'smooth'});}
+   if(e.target.closest('[data-gd-health-open]')){page('actualizaciones');$('#gasdataFreshness').open=true;$('#gasdataFreshness').scrollIntoView({block:'center',behavior:'smooth'});}
    queueMicrotask(syncProjectButtons);
  });
  document.addEventListener('change',e=>{

@@ -14,7 +14,7 @@
  const label=p=>p.products.includes('GNL')?'GNL':p.products.includes('Petróleo / líquidos')?'Petróleo / líquidos':'Gas';
  const coords=ps=>ps.map(p=>[p.lat,p.lon]);
  function mapAt(node){
-   const m=L.map(node,{scrollWheelZoom:false,zoomSnap:0.25,zoomDelta:0.5,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
+   const m=L.map(node,{scrollWheelZoom:true,zoomSnap:0.25,zoomDelta:0.5,minZoom:3,maxZoom:14,zoomControl:true,attributionControl:true});
    m.createPane('infraSystem');m.getPane('infraSystem').style.zIndex=350;
    systemMaps.set(m,L.layerGroup().addTo(m));m.on('unload',()=>systemMaps.delete(m));
    m.createPane('infraReference');m.getPane('infraReference').style.zIndex=150;
