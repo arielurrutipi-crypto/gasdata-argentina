@@ -46,6 +46,7 @@ class CatalogueTests(unittest.TestCase):
         r = dict(disposition='INSCRIBIR como comercializador de gas natural conforme al Reglamento de Comercializadores', tags=['Técnica / operativa'])
         d = self.data(); d['regulations'] = [r]; self.sync(d)
         self.assertFalse(r['technical']); self.assertNotIn('Técnica / operativa', r['tags'])
+        self.assertFalse(is_technical(dict(firstArticle='INSCRIBIR A UNA FIRMA COMO COMERCIALIZADOR DE GAS', desc='Antecedentes de normativa técnica y seguridad')))
 
     def test_technical_decisions_not_sanctions_or_electric_commercial_company(self):
         self.assertFalse(is_technical(dict(desc='SANCIONAR por incumplir la NAG-100')))

@@ -16277,23 +16277,21 @@
     },
     {
       "num": "Resolución 120/2026",
-      "category": "Técnica / operativa",
+      "category": "Mercado",
       "title": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 120/2026 RESFC-2026-120-APN-DIRECTORIO#ENREGE",
       "publishedAt": "2026-06-19T00:00-03:00",
       "validatedAt": "2026-09-30T11:59-03:00",
       "sourceType": "OFFICIAL",
       "status": "updated",
       "desc": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD Resolución 120/2026 RESFC-2026-120-APN-DIRECTORIO#ENREGE Ciudad de Buenos Aires, 17/06/2026 VISTO el Expediente N° EX-2025-127029878- -APN-GIYN#ENARGAS, la Ley N° 24.076 (T.O. 2025), la NAG- 444 y las Resolución N° RESOL-2026-96-APN-DIRECTORIO#ENARGAS (B.O. 5-3-26) y N.° RESOL-2026-329-APN-DIRECTORIO#ENARGAS (B.O. 12-3-26), y, C",
-      "tags": [
-        "Técnica / operativa"
-      ],
+      "tags": [],
       "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/343323/20260619",
       "issuer": "ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD",
       "auto": true,
       "firstArticle": "Prorrogar por treinta (30) días corridos, contados a partir de la fecha de vencimiento, los plazos establecidos en los artículos 1° y 2° de la Resolución N.° RESOL-2026-329-APN-DIRECTORIO#ENARGAS.",
       "disposition": "Prorrogar por treinta (30) días corridos, contados a partir de la fecha de vencimiento, los plazos establecidos en los artículos 1° y 2° de la Resolución N.° RESOL-2026-329-APN-DIRECTORIO#ENARGAS.",
       "operativePreview": true,
-      "technical": true
+      "technical": false
     },
     {
       "num": "Resolución 131/2026",
@@ -39586,7 +39584,7 @@
     "checkedAt": "2026-10-26T06:00-03:00",
     "complete": true,
     "added": 255,
-    "technicalCount": 34,
+    "technicalCount": 33,
     "sourceUrl": "https://www.enargas.gob.ar/secciones/normativa/resoluciones.php",
     "cadence": "Cada 3 horas",
     "dateMeaning": "Se distingue emisión de publicación; las ediciones pendientes del Boletín se conservan"

@@ -29,8 +29,7 @@ def regulator_key(row):
 
 def technical_text(row):
     # The decision, not generic laws cited in the recitals, determines the topic.
-    return normalized(' '.join(str(row.get(k) or '') for k in
-                      ('firstArticle', 'disposition', 'title', 'desc')))
+    return normalized(row.get('firstArticle') or row.get('disposition') or row.get('desc') or row.get('title') or '')
 
 
 def is_technical(row):
