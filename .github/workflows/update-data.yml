@@ -38,6 +38,8 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Probar lectores antes de modificar datos
         run: |
+          python -m unittest discover -s scripts -p 'test_regulatory_catalogue.py'
+          node scripts/test_technical_regulations.cjs
           python -m unittest discover -s scripts -p 'test_automatic_sources.py'
           python -m unittest discover -s scripts -p 'test_news_reader.py'
           python -m unittest discover -s scripts -p 'test_infrastructure.py'

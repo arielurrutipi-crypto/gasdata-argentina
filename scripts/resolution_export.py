@@ -51,7 +51,7 @@ def update_resolution_export(d, now, iso):
         rows = [r for group in results for r in group]
         if not rows: raise ValueError("El catálogo anual está vacío; se conserva la versión anterior")
         state.update(rows=sorted(rows,key=lambda r:(r["date"],r["num"]),reverse=True),
-                     checkedAt=iso(), complete=True, sourceUrl=SOURCE,
+                     checkedAt=iso(), lastSuccessAt=iso(), complete=True, sourceUrl=SOURCE,
                      fromDate=f"{year}-01-01", toDate=now().date().isoformat(),
                      dateMeaning="Fecha de la resolución en el catálogo oficial", error=None)
     except Exception as e:

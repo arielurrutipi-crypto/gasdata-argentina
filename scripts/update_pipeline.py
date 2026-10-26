@@ -42,6 +42,7 @@ from news_reader import update_news as read_news
 from bagsa_news import update_bagsa_news
 from tariff_comparison import update_tariff_comparison
 from resolution_export import update_resolution_export
+from regulatory_catalogue import sync_regulator_catalogue, regulator_key
 from infrastructure import update_infrastructure
 from infrastructure_layers import update_layers
 
@@ -851,7 +852,7 @@ def _reg_relevant(text):
     low=(text or "").lower()
     if _reg_electric_only(text):
         return False
-    return any(k in low for k in REGULATION_GAS_SIGNALS)
+    return any(k in low for k in REGULATION_GAS_SIGNALS) or bool(re.search(r"\bnag\s*[-–—]?\s*\d{3}\b|\bgnc\b", low))
 
 def _reg_number(name):
     name=clean(name)
@@ -1008,6 +1009,8 @@ def _reg_family(x):
 def _reg_identity(x):
     if x.get('jurisdiction') == 'PBA':
         return 'pba|' + str(x.get('url'))
+    regulator=regulator_key(x)
+    if regulator: return "|".join(map(str,regulator))
     return _reg_family(x)+"|"+re.sub(r"\s+","",str(x.get("num","")).lower())
 
 def _bora_label(a):
@@ -1120,9 +1123,9 @@ def _scan_bora_dates(start_day,end_day,retry_dates=()):
 def update_regulations(d):
     existing=[]
     for x in d.get("regulations",[]):
-        try: dt=datetime.fromisoformat(x.get("publishedAt",""))
+        try: dt=datetime.fromisoformat(x.get("publishedAt") or x.get("issuedAt") or "")
         except Exception: dt=None
-        if dt and dt>=REGULATION_START:
+        if dt and (dt.replace(tzinfo=ART) if dt.tzinfo is None else dt)>=REGULATION_START:
             if x.get("jurisdiction")!="PBA":
                 probe_text=" ".join(str(x.get(k,"")) for k in ("title","desc","issuer","firstArticle","disposition"))
                 if _reg_electric_only(probe_text):
@@ -1159,7 +1162,7 @@ def update_regulations(d):
         num=_reg_number(entry["label"])
         probe={"num":num,"issuer":_bora_issuer(entry["label"]),"title":_bora_title(entry["label"]),"desc":entry["label"]}
         key=_reg_identity(probe)
-        if key in known:
+        if key in known and known[key].get("publishedAt"):
             known[key]["validatedAt"]=iso(); known[key]["auto"]=True
             if not known[key].get("issuer"): known[key]["issuer"]=probe.get("issuer")
             refreshed+=1
@@ -1179,12 +1182,13 @@ def update_regulations(d):
                 if not item: continue
                 key=_reg_identity(item)
                 if key in known:
+                    known[key].update(item)
                     refreshed+=1
                     continue
                 known[key]=item; added+=1
     preview_backfilled=0
     preview_targets=sorted(
-        (x for x in known.values() if x.get("url") and x.get("jurisdiction")!="PBA" and not x.get("firstArticle")),
+        (x for x in known.values() if x.get("url") and x.get("publishedAt") and x.get("jurisdiction")!="PBA" and not x.get("firstArticle")),
         key=lambda x:x.get("publishedAt",""),reverse=True
     )[:80]
     def load_preview(item):
@@ -1211,7 +1215,7 @@ def update_regulations(d):
                     preview_backfilled+=1
 
     items=list(known.values())
-    items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
+    items.sort(key=lambda x:x.get("publishedAt") or x.get("issuedAt") or "",reverse=True)
     d["regulations"]=items
     incomplete=bool(failed_dates or failed_details)
     state.update(lastScannedDate=end_day.isoformat(),source="Boletín Oficial de la República Argentina · Primera Sección",
@@ -1634,6 +1638,7 @@ def sync_tariffs_from_regulations(d):
         if not names: continue
         candidates=[]
         for r in regs:
+            if not r.get("publishedAt"): continue  # issue date alone cannot establish tariff validity
             hay=(str(r.get("title",""))+" "+str(r.get("desc",""))+" "+str(r.get("issuer",""))).lower()
             cats=[str(r.get("category","")).lower()]+[str(t).lower() for t in r.get("tags",[])]
             if "tarifas" not in cats and "tarifa" not in hay: continue
@@ -1765,6 +1770,7 @@ def main():
     needs_reg_relevance=scan.get("relevanceVersion")!=2
     needs_reg_backfill=scan.get("previewBackfillVersion")!=1
     if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_relevance or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
+    sync_regulator_catalogue(d, _reg_categories)
     sync_tariffs_from_regulations(d)
     sync_tariffs_from_enargas(d)
     sync_enargas_tariff_series(d)
