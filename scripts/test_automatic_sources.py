@@ -36,5 +36,22 @@ class ReadersTest(unittest.TestCase):
         self.assertEqual((row['value'],row['reference'],row['validatedAt']), ('2,90','22/09/2026','old'))
         self.assertEqual(row['updateStatus'], 'error')
 
+class ProvincialCatalogueDates(unittest.TestCase):
+    def test_mixed_dates_and_failed_source_keep_national_records(self):
+        from automatic_sources import update_bopba
+        from datetime import datetime, timezone
+        rows = [dict(url='https://example.org/published', publishedAt='2026-10-20T00:00-03:00'),
+                dict(url='https://example.org/issued', publishedAt=None, issuedAt='2026-10-23'),
+                dict(url='https://example.org/unknown', publishedAt=None)]
+        for response in ('success', 'offline'):
+            data = dict(regulations=[dict(r) for r in rows])
+            def fetch(*args):
+                if response == 'offline': raise OSError('offline')
+                return b'<div class="search-result"></div>'
+            update_bopba(data, fetch, lambda:'2026-10-27T15:00-03:00', datetime(2026,10,27,tzinfo=timezone.utc))
+            self.assertEqual([r['url'].split('/')[-1] for r in data['regulations']], ['issued','published','unknown'])
+            self.assertIsNone(data['regulations'][0]['publishedAt'])
+            self.assertEqual(data['regulations'][0]['issuedAt'], '2026-10-23')
+
 if __name__ == '__main__':
     unittest.main()

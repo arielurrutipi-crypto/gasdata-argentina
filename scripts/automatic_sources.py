@@ -528,7 +528,7 @@ def update_bopba(d, fetch, iso, today):
                 errors.append(term + ': continúa la paginación en la próxima ejecución')
         except Exception as exc:
             errors.append(term + ': ' + str(exc)[:140])
-    d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt', ''), reverse=True)
+    d['regulations'] = sorted(items.values(), key=lambda r: r.get('publishedAt') or r.get('issuedAt') or '', reverse=True)
     state['cleanupVersion'] = 5
     for row in d.get('updates', []):
         if row['name'] == 'Boletín Oficial PBA':
