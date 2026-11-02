@@ -123,9 +123,9 @@ def propano_ppe_from_bagsa(d,fetch):
     recognised=max(candidates)
     return recognised,recognised/0.60,url,row.get('res',''),row.get('validFrom','')
 
-def update_market(d, fetch, iso):
+def update_market(d, fetch, iso, only=None):
     items = {x['id']: x for x in d.get('marketPrices', [])}
-    outcomes = {}
+    outcomes = dict(d.get('marketAutomation', {}).get('readers', {})) if only else {}
     def save(key, period, value, **fields):
         item = items.get(key, {'id': key})
         if item.get('observationDate', '') > period:
@@ -140,6 +140,7 @@ def update_market(d, fetch, iso):
         'mb_propane': 'https://www.eia.gov/dnav/pet/hist_xls/EER_EPLLPA_PF4_Y44MB_DPGd.xls',
     }
     for key, url in sources.items():
+        if only and only!=key: continue
         try:
             date, value = eia_latest(fetch(url, timeout=40))
             fields = dict(reference=date.strftime('%d/%m/%Y') + ' · spot', source='U.S. EIA',
@@ -155,68 +156,72 @@ def update_market(d, fetch, iso):
             outcomes[key] = str(exc)[:180]
             if key in items:
                 items[key].update(checkedAt=iso(), updateStatus='error', updateError=outcomes[key])
-    try:
-        hub = 'https://www.worldbank.org/en/research/commodity-markets'
-        soup = BeautifulSoup(fetch(hub), 'html.parser')
-        link = next(a['href'] for a in soup.select('a[href]') if 'CMO-Historical-Data-Monthly.xlsx' in a['href'])
-        url = urljoin(hub, link)
-        if urlparse(url).hostname not in ('thedocs.worldbank.org', 'www.worldbank.org'):
-            raise ValueError('La descarga no pertenece al Banco Mundial')
-        for key, (period, value) in worldbank_latest(fetch(url, timeout=40)).items():
-            japan = key == 'wb_japan'
-            save(key, period, value, label='GNL Japón · promedio mensual' if japan else 'Gas Europa · promedio mensual',
-                 group='GNL' if japan else 'GN internacional', unit='USD/MMBtu', reference=period + ' · promedio mensual',
-                 source='Banco Mundial · Pink Sheet', sourceUrl=url, statusText='MENSUAL · AUTOMÁTICO',
-                 note='Serie mensual de referencia del Banco Mundial.',
-                 details='Alternativa pública al seguimiento regional. Tiene metodología y frecuencia propias; no equivale a la cotización diaria JKM o TTF.')
-        outcomes['worldbank'] = 'ok'
-    except Exception as exc:
-        outcomes['worldbank'] = str(exc)[:180]
-        for key in ('wb_japan', 'wb_europe'):
-            if key in items:
-                items[key].update(checkedAt=iso(), updateStatus='error', updateError=outcomes['worldbank'])
-    try:
-        period,jkm,ttf,url=catalyst_latest(fetch)
-        save('jkm',period,jkm,label='JKM LNG · Asia',group='GNL',unit='USD/MMBtu',
-             reference=period+' · M+1',source='Catalyst Commercial · market report',sourceUrl=url,
-             statusText='BENCHMARK · AUTOMÁTICO',note='JKM LNG M+1 extraído del último reporte de mercado publicado.',
-             details='Benchmark spot/M+1 del noreste asiático; no equivale a un netback argentino.')
-        save('ttf',period,ttf,label='TTF · gas natural Europa',group='GN internacional',unit='USD/MMBtu',
-             reference=period+' · spot',source='Catalyst Commercial · market report',sourceUrl=url,
-             statusText='BENCHMARK · AUTOMÁTICO',note='TTF spot extraído del último reporte de mercado publicado.',
-             details='Benchmark europeo de gas natural.')
-        outcomes['catalyst']='ok'
-    except Exception as exc:
-        outcomes['catalyst']=str(exc)[:180]
-        for key in ('jkm','ttf'):
-            if key in items: items[key].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['catalyst'])
+    if not only or only=='worldbank':
+        try:
+            hub = 'https://www.worldbank.org/en/research/commodity-markets'
+            soup = BeautifulSoup(fetch(hub), 'html.parser')
+            link = next(a['href'] for a in soup.select('a[href]') if 'CMO-Historical-Data-Monthly.xlsx' in a['href'])
+            url = urljoin(hub, link)
+            if urlparse(url).hostname not in ('thedocs.worldbank.org', 'www.worldbank.org'):
+                raise ValueError('La descarga no pertenece al Banco Mundial')
+            for key, (period, value) in worldbank_latest(fetch(url, timeout=40)).items():
+                japan = key == 'wb_japan'
+                save(key, period, value, label='GNL Japón · promedio mensual' if japan else 'Gas Europa · promedio mensual',
+                     group='GNL' if japan else 'GN internacional', unit='USD/MMBtu', reference=period + ' · promedio mensual',
+                     source='Banco Mundial · Pink Sheet', sourceUrl=url, statusText='MENSUAL · AUTOMÁTICO',
+                     note='Serie mensual de referencia del Banco Mundial.',
+                     details='Alternativa pública al seguimiento regional. Tiene metodología y frecuencia propias; no equivale a la cotización diaria JKM o TTF.')
+            outcomes['worldbank'] = 'ok'
+        except Exception as exc:
+            outcomes['worldbank'] = str(exc)[:180]
+            for key in ('wb_japan', 'wb_europe'):
+                if key in items:
+                    items[key].update(checkedAt=iso(), updateStatus='error', updateError=outcomes['worldbank'])
+    if not only or only=='catalyst':
+        try:
+            period,jkm,ttf,url=catalyst_latest(fetch)
+            save('jkm',period,jkm,label='JKM LNG · Asia',group='GNL',unit='USD/MMBtu',
+                 reference=period+' · M+1',source='Catalyst Commercial · market report',sourceUrl=url,
+                 statusText='BENCHMARK · AUTOMÁTICO',note='JKM LNG M+1 extraído del último reporte de mercado publicado.',
+                 details='Benchmark spot/M+1 del noreste asiático; no equivale a un netback argentino.')
+            save('ttf',period,ttf,label='TTF · gas natural Europa',group='GN internacional',unit='USD/MMBtu',
+                 reference=period+' · spot',source='Catalyst Commercial · market report',sourceUrl=url,
+                 statusText='BENCHMARK · AUTOMÁTICO',note='TTF spot extraído del último reporte de mercado publicado.',
+                 details='Benchmark europeo de gas natural.')
+            outcomes['catalyst']='ok'
+        except Exception as exc:
+            outcomes['catalyst']=str(exc)[:180]
+            for key in ('jkm','ttf'):
+                if key in items: items[key].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['catalyst'])
 
-    try:
-        low,high,url=pau_2026(fetch)
-        item=items.get('pau',{'id':'pau'})
-        item.update(value=f'{low:.2f}–{high:.2f}'.replace('.',','),unit='USD/MMBtu',
-                    reference='Año 2026 · rango nacional por subzona',checkedAt=iso(),validatedAt=iso(),
-                    auto=True,updateStatus='current',statusText='OFICIAL · AUTOMÁTICO',
-                    source='Secretaría de Energía · Res. 23/2026',sourceUrl=url,
-                    note='Rango mínimo–máximo del Anexo oficial del Precio Anual Uniforme 2026 por subzona.')
-        item.pop('updateError',None);items['pau']=item;outcomes['pau']='ok'
-    except Exception as exc:
-        outcomes['pau']=str(exc)[:180]
-        if 'pau' in items: items['pau'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['pau'])
+    if not only or only=='pau':
+        try:
+            low,high,url=pau_2026(fetch)
+            item=items.get('pau',{'id':'pau'})
+            item.update(value=f'{low:.2f}–{high:.2f}'.replace('.',','),unit='USD/MMBtu',
+                        reference='Año 2026 · rango nacional por subzona',checkedAt=iso(),validatedAt=iso(),
+                        auto=True,updateStatus='current',statusText='OFICIAL · AUTOMÁTICO',
+                        source='Secretaría de Energía · Res. 23/2026',sourceUrl=url,
+                        note='Rango mínimo–máximo del Anexo oficial del Precio Anual Uniforme 2026 por subzona.')
+            item.pop('updateError',None);items['pau']=item;outcomes['pau']='ok'
+        except Exception as exc:
+            outcomes['pau']=str(exc)[:180]
+            if 'pau' in items: items['pau'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['pau'])
 
-    try:
-        recognised,ppe,url,res,valid=propano_ppe_from_bagsa(d,fetch)
-        item=items.get('glp_ppe_propano_arg',{'id':'glp_ppe_propano_arg'})
-        item.update(value=f'{ppe:,.0f}'.replace(',','.'),unit='ARS/t',
-                    reference=(valid or 'Cuadro vigente')+' · derivado de tarifa BAGSA',
-                    checkedAt=iso(),validatedAt=iso(),auto=True,updateStatus='current',
-                    statusText='DERIVADO · AUTOMÁTICO',source='BAGSA / ENReGE + Res. 126/2026',sourceUrl=url,
-                    note='PPE implícito = precio de compra reconocido en tarifa / 60%.',
-                    details=f'Precio reconocido: $ {recognised:,.2f}/t · Res. {res}. La Res. 126/2026 dispone trasladar 60% del PPE.'.replace(',','_').replace('.',',').replace('_','.'))
-        item.pop('updateError',None);items['glp_ppe_propano_arg']=item;outcomes['ppe_propano']='ok'
-    except Exception as exc:
-        outcomes['ppe_propano']=str(exc)[:180]
-        if 'glp_ppe_propano_arg' in items: items['glp_ppe_propano_arg'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['ppe_propano'])
+    if not only or only=='ppe_propano':
+        try:
+            recognised,ppe,url,res,valid=propano_ppe_from_bagsa(d,fetch)
+            item=items.get('glp_ppe_propano_arg',{'id':'glp_ppe_propano_arg'})
+            item.update(value=f'{ppe:,.0f}'.replace(',','.'),unit='ARS/t',
+                        reference=(valid or 'Cuadro vigente')+' · derivado de tarifa BAGSA',
+                        checkedAt=iso(),validatedAt=iso(),auto=True,updateStatus='current',
+                        statusText='DERIVADO · AUTOMÁTICO',source='BAGSA / ENReGE + Res. 126/2026',sourceUrl=url,
+                        note='PPE implícito = precio de compra reconocido en tarifa / 60%.',
+                        details=f'Precio reconocido: $ {recognised:,.2f}/t · Res. {res}. La Res. 126/2026 dispone trasladar 60% del PPE.'.replace(',','_').replace('.',',').replace('_','.'))
+            item.pop('updateError',None);items['glp_ppe_propano_arg']=item;outcomes['ppe_propano']='ok'
+        except Exception as exc:
+            outcomes['ppe_propano']=str(exc)[:180]
+            if 'glp_ppe_propano_arg' in items: items['glp_ppe_propano_arg'].update(checkedAt=iso(),updateStatus='error',updateError=outcomes['ppe_propano'])
 
     supplemental={'megsa_pist','free_contracts','glp_ppe_arg','aramco_lpg','sonatrach_lpg'}
     for key,item in items.items():

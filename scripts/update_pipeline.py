@@ -1142,7 +1142,7 @@ def update_regulations(d):
     # Keep failed detail requests even after their edition leaves the overlap window.
     for entry in state.get("pendingDetails",[]):
         entry={**entry,"day":datetime.strptime(entry["day"],"%Y-%m-%d").date()}
-        candidates.setdefault(entry["url"],entry)
+        candidates[entry["url"]]={**candidates.get(entry["url"],{}),**entry}
     known={_reg_identity(x):x for x in existing if x.get("num")}
     added=0; refreshed=0
     to_fetch=[]
@@ -1157,7 +1157,7 @@ def update_regulations(d):
         else:
             to_fetch.append(entry)
     # Drain backlogs in bounded batches; preserve every unprocessed document.
-    to_fetch.sort(key=lambda entry:entry["day"],reverse=True)
+    to_fetch.sort(key=lambda entry:(entry.get("attemptedAt",""),-entry["day"].toordinal()))
     failed_details=[{**entry,"day":entry["day"].isoformat()} for entry in to_fetch[12:]]
     to_fetch=to_fetch[:12]
     def parse_entry(entry):
@@ -1169,7 +1169,7 @@ def update_regulations(d):
             futs=[ex.submit(parse_entry,e) for e in to_fetch]
             for fut in as_completed(futs):
                 entry,item,failed=fut.result()
-                if failed: failed_details.append({**entry,"day":entry["day"].isoformat()})
+                if failed: failed_details.append({**entry,"day":entry["day"].isoformat(),"attemptedAt":iso()})
                 if not item: continue
                 key=_reg_identity(item)
                 if key in known:
@@ -1753,6 +1753,7 @@ def main():
     sync_update_catalog(d)
     from pipeline_runner import PipelineRunner
     from news_translation import translate_news
+    d.get("pipelineStages",{}).pop("Mercado",None)
     runner=PipelineRunner(d, DATA, iso)
     run=runner.run
     run("Noticias", lambda x:update_news(x), timeout=240)
@@ -1772,7 +1773,8 @@ def main():
     run("Serie tarifaria", lambda x:sync_enargas_tariff_series(x))
     run("Archivo tarifas", lambda x:sync_tariff_archive(x))
     run("Comparador", lambda x:update_tariff_comparison(x, fetch, now, iso), timeout=180)
-    run("Mercado", lambda x:update_market(x,fetch,iso))
+    for key,label in (("henry_hub","Henry Hub"),("mb_propane","Mont Belvieu"),("worldbank","Banco Mundial"),("catalyst","JKM y TTF"),("pau","PAU"),("ppe_propano","Propano")):
+        run("Mercado · "+label, lambda x,k=key:update_market(x,fetch,iso,only=k))
     run("Validación documentos", lambda x:validate_pages(x))
     run("Producción", lambda x:production(x))
     if d.get("basinMonthlyMeta",{}).get("readerVersion")!=2 or _update_due(d,"Producción por cuenca/provincia",24): run("Producción cuencas", lambda x:update_basin_production(x))

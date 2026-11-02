@@ -60,6 +60,21 @@ class PipelineIntegration(unittest.TestCase):
         self.assertEqual(data['regulationScan']['pendingDetails'],[])
         self.assertTrue(data['regulationScan']['complete'])
 
+    def test_market_reader_updates_without_waiting_for_other_sources(self):
+        import automatic_sources as market
+        from unittest.mock import Mock, patch
+        from datetime import datetime
+        data={'marketPrices':[{'id':'wb_europe','value':'old','observationDate':'2026-09'}]}
+        fetch=Mock(return_value=b'workbook')
+        with patch.object(market,'eia_latest',return_value=(datetime(2026,10,30),3.5)):
+            market.update_market(data,fetch,lambda:'now',only='henry_hub')
+        self.assertEqual(fetch.call_count,1)
+        prices={row['id']:row for row in data['marketPrices']}
+        self.assertEqual(prices['henry_hub']['value'],'3,50')
+        self.assertEqual(prices['wb_europe']['value'],'old')
+        self.assertNotIn('validatedAt',prices['wb_europe'])
+        self.assertEqual(data['marketAutomation']['readers'],{'henry_hub':'ok'})
+
     def test_main_completes_all_stages_offline(self):
         import update_pipeline as pipeline
         import automatic_sources
