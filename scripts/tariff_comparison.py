@@ -72,7 +72,9 @@ def update_tariff_comparison(d, fetch, now, iso):
         try:
             data = read_xlsx(fetch(source['documentUrl'],timeout=40))
             data.update(month=source['month'],period=source['validFrom'],product=source['product'],sourceUrl=source['documentUrl'],checkedAt=iso())
-            path.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+            temporary=path.with_suffix('.json.tmp')
+            temporary.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+            temporary.replace(path)
             return {'key':key,'month':source['month'],'period':source['validFrom'],'product':source['product'],'sourceUrl':source['documentUrl'],'url':'data/tariff-comparison/'+key+'.json','count':len(data['rows']),'checkedAt':iso()},None
         except Exception as error: return previous,{'key':key,'error':str(error)[:180]}
     with ThreadPoolExecutor(max_workers=4) as pool:

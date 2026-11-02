@@ -47,7 +47,7 @@ from infrastructure import update_infrastructure
 from infrastructure_layers import update_layers
 
 def update_news(d):
-    return read_news(d, fetch, now, iso)
+    return read_news(d, fetch, now, iso, translate=False)
 
 def official_series(series_id):
     qs=urllib.parse.urlencode({"ids":series_id,"last":1,"metadata":"full"})
@@ -1080,26 +1080,14 @@ def _scan_bora_dates(start_day,end_day,retry_dates=()):
             if raw is not None: pages.append((day,raw))
             else: failed.append(day.isoformat())
 
-    # BORA occasionally returns a transient 5xx/challenge for one edition while
-    # the surrounding dates work. Retry failed dates serially in the same run
-    # before marking the whole Normativa module as partial.
+    # One bounded parallel retry; keep unresolved dates for the next cycle.
     if failed:
-        retry_failed=[]
-        for raw_day in failed:
-            day=datetime.strptime(raw_day,"%Y-%m-%d").date()
-            url="https://www.boletinoficial.gob.ar/seccion/primera/"+day.strftime("%Y%m%d")
-            recovered=None
-            for timeout in (30,45):
-                try:
-                    recovered=fetch(url,timeout=timeout)
-                    break
-                except Exception as e:
-                    print("BORA RETRY",day,e)
-            if recovered is not None:
-                pages.append((day,recovered))
-            else:
-                retry_failed.append(raw_day)
-        failed=retry_failed
+        retry_days=[datetime.strptime(day,"%Y-%m-%d").date() for day in failed]
+        failed=[]
+        with ThreadPoolExecutor(max_workers=4) as ex:
+            for day,raw,err in ex.map(load,retry_days):
+                if raw is not None: pages.append((day,raw))
+                else: failed.append(day.isoformat())
     candidates={}
     for day,raw in pages:
         soup=BeautifulSoup(raw,"html.parser")
@@ -1168,7 +1156,10 @@ def update_regulations(d):
             refreshed+=1
         else:
             to_fetch.append(entry)
-    failed_details=[]
+    # Drain backlogs in bounded batches; preserve every unprocessed document.
+    to_fetch.sort(key=lambda entry:entry["day"],reverse=True)
+    failed_details=[{**entry,"day":entry["day"].isoformat()} for entry in to_fetch[12:]]
+    to_fetch=to_fetch[:12]
     def parse_entry(entry):
         try: return entry,_parse_bora_detail(entry["url"],entry["day"],entry["label"]),False
         except Exception as e:
@@ -1190,7 +1181,7 @@ def update_regulations(d):
     preview_targets=sorted(
         (x for x in known.values() if x.get("url") and x.get("publishedAt") and x.get("jurisdiction")!="PBA" and not x.get("firstArticle")),
         key=lambda x:x.get("publishedAt",""),reverse=True
-    )[:80]
+    )[:8]
     def load_preview(item):
         try:
             raw=fetch(item["url"],timeout=15)
@@ -1760,37 +1751,43 @@ def main():
     from automatic_sources import update_market, update_bopba
     d=json.loads(DATA.read_text(encoding="utf-8"))
     sync_update_catalog(d)
-    update_news(d)
-    update_infrastructure(d, fetch, now, iso)
-    update_layers(d, fetch, now, iso)
-    update_bagsa_news(d, now, iso)
-    update_resolution_export(d, now, iso)
+    from pipeline_runner import PipelineRunner
+    from news_translation import translate_news
+    runner=PipelineRunner(d, DATA, iso)
+    run=runner.run
+    run("Noticias", lambda x:update_news(x), timeout=240)
+    run("Traducción", lambda x:translate_news(x, iso), timeout=90)
+    run("Infraestructura", lambda x:update_infrastructure(x, fetch, now, iso))
+    run("Capas", lambda x:update_layers(x, fetch, now, iso))
+    run("Noticias BAGSA", lambda x:update_bagsa_news(x, now, iso))
+    run("Catálogo ENReGE", lambda x:update_resolution_export(x, now, iso))
     scan=d.get("regulationScan",{})
     needs_reg_migration=any(x.get("firstArticle") and not x.get("operativePreview") for x in d.get("regulations",[]))
     needs_reg_relevance=scan.get("relevanceVersion")!=2
     needs_reg_backfill=scan.get("previewBackfillVersion")!=1
-    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_relevance or needs_reg_backfill or _update_due(d,"Normativa",3): update_regulations(d)
+    if not scan.get("lastScannedDate") or scan.get("pendingDates") or scan.get("pendingDetails") or needs_reg_migration or needs_reg_relevance or needs_reg_backfill or _update_due(d,"Normativa",3): run("Normativa", lambda x:update_regulations(x), timeout=180)
     sync_regulator_catalogue(d, _reg_categories)
-    sync_tariffs_from_regulations(d)
-    sync_tariffs_from_enargas(d)
-    sync_enargas_tariff_series(d)
-    sync_tariff_archive(d)
-    update_tariff_comparison(d, fetch, now, iso)
-    update_market(d,fetch,iso)
-    validate_pages(d)
-    production(d)
-    if d.get("basinMonthlyMeta",{}).get("readerVersion")!=2 or _update_due(d,"Producción por cuenca/provincia",24): update_basin_production(d)
-    demand_priority(d)
-    system_market(d)
-    monthly_flows_status(d)
-    if _update_due(d,"Capacidad de transporte",3): transport_capacity(d)
+    run("Cruce tarifas", lambda x:sync_tariffs_from_regulations(x))
+    run("Cuadros oficiales", lambda x:sync_tariffs_from_enargas(x))
+    run("Serie tarifaria", lambda x:sync_enargas_tariff_series(x))
+    run("Archivo tarifas", lambda x:sync_tariff_archive(x))
+    run("Comparador", lambda x:update_tariff_comparison(x, fetch, now, iso), timeout=180)
+    run("Mercado", lambda x:update_market(x,fetch,iso))
+    run("Validación documentos", lambda x:validate_pages(x))
+    run("Producción", lambda x:production(x))
+    if d.get("basinMonthlyMeta",{}).get("readerVersion")!=2 or _update_due(d,"Producción por cuenca/provincia",24): run("Producción cuencas", lambda x:update_basin_production(x))
+    run("Demanda", lambda x:demand_priority(x))
+    run("Sistema gasífero", lambda x:system_market(x))
+    run("Flujos mensuales", lambda x:monthly_flows_status(x))
+    if _update_due(d,"Capacidad de transporte",3): run("Capacidad", lambda x:transport_capacity(x))
     needs_pba_migration=d.get("bopbaScan",{}).get("cleanupVersion")!=5 or any(x.get("jurisdiction")=="PBA" and not x.get("disposition") for x in d.get("regulations",[]))
-    if not d.get("bopbaScan") or needs_pba_migration or _update_due(d,"Boletín Oficial PBA",3): update_bopba(d,fetch,iso,now())
-    refresh_source_status(d)
+    if not d.get("bopbaScan") or needs_pba_migration or _update_due(d,"Boletín Oficial PBA",3): run("Boletín Oficial PBA", lambda x:update_bopba(x,fetch,iso,now()))
+    run("Disponibilidad fuentes", lambda x:refresh_source_status(x), timeout=45)
     sync_update_catalog(d)
     d["meta"]["updatedAt"]=iso()
     d["meta"]["version"]="2.0.0"
-    DATA.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    from pipeline_runner import atomic_json
+    atomic_json(DATA, d)
 
 if __name__=="__main__":
     main()

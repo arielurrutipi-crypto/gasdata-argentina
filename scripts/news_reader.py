@@ -123,7 +123,7 @@ def feed_items(raw, source):
 def is_article(row):
     return not re.search(r"sportsbook|casino|bet-label|leon.?bet|amazonslots|grams-bets|gambling|glücksspiel|στοίχημα", row.get("title", "")+" "+row.get("desc", ""), re.I)
 
-def update_news(d, fetch, now, iso):
+def update_news(d, fetch, now, iso, translate=True):
     existing = {x.get("url", "").rstrip("/"): x for x in d.get("news", []) if is_article(x) and x.get("source") != "Energy Voice"}
     checked = iso()
     statuses = []
@@ -197,7 +197,7 @@ def update_news(d, fetch, now, iso):
     for row in prepared: merged[row["url"].rstrip("/")] = row
     d["news"] = sorted(merged.values(), key=lambda x: x.get("publishedAt", ""), reverse=True)[:600]
     d["sources"] = [x for x in d.get("sources", []) if x.get("name") != "Energy Voice"]
-    translate_news(d, iso)
+    if translate: translate_news(d, iso)
     d["newsSources"] = statuses
     for status in statuses:
         if status.get("edition") != "international": continue

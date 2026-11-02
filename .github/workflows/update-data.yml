@@ -38,6 +38,7 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Probar lectores antes de modificar datos
         run: |
+          python -m unittest discover -s scripts -p 'test_pipeline_runner.py'
           python -m unittest discover -s scripts -p 'test_regulatory_catalogue.py'
           node scripts/test_technical_regulations.cjs
           python -m unittest discover -s scripts -p 'test_automatic_sources.py'
@@ -57,7 +58,7 @@ jobs:
             echo "Intento $intento"
             git fetch origin main
             git reset --hard origin/main
-            python scripts/update_pipeline.py
+            python -u scripts/update_pipeline.py
             git add data/data.json data/tariff-comparison data/infrastructure.json data/infrastructure-layers.json
             if git diff --cached --quiet; then
               echo "Sin cambios"
