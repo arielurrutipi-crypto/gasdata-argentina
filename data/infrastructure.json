@@ -2,19 +2,19 @@
   "meta": {
     "schemaVersion": 1,
     "strategy": "hybrid",
-    "generatedAt": "2026-11-06T04:57-03:00",
+    "generatedAt": "2026-11-06T12:57-03:00",
     "inventoryVerifiedAt": "2026-10-13",
     "excludedProjectIds": [
       "G07"
     ],
     "officialStatus": "partial",
-    "newsLinkedAt": "2026-11-06T04:57-03:00",
+    "newsLinkedAt": "2026-11-06T12:57-03:00",
     "pendingCount": 17,
-    "officialLastSuccessAt": "2026-11-05T21:20-03:00",
-    "officialErrors": 17,
+    "officialLastSuccessAt": "2026-11-06T12:57-03:00",
+    "officialErrors": 16,
     "newsFrequency": "Cada hora, colector existente",
     "officialFrequency": "Descubrimiento diario; documentos en rotación semanal",
-    "newsCursor": "2026-11-05T17:34:53+00:00"
+    "newsCursor": "2026-11-06T12:15:00+00:00"
   },
   "projects": [
     {
@@ -9150,7 +9150,7 @@
       "publishedAt": "2026-03-12",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "tgs + ngl"
       ]
@@ -9166,7 +9166,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9182,7 +9182,7 @@
       "publishedAt": "2026-02-09",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9198,7 +9198,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto perito moreno"
       ]
@@ -9214,7 +9214,7 @@
       "publishedAt": "2025-10-20",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -9230,7 +9230,7 @@
       "publishedAt": "2026-09-17",
       "datePrecision": "day",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano",
         "tgn + manuel belgrano"
@@ -9247,7 +9247,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-13T10:23-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano"
       ]
@@ -10404,7 +10404,7 @@
       "publishedAt": "2026-10-20T18:40:30-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-20T18:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -10420,7 +10420,7 @@
       "publishedAt": "2026-10-20T18:40:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-20T19:46-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -10436,7 +10436,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-21T02:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -10452,7 +10452,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-21T02:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10468,7 +10468,7 @@
       "publishedAt": "2026-10-21T10:30:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-21T07:49-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -10484,7 +10484,7 @@
       "publishedAt": "2026-10-21T19:23:45-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-21T19:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "ampliacion + perito moreno"
       ]
@@ -10500,7 +10500,7 @@
       "publishedAt": "2026-10-21T19:07:21-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-21T19:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "la calera + pluspetrol"
       ]
@@ -10516,7 +10516,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-21T20:45-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "oldelval + duplicar"
       ]
@@ -10532,7 +10532,7 @@
       "publishedAt": "2026-10-21T19:59:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-21T20:45-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10548,7 +10548,7 @@
       "publishedAt": "2026-10-22T11:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-22T10:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -10564,7 +10564,7 @@
       "publishedAt": "2026-10-22T11:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-22T10:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10612,7 +10612,7 @@
       "publishedAt": "2026-10-23T11:30:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-23T10:55-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -10628,7 +10628,7 @@
       "publishedAt": "2026-10-23T23:55:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-24T00:49-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10661,7 +10661,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-27T15:26-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano",
         "tgn + manuel belgrano"
@@ -10678,7 +10678,7 @@
       "publishedAt": "2026-10-26T09:44:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-27T15:26-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10694,7 +10694,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-27T19:49-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "gasoducto manuel belgrano",
         "tgn + manuel belgrano"
@@ -10711,7 +10711,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-28T20:15-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -10727,7 +10727,7 @@
       "publishedAt": null,
       "datePrecision": "unknown",
       "firstDetectedAt": "2026-10-29T13:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10743,7 +10743,7 @@
       "publishedAt": "2026-10-29T16:38:31+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-29T13:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10759,7 +10759,7 @@
       "publishedAt": "2026-10-29T13:06:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-29T13:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10775,7 +10775,7 @@
       "publishedAt": "2026-10-29T14:16:12+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-29T13:57-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vaca muerta oil sur"
       ]
@@ -10791,7 +10791,7 @@
       "publishedAt": "2026-10-29T12:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-10-29T22:59-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "hilli episeyo"
       ]
@@ -10807,7 +10807,7 @@
       "publishedAt": "2026-11-02T14:54:10+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-02T13:28-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -10824,7 +10824,7 @@
       "publishedAt": "2026-10-30T17:34:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-02T13:28-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "duplicar norte"
       ]
@@ -10840,7 +10840,7 @@
       "publishedAt": "2026-10-30T12:50:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-02T13:28-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -10888,7 +10888,7 @@
       "publishedAt": "2026-11-03T14:18:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-03T14:52-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "rincon de aranda + pampa"
       ]
@@ -10904,7 +10904,7 @@
       "publishedAt": "2026-11-03T13:15:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-03T14:52-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos"
       ]
@@ -10920,7 +10920,7 @@
       "publishedAt": "2026-11-03T12:30:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-03T14:52-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "vmos",
         "vaca muerta oil sur"
@@ -10937,7 +10937,7 @@
       "publishedAt": "2026-11-03T12:15:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-03T14:52-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "los toldos ii este"
       ]
@@ -10953,7 +10953,7 @@
       "publishedAt": "2026-11-03T22:30:10+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-03T20:27-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "rincon de aranda + pampa"
       ]
@@ -10969,7 +10969,7 @@
       "publishedAt": "2026-11-03T12:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-04T03:32-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "southern energy"
       ]
@@ -10985,7 +10985,7 @@
       "publishedAt": "2026-11-03T12:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-04T03:32-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -11001,7 +11001,7 @@
       "publishedAt": "2026-11-04T17:53:18-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-04T18:55-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "los toldos ii este"
       ]
@@ -11017,7 +11017,7 @@
       "publishedAt": "2026-11-04T22:17:21+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-04T23:30-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "los toldos ii este"
       ]
@@ -11049,7 +11049,7 @@
       "publishedAt": "2026-11-05T17:34:53+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-05T15:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -11065,7 +11065,7 @@
       "publishedAt": "2026-11-05T14:29:00-03:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-05T15:47-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "argentina lng"
       ]
@@ -11081,9 +11081,57 @@
       "publishedAt": "2026-11-05T10:00:00+00:00",
       "datePrecision": "instant",
       "firstDetectedAt": "2026-11-05T21:20-03:00",
-      "lastDetectedAt": "2026-11-06T04:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
       "matchedAliases": [
         "tgs + liquidos + tratayen"
+      ]
+    },
+    "f097706daff66c0df5d7f540": {
+      "id": "f097706daff66c0df5d7f540",
+      "projectId": "G16",
+      "url": "https://runrunenergetico.com/argentina-lng-acelera-hacia-la-fid-y-proyecta-exportaciones-energeticas-por-us-50-000-millones-al-ano/",
+      "title": "Argentina LNG acelera hacia la FID y proyecta exportaciones energéticas por US$ 50.000 millones al año",
+      "source": "RunRun Energético",
+      "sourceType": "press",
+      "summary": "RunRun Energético aborda novedades del proyecto vinculados a Argentina LNG — proyecto integrado YPF–Eni–XRG, fase 12 MTPA. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-11-06T12:15:00+00:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-11-06T12:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
+      "matchedAliases": [
+        "argentina lng"
+      ]
+    },
+    "045bb228a6cf07a153755da9": {
+      "id": "045bb228a6cf07a153755da9",
+      "projectId": "P03",
+      "url": "https://runrunenergetico.com/vmos-instala-sus-primeras-terminales-offshore-y-acelera-la-salida-exportadora-de-vaca-muerta/",
+      "title": "VMOS instala sus primeras terminales offshore y acelera la salida exportadora de Vaca Muerta",
+      "source": "RunRun Energético",
+      "sourceType": "press",
+      "summary": "RunRun Energético aborda novedades del proyecto vinculados a Vaca Muerta Oleoducto Sur — VMOS, sistema integral. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-11-06T12:00:00+00:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-11-06T12:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
+      "matchedAliases": [
+        "vmos"
+      ]
+    },
+    "bea38bdc8ee5a255c712df24": {
+      "id": "bea38bdc8ee5a255c712df24",
+      "projectId": "G16",
+      "url": "https://runrunenergetico.com/argentina-lng-apuesta-por-los-liquidos-de-vaca-muerta-y-redefine-su-negocio-exportador/",
+      "title": "Argentina LNG apuesta por los líquidos de Vaca Muerta y redefine su negocio exportador",
+      "source": "RunRun Energético",
+      "sourceType": "press",
+      "summary": "RunRun Energético aborda novedades del proyecto vinculados a Argentina LNG — proyecto integrado YPF–Eni–XRG, fase 12 MTPA. La referencia se conserva para seguir los hitos de esta obra.",
+      "publishedAt": "2026-11-06T11:30:00+00:00",
+      "datePrecision": "instant",
+      "firstDetectedAt": "2026-11-06T12:57-03:00",
+      "lastDetectedAt": "2026-11-06T12:57-03:00",
+      "matchedAliases": [
+        "argentina lng"
       ]
     }
   },
@@ -11585,11 +11633,11 @@
     "https://www.santafe.gob.ar/ms/enerfe/": {
       "name": "Santa Fe / ENERFE",
       "type": "hub",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-20T22:01-03:00",
       "status": "error",
       "discovered": 0,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.pluspetrol.net/es/noticias": {
@@ -11635,8 +11683,8 @@
     "https://www.axionenergy.com/en-movimiento/": {
       "name": "AXION",
       "type": "hub",
-      "checkedAt": "2026-11-06T04:57-03:00",
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
@@ -12000,52 +12048,52 @@
     },
     "https://www.santafe.gob.ar/noticias/noticia/285590/": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:10-03:00",
       "status": "error",
       "hash": "f4fa65794aed7ab68f462a5d8a4759c2eb7c56e0a8344daa7041fbdc91b55ed1",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.santafe.gob.ar/noticias/noticia/284101/": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:10-03:00",
       "status": "error",
       "hash": "7989a9065d5eec68e05b21e4af2f32b546970c81eb069d7da018b9ef3aaecf0b",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.santafe.gob.ar/noticias/noticia/286309/": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:10-03:00",
       "status": "error",
       "hash": "3cbf8b1891016701d1059b91f21fd4c67d3a8dd47b42bc041a7c21ae602b55c3",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.santafe.gob.ar/ms/enerfe/2021/05/21/gasoducto-regional-sur/": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:10-03:00",
       "status": "error",
       "hash": "02376c79786e4b0e0f07758f64602783d82e1ef60ded1a875ee9274e1c3a3791",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.santafe.gob.ar/noticias/noticia/imprimir/282855/": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:10-03:00",
       "status": "error",
       "hash": "c36b848e2a666bc4007c217fcc941ea1c33516767a5fbffc593a00ccb5b266ad",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://legislaturacba.gob.ar/wp-content/uploads/2022/11/26-10-2022-Anexo-Ley-10485.pdf": {
@@ -12076,9 +12124,9 @@
     },
     "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-67-2022-360655/actualizacion": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
-      "lastSuccessAt": "2026-10-29T07:03-03:00",
-      "status": "error",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "lastSuccessAt": "2026-11-06T12:57-03:00",
+      "status": "ok",
       "hash": "8a03b3c062e620af44cda00981f164f37f2b6207013a3e4ac9e7a0ec93144b68",
       "changed": false,
       "retryAt": "2026-11-06T10:57:25.579704-03:00",
@@ -12102,12 +12150,12 @@
     },
     "https://www.boletinoficial.gob.ar/detalleAviso/primera/322830/1": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
       "lastSuccessAt": "2026-10-14T21:12-03:00",
       "status": "error",
       "hash": "b4b3d68fb0330de83ab2f58bd8a3b9e802b6579886625df6dbcf7785305d06f2",
       "changed": false,
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "error": "<urlopen error timed out>"
     },
     "https://www.techint.com/es/noticias/2026/la-fuerza-de-la-union-finalizamos-la-construccion-del-vaca-muerta-oil-sur-vmos": {
@@ -12128,22 +12176,22 @@
     },
     "https://www.sec.gov/Archives/edgar/data/904851/000119312526126363/d95578d20f.htm": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "HTTP Error 403: Forbidden"
     },
     "https://www.sec.gov/Archives/edgar/data/904851/000119312525067155/d866694d20f.htm": {
       "type": "document",
-      "checkedAt": "2026-11-06T04:57-03:00",
-      "retryAt": "2026-11-06T10:57:25.579704-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "HTTP Error 403: Forbidden"
     },
     "https://www.sec.gov/Archives/edgar/data/904851/000119312525175497/d907911d6k.htm": {
       "type": "document",
-      "checkedAt": "2026-11-05T21:20-03:00",
-      "retryAt": "2026-11-06T03:20:53.685178-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "HTTP Error 403: Forbidden"
     },
@@ -12215,8 +12263,8 @@
     },
     "https://www.axionenergy.com/refineria/inversion-axion-energy-dejamos-de-importar-diesel-premium-y-lo-producimos-en-campana/": {
       "type": "document",
-      "checkedAt": "2026-11-05T21:20-03:00",
-      "retryAt": "2026-11-06T03:20:53.685178-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
@@ -12229,8 +12277,8 @@
     },
     "https://www2.hcdn.gob.ar/export/hcdn/secparl/dgral_info_parlamentaria/dip/archivos/informe_140_-_hcdn.pdf": {
       "type": "document",
-      "checkedAt": "2026-11-05T21:20-03:00",
-      "retryAt": "2026-11-06T03:20:53.685178-03:00",
+      "checkedAt": "2026-11-06T12:57-03:00",
+      "retryAt": "2026-11-06T18:57:39.616261-03:00",
       "status": "error",
       "error": "Documento excede límite de lectura de 16 MB"
     },
