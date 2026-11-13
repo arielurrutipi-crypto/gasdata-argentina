@@ -2,7 +2,13 @@ const {JSDOM}=require('jsdom'),fs=require('fs'),assert=require('assert');
 const b=require('path').resolve(__dirname,'..')+'/';
 const dom=new JSDOM(fs.readFileSync(b+'index.html','utf8'),{url:'https://example.org/gasdata/',runScripts:'outside-only',pretendToBeVisual:true}),w=dom.window,d=w.document;
 w.SVGSVGElement.prototype.createSVGRect=()=>({});w.HTMLElement.prototype.scrollIntoView=()=>{};Object.defineProperty(w.HTMLElement.prototype,'clientWidth',{get(){return 800;}});Object.defineProperty(w.HTMLElement.prototype,'clientHeight',{get(){return 500;}});w.setInterval=()=>0;
-w.fetch=async u=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(b+u.split('?')[0],'utf8'))});
+w.fetch=async u=>({ok:true,json:async()=>{
+ const path=u.split('?')[0],fixture=JSON.parse(fs.readFileSync(b+path,'utf8'));
+ // Keep the real project inventory and layers, but inject only the news and
+ // candidates controlled by this test so bot updates cannot reorder its alerts.
+ if(path==='data/infrastructure.json'){fixture.news={};fixture.candidates={};}
+ return fixture;
+}});
 const errors=[];w.console.error=(...x)=>errors.push(x.join(' '));w.addEventListener('error',e=>errors.push(e.error?.stack||e.message));
 w.eval(`var D={};var $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),fmt=s=>s||'—';function safeNewsUrl(s){return /^https?:/.test(s||'')?s:'#'}function page(id){document.querySelectorAll('.page').forEach(n=>n.classList.toggle('active',n.id===id))}function newsIsArticle(){return true}function tariffDocUrl(r){return r.url}`);
 w.localStorage.setItem('gasdata-following-v1',JSON.stringify({legacy:{key:'legacy',kind:'news',title:'Leída previa',description:'Preservar',source:'Fuente',url:'https://example.org',status:'read',note:'Mi nota previa',savedAt:'2026-01-01'}}));
@@ -15,6 +21,9 @@ const infUpdate=()=>{const x=w.GasDataInfrastructure.getData();w.dispatchEvent(n
 (async()=>{
  update();await tick();assert.equal(Object.keys(w.GasDataEnhancements.getAlerts().events).length,0,'first visit is baseline, not old alerts');
  data.regulations[0].disposition='Nueva obligación';update();assert.equal(Object.keys(w.GasDataEnhancements.getAlerts().events).length,1);assert(d.querySelector('#gasdataAlerts').textContent.includes('Antes: Texto original Ahora: Nueva obligación'));
+ const regulationAlert=d.querySelector('.gd-alert-card a[href="https://example.org/norma"]')?.closest('.gd-alert-card');
+ assert(regulationAlert,'the modified regulation renders its own alert');
+ assert.match(regulationAlert.querySelector('small').textContent,/Publicación: 01\/01\/2020$/,'date-only publication retains its calendar day');
  data.regulations[0].validatedAt=new Date().toISOString();update();assert.equal(Object.keys(w.GasDataEnhancements.getAlerts().events).length,1,'validation alone is not a material change');
  data.transportCapacity.push({id:'future',title:'Concurso de prueba',status:'VIGENTE',deadlineAt:new Date(Date.now()+3600000).toISOString(),url:'https://example.org/concurso'});update();assert(Object.values(w.GasDataEnhancements.getAlerts().events).some(x=>x.priority==='urgent'));assert(!Object.values(w.GasDataEnhancements.getAlerts().events).some(x=>x.contestId==='closed'||x.contestId==='past'));
  const clock=w.Date.now;w.Date.now=()=>Date.parse(data.transportCapacity.find(r=>r.id==='future').deadlineAt)+1;update();assert(Object.values(w.GasDataEnhancements.getAlerts().events).filter(e=>e.contestId==='future').every(e=>e.obsolete),'past deadline alerts retire automatically');w.Date.now=clock;
@@ -25,7 +34,6 @@ const infUpdate=()=>{const x=w.GasDataInfrastructure.getData();w.dispatchEvent(n
  for(const id of ['G01','P02','P03']){const c=d.querySelector('[data-project-compare='+id+']');c.checked=true;c.dispatchEvent(new w.Event('change',{bubbles:true}));}assert.equal(w.GasDataEnhancements.getChosen().length,3);assert(d.querySelector('#gdCompareTable').textContent.includes('Alcance de la inversión'));assert(d.querySelector('#gdCompareTable').textContent.includes('Avance físico publicado'));
  const fourth=d.querySelector('[data-project-compare=G04]');fourth.checked=true;fourth.dispatchEvent(new w.Event('change',{bubbles:true}));assert.equal(w.GasDataEnhancements.getChosen().length,3);assert(!fourth.checked);assert(d.querySelector('#gdCompareMessage').textContent.includes('hasta tres'));
  const remove=Array.from(d.querySelectorAll('[data-follow-remove]')).find(e=>e.dataset.followRemove===nk);assert(remove);remove.click();infUpdate();assert(!JSON.parse(w.localStorage.getItem('gasdata-following-v1'))[nk],'removed project news must not reappear');
- assert(d.querySelector('#gasdataAlerts').textContent.includes('01/01/2020'),'date-only publication retains its calendar day');
  const layer=d.querySelector('[data-system-layer=network]');layer.checked=true;layer.dispatchEvent(new w.Event('change',{bubbles:true}));await tick();assert(d.querySelectorAll('.leaflet-infraSystem-pane path').length>100);const before=d.querySelectorAll('.leaflet-infraSystem-pane path').length;
  const op=d.querySelector('[data-system-operator]');op.value='TGS';op.dispatchEvent(new w.Event('change',{bubbles:true}));await tick();assert(d.querySelectorAll('.leaflet-infraSystem-pane path').length<before);assert(d.querySelectorAll('.leaflet-infraSystem-pane path').length>0);
  for(const id of ['compressors','basins']){const c=d.querySelector('[data-system-layer='+id+']');c.checked=true;c.dispatchEvent(new w.Event('change',{bubbles:true}));}await tick();assert(d.querySelector('[data-system-sources]').textContent.includes('61 elementos'));assert(d.querySelector('[data-system-sources]').textContent.includes('edición de la fuente No informada'));
