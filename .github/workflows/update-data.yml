@@ -11,6 +11,7 @@ on:
       - 'package-lock.json'
       - 'data/infrastructure-decisions.json'
       - '.github/workflows/update-data.yml'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -40,6 +41,7 @@ jobs:
         run: |
           python -m unittest discover -s scripts -p 'test_pipeline_runner.py'
           python -m unittest discover -s scripts -p 'test_regulatory_catalogue.py'
+          node scripts/test_pages_artifact.cjs
           node scripts/test_technical_regulations.cjs
           python -m unittest discover -s scripts -p 'test_automatic_sources.py'
           python -m unittest discover -s scripts -p 'test_news_reader.py'
@@ -75,28 +77,10 @@ jobs:
           exit 1
 
   deploy:
-    concurrency:
-      group: pages
-      cancel-in-progress: true
     needs: update
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/pages.yml
     permissions:
+      actions: read
       contents: read
       pages: write
       id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - name: Publicar datos actualizados
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-
