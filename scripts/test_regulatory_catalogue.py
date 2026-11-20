@@ -54,4 +54,49 @@ class CatalogueTests(unittest.TestCase):
         self.assertFalse(relevant_catalogue(dict(desc='SANCIONAR A DISTRIBUIDORA Y COMERCIALIZADORA NORTE SOCIEDAD ANÓNIMA')))
 
 
+
+class OfficialCatalogueReaderTests(unittest.TestCase):
+    def table(self, with_department=True):
+        department='<td>DIRECTORIO#ENREGE</td>' if with_department else ''
+        return ('<table id="tableFiltro"><tbody><tr><td>970</td><td>19/11/2026</td>'
+                '<td>ARTÍCULO 1: APROBAR LA NORMA NAG-201.</td><td>Resolución FC</td>'+department+
+                '<td><a href="https://wss.enargas.gov.ar:9092/service.asmx/ObtenerArchivo?Tipo=13&amp;Numero=970&amp;Ano=2026&amp;Reparticion=37">PDF</a></td>'
+                '</tr></tbody></table>').encode()
+
+    def test_original_pdf_in_both_official_layouts(self):
+        from resolution_export import parse_catalogue
+        for with_department in (False,True):
+            row=parse_catalogue(self.table(with_department),2026,'ENReGE')[0]
+            self.assertIn('ObtenerArchivo?',row['url'])
+            self.assertIn('&Reparticion=37',row['url'])
+            self.assertEqual(row['date'],'2026-11-19')
+            self.assertIn('NAG-201',row['desc'])
+
+    def test_reader_migration_then_preserves_three_hour_frequency(self):
+        import io
+        from datetime import datetime,timezone
+        from unittest.mock import patch
+        from resolution_export import update_resolution_export
+        current=datetime(2026,11,20,11,tzinfo=timezone.utc)
+        data={'resolutionExport':{'complete':True,'checkedAt':current.isoformat(),'rows':[{'url':'old-catalogue'}]}}
+        with patch('resolution_export.urllib.request.urlopen',side_effect=lambda *a,**kw:io.BytesIO(self.table())) as request:
+            update_resolution_export(data,lambda:current,lambda:current.isoformat())
+            self.assertEqual(request.call_count,2)
+            self.assertEqual(data['resolutionExport']['readerVersion'],2)
+            self.assertIn('ObtenerArchivo?',data['resolutionExport']['rows'][0]['url'])
+            update_resolution_export(data,lambda:current,lambda:current.isoformat())
+            self.assertEqual(request.call_count,2,'no extra requests within the existing cadence')
+
+    def test_failed_read_keeps_catalogue_and_links(self):
+        from datetime import datetime,timezone
+        from unittest.mock import patch
+        from resolution_export import update_resolution_export
+        old=[{'url':'https://example.org/verified.pdf'}]
+        data={'resolutionExport':{'rows':old}}
+        current=datetime(2026,11,20,11,tzinfo=timezone.utc)
+        with patch('resolution_export.urllib.request.urlopen',side_effect=OSError('offline')):
+            update_resolution_export(data,lambda:current,lambda:current.isoformat())
+        self.assertEqual(data['resolutionExport']['rows'],old)
+        self.assertFalse(data['resolutionExport']['complete'])
+
 if __name__ == '__main__': unittest.main()

@@ -21,7 +21,8 @@ def parse_catalogue(raw, year, issuer):
         if len(cells) < 5: raise ValueError("Fila incompleta en el catálogo oficial")
         number, date, desc, kind = [c.get_text(" ", strip=True) for c in cells[:4]]
         day = datetime.strptime(date.strip(), "%d/%m/%Y").date().isoformat()
-        link = cells[4].find("a", href=True)
+        link = tr.find("a", href=True)
+        url = urllib.parse.urljoin(SOURCE, link["href"]) if link else SOURCE
         desc = re.sub(r"\s+", " ", desc)
         brief = re.sub(r"^(?:RESUELVE:\s*)?(?:ART[ÍI]CULO\s*1[°º]?[.\-:\s]*)?", "", desc, flags=re.I).strip()
         brief = re.split(r"ART[ÍI]CULO\s*2[°º]?", brief, flags=re.I)[0].strip()
@@ -29,13 +30,13 @@ def parse_catalogue(raw, year, issuer):
         label = kind if issuer.lower() in kind.lower() else issuer + " " + kind
         out.append({"num": f"{label} {number}/{year}", "number": number,
                     "issuer": issuer, "type": kind, "date": day,
-                    "desc": brief or desc[:360], "url": link["href"] if link else SOURCE})
+                    "desc": brief or desc[:360], "url": url})
     return out
 
 def update_resolution_export(d, now, iso):
     state = d.setdefault("resolutionExport", {})
     try:
-        if state.get("complete") and now()-datetime.fromisoformat(state["checkedAt"]) < timedelta(hours=3): return
+        if state.get("readerVersion")==2 and state.get("complete") and now()-datetime.fromisoformat(state["checkedAt"]) < timedelta(hours=3): return
     except (KeyError, ValueError, TypeError): pass
     year = now().year
     specs = [(6, "ENReGE"), (1, "ENARGAS")]
@@ -50,7 +51,7 @@ def update_resolution_export(d, now, iso):
             results = list(pool.map(load, specs))
         rows = [r for group in results for r in group]
         if not rows: raise ValueError("El catálogo anual está vacío; se conserva la versión anterior")
-        state.update(rows=sorted(rows,key=lambda r:(r["date"],r["num"]),reverse=True),
+        state.update(readerVersion=2, rows=sorted(rows,key=lambda r:(r["date"],r["num"]),reverse=True),
                      checkedAt=iso(), lastSuccessAt=iso(), complete=True, sourceUrl=SOURCE,
                      fromDate=f"{year}-01-01", toDate=now().date().isoformat(),
                      dateMeaning="Fecha de la resolución en el catálogo oficial", error=None)
