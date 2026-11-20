@@ -9,7 +9,8 @@ on:
       - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
-      - 'data/infrastructure-decisions.json'
+      - 'data/**'
+      - 'docs/**'
       - '.github/workflows/update-data.yml'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
